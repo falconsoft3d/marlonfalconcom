@@ -65,6 +65,11 @@ Ejecutar un docker con volumen y puerto
 docker run -d -p 80:80 --name webserver -v /var/www/html:/usr/share/nginx/html nginx
 ```
 
+Ejecutar un docker desdes una imagen en dockerhub
+```bash
+docker run -d -p 3014:3014 --restart=always  mfalconsoft/apialticephone
+```
+
 Otra forma
 ```bash
 docker run -d --name=netdata \
@@ -77,4 +82,17 @@ docker run -d --name=netdata \
   --cap-add SYS_PTRACE \
   --security-opt apparmor=unconfined \
   netdata/netdata
+```
+
+Subir un docker a dockerhub
+```bash
+docker login
+docker tag mfalconsoft/odoo:10.0 mfalconsoft/odoo:10.0
+docker push mfalconsoft/odoo:10.0
+docker run -d  mfalconsoft/odoo:10.0
+```
+
+Crear un docker desde un Dockerfile
+```bash
+docker build -t mfalconsoft/odoo:10.0 .
 ```
