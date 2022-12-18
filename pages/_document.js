@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   const meta = {
-    title: 'Marlon Falcon | Full Stack Developer',
+    title: 'Marlon Falcón Hernández | Full Stack Developer',
     description: 'Desarrollador de Odoo y Python, con experiencia en desarrollo web y móvil.',
     image: 'https://assets.vercel.com/image/upload/q_auto/front/vercel/dps.png'
   }
