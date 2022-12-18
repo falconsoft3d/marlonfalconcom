@@ -6,7 +6,7 @@ tag: django
 author: Marlon Falcon Hernandez
 ---
 
-# Comandos SQL
+# Comandos Django
 
 Creamos el entorno virtual
 
