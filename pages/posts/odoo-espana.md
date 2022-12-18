@@ -14,6 +14,6 @@ Servicios de implementación del ERP Odoo para grandes, medianas y pequeñas emp
 
 Realizamos la implantación la aplicación Odoo tanto en empresas de gran tamaño como en pequeñas y medianas empresas de Madrid, Valencia, Barcelona, etc. Con Odoo también es muy fácil gestionar las sucursales en todo el territorio de España.
 
-Si su empresa es proveedora de soluciones de negocio y cuenta con un muy buen equipo de implantación de software ERP Odoo, con experiencia comprobable, también puede contactarnos porque buscamos partners estratégicos de alto nivel en Españ.
+Si su empresa es proveedora de soluciones de negocio y cuenta con un muy buen equipo de implantación de software ERP Odoo, con experiencia comprobable, también puede contactarnos porque buscamos partners estratégicos de alto nivel en España.
 
 La implantación del software ERP se puede hacer mediante la participación completa de nuestro equipo “in company”, mediante el desarrollo mixto con participación de empleados de la compañía, o mediante la implantación online. De hecho, la aplicación puede ser implementada o instalada en un servidor dentro de la empresa, o en nuestros servidores con acceso remoto desde la empresa, o mediante servicios en la nube (SAAS) es decir, la empresa contrata los servicios que necesite y accede a la aplicación vía web sin necesidad de instalar nada en sus computadoras o servidores.
