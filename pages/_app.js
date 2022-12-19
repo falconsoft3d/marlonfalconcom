@@ -36,6 +36,20 @@ export default function Nextra({ Component, pageProps }) {
         `}
       </Script>
 
+      <Script id="tawk_api" strategy="afterInteractive">
+         {`
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/6240cbda0bfe3f4a876ff347/1fv6hojqp';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            })();
+        `}
+        </Script>
+
       <Component {...pageProps} />
     </>
   )
