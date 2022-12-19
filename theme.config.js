@@ -18,7 +18,7 @@ export default {
         <li><Link href="/contacto"><a>Contacto</a></Link></li>
       </ul>
       <ul className="myul">
-        <li><Link href="/odoo-valencia"><a>Odoo Valencia</a></Link></li>
+        <li><Link href="/odoo-migraciones"><a>Odoo Migraciones</a></Link></li>
         <li><Link href="/posts/odoo-16"><a>Odoo 16</a></Link></li>
         <li><Link href="/posts/odoo-sis20"><a>Odoo Sis20</a></Link></li>
         <li><Link href="/posts/odoo-clinica"><a>Odoo Clinica</a></Link></li>
