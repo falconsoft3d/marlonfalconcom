@@ -4,7 +4,7 @@ export default {
   footer: (
     <>
     <small style={{ display: 'block', marginTop: '8rem' }}>
-      <time>{YEAR}</time> © Marlon Falcón Hernandez.
+      <time>{YEAR}</time> @Marlon / mfalconsoft@gmail.com / +34 (662) 47 0645
       
       <a href="/feed.xml">RSS</a>
       <style jsx>{`
