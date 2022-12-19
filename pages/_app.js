@@ -2,7 +2,8 @@ import 'nextra-theme-blog/style.css'
 import Head from 'next/head'
 import '../styles/main.css'
 import Script from 'next/script';
-import WhatsappLink from '../pages/WhatsappLink/WhatsappLink';
+import WhatsappLink from '../components/WhatsappLink';
+import { MyFooter } from '../components/MyFooter';
 
 export default function Nextra({ Component, pageProps }) {
   return (
@@ -52,8 +53,10 @@ export default function Nextra({ Component, pageProps }) {
             })();
         `}
         </Script>
-
+      
+      
       <Component {...pageProps} />
+      
     </>
   )
 }
