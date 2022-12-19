@@ -42,18 +42,16 @@ export default {
         }
 
         .myul {
-          list-style: none;
           display: flex;
           justify-content: space-between;
           padding: 0;
-          decoration: none;
-          
+          list-style-type: none !important;
         }
 
         .myul > li {
           margin: 0;
           decoration: none;
-          list-style-type: none;
+          
         }
 
         .myul > li > a {
