@@ -1,10 +1,10 @@
 ---
 type: posts
-title: Odoo España
+title: Odoo
 date: 2021-03-18
 ---
 
-# Posts
+# Odoo ERP para empresas de España
 
 Odoo es un eficiente sistema de gestión empresarial (ERP) que permite gestionar con sencillez todas las áreas de la empresa: área financiera y contabilidad, ventas, compras y proveedores, relaciones con los clientes CRM, proyectos, almacén, comercio electrónico o ecommerce, recursos humanos, entre otros.
 
