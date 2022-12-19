@@ -2,6 +2,7 @@ import 'nextra-theme-blog/style.css'
 import Head from 'next/head'
 import '../styles/main.css'
 import Script from 'next/script';
+import WhatsappLink from '../pages/WhatsappLink/WhatsappLink';
 
 export default function Nextra({ Component, pageProps }) {
   return (
@@ -21,6 +22,8 @@ export default function Nextra({ Component, pageProps }) {
           crossOrigin="anonymous"
         />
       </Head>
+
+      <WhatsappLink />
 
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=UA-232389777-1"
