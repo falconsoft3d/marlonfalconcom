@@ -1,6 +1,6 @@
 ---
 title: Creando una clave publica ssh en windows
-date: 2022/12/18
+date: 2022/12/19
 description: Creando una clave publica ssh en windows
 tag: windows,ssh
 author: Marlon Falcon Hernandez
