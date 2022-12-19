@@ -29,6 +29,12 @@ export default {
         <li><Link href="/posts/desarrollo-odoo"><a>Desarrollo Odoo</a></Link></li>
         <li><Link href="/posts/soporte-odoo"><a>Soporte Odoo</a></Link></li>
       </ul>
+      <ul className="myul">
+        <li><Link href="/posts/odoo-servicios"><a>Odoo Servicios</a></Link></li>
+        <li><Link href="/posts/odoo-auditoria"><a>Odoo Auditoria</a></Link></li>
+        <li><Link href="/posts/odoo-como-implementar"><a>Implementar Odoo</a></Link></li>
+        <li><Link href="/posts/ventajas-odoo"><a>Ventajas Odoo</a></Link></li>
+      </ul>
     </div>
 
     <hr/>
