@@ -23,7 +23,7 @@ export default {
       </ul>
     </div> 
 
-      <time>{YEAR}</time> @Marlon / mfalconsoft@gmail.com / +34 (662) 47 0645
+      <time>{YEAR}</time> mfalconsoft@gmail.com / +34 (662) 47 0645
       
       <a href="/feed.xml">RSS</a>
       <style jsx>{`
