@@ -21,6 +21,12 @@ export default {
         <li><Link href="/posts/odoo-sis20"><a>Odoo Sis20</a></Link></li>
         <li><Link href="/posts/odoo-clinica"><a>Odoo Clinica</a></Link></li>
       </ul>
+      <ul className="myul">
+        <li><Link href="/posts/docker-instalar-odoo-16-erp"><a>Odoo 16 instalación</a></Link></li>
+        <li><Link href="/posts/consultor-odoo"><a>Consultor Odoo</a></Link></li>
+        <li><Link href="/posts/desarrollo-odoo"><a>Desarrollo Odoo</a></Link></li>
+        <li><Link href="/posts/soporte-odoo"><a>Soporte Odoo</a></Link></li>
+      </ul>
     </div> 
 
       <time>{YEAR}</time> mfalconsoft@gmail.com / +34 (662) 47 0645
