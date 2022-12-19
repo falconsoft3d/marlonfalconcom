@@ -8,7 +8,7 @@ author: Servicios Odoo
 
 # Servicios Odoo
 
-Lo consultores brindan diferentes servicios de Odoo, como
+Brindamos diferentes servicios de Odoo, como son:
 1. Implementación de Odoo
 2. Desarrollo de Odoo
 3. Consultoría de Odoo
