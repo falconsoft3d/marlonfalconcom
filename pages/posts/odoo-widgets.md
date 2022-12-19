@@ -48,6 +48,35 @@ monetary
   className="next-image"
 />
 
+boolean_toggle
+```
+<field name="active" widget="boolean_toggle"/>
+```
+
+<Image
+  src="/images/widget/boolean_toggle.png"
+  alt="boolean_toggle"
+  width={240}
+  height={143}
+  className="next-image"
+/>
+
+badge
+```
+<field name="state" widget="badge" decoration-info="state == 'draft'" decoration-success="state == 'posted'"/>
+```
+
+<Image
+  src="/images/widget/badge.png"
+  alt="badge"
+  width={240}
+  height={143}
+  className="next-image"
+/>
+
+
+
+
 
 
 
