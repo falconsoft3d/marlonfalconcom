@@ -8,6 +8,8 @@ export default {
     
     <small style={{ display: 'block', marginTop: '8rem' }}>
 
+    <hr/>
+
     <div className="menu-footer"> 
       <ul className="myul">
         <li><Link href="/odoo-espana"><a>Odoo España</a></Link></li>
@@ -27,7 +29,9 @@ export default {
         <li><Link href="/posts/desarrollo-odoo"><a>Desarrollo Odoo</a></Link></li>
         <li><Link href="/posts/soporte-odoo"><a>Soporte Odoo</a></Link></li>
       </ul>
-    </div> 
+    </div>
+
+    <hr/>
 
       <time>{YEAR}</time> mfalconsoft@gmail.com / +34 (662) 47 0645
       
