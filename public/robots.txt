@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://marlonfalcon.com
+
+# Sitemaps
+Sitemap: https://marlonfalcon.com/sitemap.xml
