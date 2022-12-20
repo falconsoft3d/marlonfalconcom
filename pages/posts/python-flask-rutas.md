@@ -2,7 +2,7 @@
 title: Rutas con Python y Flask
 date: 2022/12/18
 description: Rutas con Python y Flask
-tag: python, flask, bootstrap
+tag: python, flask, api
 author: Marlon Falcon Hernandez
 ---
 
