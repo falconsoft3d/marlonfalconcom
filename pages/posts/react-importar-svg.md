@@ -8,9 +8,7 @@ author: Marlon Falcon Hernandez
 
 # React como importar svg
 Un svg es un archivo de imagen vectorial, es decir, que no se ve afectado por el tamaño de la pantalla, por lo que se puede ver en cualquier dispositivo sin perder calidad. Para importar un svg en react se debe usar la siguiente sintaxis:
-```js
 
-Plantilla
 ```js
 import {ReactComponent as SvgLogin} from './../imagenes/registro.svg';
 import styled from "styled-components";
