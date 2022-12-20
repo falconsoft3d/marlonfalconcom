@@ -7,7 +7,6 @@ author: Marlon Falcon Hernandez
 ---
 
 # Python herencia múltiple
-
 Herencia múltiple podemos heredar de dos clases.
 ```
 class A:
