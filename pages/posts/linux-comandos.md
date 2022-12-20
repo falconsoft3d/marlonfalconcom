@@ -14,6 +14,16 @@ Conectarse a un servidor con el comando ssh.
 ssh-copy-id root@159.89.29.1
 ```
 
+Cambiamos la contraseña al usuario root.
+```
+passwd
+```
+
+Mostrar espacio del disco duro.
+```
+df -h
+```
+
 Convertirse en superusuario.
 ```
 sudo su
@@ -35,6 +45,10 @@ Editamos un fichero con Nano.
 nano /etc/odoo/odoo.conf
 ```
 
+Mostrar procesos con palabra clave ejemplo: chro
+```
+ps aux | grep chro
+```
 
 Reiniciamos un servicio.
 ```
@@ -56,9 +70,21 @@ Instalamos un programa
 apt-get install htop
 ```
 
+Ver tamaño de una carpeta
+```
+du -hc
+du -sh /opt/extra-addons/
+```
+
+
 Vemos los recursos del sistema
 ```
 htop
+```
+
+Borramos un directorio
+```
+sudo rm -r carpeta
 ```
 
 Generamos una clave pública.
