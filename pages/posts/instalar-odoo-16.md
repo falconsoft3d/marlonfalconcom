@@ -7,6 +7,21 @@ author: Marlon Falcon Hernandez
 ---
 
 # Instalar Odoo 16 ERP
+import Image from 'next/image'
+
+<Image
+  src="/images/posts/instalar_odoo_16.png"
+  alt="odoo9"
+  width={1280}
+  height={720}
+  priority
+  className="next-image"
+/>
+
+Nos creamos una cuenta en [Digital Ocean](https://m.do.co/c/7f5c3af8d6bb). Nos logueamos en [Digital Ocean](https://m.do.co/c/7f5c3af8d6bb). Nos creamos una instancia de Ubuntu 20.04. Nos conectamos a la instancia de Ubuntu 20.04.
+```
+https://m.do.co/c/7f5c3af8d6bb
+```
 
 Actualizamos el sistema operativo.
 ```
