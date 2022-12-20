@@ -11,7 +11,7 @@ author: Marlon Falcon Hernandez
 CursoModulo.py
 ```
 def OperacionSuma(a,b):
-    return a + 
+    return a + b
 ```
 
 main.py
