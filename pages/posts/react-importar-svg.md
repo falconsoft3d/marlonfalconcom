@@ -1,6 +1,6 @@
 ---
 title: React como importar svg
-date: 2022/12/18
+date: 2022/12/20
 description: React como importar svg
 tag: react
 author: Marlon Falcon Hernandez
