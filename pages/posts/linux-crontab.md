@@ -2,7 +2,7 @@
 title: Linux crontab tareas programadas
 date: 2022/12/20
 description: Linux crontab tareas programadas
-tag: linux
+tag: linux, cron
 author: Marlon Falcon Hernandez
 ---
 
