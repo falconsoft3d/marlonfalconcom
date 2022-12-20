@@ -1,1 +1,0 @@
-export { MyFooter } from './MyFooter';

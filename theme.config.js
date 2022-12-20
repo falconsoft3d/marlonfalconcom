@@ -1,4 +1,5 @@
 import Link from "next/link"
+import ButtonCall from "./components/WhatsappLink/ButtonCall"
 
 const YEAR = new Date().getFullYear()
 
@@ -36,7 +37,7 @@ export default {
         <li><Link href="/posts/ventajas-odoo"><a>Ventajas Odoo</a></Link></li>
       </ul>
     </div>
-
+    <ButtonCall />
     <hr/>
 
       <time>{YEAR}</time> mfalconsoft@gmail.com / +34 (662) 47 0645
@@ -77,7 +78,6 @@ export default {
         ul > li > a:hover {
           text-decoration: underline;
         }
-
       `}</style>
     </small>
     </>
