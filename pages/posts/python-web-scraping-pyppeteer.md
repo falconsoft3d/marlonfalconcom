@@ -2,7 +2,7 @@
 title: Web Scraping con Python y Pyppeteer
 date: 2022/12/20
 description: Web Scraping con Python y Pyppeteer
-tag: react
+tag: python, webscraping
 author: Marlon Falcon Hernandez
 ---
 
@@ -34,4 +34,4 @@ async def main():
 print("Starting...")
 asyncio.get_event_loop().run_until_complete(main())
 print("Screenshot has been taken")
-```python
+```
