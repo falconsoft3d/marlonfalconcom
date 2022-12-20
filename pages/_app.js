@@ -52,10 +52,7 @@ export default function Nextra({ Component, pageProps }) {
             })();
         `}
         </Script>
-      
-      
       <Component {...pageProps} />
-      
     </>
   )
 }
