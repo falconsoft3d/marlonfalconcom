@@ -4,7 +4,7 @@ export default function ButtonCall() {
   return (
             <>
                 <div className="container-button">
-                    <a href="mailto:+34662470645" target="_blank" rel="noopener noreferrer" 
+                    <a href="callto:+34662470645" target="_blank" rel="noopener noreferrer" 
                         className="button-call">LLAMAR +34 662 47 0645</a>
                 </div>
 
