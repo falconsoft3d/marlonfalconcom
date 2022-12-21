@@ -6,6 +6,19 @@ date: 2021-03-18
 
 # Odoo ERP para empresas de España
 
+import Image from 'next/image'
+
+
+## Odoo 16 Enterprise Edition
+<Image
+  src="/images/posts/odoo-16-app.png"
+  alt="odoo9"
+  width={1020}
+  height={699}
+  priority
+  className="next-image"
+/>
+
 Odoo es un eficiente sistema de gestión empresarial (ERP) que permite gestionar con sencillez todas las áreas de la empresa: área financiera y contabilidad, ventas, compras y proveedores, relaciones con los clientes CRM, proyectos, almacén, comercio electrónico o ecommerce, recursos humanos, entre otros.
 
 Se distribuye como software libre, bajo licencia GPL, por lo tanto la aplicación es gratis. La empresa sólo paga por los servicios de implantación, por ejemplo, análisis de los procesos de la empresa y sus necesidades, implantación del paquete de software principal y módulos específicos, desarrollo de módulos a medida si hiciera falta, formación de los usuarios y mantenimiento.
