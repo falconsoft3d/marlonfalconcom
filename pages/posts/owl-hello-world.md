@@ -1,3 +1,17 @@
+---
+title: Hola mundo con Owl
+date: 2022/12/21
+description: Hola mundo con Owl
+tag: owl
+author: Marlon Falcon Hernandez
+---
+#  Hola mundo con Owl
+
+Este es un ejemplo de como crear un componente en Owl
+
+[owl-hello-world](/owl-samples/01-hello-world/index.html)
+
+```js
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,3 +27,4 @@
     </script>
   </body>
 </html>
+```
