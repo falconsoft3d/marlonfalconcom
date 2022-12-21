@@ -2,7 +2,7 @@
 title: Crear un CRUD con React
 date: 2022/12/21
 description: Crear un CRUD con React
-tag: react
+tag: react, crud, bootstrap
 author: Marlon Falcon Hernandez
 ---
 
