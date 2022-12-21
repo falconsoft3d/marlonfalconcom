@@ -7,7 +7,7 @@ author: Marlon Falcon Hernandez
 ---
 #  Hola mundo con Owl
 
-Este es un ejemplo de como crear un componente en Owl
+Este es un ejemplo de un hola mundo con Owl.
 
 [owl-hello-world](/owl-samples/01-hello-world/index.html)
 
