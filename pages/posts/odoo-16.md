@@ -8,7 +8,6 @@ author: Marlon Falcon Hernandez
 
 # Odoo ERP 16
 
-# Odoo ERP 16
 Odoo 16 es la última versión de Odoo ERP. Odoo 16 es una versión estable y segura. Odoo 16 es una versión que incluye nuevas funcionalidades y correcciones de errores.
 
 # Odoo 16 puede ser instalado de diferentes formas
