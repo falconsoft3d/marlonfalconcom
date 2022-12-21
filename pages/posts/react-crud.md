@@ -7,8 +7,21 @@ author: Marlon Falcon Hernandez
 ---
 
 # Crear un CRUD con React
+import Image from 'next/image'
+
+
+Un [crud](/tags/crud) es una aplicación que permite crear, leer, actualizar y eliminar datos. En este tutorial vamos a crear un crud con React, para ello vamos a utilizar el framework Bootstrap para darle un poco de estilo a nuestra aplicación.
 
 link: https://github.com/crud-demos/react-crud
+
+<Image
+  src="/images/posts/react-crud.png"
+  alt="odoo9"
+  width={1280}
+  height={720}
+  priority
+  className="next-image"
+/>
 
 src/App.js
 
