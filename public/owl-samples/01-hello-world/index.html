@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hello Owl</title>
+    <script src="owl.js"></script>
+  </head>
+  <body>
+    <h1>Owl</h1>
+    <p id="version"></p>
+    <script>
+       console.log("hello owl", owl.__info__.version);
+       document.getElementById("version").textContent += owl.__info__.version;
+    </script>
+  </body>
+</html>
