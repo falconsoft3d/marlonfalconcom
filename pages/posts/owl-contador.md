@@ -9,7 +9,7 @@ author: Marlon Falcon Hernandez
 
 Este es un ejemplo de un contador con Owl de Odoo.
 
-[owl-hello-world](/owl-samples/02-counter/index.html)
+[02-counter](/owl-samples/02-counter/index.html)
 
 ```js
 <!DOCTYPE html>
