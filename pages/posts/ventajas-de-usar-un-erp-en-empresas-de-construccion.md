@@ -2,7 +2,7 @@
 title: Ventajas de usar un ERP en empresas de construcción
 date: 2022/12/22
 description: Ventajas de usar un ERP en empresas de construcción
-tag: odoo
+tag: erp
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
