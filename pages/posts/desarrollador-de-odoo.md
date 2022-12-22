@@ -5,9 +5,21 @@ description: Desarrollador de Odoo
 tag: odoo, desarrollador, marlon
 author: Marlon Falcon Hernandez
 ---
+import Image from 'next/image'
+
 # Desarrollador de Odoo
 
 Odoo es una plataforma de software de código abierto que ofrece una amplia gama de soluciones empresariales antes conocido como openerp, desde la gestión de proyectos y la gestión de relaciones con clientes hasta la contabilidad y la gestión de inventario. Si su empresa está considerando implementar Odoo, es importante contar con desarrollador en la plataforma para garantizar una implementación y uso eficientes.
+
+<Image
+  src="/images/marlon-falcon-odoo-erp.png"
+  alt="odoo9"
+  width={1280}
+  height={720}
+  priority
+  className="next-image"
+/>
+
 
 Los desarrolladores en Odoo tienen conocimientos profundos de la plataforma y pueden ayudar a su empresa a aprovechar al máximo todas las características y beneficios que ofrece. Además, pueden brindar asesoramiento y soporte en todas las etapas del proceso de implementación, desde la planificación hasta la puesta en marcha y el mantenimiento.
 
