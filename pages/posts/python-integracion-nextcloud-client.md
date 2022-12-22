@@ -2,7 +2,7 @@
 title: Python integración nextcloud client
 date: 2022/12/18
 description: Python integración nextcloud client
-tag: python, integraciones
+tag: python, integraciones, nextcloud
 author: Marlon Falcon Hernandez
 ---
 
@@ -25,3 +25,5 @@ nc.put_file('Demo/bd.zip', 'bd.zip')
 link_info = nc.share_file_with_link('Demo/bd.zip')
 print("Here is your link: " + link_info.get_link())
 ```
+
+ver más en [https://github.com/pragmaticindustries/pyncclient](https://github.com/pragmaticindustries/pyncclient)
