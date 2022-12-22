@@ -2,7 +2,7 @@
 title: ¿Por qué una empresa constructora necesita un sistema web ERP?
 date: 2022/12/22
 description: ¿Por qué una empresa constructora necesita un sistema web ERP?
-tag: construcción
+tag: construccion, erp
 author: ¿Por qué una empresa constructora necesita un sistema web ERP?
 ---
 
