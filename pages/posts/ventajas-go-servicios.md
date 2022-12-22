@@ -1,13 +1,13 @@
 ---
-title: Ventajas de Go para el desarrollo de software
+title: Ventajas de Go para el desarrollo de servicios web
 date: 2022/12/19
-description: Ventajas de Go para el desarrollo de software
+description: Ventajas de Go para el desarrollo de servicios web
 tag: go
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# Ventajas de Go para el desarrollo de software
+# Ventajas de Go para el desarrollo de servicios web
 
 Go es un lenguaje de programación moderno y poderoso que ha ganado popularidad en los últimos años debido a sus características y ventajas. Algunas de las principales ventajas de usar Go para el desarrollo de servicios son:
 
