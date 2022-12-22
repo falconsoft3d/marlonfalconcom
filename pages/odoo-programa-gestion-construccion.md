@@ -24,7 +24,7 @@ Con Odoo ERP podemos ofrecer verticales específicas para la construcción, como
 
 El sistema de gestión de la construcción BIM 20 ofrece una coordinación total de muchos procesos claves en las constructoras involucradas en los procesos de construcción que operan en diferentes esferas o áreas.
 
-Odoo Bim 2.0 es una plataforma de software de código abierto que se utiliza comúnmente en la industria de la construcción para administrar y automatizar diversos procesos de negocio. Con más de 30 módulos disponibles, Odoo BIM ofrece una solución completa para la gestión de proyectos, la facturación, la contabilidad, la gestión de inventario, el seguimiento de tareas y mucho más.
+Odoo es una plataforma de software de código abierto que se utiliza comúnmente en la industria de la construcción para administrar y automatizar diversos procesos de negoci con el módulo o vertical bim 2.0. Con más de 30 módulos disponibles, Odoo BIM ofrece una solución completa para la gestión de proyectos, la facturación, la contabilidad, la gestión de inventario, el seguimiento de tareas y mucho más.
 
 <Image
   src="/images/bim20/odoo-bim20-2.png"
