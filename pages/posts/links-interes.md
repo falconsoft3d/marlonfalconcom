@@ -1,14 +1,15 @@
 ---
-type: page
-title: Links
-date: 2021-03-18
+title: Mis links de interés
+date: 2022/12/18
+description: Mis links de interés
+tag: links, tools, web
+author: Marlon Falcon Hernandez
 ---
 
-# Links de interes
+# Mis links de interés
 
 Aplicaciones para video llamadas
 - https://whereby.com
-
 
 Aplicaciones para grabar videos
 - https://www.loom.com
@@ -47,12 +48,3 @@ Aplicaciones para gestión de visitas
 
 Liberias para React
 - https://ant.design
-
-
-
-
-
-
-
-
-
