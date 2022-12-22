@@ -92,3 +92,9 @@ Generamos una clave pública.
 ssh-keygen
 cat ~/.ssh/id_rsa.pub
 ```
+
+Copiar con scp
+El comando scp permite copiar archivos y directorios de un equipo a otro. Para copiar un archivo de un equipo a otro, se utiliza el siguiente comando:
+```bash
+scp -r root@123.12.12.2:/opt/extra-addons/ Desktop/
+```
