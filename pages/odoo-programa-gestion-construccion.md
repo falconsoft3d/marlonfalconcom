@@ -64,7 +64,4 @@ Otra ventaja de utilizar Odoo BIM 2.0 para el control de gastos en proyectos de 
   className="next-image"
 />
 
-
-Además, Odoo BIM 2.0 ofrece una serie de herramientas de colaboración que facilitan la comunicación entre los equipos y la toma de decisiones. Esto incluye la posibilidad de asignar tareas y seguir el progreso de las mismas en tiempo real, lo que permite una mayor eficiencia en la ejecución del proyecto.
-
 En resumen, Odoo BIM 2.0 es una excelente opción para las empresas de construcción que buscan una solución completa y flexible para la gestión de sus proyectos. Con su amplia gama de módulos y herramientas de colaboración, Odoo BIM puede ayudar a mejorar la eficiencia y el rendimiento de cualquier empresa de construcción.
