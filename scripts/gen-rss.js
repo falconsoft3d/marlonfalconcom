@@ -7,7 +7,7 @@ async function generate() {
   const feed = new RSS({
     title: 'Marlon Falcon',
     site_url: 'https://marlonfalcon.com',
-    feed_url: 'https://marlonfalcon/feed.xml'
+    feed_url: 'https://marlonfalcon.com/feed.xml'
   })
 
   const posts = await fs.readdir(path.join(__dirname, '..', 'pages', 'posts'))
