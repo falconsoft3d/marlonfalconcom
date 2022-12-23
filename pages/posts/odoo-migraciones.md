@@ -1,6 +1,6 @@
 ---
 title: Odoo migraciones
-date: 2022/12/19
+date: 2022/12/23
 description: Odoo migraciones
 tag: odoo, odoo-migraciones
 author: Marlon Falcon Hernandez
@@ -14,7 +14,7 @@ Odoo es un ERP que todos los años cambia de versión, por lo que es necesario m
 # Versiones de Odoo ERP.
 <Image
   src="/images/odoo-migraciones-version.png"
-  alt="odoo9"
+  alt="odoo-migracione"
   width={1280}
   height={720}
   priority
