@@ -4,6 +4,7 @@ date: 2022/12/23
 description: Odoo cambio partner
 tag: odoo, erp
 author: Marlon Falcon Hernandez
+image: 'https://marlonfalcon.com/images/posts/cambio-partner.png'
 ---
 import Image from 'next/image'
 
