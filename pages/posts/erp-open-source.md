@@ -25,7 +25,7 @@ Primero tenemos que entender que es open source. Hacía referencia al software o
   className="next-image"
 />
 
-2. [Dolibar ERP](https://www.dolibarr.org/) Escrito en PHP, CSS entre otros. Es un ERP open source muy potente, con una comunidad muy activa. Si quieres saber más sobre Dolibar ERP puedes leer el siguiente post [Dolibar ERP](/posts/dolibar-erp/).
+2. [Dolibar ERP](https://www.dolibarr.org/) Escrito en PHP, CSS entre otros. Es un ERP open source muy potente, con una comunidad muy activa.
 
 <Image
   src="/images/posts/dolibar-erp.png"
@@ -36,7 +36,7 @@ Primero tenemos que entender que es open source. Hacía referencia al software o
   className="next-image"
 />
 
-3. [ERPNext](https://erpnext.com/) Escrito en Python, CSS y Javascript entre otros. Es un ERP open source con alto crecimiento, con una interface muy limpia. Si quieres saber más sobre ERPNext puedes leer el siguiente post [ERPNext ERP](/posts/erpnext/).
+3. [ERPNext](https://erpnext.com/) Escrito en Python, CSS y Javascript entre otros. Es un ERP open source con alto crecimiento, con una interface muy limpia.
 
 <Image
   src="/images/posts/erpnext-erp.png"
