@@ -2,7 +2,7 @@
 title: Flutter en 20 pasos
 date: 2022/12/24
 description: Flutter en 20 pasos
-tag: dart, flutter
+tag: dart, flutter, 20pasos
 author: Flutter en 20 pasos
 ---
 

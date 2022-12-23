@@ -2,7 +2,7 @@
 title: Dart en 20 pasos
 date: 2022/12/24
 description: Dart en 20 pasos
-tag: dart
+tag: dart, 20pasos
 author: Auditoría Odoo ERP
 ---
 
