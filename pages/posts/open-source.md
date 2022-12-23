@@ -4,7 +4,7 @@ date: 2022/12/23
 description: Open Source
 tag: open, source
 author: Marlon Falcon Hernandez
-image: 'https://marlonfalcon.com/images/posts/cambio-partner.png'
+
 ---
 import Image from 'next/image'
 
