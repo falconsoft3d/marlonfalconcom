@@ -36,6 +36,12 @@ export default {
         <li><Link href="/posts/odoo-como-implementar"><a>Implementar Odoo</a></Link></li>
         <li><Link href="/posts/ventajas-odoo"><a>Ventajas Odoo</a></Link></li>
       </ul>
+      <ul className="myul">
+        <li><Link href="/"><a>Inicio</a></Link></li>
+        <li><Link href="/cursos"><a>Cursos</a></Link></li>
+        <li><Link href="/posts/erp-open-source"><a>ERP open source</a></Link></li>
+        <li><Link href="/posts/odoo-erp"><a>Odoo ERP</a></Link></li>
+      </ul>
     </div>
     <ButtonCall />
     <hr/>
