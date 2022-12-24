@@ -28,7 +28,8 @@ Cuando hacemos un proyecto de implementación de Odoo ERP puede que quieras camb
 4. Cambia los accesos al partner anterior.
 5. Cambia las contraseñas de los usuarios.
 6. Cambia las contraseñas de la base de datos, contraseña maestra, root y otros.
-7. Consultoría Express, que es para evaluar si es necesario reprogramar todo el código o solo migrarlo. En este punto te recomiendo antes de iniciar hacer una auditoria completa de todo el código, para saber si es necesario reprogramar o solo migrarlo.
+7. Consultoría Express, que es para evaluar si es necesario reprogramar todo el código o solo migrarlo. En este punto te recomiendo antes de iniciar hacer una auditoria completa de todo el código para poder tomar la mejor decisión.
+
 8. Solicita un documento donde se describa todos los procesos nuevos implementados en el nuevo partner.
 9. Parar todos los cron jobs del odoo anterior.
 10. Cambiar los DNS del dominio.
