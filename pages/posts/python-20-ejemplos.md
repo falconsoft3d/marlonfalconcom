@@ -8,7 +8,7 @@ author: Marlon Falcon Hernandez
 
 # Python 20 Ejemplos
 
-## 1. Numeros primos
+## 1. Números primos
 ````python
 def es_primo(numero):
     if numero < 2:
