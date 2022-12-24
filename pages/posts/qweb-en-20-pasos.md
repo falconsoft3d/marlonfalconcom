@@ -2,7 +2,7 @@
 title: Qweb en 20 pasos
 date: 2022/12/18
 description: ReactJS en 20 pasos
-tag: qweb
+tag: qweb, 20pasos, python
 author: Marlon Falcon Hernandez
 ---
 
