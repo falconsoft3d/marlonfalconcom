@@ -2,7 +2,7 @@
 title: Flutter plantilla basica
 date: 2022/12/25
 description: Flutter plantilla basica
-tag: dart, flutter, father
+tag: dart, flutter, father, apirest
 author: Marlon Falcon Hernandez
 ---
 
@@ -65,7 +65,7 @@ class LoginScreen extends StatelessWidget {
 ```
 
 
-# Plantilla basica II
+# Plantilla básica II
 
 lib/main.dart
 
@@ -105,6 +105,37 @@ class HomePage extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
+    return const Scaffold();
+  }
+}
+```
+
+# Plantilla con llamada a api rest
+
+pubspec.yaml
+```
+  cupertino_icons: ^1.0.2
+  http: ^0.13.5
+```
+
+
+lib/home_page.dart
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
+  
+  Future getTeams() async {
+    final response = await http.get(Uri.https('balldontlie.io','api/v1/teams'));
+    print(response.body);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    getTeams();
     return const Scaffold();
   }
 }
