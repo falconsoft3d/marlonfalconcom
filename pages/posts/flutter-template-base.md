@@ -6,7 +6,7 @@ tag: dart, flutter, father
 author: Marlon Falcon Hernandez
 ---
 
-# Flutter plantilla basica
+# Flutter plantilla basica I
 
 En este post vamos a ver como crear una plantilla basica para nuestros proyectos de Flutter.
 
@@ -63,3 +63,50 @@ class LoginScreen extends StatelessWidget {
   }
 }
 ```
+
+
+# Plantilla basica II
+
+lib/main.dart
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:nba_api/home_page.dart';
+
+void main() async { 
+  runApp(const MyApp());
+  }
+
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
+    );
+    }
+}
+```
+
+lib/home_page.dart
+```dart
+import 'package:flutter/material.dart';
+
+class HomePage extends StatelessWidget {
+   
+  const HomePage({Key? key}) : super(key: key);
+  
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold();
+  }
+}
+```
+
