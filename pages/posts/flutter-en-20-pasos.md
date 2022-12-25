@@ -47,4 +47,14 @@ flutter run --profile
 flutter run --debug
 ```
 
+## 8. Ver dependencias
+```bash
+flutter pub deps -- --style=compact
+```
+
+## 8. Analizar Flutter
+```bash
+flutter doctor
+```
+
 
