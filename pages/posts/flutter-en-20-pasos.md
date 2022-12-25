@@ -18,6 +18,7 @@ brew install flutter
 ## 2. Crear un proyecto
 ```bash
 flutter create nombre_proyecto
+flutter create --org com.marlonfalcon firebasetutorial
 ```
 
 ## 3. Ejecutar el proyecto
