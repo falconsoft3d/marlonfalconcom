@@ -1,6 +1,6 @@
 ---
 title: Flutter plantilla basica
-date: 2022/12/24
+date: 2022/12/25
 description: Flutter plantilla basica
 tag: dart, flutter, father
 author: Marlon Falcon Hernandez
