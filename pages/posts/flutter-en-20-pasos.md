@@ -57,4 +57,8 @@ flutter pub deps -- --style=compact
 flutter doctor
 ```
 
+## 9. Generamos una app vacia en Visual studio code
+```bash
+mateapp
+```
 

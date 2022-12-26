@@ -13,6 +13,9 @@ En este post vamos a ver como crear una plantilla basica para nuestros proyectos
 ## 1. Crear un proyecto y en la carpeta lib crear los siguientes archivos:
 
 lib/main.dart
+```
+mateapp
+```
 
 ```dart
 import 'package:flutter/material.dart';
