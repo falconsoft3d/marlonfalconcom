@@ -62,3 +62,18 @@ flutter doctor
 mateapp
 ```
 
+## 10. Generamos una Widget vacio en Visual studio code
+```bash
+stless
+```
+
+## 11. Generamos una Widget vacio en Visual studio code
+```bash
+stful
+```
+
+## 12. Generamos una Widget vaciao en Visual studio code
+```bash
+stanim
+```
+
