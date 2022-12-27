@@ -12,7 +12,7 @@ import Image from 'next/image'
 Odoo 16 ERP es una plataforma de software de código abierto que ofrece una amplia gama de soluciones empresariales, desde la gestión contable y la gestión de relaciones con clientes hasta la contabilidad y la gestión de inventario. Si su empresa está considerando implementar Odoo, es importante contar con un profesor en la plataforma para garantizar una implementación y uso eficientes.
 
 <Image
-  src="/images/marlon-falcon-odoo-erp.png"
+  src="/images/profesor-marlon-falcon-odoo-erp.png"
   alt="odoo-profesor"
   width={1280}
   height={720}
