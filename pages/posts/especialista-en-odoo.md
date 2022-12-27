@@ -28,8 +28,41 @@ Además, los especialistas en Odoo pueden brindar capacitación y soporte a su e
 
 En resumen, los especialistas en Odoo pueden ser una valiosa adición a su equipo empresarial al brindar asesoramiento y soporte en todas las etapas de la implementación y uso de la plataforma. Su conocimiento y experiencia pueden ayudar a su empresa a aprovechar al máximo todas las características y beneficios de Odoo y a adaptar la plataforma a las necesidades específicas de su negocio.
 
-Si gustas te dejo mis datos de contacto por si quieres contactarme:
+Si gustas te dejo mis datos de contacto por si quieres contactarme: [https://marlonfalcon.com/contacto](https://marlonfalcon.com/contacto)
 
+# Necesito un epecialista en Odoo ERP para mi empresa
+
+Depende, si tu empresa es pequeña y no tienes un presupuesto muy grande alomejor tu equipo puede implementarlo , pero si tu empresa es mediana o grande, te recomiendo que contrates un desarrollador a una empresa de desarrollo de software, ya que ellos tienen un equipo de trabajo y pueden brindarte un mejor servicio. 
+
+# ¿Cuánto me Cuesta la hora de un especialista en Odoo?
+
+Por mi experiencia en Odoo y sacando información de la web, el precio de un especialista en Odoo se encuentra entre  **50€ - 100€** la hora, pero esto puede variar dependiendo de la empresa que contrates.
+
+# ¿Cómo puedo saber cuantas horas necesito de un especialista en Odoo?
+Por mi experiencias proyectos normales llevan 200 horas = 1 mes de trabajo, pero esto puede variar dependiendo de la complejidad del proyecto. Pero igual he hecho proyectos de 1 semana y otros de 2 Años.
+
+1. Create um documento con las tareas que necesitas que realice el especialista. Asi lo aduntas y no te olvidas de nada.
+2. Enviale el documento al especialista y que te de un presupuesto.
+3. Aceptalo o no.
+
+# ¿Hay especialistas en Odoo en España?
+Si hay, pero no son muchos, yo soy de España y me dedico a Odoo desde hace 5 años.
+
+# Especialidades en Odoo.
+ Odoo es muy amplio, puedes encontrar especialistas en Odoo en diferentes áreas, como por ejemplo:
+1. Implementación de Odoo para la construcción.
+2. Implementación de Odoo para la industria.
+3. Implementación de Odoo para la logística.
+4. Implementación de Odoo para la salud.
+5. Implementación de Odoo para la educación.
+6. Implementación de Odoo para la administración pública.
+7. Implementación de Odoo para la banca.
+8. Implementación de Odoo para la venta al por menor.
+9. Implementación de Odoo para la venta al por mayor.
+10. Integraciones.
+11. Diseño WEB.
+
+# Contactar un especialista en Odoo
 - Nombre: Marlon Falcón Hernández
 - WhatsApp [+34662470645](https://web.whatsapp.com/send?phone=34662470645&text=)
 - GitHub [@falconsoft3d](https://github.com/falconsoft3d)
