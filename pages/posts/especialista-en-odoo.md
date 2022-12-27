@@ -35,7 +35,6 @@ Si gustas te dejo mis datos de contacto por si quieres contactarme: [https://mar
 Depende, si tu empresa es pequeña y no tienes un presupuesto muy grande alomejor tu equipo puede implementarlo , pero si tu empresa es mediana o grande, te recomiendo que contrates un desarrollador o a una empresa de desarrollo de software, ya que ellos tienen un equipo de trabajo y pueden brindarte un mejor servicio.
 
 # ¿Cuánto me Cuesta la hora de un especialista en Odoo?
-
 Por mi experiencia en Odoo y sacando información de la web, el precio de un especialista en Odoo se encuentra entre  **50€ - 100€** la hora, pero esto puede variar dependiendo de la empresa que contrates.
 
 # ¿Cómo puedo saber cuantas horas necesito de un especialista en Odoo?
@@ -64,6 +63,15 @@ Si hay, pero no son muchos, yo soy de España y me dedico a Odoo desde hace 5 a�
 9. Implementación de Odoo para la venta al por mayor.
 10. Integraciones.
 11. Diseño WEB.
+
+# ¿Qué costes tengo cuando implemento un erp como odoo?
+Estos son los mínimos costes que tienes que tener en cuenta cuando implementas un ERP como Odoo:
+1. Coste de la licencia de Odoo.
+2. Coste de la implementación.
+3. Coste de la formación.
+4. Costes de servidores. (Si no tienes un servidor propio)
+5. Costes de mantenimiento.
+9. Costes de DNS y Hosting.
 
 # Contactar un especialista en Odoo
 - Nombre: Marlon Falcón Hernández
