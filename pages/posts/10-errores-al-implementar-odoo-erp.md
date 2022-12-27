@@ -45,4 +45,15 @@ Contratar a alguien que no es experto en Odoo ERP, puede ser un problema. Por lo
 Trata de llevar un control del código fuente de Odoo ERP. Por lo tanto, es importante que trabajes con un control de versiones como lo es Git.
 
 
+Si las cosas no salieron bien, si gustas te dejo mis datos de contacto por si quieres contactarme:
+
+- Nombre: Marlon Falcón Hernández
+- WhatsApp [+34662470645](https://web.whatsapp.com/send?phone=34662470645&text=)
+- GitHub [@falconsoft3d](https://github.com/falconsoft3d)
+- Youtube [@marlonfalconhdez](https://www.youtube.com/@marlonfalconhdez)
+- Telegram [@falconsoft]
+- Phone +34 (662) 47 0645
+- Email mfalconsoft@gmail.com
+
+
 
