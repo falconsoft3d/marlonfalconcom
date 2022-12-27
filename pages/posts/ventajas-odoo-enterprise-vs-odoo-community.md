@@ -8,7 +8,7 @@ author: Marlon Falcon Hernandez
 
 # Ventajas de Odoo Enterprise vs Odoo Community
 
-Odoo ERP es un sistema de gestión empresarial que ofrece dos versiones: Odoo Community y Odoo Enterprise. La versión Community es gratuita y de código abierto, mientras que la versión Enterprise tiene un costo y es de código cerrado. A continuación, se presentan las principales diferencias entre las dos versiones:
+[Odoo ERP](/posts/odoo-erp) es un sistema de gestión empresarial que ofrece dos versiones: Odoo Community y Odoo Enterprise. La versión Community es gratuita y de código abierto, mientras que la versión Enterprise tiene un costo y es de código cerrado. A continuación, se presentan las principales diferencias entre las dos versiones:
 
 1. Soporte técnico: Odoo Enterprise cuenta con soporte técnico y actualizaciones regularmente disponibles para los usuarios de la versión Enterprise. Esto puede ser útil si necesita ayuda con problemas técnicos o si desea aprovechar las últimas características y mejoras de Odoo.
 
