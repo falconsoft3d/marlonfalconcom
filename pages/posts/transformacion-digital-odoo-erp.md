@@ -1,8 +1,8 @@
 ---
 title: Transformación digital Odoo ERP
-date: 2022/12/19
+date: 2022/12/27
 description: Transformación digital Odoo ERP
-tag: odoo
+tag: odoo, erp
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
