@@ -2,7 +2,7 @@
 title: Profesor Odoo ERP 16
 date: 2022/12/27
 description: Profesor Odoo ERP 16
-tag: python, 20pasos
+tag: odoo, erp
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'

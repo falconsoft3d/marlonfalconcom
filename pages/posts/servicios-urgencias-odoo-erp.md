@@ -2,7 +2,7 @@
 title: Servicios de urgencias Odoo ERP
 date: 2022/12/27
 description: Servicios de urgencias Odoo ERP
-tag: python, 20pasos
+tag: odoo, erp
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
