@@ -47,6 +47,9 @@ Por mi experiencias proyectos normales llevan 160 horas = 1 mes de trabajo, pero
 5. Crea un sistema de ticket para que controles la entrega de las tareas. En mi caso utilizo TicketPro que es una app que desarrolle para Odoo.
 6. Te recomiendo que pagues por histos y no por adelantado, ya que si no te gusta el trabajo puedes cancelar el contrato y cambiar de especialista.
 
+# ¿Quién me puede ayudar a preparar el documento de tareas?
+Normalmente esto lo hace la empresa que contrata el especialista, pero si no tienes tiempo o no sabes como hacerlo, te recomiendo que contrates a un consultor de Odoo, ya que ellos saben como hacerlo y te pueden ayudar a preparar el documento de tareas. Yo recomiendo que ese documento lo hagan juntos, ya que el consultor tiene experiencia y te puede ayudar a mejorar el documento. Normalmente te cobraran 20 - 50€ por hora.
+
 # ¿Hay especialistas en Odoo en España?
 Si hay, pero no son muchos, yo soy de España y me dedico a Odoo desde hace 5 años.
 
