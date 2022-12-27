@@ -20,7 +20,7 @@ Odoo es una plataforma de software de código abierto que ofrece una amplia gama
   className="next-image"
 />
 
-Los especialistas en Odoo tienen conocimientos profundos de la plataforma y pueden ayudar a su empresa a aprovechar al máximo todas las características y beneficios que ofrece. Además, pueden brindar asesoramiento y soporte en todas las etapas del proceso de implementación, desde la planificación hasta la puesta en marcha y el mantenimiento.
+Los especialistas en [Odoo](/odoo-espana)  tienen conocimientos profundos de la plataforma y pueden ayudar a su empresa a aprovechar al máximo todas las características y beneficios que ofrece. Además, pueden brindar asesoramiento y soporte en todas las etapas del proceso de implementación, desde la planificación hasta la puesta en marcha y el mantenimiento.
 
 Los especialistas en Odoo también pueden ayudar a su empresa a personalizar la plataforma para adaptarla a las necesidades específicas de su negocio. Esto puede incluir la integración con otras herramientas y sistemas empresariales, la creación de informes y dashboards personalizados y la automatización de procesos de negocio.
 
