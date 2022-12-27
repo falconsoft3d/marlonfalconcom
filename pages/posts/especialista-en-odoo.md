@@ -32,18 +32,21 @@ Si gustas te dejo mis datos de contacto por si quieres contactarme: [https://mar
 
 # Necesito un epecialista en Odoo ERP para mi empresa
 
-Depende, si tu empresa es pequeña y no tienes un presupuesto muy grande alomejor tu equipo puede implementarlo , pero si tu empresa es mediana o grande, te recomiendo que contrates un desarrollador a una empresa de desarrollo de software, ya que ellos tienen un equipo de trabajo y pueden brindarte un mejor servicio. 
+Depende, si tu empresa es pequeña y no tienes un presupuesto muy grande alomejor tu equipo puede implementarlo , pero si tu empresa es mediana o grande, te recomiendo que contrates un desarrollador o a una empresa de desarrollo de software, ya que ellos tienen un equipo de trabajo y pueden brindarte un mejor servicio.
 
 # ¿Cuánto me Cuesta la hora de un especialista en Odoo?
 
 Por mi experiencia en Odoo y sacando información de la web, el precio de un especialista en Odoo se encuentra entre  **50€ - 100€** la hora, pero esto puede variar dependiendo de la empresa que contrates.
 
 # ¿Cómo puedo saber cuantas horas necesito de un especialista en Odoo?
-Por mi experiencias proyectos normales llevan 200 horas = 1 mes de trabajo, pero esto puede variar dependiendo de la complejidad del proyecto. Pero igual he hecho proyectos de 1 semana y otros de 2 Años.
+Por mi experiencias proyectos normales llevan 160 horas = 1 mes de trabajo, pero esto puede variar dependiendo de la complejidad del proyecto. Pero igual he hecho proyectos de 1 semana y otros de 2 Años. No aceptes un proyecto sin saber cuantas horas necesitas aunque te den precios cerrados.
 
 1. Create um documento con las tareas que necesitas que realice el especialista. Asi lo aduntas y no te olvidas de nada.
 2. Enviale el documento al especialista y que te de un presupuesto.
 3. Aceptalo o no.
+4. Cundo lo aceptes crea un contrato de trabajo.
+5. Crea un sistema de ticket para que controles la entrega de las tareas. En mi caso utilizo TicketPro que es una app que desarrolle para Odoo.
+6. Te recomiendo que pagues por histos y no por adelantado, ya que si no te gusta el trabajo puedes cancelar el contrato y cambiar de especialista.
 
 # ¿Hay especialistas en Odoo en España?
 Si hay, pero no son muchos, yo soy de España y me dedico a Odoo desde hace 5 años.
