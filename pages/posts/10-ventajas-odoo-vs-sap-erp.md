@@ -1,12 +1,12 @@
 ---
-title: 10 ventajas de Odoo sobre SAP ERP.
+title: 10 ventajas de Odoo vs SAP ERP.
 date: 2022/12/27
-description: 10 ventajas de Odoo sobre SAP ERP.
+description: 10 ventajas de Odoo vs SAP ERP.
 tag: odoo, sap
 author: Marlon Falcon Hernandez
 ---
 
-# 10 ventajas de Odoo sobre SAP ERP.
+# 10 ventajas de Odoo vs SAP ERP.
 
 Aqui te dejo 10 ventajas de Odoo ERP sobre SAP ERP.
 

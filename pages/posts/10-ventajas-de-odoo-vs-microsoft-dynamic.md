@@ -1,12 +1,12 @@
 ---
-title: 10 ventajas de Odoo sobre Microsoft Dynamic.
+title: 10 ventajas de Odoo vs Microsoft Dynamic.
 date: 2022/12/27
-description: 10 ventajas de Odoo sobre Microsoft Dynamic.
+description: 10 ventajas de Odoo vs Microsoft Dynamic.
 tag: odoo, sap
 author: Marlon Falcon Hernandez
 ---
 
-# 10 ventajas de Odoo sobre Microsoft Dynamic.
+# 10 ventajas de Odoo vs Microsoft Dynamic.
 
 Aqui te dejo 10 ventajas de Odoo ERP sobre Microsoft Dynamic.
 
