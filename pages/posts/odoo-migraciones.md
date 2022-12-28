@@ -91,3 +91,14 @@ Pude ser entre 1 y 3 meses dependiendo del alcance de la migración.
 2. Si tu proyecto está mal implementado y quieres mejorar los procesos o rediseñar correctamente el proyecto.
 
 3. O cada 5 años.
+
+
+# Contactar un consultor de Odoo ERP para migrar tu proyecto.
+- Nombre: Marlon Falcón Hernández
+- WhatsApp [+34662470645](https://web.whatsapp.com/send?phone=34662470645&text=)
+- GitHub [@falconsoft3d](https://github.com/falconsoft3d)
+- Youtube [@marlonfalconhdez](https://www.youtube.com/@marlonfalconhdez)
+- Telegram [@falconsoft]
+- Phone +34 (662) 47 0645
+- Email mfalconsoft@gmail.com
+
