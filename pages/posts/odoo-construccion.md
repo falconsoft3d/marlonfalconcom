@@ -27,7 +27,7 @@ En los proyectos de construccion veremos el listado de Obras y el resumen de cos
 
 
 ## Vista de Presupuestos de Obra.
-La vista de presupuesto de obra la diseñamos tal cual se utilza en la construcción para que sea fácil de usar y que los usuarios se sientan cómodos. Esta compuesta en su parte derecha de un arbol de conceptos y en su parte izquierda de un formulario de presupuesto. En la parte inferior tenemos las mediciones de la obra.
+La vista de presupuesto de obra la diseñamos tal cual se utiliza en la construcción para que sea fácil de usar y que los usuarios se sientan cómodos. Esta compuesta en su parte derecha de un arbol de conceptos y en su parte izquierda de un formulario de presupuesto. En la parte inferior tenemos las mediciones de la obra.
 <Image
   src="/images/bim20/odoo-bim20.png"
   alt="odoo-erp"
