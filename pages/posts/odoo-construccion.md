@@ -27,7 +27,7 @@ En los proyectos de construccion veremos el listado de Obras y el resumen de cos
 
 
 ## Vista de Presupuestos de Obra.
-La vista de presupuesto de obra la diseñamos tal cual se utiliza en la construcción para que sea fácil de usar y que los usuarios se sientan cómodos. Esta compuesta en su parte derecha de un arbol de conceptos y en su parte izquierda de un formulario de presupuesto. En la parte inferior tenemos las mediciones de la obra.
+La vista de presupuesto de obra la diseñamos tal cual se utiliza en la construcción para que sea fácil de usar y que los usuarios se sientan cómodos. Esta compuesta en su parte derecha de un árbol de conceptos y en su parte izquierda de un formulario de presupuesto. En la parte inferior tenemos las mediciones de la obra.
 <Image
   src="/images/bim20/odoo-bim20.png"
   alt="odoo-erp"
@@ -39,7 +39,7 @@ La vista de presupuesto de obra la diseñamos tal cual se utiliza en la construc
 
 
 ## Vista de Presupuestos de Obra.
-BIM 2.0 permite hacer certificaciones de obra, es decir, certificar el avance de obra y el coste de la misma. En la vista de certificaciones de obra podemos ver el listado de certificaciones de obra y el resumen de costes de cada una de ellas, así como el estado de cada una de ellas. Los estados son configurables.
+BIM 2.0 permite hacer certificaciones de obra, es decir, certificar el avance de obra y el coste del proyecto. En la vista de certificaciones de obra podemos ver el listado de certificaciones de obra y el resumen de costes de cada una de ellas, así como el estado de cada una de ellas. Los estados son configurables.
 <Image
   src="/images/bim20/odoo-bim20-2.png"
   alt="odoo-erp"
