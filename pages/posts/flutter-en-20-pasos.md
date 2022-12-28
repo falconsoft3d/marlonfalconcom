@@ -77,3 +77,8 @@ stful
 stanim
 ```
 
+## 13. Descargar los paquestes de un proyecto existente.
+```bash
+flutter packages get
+```
+
