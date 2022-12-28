@@ -1,13 +1,13 @@
 ---
-title: Vscode mostrar guias padres para Flutter
+title: ▷ Vscode mostrar guias padres para Flutter
 date: 2022/12/29
-description: Vscode mostrar guias padres para Flutter
+description: ▷ Vscode mostrar guias padres para Flutter
 tag: flutter, vscode
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# Vscode mostrar guias padres para Flutter
+# ▷ Vscode mostrar guias padres para Flutter
 
 En este post te voy a mostrar como mostrar guias padres en Vscode para Flutter.
 1. Vamos al menu Configuración.
