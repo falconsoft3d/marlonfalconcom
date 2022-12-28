@@ -1,13 +1,13 @@
 ---
-title: Metodología para la implementación de odoo para un proyecto exitoso
+title: ▷ Metodología para la implementación de odoo para un proyecto exitoso
 date: 2022/12/23
-description: Metodología para la implementación de odoo para un proyecto exitoso
+description: ▷ Metodología para la implementación de odoo para un proyecto exitoso
 tag: odoo, erp, metodologia
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# Metodología para la implementación de odoo para un proyecto exitoso
+# ▷ Metodología para la implementación de odoo para un proyecto exitoso
 Implementar un proyecto de [odoo erp](/posts/odoo-erp) es un proceso que requiere de una metodología para que el proyecto sea exitoso, en este articulo te voy a mostrar una metodología que yo he utilizado para implementar proyectos de odoo.
 
 <Image

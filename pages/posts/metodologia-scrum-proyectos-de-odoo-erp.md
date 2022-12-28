@@ -1,13 +1,13 @@
 ---
-title: Metodología Scrum para la implementación de odoo erp
+title: ▷ Metodología Scrum para la implementación de odoo erp
 date: 2022/12/27
-description: Metodología Scrum para la implementación de odoo erp
+description: ▷ Metodología Scrum para la implementación de odoo erp
 tag: odoo, erp, metodologia
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# Metodología Scrum para la implementación de odoo erp
+# ▷ Metodología Scrum para la implementación de odoo erp
 La metodología Scrum es un marco de trabajo ágil que se utiliza en la gestión de proyectos de software, y se ha demostrado ser muy efectiva en la implementación de sistemas de planificación de recursos empresariales (ERP, por sus siglas en inglés).
 
 Scrum se basa en un enfoque iterativo e incremental para el desarrollo de proyectos, en el que se entregan pequeñas partes funcionales del producto final en intervalos regulares de tiempo llamados "Sprints". Esto permite a los equipos de desarrollo ajustar su trabajo y priorizar tareas en función de los cambios en los requisitos del proyecto y los objetivos del negocio.
