@@ -1,12 +1,12 @@
 ---
-title: ▷ D10 ventajas de Flutter vs React Native
-date: 2022/12/27
-description: ▷ D10 ventajas de Flutter vs React Native
+title: ▷ 10 ventajas de Flutter vs React Native
+date: 2022/12/29
+description: ▷ 10 ventajas de Flutter vs React Native
 tag: python
 author: Marlon Falcon Hernandez
 ---
 
-# ▷ D10 ventajas de Flutter vs React Native
+# ▷ 10 ventajas de Flutter vs React Native
 
 1. Flutter tiene un rendimiento más rápido que React Native debido a su compilación AOT (Ahead-of-Time) y al uso de widgets nativos.
 2. Flutter tiene una documentación y una comunidad más grandes y sólidas.
