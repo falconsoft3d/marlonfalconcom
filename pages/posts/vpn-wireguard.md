@@ -86,6 +86,12 @@ docker-compose up -d
 docker-compose logs -f
 ```
 
+# Ver el log del servidor
+```
+docker logs -f wireguard
+```
+
+
 # Instalar un VPN con Wireguard en el cliente
 Esto lo sacamos del servidor usando el log
 ```
