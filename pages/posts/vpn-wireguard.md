@@ -7,10 +7,10 @@ author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# Instalar un VPN con Wireguard
+## Instalar un VPN con Wireguard
 Wireguard es un VPN que permite crear una red privada virtual. Es un protocolo de código abierto y de alto rendimiento. Es muy fácil de configurar y usar. En este tutorial veremos como instalar un VPN con Wireguard en Ubuntu 20.04.
 
-# Instalar un VPN con Wireguard en el servidor
+## Instalar un VPN con Wireguard en el servidor
 ```
 apt install docker.io docker-compose -y
 ```
@@ -86,13 +86,13 @@ docker-compose up -d
 docker-compose logs -f
 ```
 
-# Ver el log del servidor
+## Ver el log del servidor
 ```
 docker logs -f wireguard
 ```
 
 
-# Instalar un VPN con Wireguard en el cliente
+## Instalar un VPN con Wireguard en el cliente
 Esto lo sacamos del servidor usando el log
 ```
 [Interface]
@@ -107,4 +107,15 @@ PresharedKey = yLc3JP4PP4Tz01BDGsf22gBAw1+k42lqBpeKWLbiJo=
 AllowedIPs = 0.0.0.0/0, ::/0
 Endpoint = 81.198.198.51:51820
 ```
+
+## Configuras el cliente
+<Image
+  src="/images/posts/wireguard.png"
+  alt="owl-odoo"
+  width={876}
+  height={616}
+  priority
+  className="next-image"
+/>
+
 
