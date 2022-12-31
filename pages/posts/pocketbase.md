@@ -8,7 +8,7 @@ author: Marlon Falcon Hernandez
 import Image from 'next/image'
 
 # ▷ Instalación de PocketBase
-PocketBase es una aplicación de código abierto para la gestión de bases de datos. Es una aplicación web que se ejecuta en el navegador y se puede usar en cualquier dispositivo con acceso a Internet. PocketBase es una aplicación de código abierto para la gestión de bases de datos. Es una aplicación web que se ejecuta en el navegador y se puede usar en cualquier dispositivo con acceso a Internet.
+PocketBase es una aplicación de código abierto para la gestión de bases de datos escrita en Go. Es una aplicación web que se ejecuta en el navegador y se puede usar en cualquier dispositivo con acceso a Internet. PocketBase es una aplicación de código abierto para la gestión de bases de datos. Es una aplicación web que se ejecuta en el navegador y se puede usar en cualquier dispositivo con acceso a Internet.
 
 # Creamos el fichero docker-compose.yml
 ```yaml
