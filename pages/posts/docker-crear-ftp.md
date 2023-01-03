@@ -7,6 +7,7 @@ author: Marlon Falcon Hernandez
 ---
 
 # Docker crear ftp
+FTP es un protocolo de transferencia de archivos que permite la transferencia de archivos entre dos computadoras conectadas a una red. El protocolo FTP se utiliza para transferir archivos entre dos computadoras conectadas a Internet. El protocolo FTP se utiliza para transferir archivos entre dos computadoras conectadas a Internet. El protocolo FTP se utiliza para transferir archivos entre dos computadoras conectadas a Internet.
 
 Creamos el fichero docker-compose.yml
 
