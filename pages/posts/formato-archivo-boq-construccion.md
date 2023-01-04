@@ -8,7 +8,7 @@ author: Marlon Falcon Hernandez
 import Image from 'next/image'
 
 # ▷ Formato archivo BOQ en el módulo de construcción.
-Un archivo BOQ, también conocido como lista de precios unitarios o lista de cantidades, es un documento esencial en la industria de la construcción. Se utiliza para describir y cuantificar los materiales, trabajos y servicios necesarios para completar un proyecto de construcción.
+Un archivo BOQ, por sus siglas en Ingles (**Bill Of Quantity**),también conocido como lista de precios unitarios o lista de cantidades, es un documento esencial en la industria de la construcción. Se utiliza para describir y cuantificar los materiales, trabajos y servicios necesarios para completar un proyecto de construcción.
 
 Un archivo BOQ incluye una lista detallada de todos los elementos necesarios para el proyecto, junto con sus cantidades, precios unitarios y totales. Esto incluye materiales, mano de obra, equipo y cualquier otro costo asociado con el proyecto. El archivo BOQ también puede incluir especificaciones técnicas para cada elemento, así como plazos de entrega y condiciones de pago.
 
