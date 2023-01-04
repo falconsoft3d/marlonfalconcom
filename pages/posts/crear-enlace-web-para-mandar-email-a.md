@@ -20,4 +20,3 @@ Las etiquetas a permiten crear enlaces web para mandar email desde la web. Para 
 1. mailto: Especifica el email del destinatario.
 2. subject: Especifica el asunto del email.
 3. body: Especifica el cuerpo del email.
-
