@@ -16,7 +16,7 @@ BIM 2.0 es una **vertical de construcción para Odoo ERP**, en este post vamos a
 En Odoo BIM tenemos un Importador de BOQ que permite crearte plantillas reutilizables para importar archivos en Odoo ERP BIM Construcción. Para lo cual es necario tener APUs (**Analisis de precios unitarios**) Cargadas. Ya que el importador utiliza el código BIM del APU para relacionar los conceptos del BOQ con los APUs.
 
 
-1. Creamos la plantilla de configuración del archivo BOQ. Para decirle a Odoo cual es la columna de código y cual es la de cantidad.
+1. Creamos la plantilla de configuración del archivo BOQ. Para decirle a Odoo cual es la columna de código y cual es la de cantidad. Esto enlazara con las APUs y usando una plantilla de una obra llenará los valores.
 
 <Image
   src="/images/posts/boq-1.png"
