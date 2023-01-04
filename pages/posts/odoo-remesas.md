@@ -2,7 +2,7 @@
 title: ▷ Odoo erp remesas para España
 date: 2023/1/3
 description: ▷ Odoo erp remesas para España
-tag: odoo, erp, metodologia
+tag: odoo, erp, remesas
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
