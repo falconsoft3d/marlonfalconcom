@@ -8,10 +8,9 @@ author: Marlon Falcon Hernandez
 import Image from 'next/image'
 
 # ▷ Importar BOQ en Odoo ERP BIM Construcción
-Un archivo BOQ, por sus siglas en Ingles (**Bill Of Quantity**),también conocido como lista de codigos y cantidades, es un documento esencial en la industria de la construcción. Se utiliza para describir y cuantificar los materiales, trabajos y servicios necesarios para completar un proyecto de construcción.
+Un archivo BOQ, por sus siglas en Ingles (**Bill Of Quantity**),también conocido como lista de códigos y cantidades, es un archivo esencial en la industria de la construcción. Se utiliza para codificar y cuantificar los materiales en un proyecto de construcción.
 
 Los archivos BOQ se utilizan en aplicaciones como:
-
 1. AutoCAD
 2. Revit
 3. ArchiCAD
@@ -38,7 +37,7 @@ En Odoo BIM tenemos un Importador de BOQ que permite crearte plantillas reutiliz
   className="next-image"
 />
 
-2. Cargamos el fichero segun la plantilla y seleccionamos crear presupuesto.
+2. Cargamos el fichero según la plantilla y seleccionamos crear presupuesto desde el menu de integraciones de BIM 2.0.
 
 <Image
   src="/images/posts/boq-2.png"
@@ -49,7 +48,7 @@ En Odoo BIM tenemos un Importador de BOQ que permite crearte plantillas reutiliz
   className="next-image"
 />
 
-3. Cargamos el fichero segun la plantilla y seleccionamos crear presupuesto.
+3. Cargamos el fichero según la plantilla y seleccionamos crear presupuesto. Ten en cuenta que el fichero debe estar en formato **.xlsx** o **csv**.
 
 <Image
   src="/images/posts/boq-3.png"
