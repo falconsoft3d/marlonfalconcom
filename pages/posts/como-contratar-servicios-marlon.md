@@ -35,13 +35,14 @@ import Image from 'next/image'
 
 
 4. Una ves que tengamos la cita, tendremos que hacer un levantamiento de requerimientos, para poder definir el alcance del proyecto y poder hacer un presupuesto. Para esto yo utilizo TicketPro donde anotamos cada uno de tus requerimiento. por ejemplo:
-- Hacer reporte de ventas en pdf con 10 columnas. Tiempo estimado 25 Horas.
-- Hacer módulo para gestionar los creditos de los clientes. Tiempo estimado 20 Horas.
-- Hacer módulo para gestionar los pagos de los clientes. Tiempo estimado 20 Horas.
-- Migrar las 3000 fatcuras de mi sistema actual a Odoo. Tiempo estimado 80 Horas.
+- Instalar odoo en un servidor de AWS. Tiempo estimado **10 Horas**.
+- Hacer reporte de ventas en pdf con 10 columnas. Tiempo estimado **25 Horas**.
+- Hacer módulo para gestionar los creditos de los clientes. Tiempo estimado **20 Horas**.
+- Hacer módulo para gestionar los pagos de los clientes. Tiempo estimado **20 Horas**.
+- Migrar las 3000 fatcuras de mi sistema actual a Odoo. Tiempo estimado **80 Horas**.
 y asi sucesivamente.
 
-5. Con el listado de requerimientos, yo puedo hacer un presupuesto y enviártelo para que lo revises y me digas si estas de acuerdo con el presupuesto. En el punto 1 te dejo un enlace a mi tarifa de servicios, para que tengas una idea de los precios de mis servicios.
+5. Con el listado de requerimientos, yo puedo hacer un presupuesto y enviártelo para que lo revises y me digas si estas de acuerdo con el presupuesto. En el punto 1 te dejo un enlace a mi tarifa de servicios, para que tengas una idea de los precios de mis servicios. *No doy precios cerrados si no tengo claro el alcance del proyecto*.
 
 6. Para iniciar el proyecto lo más seguro que te pedire el 50% del presupuesto, para poder empezar a trabajar. Una ves que yo termine el proyecto, te pedire el 50% restante para poder entregarte el proyecto.
 
