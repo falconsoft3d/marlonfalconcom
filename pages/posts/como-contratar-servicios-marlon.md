@@ -48,7 +48,7 @@ y asi sucesivamente.
 
 7. Para entregar avance podemos hacer reuniones semanales con el resultado del trabajo realizado, para que puedas ver el avance del proyecto.
 
-8. Una vez terminado el desarrollo normalmente te ofrezco un mes de soporte gratuito, para que puedas revisar que todo este funcionando correctamente. Si necesitas mas soporte, te cobraré segun la velocidad de respuesta que necesites. Por ejemplo: 72h, 48h, 24h. En el documento de tarifa de servicios te dejo los precios de los servicios de soporte.
+8. Una vez terminado el desarrollo normalmente te ofrezco un mes de soporte gratuito, para que puedas revisar que todo este funcionando correctamente. Si necesitas mas soporte, te cobraré segun la velocidad de respuesta que necesites. Por ejemplo: **72h, 48h, 24h**. En el documento de tarifa de servicios te dejo los precios de los servicios de soporte.
 
 9. Mientras estas de soporte puedes solicitar desarrollos adicionales, para que yo pueda hacerlos y te cobrare según mi tarifa de servicios. Para estos desarrollos siempre te pediré que crees un ticket para que quede la trasavilidad de lo que se esta solicitando.
 
