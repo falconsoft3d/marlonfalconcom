@@ -21,8 +21,8 @@ Según la norma ISO 19650:2012, la metodología BIM es el uso de una representac
 8. Mejor gestión durante la vida del proyecto.
 
 ## Dimensiones de la metodología BIM
-3D. Representación de los elementos del proyecto en 3 dimensiones.
-4D. Representación de los elementos del proyecto en 3 dimensiones y su secuencia de construcción.
-5D. Representación de los elementos del proyecto en 3 dimensiones, su secuencia de construcción y sus costos.
-6D. Representación de los elementos del proyecto en 3 dimensiones, su secuencia de construcción, sus costos y su impacto ambiental.
-7D. Representación de los elementos del proyecto en 3 dimensiones, su secuencia de construcción, sus costos, su impacto ambiental y su mantenimiento.
+* 3D Representación de los elementos del proyecto en 3 dimensiones.
+* 4D. Representación de los elementos del proyecto en 3 dimensiones y su secuencia de construcción.
+* 5D. Representación de los elementos del proyecto en 3 dimensiones, su secuencia de construcción y sus costos.
+* 6D. Representación de los elementos del proyecto en 3 dimensiones, su secuencia de construcción, sus costos y su impacto ambiental.
+* 7D. Representación de los elementos del proyecto en 3 dimensiones, su secuencia de construcción, sus costos, su impacto ambiental y su mantenimiento.
