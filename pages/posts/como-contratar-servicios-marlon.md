@@ -26,7 +26,7 @@ import Image from 'next/image'
 />
 
 
-2. Lo primero que te recomiendo es que revises mi tarifa de servicios, para que tengas una idea de los precios de mis servicios. Aqui te dejo un enlace a mi tarifa de servicios en EUR: [Forma de trabajo y tarifa de servicios](/doc/forma_de_trabajo_mfh.pdf)
+2. Lo primero que te recomiendo es que revises mi tarifa de servicios, para que tengas una idea de los precios de mis servicios. Aqui te dejo un enlace a mi tarifa de servicios en [EUR](https://es.wikipedia.org/wiki/Euro), por favor leer detalladamente: [Forma de trabajo y tarifa de servicios](/doc/forma_de_trabajo_mfh.pdf)
 
 3. Si estas de acuerdo con mis tarifas, puedes contactarme por medio de mi correo electrónico o por Whatsapp, para que podamos coordinar una cita y poder hablar de tus necesidades.
 
@@ -40,11 +40,11 @@ import Image from 'next/image'
 - Hacer módulo para gestionar los creditos de los clientes. Tiempo estimado **20 Horas**.
 - Hacer módulo para gestionar los pagos de los clientes. Tiempo estimado **20 Horas**.
 - Migrar las 3000 fatcuras de mi sistema actual a Odoo. Tiempo estimado **80 Horas**.
-y asi sucesivamente.
+- y asi sucesivamente. *Ten en cuenta que en odoo puedes hacer lo que seas capaz de pagar*.
 
 5. Con el listado de requerimientos, yo puedo hacer un presupuesto y enviártelo para que lo revises y me digas si estas de acuerdo con el presupuesto. En el punto 1 te dejo un enlace a mi tarifa de servicios, para que tengas una idea de los precios de mis servicios. *No doy precios cerrados si no tengo claro el alcance del proyecto*.
 
-6. Para iniciar el proyecto lo más seguro que te pedire el 50% del presupuesto, para poder empezar a trabajar. Una ves que yo termine el proyecto, te pedire el 50% restante para poder entregarte el proyecto.
+6. Para iniciar el proyecto lo más seguro que te pedire el **50%** del presupuesto, para poder empezar a trabajar. Una ves que yo termine el proyecto, te pedire el **50%** restante para poder entregarte el proyecto.
 
 7. Para entregar avance podemos hacer reuniones semanales con el resultado del trabajo realizado, para que puedas ver el avance del proyecto.
 
@@ -52,7 +52,7 @@ y asi sucesivamente.
 
 9. Mientras estas de soporte puedes solicitar desarrollos adicionales, para que yo pueda hacerlos y te cobrare según mi tarifa de servicios. Para estos desarrollos siempre te pediré que crees un ticket para que quede la trasavilidad de lo que se esta solicitando.
 
-10. Si odoo cambia de versión, lo más seguro si es que estás ineteresado en actualizar, es que tendras que solicitar una migración de los desarrollos realizados, ten en cuenta que se cobra por horas los trabajos de migración tal como explico en mi forma de trabajo.
+10. Si **Odoo ERP** cambia de versión, lo más seguro que si es que estás ineteresado en actualizar, es que tendras que solicitar una migración de los desarrollos realizados, ten en cuenta que se cobra por horas los trabajos de migración tal como explico en mi forma de trabajo.
 
 ## Contacto
 ```
