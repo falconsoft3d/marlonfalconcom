@@ -38,6 +38,7 @@ import Image from 'next/image'
 - Hacer reporte de ventas en pdf con 10 columnas. Tiempo estimado 25 Horas.
 - Hacer módulo para gestionar los creditos de los clientes. Tiempo estimado 20 Horas.
 - Hacer módulo para gestionar los pagos de los clientes. Tiempo estimado 20 Horas.
+- Migrar las 3000 fatcuras de mi sistema actual a Odoo. Tiempo estimado 80 Horas.
 y asi sucesivamente.
 
 5. Con el listado de requerimientos, yo puedo hacer un presupuesto y enviártelo para que lo revises y me digas si estas de acuerdo con el presupuesto. En el punto 1 te dejo un enlace a mi tarifa de servicios, para que tengas una idea de los precios de mis servicios.
@@ -50,7 +51,7 @@ y asi sucesivamente.
 
 9. Mientras estas de soporte puedes solicitar desarrollos adicionales, para que yo pueda hacerlos y te cobrare según mi tarifa de servicios. Para estos desarrollos siempre te pediré que crees un ticket para que quede la trasavilidad de lo que se esta solicitando.
 
-10. Si odoo cambia de versión, lo más seguro si es que estas ineteresado en cambiarte, es que tendras que solicitar una migración de los desarrollos realizados, ten en cuenta que se cobra por horas los trabajos de migración tal como explico en mi forma de trabajo.
+10. Si odoo cambia de versión, lo más seguro si es que estás ineteresado en actualizar, es que tendras que solicitar una migración de los desarrollos realizados, ten en cuenta que se cobra por horas los trabajos de migración tal como explico en mi forma de trabajo.
 
 ## Contacto
 ```
