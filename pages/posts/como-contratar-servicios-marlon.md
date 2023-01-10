@@ -15,8 +15,9 @@ import Image from 'next/image'
 - Quieres implementar Odoo o una vertical que he desarrollado como BIM, SIS, Creditos, etc.
 - Quieres contratar mis servicios para desarrollar un proyecto en Odoo.
 
+
 <Image
-  src="/images/consultor-funcional-odoo.png"
+  src="/images/marlon_yellow2.png"
   alt="odoo-profesor"
   width={1280}
   height={720}
