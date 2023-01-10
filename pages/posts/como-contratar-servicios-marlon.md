@@ -50,6 +50,8 @@ y asi sucesivamente.
 
 9. Mientras estas de soporte puedes solicitar desarrollos adicionales, para que yo pueda hacerlos y te cobrare según mi tarifa de servicios. Para estos desarrollos siempre te pediré que crees un ticket para que quede la trasavilidad de lo que se esta solicitando.
 
+10. Si odoo cambia de versión, lo más seguro si es que estas ineteresado en cambiarte, es que tendras que solicitar una migración de los desarrollos realizados, ten en cuenta que se cobra por horas los trabajos de migración tal como explico en mi forma de trabajo.
+
 ## Contacto
 ```
 Nombre: Marlon Falcón Hernández
