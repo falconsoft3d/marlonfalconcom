@@ -26,7 +26,7 @@ import Image from 'next/image'
 />
 
 
-2. Lo primero que te recomiendo es que revises mi tarifa de servicios, para que tengas una idea de los precios de mis servicios. Aqui te dejo un enlace a mi tarifa de servicios en EUR: [Tarifa de servicios](/doc/forma_de_trabajo_mfh.pdf)
+2. Lo primero que te recomiendo es que revises mi tarifa de servicios, para que tengas una idea de los precios de mis servicios. Aqui te dejo un enlace a mi tarifa de servicios en EUR: [Forma de trabajo y tarifa de servicios](/doc/forma_de_trabajo_mfh.pdf)
 
 3. Si estas de acuerdo con mis tarifas, puedes contactarme por medio de mi correo electrónico o por Whatsapp, para que podamos coordinar una cita y poder hablar de tus necesidades.
 
