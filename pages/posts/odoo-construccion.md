@@ -159,8 +159,8 @@ Permite crear índices técnicos económicos para la obra asi simplificar la cre
 ## 23 Fórmula polinómicas.
 Crear fórmulas polinómicas para la creación de presupuestos.
 
-## 24. Comparaciones de Presupuesto.
-Podemos tener todos los presupuestos de la obra y compararlos entre ellos. Asi podemos ver que presupuesto es el más barato y el más caro. Tambien podemos ver que presupuesto es el que tiene más beneficios.
+## 24. Comparaciones de Presupuestos.
+Podemos tener todos los presupuestos de la obra y compararlos entre ellos. Asi podemos ver que presupuesto es el más barato y el más caro. Tambien podemos ver que presupuesto es el que tiene más beneficios y podemos detectar diferencias o cambios en ellos.
 
 ---
 
