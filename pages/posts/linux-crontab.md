@@ -7,7 +7,7 @@ author: Marlon Falcon Hernandez
 ---
 
 # Linux crontab tareas programadas
-El crontab es un servicio que permite ejecutar tareas programadas en Linux. El crontab se ejecuta en segundo plano y se ejecuta cada vez que el sistema operativo se inicia. El crontab se ejecuta cada minuto y se ejecuta cada vez que el sistema operativo se inicia.
+El crontab es un servicio que permite ejecutar tareas programadas en Linux. El crontab se ejecuta en segundo plano y se ejecuta cada vez que el sistema operativo se inicia. 
 
 # Editamos el cron
 ```  
