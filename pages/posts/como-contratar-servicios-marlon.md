@@ -17,7 +17,7 @@ Si me contactas seguro son por cuatro motivos:
 
 
 <Image
-  src="/images/marlon_yellow2.png"
+  src="/images/trabajando-marlon-falcon.png"
   alt="contratar-servicios-odoo"
   width={1280}
   height={720}
