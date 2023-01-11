@@ -1,12 +1,12 @@
 ---
-title: Odoo ERP Construcción
+title: ▷ Odoo ERP Construcción. BIM 2.0
 date: 2022/12/19
-description: Odoo ERP Construcción
+description: ▷ Odoo ERP Construcción. BIM 2.0
 tag: odoo,bim20,construccion
 author: Marlon Falcon Hernandez
 ---
 
-# Odoo ERP Construcción
+# ▷ ▷ Odoo ERP Construcción. BIM 2.0
 ---
 import Image from 'next/image'
 
