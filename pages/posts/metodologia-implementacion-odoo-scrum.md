@@ -1,5 +1,5 @@
 ---
-title: ▷ Importacia de la metodología Scrum para la implementación de odoo erp.
+title: ▷ Importancia de la metodología Scrum para la implementación de odoo erp.
 date: 2022/12/27
 description: ▷ Importacia de la metodología Scrum para la implementación de odoo erp.
 tag: odoo, erp, metodologia
@@ -7,7 +7,7 @@ author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# ▷ Importacia de la metodología Scrum para la implementación de odoo erp.
+# ▷ Importancia de la metodología Scrum para la implementación de odoo erp.
 La metodología Scrum es un enfoque ágil para la gestión de proyectos de software, que se basa en la entrega de trabajo en pequeñas iteraciones llamadas "sprints". Esta metodología se ha vuelto extremadamente popular en los últimos años debido a su flexibilidad y eficiencia en la gestión de proyectos complejos.
 
 <Image
