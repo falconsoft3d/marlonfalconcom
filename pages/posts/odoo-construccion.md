@@ -107,7 +107,7 @@ Múltiples reportes para controlar la obra y los presupuestos, la mayoría de lo
 - y otros reportes...
 
 ## 10. Importaciones o Integraciones.
-Importa BoQ , BC3, Excel, XML, etc.
+Importa BoQ , BC3, Excel, XML, etc. Estas importaciones permiten integrar el módulo con otros programas de arquitectura como AutoCAD, Revit, etc.
 
 ## 11. Asistencias de Obra.
 Podemos imputar las asistencias de obras a los costes de la obra. Asi si configuramos un coste hora al empleado podemos calcular el coste de la mano de obra.
@@ -119,7 +119,7 @@ Podemo imputar los costes de alquiler de maquinaria a la obra. Asi si configuram
 Podemos importar proyectos de Microsoft Project y exportar proyectos de Microsoft Project. Esto permite poder programar la obra para calcular la fecha real de finalización de la obra.
 
 ## 14.Integración con BC3.
-BC3 es un fichero de formato txt que permite la integración con programas de arquitectura como AutoCAD, Revit, etc. Este fichero permite importar y exportar los presupuestos de obra.
+BC3 un tipo de fichero estándar utilizado muy frecuentemente para intercambiar información entre programas de cálculo de presupuestos, como es el caso de Bim 2.0. Este software permite el control de costes en el sector de la construcción y obra civil.
 
 ## 15 Integración con Excel.
 - Podemos importar y exportar presupuestos de obra a Excel.
