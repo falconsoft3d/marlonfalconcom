@@ -10,11 +10,24 @@ import Image from 'next/image'
 # ▷ Metodología para la implementación de Odoo BIM 2.0.
 Esta es una propuesta de metodología para implementar Odoo BIM 2.0 en una empresa. Se basa en la experiencia de 5 años de implementación de Odoo BIM 1.0. Se puede adaptar a cualquier empresa que quiera implementar Odoo BIM 2.0.
 
+<Image
+  src="/images/posts/bim-20-metodologia.png"
+  alt="owl-odoo"
+  width={1584}
+  height={396}
+  priority
+  className="next-image"
+/>
+
 ## 1. Servidores.
 Se debe tener un servidor para producción y otro para desarrollo. Que permite clonar repos e instalar librerias con pip.
 - Sistema Operativo: Ubuntu 20.04
 - Memoria RAM: > 16GB
 - Disco Duro: > 500GB
+- Procesador: > 6 núcleos
+- Odoo 16
+- PostgreSQL 13
+- Python 3.X
 
 ## 2. Instalación de Odoo ERP.
 Se debe instalar Odoo 16 con la localización contable del país.
@@ -34,7 +47,7 @@ Tomaremos 2 meses como mínimo para desarrollar los requerimientos que se necesi
 - Se usara la rama dev para subir los desarrollos.
 - Se usara la rama master para subir los desarrollos estables.
 
-## 6. Se entregara el proyecto con el manual de usuario.
+## 6. Se entregará el proyecto con el manual de usuario.
 El manual se actualiza con los desarrollos realizados.
 
 ## 7. Se hace 3 meses de soporte alto.
