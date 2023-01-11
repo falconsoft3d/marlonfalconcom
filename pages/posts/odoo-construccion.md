@@ -97,6 +97,14 @@ Los estados de pagos pemiten controlar la creación de factura, asi los técnico
 
 ## 9. Reportes Varios.
 Múltiples reportes para controlar la obra y los presupuestos, la mayoría de los reportes son exportables a Excel y a PDF.
+- Reporte de Presupuestos de Obra.
+- Reporte de Certificaciones de Obra.
+- Reporte de Costes de Obra.
+- Reportes de lista de materiales.
+- Reportes con gastos indirectos.
+- Reportes de control detallado de los costes.
+- Reportes de comparación de presupuestos.
+- y otros reportes...
 
 ## 10. Importaciones o Integraciones.
 Importa BoQ , BC3, Excel, XML, etc.
