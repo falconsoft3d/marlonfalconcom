@@ -10,7 +10,7 @@ author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-## Bim 2.0 es un Vertical de Odoo para las empresas de construcción. Desarrollada por el MSc. Marlon Falcon Hernandez y su equipo de trabajo.
+## Bim 2.0 es un módulo de Odoo para las empresas de construcción. Desarrollado por el MSc. Marlon Falcón Hernández y su equipo de trabajo.
 Un **ERP** de Construcción es un sistema de gestión que permite gestionar de forma integral todos los procesos de una empresa de construcción, desde la fase de diseño hasta la fase de construcción. Entre las soluciones de **ERP** de construcción en odoo se encuentra [Bim 2.0](/posts/bim20) es una vertical que permite convertir a Odoo ERP en una excelente herramienta para controlar las empresas de constructoras. Puedes tener en un sistema desde la etapa de presupuesto a el cobro de la factura. Nunca más tendrás que estar cambiando de sistema para gestionar tu empresa de construcción. Esta solución es desarrollada de Ingenenieros Civiles y Arquitectos para que sea fácil de usar y que los usuarios se sientan cómodos.
 
 Ten en cuenta que odoo tiene muchos módulos ya listos como **CRM, Ventas, Compras, Inventario, Contabilidad, Facturación**, etc. que puedes usar para tu empresa de construcción. Pero si lo que necesitas es una solución de construcción que te permita gestionar desde la etapa de presupuesto hasta el cobro de la factura, entonces **Odoo Bim 2.0** es la solución que necesitas. Ya que agrega a Odoo todos los módulos que necesitas para gestionar tu empresa de construcción.
@@ -159,7 +159,7 @@ Podemos tener todos los presupuestos de la obra y compararlos entre ellos. Asi p
 ---
 
 ## Contactar para implementar de Odoo BIM 2.0 para la construcción.
-Ingeniero en construcción civil y master en arquitectura
+Ingeniero en Construcción civil, Master en arquitectura y Desarrollador de Odoo ERP.
 - Nombre: Marlon Falcón Hernández
 - WhatsApp [+34662470645](https://web.whatsapp.com/send?phone=34662470645&text=)
 - GitHub [@falconsoft3d](https://github.com/falconsoft3d)
