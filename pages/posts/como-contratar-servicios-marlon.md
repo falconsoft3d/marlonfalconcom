@@ -12,9 +12,8 @@ import Image from 'next/image'
 Si me contactas seguro son por cuatro motivos:
 - Quieres comprar un módulo que yo he desarrollado. Te lo venderé por el coste de horas que me llevo desarrollarlo. Ejemplo si un reporte me llevo 30 horas, te lo venderé por 30 horas de trabajo.
 - Quieres un curso de SAP: En este momento no estoy haciendo cursos o servicios de SAP. Solo estoy enfocado en Odoo.
-- Quieres implementar Odoo o una vertical que he desarrollado como BIM, SIS, Creditos, etc.
-- Quieres contratar mis servicios para desarrollar un proyecto en Odoo.
-
+- Quieres implementar Odoo o una vertical que he desarrollado como BIM, SIS, Creditos, etc. Cada vertical tiene su tarifa de servicios.
+- Quieres contratar mis servicios para desarrollar un módulo o implementar un proyecto en Odoo.
 
 <Image
   src="/images/trabajando-marlon-falcon.png"
