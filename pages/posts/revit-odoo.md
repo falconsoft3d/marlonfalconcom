@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 # ▷ Importar desde Revit a Odoo
 
-**Odoo ERP** con el módulo **BIM 2.0** permite importar desde [Revit](/posts/revit) a **Odoo** , el listado de materiales. Odoo es un ERP open source que permite gestionar la información de una empresa, desde la facturación, compras, ventas, inventarios, contabilidad, etc. 
+**Odoo ERP** con el módulo [BIM 2.0](/posts/odoo-construccion) permite importar desde [Revit](/posts/revit) el listado de materiales utilizando el formato BoQ (bill of quantities). Odoo es un ERP open source que permite gestionar la información de una empresa, desde la facturación, compras, ventas, inventarios, contabilidad, etc. 
 
 Revit es un software de modelado 3D paramétrico, que permite crear modelos BIM (Building Information Modeling) para la construcción.
 
