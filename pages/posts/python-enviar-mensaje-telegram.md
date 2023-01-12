@@ -1,12 +1,23 @@
 ---
-title: Mandar un mensaje a Telegram con Python
+title: ▷ Mandar un mensaje a Telegram con Python
 date: 2022/12/18
-description: Mandar un mensaje a Telegram con Python
+description: ▷ Mandar un mensaje a Telegram con Python
 tag: python, telegram, api
 author: Marlon Falcon Hernandez
 ---
+import Image from 'next/image'
 
-# Mandar un mensaje a Telegram con Python
+# ▷ Mandar un mensaje a Telegram con Python
+En este post vamos a ver como mandar un mensaje a Telegram con Python usando la API de Telegram y la libreria requests.
+
+<Image
+  src="/images/posts/python-telegram.png"
+  alt="odoo-migracione"
+  width={1280}
+  height={720}
+  priority
+  className="next-image"
+/>
 
 Configuramos el bot de telegram.
 ```
