@@ -11,7 +11,7 @@ author: Marlon Falcon Hernandez
 import Image from 'next/image'
 
 ## Bim 2.0 es un módulo de Odoo ERP para las empresas de construcción.
-Un **ERP** de Construcción es un sistema de gestión que permite gestionar de forma integral todos los procesos de una empresa de construcción, desde la fase de diseño hasta la fase de construcción. Entre las soluciones de **ERP** de construcción en odoo se encuentra [Bim 2.0](/posts/bim20) es una vertical que permite convertir a Odoo ERP en una excelente herramienta para controlar las empresas de constructoras. Puedes tener en un sistema desde la etapa de presupuesto a el cobro de la factura. Nunca más tendrás que estar cambiando de sistema para gestionar tu empresa de construcción. Esta solución es desarrollada de Ingenenieros Civiles y Arquitectos para que sea fácil de usar y que los usuarios se sientan cómodos.
+Un **ERP** de Construcción es un sistema de gestión que permite gestionar de forma integral todos los procesos de una empresa de construcción, desde la fase de diseño hasta la fase de construcción. Entre las soluciones de **ERP** de construcción en odoo se encuentra [Bim 2.0](/posts/bim20) es una vertical que permite convertir a Odoo ERP en una excelente herramienta para controlar las empresas de constructoras. Puedes tener en un sistema desde la etapa de presupuesto a el cobro de la factura. Nunca más tendrás que estar cambiando de sistema para gestionar tu empresa de construcción. Esta solución es desarrollada de Ingenieros Civiles y Arquitectos para que sea fácil de usar y que los usuarios se sientan cómodos.
 
 <Image
   src="/images/bim-16.png"
