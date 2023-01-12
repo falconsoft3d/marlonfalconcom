@@ -2,7 +2,7 @@
 title: Trucos con los archivos htaccess
 date: 2023/01/12
 description: Trucos con los archivos htaccess
-tag: canva, whatsapp
+tag: htaccess
 author: Marlon Falcon Hernandez
 ---
 
