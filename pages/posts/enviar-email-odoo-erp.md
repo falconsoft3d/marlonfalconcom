@@ -11,8 +11,7 @@ import Image from 'next/image'
 En este post vamos a ver como enviar un email con Odoo usando la libreria de python email.
 
 1. Creamos la plantilla data/template_response.xml
-``
-<?xml version="1.0" encoding="utf-8"?>
+```xml
 <odoo>
     <data noupdate="0">
        
