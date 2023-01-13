@@ -8,13 +8,7 @@ author: Marlon Falcon Hernandez
 import Image from 'next/image'
 
 #  ▷ Cómo contratar servicios de Marlon Falcon Hernandez
-Hola, muchas gracias por tomarte el tiempo de leer mi forma de trabajo y tarifa de servicios. En este post te voy a explicar como contratar mis servicios de desarrollo ya que siempre es bueno empezar con el pie derecho y se que me entendas. Estoy muy contento de que estes interesado en mis servicios, y espero que podamos trabajar juntos.
-
-Si me contactas seguro son por cuatro motivos:
-- Quieres comprar un módulo que yo he desarrollado. Te lo venderé por el coste de horas que me llevo desarrollarlo. Ejemplo si un reporte me llevo 30 horas, te lo venderé por 30 horas de trabajo.
-- Quieres un curso de SAP: En este momento no estoy haciendo cursos o servicios de SAP. Solo estoy enfocado en Odoo.
-- Quieres implementar Odoo o una vertical que he desarrollado como BIM, SIS, Creditos, etc. Cada vertical tiene su tarifa de servicios.
-- Quieres contratar mis servicios para desarrollar un módulo o implementar un proyecto en Odoo.
+Hola, muchas gracias por tomarte el tiempo de leer mi forma de trabajo y tarifa de servicios. En este post te voy a explicar como contratar mis servicios de desarrollo ya que siempre es bueno empezar correctamente. Estoy muy contento de que estes interesado en mis servicios, y espero que podamos trabajar juntos.
 
 <Image
   src="/images/trabajando-marlon-falcon.png"
@@ -25,6 +19,13 @@ Si me contactas seguro son por cuatro motivos:
   className="next-image"
 />
 
+Si me contactas seguro son por cuatro motivos:
+- Quieres comprar un módulo que yo he desarrollado. Te lo venderé por el coste de horas que me llevo desarrollarlo. Ejemplo si un reporte me llevo 30 horas, te lo venderé por 30 horas de trabajo.
+- Quieres un curso de SAP: En este momento no estoy haciendo cursos o servicios de SAP. Solo estoy enfocado en Odoo.
+- Quieres implementar Odoo o una vertical que he desarrollado como BIM, SIS, Creditos, etc. Cada vertical tiene su tarifa de servicios.
+- Quieres contratar mis servicios para desarrollar un módulo o implementar un proyecto en Odoo.
+
+---
 
 1. Lo primero que te recomiendo es que revises mi tarifa de servicios, para que tengas una idea de los precios y algunos conceptos que es muy importante que tengamos claro ambos. A continuación te dejo un enlace a mi tarifa de servicios en [EUR](https://es.wikipedia.org/wiki/Euro), por favor leer detalladamente: [Forma de trabajo y tarifa de servicios](/doc/forma_de_trabajo_mfh.pdf)
 
