@@ -8,7 +8,7 @@ author: Marlon Falcon Hernandez
 import Image from 'next/image'
 
 #  ▷ Cómo contratar servicios de Marlon Falcon Hernandez
-Hola muchas gracias por tomarte el tiempo de leer mi forma de trabajo y tarifa de servicios. En este post te voy a explicar como contratar mis servicios de desarrollo. Estoy muy contento de que estes interesado en mis servicios, y espero que podamos trabajar juntos. gracias miles !!
+Hola, muchas gracias por tomarte el tiempo de leer mi forma de trabajo y tarifa de servicios. En este post te voy a explicar como contratar mis servicios de desarrollo ya que siempre es bueno empezar con el pie derecho y se que me entendas. Estoy muy contento de que estes interesado en mis servicios, y espero que podamos trabajar juntos.
 
 Si me contactas seguro son por cuatro motivos:
 - Quieres comprar un módulo que yo he desarrollado. Te lo venderé por el coste de horas que me llevo desarrollarlo. Ejemplo si un reporte me llevo 30 horas, te lo venderé por 30 horas de trabajo.
