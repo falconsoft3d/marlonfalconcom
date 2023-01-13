@@ -1,13 +1,13 @@
 ---
-title: ▷ Fórmula polinómica de una obra
+title: ▷ Fórmula polinómica de una obra en odoo erp
 date: 2023/01/13
-description: ▷ Fórmula polinómica de una obra
+description: ▷ Fórmula polinómica de una obra en odoo erp
 tag: odoo, erp, construccion, formula-polinomica
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# ▷ Fórmula polinómica de una obra
+# ▷ Fórmula polinómica de una obra en odoo erp
 Se entiende por “fórmula polinómica” la representación matemática de la estructura de costos de un presupuesto de construcción, constituida por la sumatoria de términos, denominados monomios, que consideran la participación o incidencia de los principales recursos (mano de obra, materiales, equipo, gastos generales, otros). El resultado de esta fórmula nos muestra  un coeficiente (k) que representa la relación entre el presupuesto base (contrato) y el presupuesto actual. 
 
 <Image
