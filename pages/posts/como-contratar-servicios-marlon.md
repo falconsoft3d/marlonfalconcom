@@ -8,6 +8,7 @@ author: Marlon Falcon Hernandez
 import Image from 'next/image'
 
 #  ▷ Cómo contratar servicios de Marlon Falcon Hernandez
+Hola muchas gracias por tomarte el tiempo de leer mi forma de trabajo y tarifa de servicios. En este post te voy a explicar como contratar mis servicios de desarrollo. Estoy muy contento de que estes interesado en mis servicios, y espero que podamos trabajar juntos. gracias miles !!
 
 Si me contactas seguro son por cuatro motivos:
 - Quieres comprar un módulo que yo he desarrollado. Te lo venderé por el coste de horas que me llevo desarrollarlo. Ejemplo si un reporte me llevo 30 horas, te lo venderé por 30 horas de trabajo.
@@ -25,7 +26,7 @@ Si me contactas seguro son por cuatro motivos:
 />
 
 
-1. Lo primero que te recomiendo es que revises mi tarifa de servicios que es 50 EUR/H, para que tengas una idea de los precios de mis servicios. Aqui te dejo un enlace a mi tarifa de servicios en [EUR](https://es.wikipedia.org/wiki/Euro), por favor leer detalladamente: [Forma de trabajo y tarifa de servicios](/doc/forma_de_trabajo_mfh.pdf)
+1. Lo primero que te recomiendo es que revises mi tarifa de servicios, para que tengas una idea de los precios de mis servicios. Aqui te dejo un enlace a mi tarifa de servicios en [EUR](https://es.wikipedia.org/wiki/Euro), por favor leer detalladamente: [Forma de trabajo y tarifa de servicios](/doc/forma_de_trabajo_mfh.pdf)
 
 <Image
   src="/images/posts/como-contratar-servicios-marlon-7.png"
