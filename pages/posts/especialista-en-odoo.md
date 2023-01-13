@@ -35,7 +35,7 @@ Si gustas te dejo mis datos de contacto por si quieres contactarme: [https://mar
 Depende, si tu empresa es pequeña y no tienes un presupuesto muy grande alomejor tu equipo puede implementarlo , pero si tu empresa es mediana o grande, te recomiendo que contrates un desarrollador o a una empresa de desarrollo de software, ya que ellos tienen un equipo de trabajo y pueden brindarte un mejor servicio.
 
 # ¿Cuánto me Cuesta la hora de un especialista en Odoo?
-Por mi experiencia en Odoo y sacando información de la web, el precio de un especialista en Odoo se encuentra entre  **50€ - 100€** la hora, pero esto puede variar dependiendo de la empresa que contrates.
+Por mi experiencia en Odoo y sacando información de la web, el precio de un especialista en Odoo se encuentra entre  **45€ - 70€** la hora, pero esto puede variar dependiendo de la empresa que contrates.
 
 # ¿Cómo puedo saber cuantas horas necesito de un especialista en Odoo?
 Por mi experiencias proyectos normales llevan 160 horas = 1 mes de trabajo, pero esto puede variar dependiendo de la complejidad del proyecto. Pero igual he hecho proyectos de 1 semana y otros de 2 Años. No aceptes un proyecto sin saber cuantas horas necesitas aunque te den precios cerrados.
