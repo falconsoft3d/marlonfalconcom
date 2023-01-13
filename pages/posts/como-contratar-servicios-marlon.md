@@ -8,7 +8,7 @@ author: Marlon Falcon Hernandez
 import Image from 'next/image'
 
 #  ▷ Cómo contratar servicios de Marlon Falcon Hernandez
-Hola, muchas gracias por tomarte el tiempo de leer mi forma de trabajo y tarifa de servicios. En este post te voy a explicar como contratar mis servicios de desarrollo ya que siempre es bueno empezar correctamente. Estoy muy contento de que estes interesado en mis servicios, y espero que podamos trabajar juntos.
+Hola, muchas gracias por tomarte el tiempo de leer mi forma de trabajo y tarifa de servicios. En este post te voy a explicar como contratar mis servicios de desarrollo ya que siempre es bueno empezar correctamente. Estoy muy contento de que estes interesado en mis servicios, y espero que podamos trabajar juntos en un futuro.
 
 <Image
   src="/images/trabajando-marlon-falcon.png"
