@@ -26,7 +26,7 @@ Si me contactas seguro son por cuatro motivos:
 />
 
 
-1. Lo primero que te recomiendo es que revises mi tarifa de servicios, para que tengas una idea de los precios de mis servicios. Aqui te dejo un enlace a mi tarifa de servicios en [EUR](https://es.wikipedia.org/wiki/Euro), por favor leer detalladamente: [Forma de trabajo y tarifa de servicios](/doc/forma_de_trabajo_mfh.pdf)
+1. Lo primero que te recomiendo es que revises mi tarifa de servicios, para que tengas una idea de los precios y algunos conceptos que es muy importante que tengamos claro ambos. A continuación te dejo un enlace a mi tarifa de servicios en [EUR](https://es.wikipedia.org/wiki/Euro), por favor leer detalladamente: [Forma de trabajo y tarifa de servicios](/doc/forma_de_trabajo_mfh.pdf)
 
 <Image
   src="/images/posts/como-contratar-servicios-marlon-7.png"
@@ -37,7 +37,7 @@ Si me contactas seguro son por cuatro motivos:
   className="next-image"
 />
 
-2. Si estas de acuerdo con mis tarifas, puedes contactarme por medio de mi correo electrónico o por Whatsapp, para que podamos coordinar una cita y poder hablar de tus necesidades.
+2. Si estas de acuerdo con mis tarifa y forma de trabajo no sabes lo feliz que me pone. Puedes contactarme por medio de mi correo electrónico o por Whatsapp, para que podamos coordinar una cita y poder hablar de tus necesidades.
 
 - Email : [mfalconsoft@gmail.com](mailto:mfalconsoft@gmail.com)
 - Whatsapp : [+34 662 47 06 45](https://wa.me/34662470645)
@@ -69,7 +69,7 @@ Si me contactas seguro son por cuatro motivos:
   className="next-image"
 />
 
-4. Con el listado de requerimientos, yo puedo hacer un presupuesto y enviártelo para que lo revises y me digas si estas de acuerdo con el presupuesto. En el punto 1 te dejo un enlace a mi tarifa de servicios, para que tengas una idea de los precios de mis servicios. *No doy precios cerrados si no tengo claro el alcance del proyecto*.
+4. Con el listado de requerimientos, yo puedo hacer un presupuesto y enviártelo para que lo revises y me digas si estas de acuerdo con el presupuesto. En el punto 1 te dejo un enlace a mi tarifa de servicios, para que tengas una idea de los precios de mis servicios. *No doy precios cerrados si no tenemos claro el alcance del proyecto*.
 
 <Image
   src="/images/posts/como-contratar-servicios-marlon-2.png"
