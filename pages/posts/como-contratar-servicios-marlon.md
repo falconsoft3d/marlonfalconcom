@@ -25,7 +25,7 @@ Si me contactas seguro son por cuatro motivos:
 />
 
 
-1. Lo primero que te recomiendo es que revises mi tarifa de servicios, para que tengas una idea de los precios de mis servicios. Aqui te dejo un enlace a mi tarifa de servicios en [EUR](https://es.wikipedia.org/wiki/Euro), por favor leer detalladamente: [Forma de trabajo y tarifa de servicios](/doc/forma_de_trabajo_mfh.pdf)
+1. Lo primero que te recomiendo es que revises mi tarifa de servicios que es 50 EUR/H, para que tengas una idea de los precios de mis servicios. Aqui te dejo un enlace a mi tarifa de servicios en [EUR](https://es.wikipedia.org/wiki/Euro), por favor leer detalladamente: [Forma de trabajo y tarifa de servicios](/doc/forma_de_trabajo_mfh.pdf)
 
 <Image
   src="/images/posts/como-contratar-servicios-marlon-7.png"
