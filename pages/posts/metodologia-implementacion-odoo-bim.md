@@ -43,7 +43,7 @@ Se debe capacitar a los usuarios en el uso de Odoo BIM.
 - Aprovecharemos y levantaremos los desarrollos que se necesiten.
 
 ## 5. Desarrollo
-Tomaremos 2 meses como mínimo para desarrollar los requerimientos que se necesiten. Todo se escribirá en ticket con el módulo ticketPro.
+Tomaremos 2 meses como mínimo para desarrollar los requerimientos que se necesiten. Todo se escribirá en ticket con el módulo [ticketPro](/posts/metodologia-implementacion-odoo-bim).
 - Se usara la rama dev para subir los desarrollos.
 - Se usara la rama master para subir los desarrollos estables.
 

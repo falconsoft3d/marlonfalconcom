@@ -12,7 +12,7 @@ import Image from 'next/image'
 
 <Image
   src="/images/posts/ticketpro-odoo-1.png"
-  alt="odoo-fomula-polinomica"
+  alt="ticketpro-odoo-erp"
   width={1434}
   height={793}
   priority
@@ -22,7 +22,7 @@ import Image from 'next/image'
 En la vista *tree* podemos ver los estados de las tareas de cada proyecto. Además, podemos ver quien lo creo, el responsable y la fecha de creación.
 <Image
   src="/images/posts/ticketpro-odoo-2.png"
-  alt="odoo-fomula-polinomica"
+  alt="ticketpro-odoo-erp"
   width={1541}
   height={639}
   priority
@@ -30,10 +30,11 @@ En la vista *tree* podemos ver los estados de las tareas de cada proyecto. Adem�
 />
 
 Para crear un **ticket** tenemos que asociarle un ticket y una nota que seria la descripción del ticket. Además, podemos asociarle un proyecto, un responsable, una categoría de ticket, prioridad,  etc.
+
 <Image
   src="/images/posts/ticketpro-odoo-3.png"
-  alt="odoo-fomula-polinomica"
-  width={6615365}
+  alt="ticketpro-odoo-erp"
+  width={1536}
   height={819}
   priority
   className="next-image"
@@ -42,7 +43,7 @@ Para crear un **ticket** tenemos que asociarle un ticket y una nota que seria la
 El menú de módulos describe que hace cada módulo y como se puede configurar.
 <Image
   src="/images/posts/ticketpro-odoo-4.png"
-  alt="odoo-fomula-polinomica"
+  alt="ticketpro-odoo-erp"
   width={1531}
   height={341}
   priority
@@ -52,7 +53,7 @@ El menú de módulos describe que hace cada módulo y como se puede configurar.
 En las notas de proyecto podemos ver las notas de cada reunión desde una nota podemos crear varios ticket asi sabemos el origen. Todo lo que se hable en reuniones se puede asociar a una nota de proyecto. Nada que no quede anotado en una nota de proyecto no se considerará como acuerdo.
 <Image
   src="/images/posts/ticketpro-odoo-5.png"
-  alt="odoo-fomula-polinomica"
+  alt="ticketpro-odoo-erp"
   width={1535}
   height={572}
   priority
@@ -62,7 +63,7 @@ En las notas de proyecto podemos ver las notas de cada reunión desde una nota p
 Las categoría definen a que email de soporte se enviara la notifivacion de la incidencia. Además permite agrupar por módulos las incidencias.
 <Image
   src="/images/posts/ticketpro-odoo-6.png"
-  alt="odoo-fomula-polinomica"
+  alt="ticketpro-odoo-erp"
   width={1537}
   height={573}
   priority
