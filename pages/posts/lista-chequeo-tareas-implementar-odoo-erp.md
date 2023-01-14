@@ -10,7 +10,8 @@ import Image from 'next/image'
 # ▷ Lista de chequeo de tareas para implementar Odoo ERP
 A continuación les mostrare lo que creo que es la lista de chequeos para implementar Odoo ERP de forma geeneral que te peude servir para cualquier proyecto. Esta lista de chequeo esta basada en mi experiencia y en la experiencia de otros consultores de Odoo ERP.
 
-# Día -1 Lo que se debe estar listo el día anterior a la implementación.
+
+# Día -1 .Lo que se debe estar listo el día anterior a la implementación.
 1. Instalar Odoo ERP con la localización base.
 2. Instalar si se requeire módulos complementario de la localización.
 3. Crear las compañias.
