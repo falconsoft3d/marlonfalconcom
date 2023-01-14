@@ -8,7 +8,7 @@ author: Marlon Falcon Hernandez
 import Image from 'next/image'
 
 # ▷ Lista de chequeo de tareas para implementar Odoo ERP
-A continuación les mostrare lo que creo que es la lista de chequeos para implementar Odoo ERP de forma geeneral que te peude servir para cualquier proyecto. Esta lista de chequeo esta basada en mi experiencia y en la experiencia de otros consultores de Odoo ERP.
+A continuación les mostraré lo que creo que es la lista de chequeos para implementar Odoo ERP de forma geeneral que te peude servir para cualquier proyecto. Esta lista de chequeo esta basada en mi experiencia asi que es una recomendación que puedes mejorar.
 
 
 # Día -1 .Lo que se debe estar listo el día anterior a la implementación.
@@ -35,10 +35,11 @@ A continuación les mostrare lo que creo que es la lista de chequeos para implem
 21. Definir el método de respaldo de la base de datos.
 22. Cargar los almacenes.
 23. Cargar las ubicaciones.
-23. Cargar las reglas de reabastecimiento.
-24. Completar los partner completando la información contable, dirección, etc.
-25. Cargar los bancos.
-26. Hacer respaldo de la base de datos antes del día de la implementación.
+24. Cargar las cuentas analíticas.
+25. Cargar las reglas de reabastecimiento.
+26. Completar los partner completando la información contable, dirección, etc.
+27. Cargar los bancos.
+27. Hacer respaldo de la base de datos antes del día de la implementación.
 
 #  Lo que se debe estar listo el día de la implementación.
 1. Cargar los costes.
