@@ -2,7 +2,7 @@
 title: ▷ Módulo TicketPro para la gestión de proyectos en odoo erp.
 date: 2023/01/14
 description: ▷ Módulo TicketPro para la gestión de proyectos en odoo erp.
-tag: odoo, erp, construccion, formula-polinomica
+tag: odoo, erp, soporte, proyectos, ticketpro
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
