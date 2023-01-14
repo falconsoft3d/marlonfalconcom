@@ -39,9 +39,9 @@ A continuación les mostraré lo que creo que es la lista de chequeos para imple
 25. Cargar las reglas de reabastecimiento.
 26. Completar los partner completando la información contable, dirección, etc.
 27. Cargar los bancos.
-27. Hacer respaldo de la base de datos antes del día de la implementación.
+27. Hacer respaldo de la base de datos antes del día de la salida a producción.
 
-#  Lo que se debe estar listo el día de la implementación.
+#  Lo que se debe estar listo el día de la salida a producción.
 1. Cargar los costes.
 2. Cargar un inventario inicial.
 3. Cargar el asiento de apertura contable.
