@@ -22,9 +22,9 @@ Implementar un proyecto de [odoo erp](/posts/odoo-erp) es un proceso que requier
 
 1. Reunión inicial con el cliente.
 2. Presupuesto Inicial.
-3. Definir la infraestructura. Servidor, dominio, hosting, etc.
-4. Levantamiento de procesos. 1mes
-5. Escribir en ticket cada uno de los puntos del proyecto.
+3. Definir la infraestructura. Servidor, dominio, hosting, etc. Revisa: [métodos despliegue produccion odoo erp](/posts/metodos-despliegue-produccion-odoo-erp)
+4. Levantamiento de procesos. 1mes [CheckList de proyecto](/posts/lista-chequeo-tareas-implementar-odoo-erp)
+5. Escribir en [ticket](/posts/modulo-ticketpro-gestion-proyecto-odoo) cada uno de los puntos del proyecto.
 6. Definir que módulos se van a utilizar.
 7. Iniciar con el desarrollo del proyecto.
 8. Entrega semanal de avances.
