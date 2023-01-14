@@ -49,7 +49,7 @@ El menú de módulos describe que hace cada módulo y como se puede configurar.
   className="next-image"
 />
 
-En las notas de proyecto podemos ver las notas de cada reunión desde una nota podemos crear varios ticket asi sabemos el origen.
+En las notas de proyecto podemos ver las notas de cada reunión desde una nota podemos crear varios ticket asi sabemos el origen. Todo lo que se hable en reuniones se puede asociar a una nota de proyecto. Nada que no quede anotado en una nota de proyecto no se considerará como acuerdo.
 <Image
   src="/images/posts/ticketpro-odoo-5.png"
   alt="odoo-fomula-polinomica"
