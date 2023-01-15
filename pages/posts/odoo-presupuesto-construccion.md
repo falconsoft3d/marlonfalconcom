@@ -22,7 +22,7 @@ Ten en cuenta que en la construcción los presupuestos tienen por lo general una
   className="next-image"
 />
 
-Los conceptos que componen el árbol de presupuesto pueden de ser en los proyectos de tipo Partida, Capitulo, Función, Materiales, Mano de Obra, Equipos, Subcontratos, etc.
+Los conceptos que componen el árbol de presupuesto pueden de ser en los proyectos de tipo Partida, Capítulo, Función, Materiales, Mano de Obra, Equipos, Subcontratos, etc.
 
 <Image
   src="/images/posts/odoo-bim-presupuesto-02.png"
