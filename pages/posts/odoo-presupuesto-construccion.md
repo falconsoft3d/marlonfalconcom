@@ -11,7 +11,7 @@ import Image from 'next/image'
 
 Con el módulo **Odoo BIM 2.0** podemos generar presupuestos por partidas de obra, para ello se debe configurar el producto como partida de obra. A continuación se muestra como se vería un presupuesto de obra.
 
-Ten en cuenta que en la construcción los presupuestos tienen por lo general una estructura de árbol, por lo que se debe configurar el producto como partida de obra. Donde un proyecto esta compuesto por capítulos que origanizan las partidas de obra y estas a su ves se desglosan en subpartidas o recurso.
+Ten en cuenta que en la construcción los presupuestos tienen por lo general una estructura de árbol, por lo que se debe configurar el producto como partida de obra. Donde un proyecto tiene varios presupuestos y estos estan compuesto por capítulos que se organizan en partidas de obra y estas a su ves se desglosan en subpartidas o recurso.
 
 <Image
   src="/images/posts/odoo-bim-presupuesto-01.png"
