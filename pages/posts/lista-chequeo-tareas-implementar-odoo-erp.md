@@ -8,7 +8,7 @@ author: Marlon Falcon Hernandez
 import Image from 'next/image'
 
 # ▷ Lista de chequeo de tareas para implementar Odoo ERP
-A continuación les mostraré lo que creo que es la lista de chequeos para implementar Odoo ERP de forma geeneral que te puede servir para cualquier proyecto de ERP. Esta lista de chequeo esta basada en mi experiencia asi que es una recomendación que puedes mejorar.
+A continuación les mostraré lo que creo que es la lista de chequeos para implementar Odoo ERP de forma general que te puede servir para cualquier proyecto de ERP. Esta lista de chequeo esta basada en mi experiencia asi que es una recomendación que puedes mejorar.
 
 <Image
   src="/images/posts/check-list-odoo-erp.png"
