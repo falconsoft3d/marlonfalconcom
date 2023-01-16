@@ -20,21 +20,21 @@ Odoo es un ERP que todos los años cambia de versión, por lo que es necesario m
   priority
   className="next-image"
 />
-Odoo ERP ha tenido 9 versiones desde su creación en el año 2005. Antes de Odoo ERP se llamaba Tiny ERP y OpenERP. A continuación se muestra una tabla con las versiones de Odoo ERP.
+Odoo ERP ha tenido 11 versiones desde su creación en el año 2005 hasta el año 2023. Antes de Odoo ERP se llamaba Tiny ERP y OpenERP. A continuación se muestra una tabla con las versiones de Odoo ERP.
 
-| Nombre   | Ver | Año   |
-|----------|-----|-------|
-| Tiny ERP | 1   | 2005  |
-| OpenERP  | 5   | 2009  |
-| Odoo     | 8   | 2014  |
-| Odoo     | 9   | 2015  |
-| Odoo     | 10  | 2016  |
-| Odoo     | 11  | 2017  |
-| Odoo     | 12  | 2018  |
-| Odoo     | 13  | 2019  |
-| Odoo     | 14  | 2020  |
-| Odoo     | 15  | 2021  |
-| Odoo     | 16  | 2022  |
+|  # | Nombre   | Ver | Año   |
+|----|----------|-----|-------|
+| 01 | Tiny ERP | 1   | 2005  |
+| 02 | OpenERP  | 5   | 2009  |
+| 03 | Odoo     | 8   | 2014  |
+| 04 | Odoo     | 9   | 2015  |
+| 05 | Odoo     | 10  | 2016  |
+| 06 | Odoo     | 11  | 2017  |
+| 07 | Odoo     | 12  | 2018  |
+| 08 | Odoo     | 13  | 2019  |
+| 09 | Odoo     | 14  | 2020  |
+| 10 | Odoo     | 15  | 2021  |
+| 11 | Odoo     | 16  | 2022  |
 
 # Pasos para la migración.
 1. Crear una copia de seguridad de la base de datos.
