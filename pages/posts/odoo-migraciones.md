@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 # Odoo migraciones
 
-Odoo es un ERP que todos los años cambia de versión, por lo que es necesario migrar a la nueva versión para poder disfrutar de las nuevas funcionalidades que ofrece Odoo. En este post explicaremos como migrar de una versión a otra. Si estas en una versión inferior a la 14 deberias leer este artículo. Odoo solo le da soporte a las últimas 3 versiones es decir si estamos en la 16 soporta la **16,15,14**. Si bien el proceso de migración podrías hacerlo solo te recomiendo que lo hagas con un experto o partner en **Odoo ERP** para que te ayude a migrar tu proyecto. [Contactar a Marlon para migrarme ahora](/contacto/).
+Odoo es un ERP que todos los años cambia de versión, por lo que es necesario migrar a la nueva versión para poder disfrutar de las nuevas funcionalidades que ofrece Odoo. En este post explicaremos como migrar de una versión a otra. Si estas en una versión inferior a la 14 deberias leer este artículo. Odoo solo le da soporte a las últimas 3 versiones es decir si estamos en la 16 (Año 2023) soporta la **16,15,14**. Si bien el proceso de migración podrías hacerlo solo te recomiendo que lo hagas con un experto o partner en **Odoo ERP** para que te ayude a migrar tu proyecto. [Contactar a Marlon para migrarme ahora](/contacto/).
 
 Ahora si tu version es menor o igual que la 10 te recomiendo que migras de forma urgente debido a las mejoras en la utilización de Python 3.
 
