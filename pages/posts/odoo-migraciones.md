@@ -33,6 +33,8 @@ Odoo ERP ha tenido 9 versiones desde su creación en el año 2005. Antes de Odoo
 | Odoo     | 12  | 2018  |
 | Odoo     | 13  | 2019  |
 | Odoo     | 14  | 2020  |
+| Odoo     | 15  | 2021  |
+| Odoo     | 16  | 2022  |
 
 # Pasos para la migración.
 1. Crear una copia de seguridad de la base de datos.
