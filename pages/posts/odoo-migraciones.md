@@ -77,6 +77,17 @@ Para saber el coste de una migración de Odoo ERP es importante evaluar el alcan
 3. Módulos a migrar.
 4. Infraestructura donde está instalado Odoo ERP o tambien el sistema de 3ros.
 
+Tablas de ejemplos de costos de migración de Odoo ERP. Basado en 50 eur/hora.
+
+|  # | Tipo         | Horas |   Precio   |
+|----|--------------|-------|------------|
+| 01 |     Simple   |   80  | EUR 4.000  |
+| 02 |     Mediana  |  160  | EUR 8.000  |
+| 03 |     Compleja |  400  | EUR 20.000 |
+| 04 | Muy compleja |  800  | EUR 40.000 |
+
+Para saber que complejidad tiene tu migración de Odoo ERP te recomiendo que te comuniques con nosotros para que te ayudemos a evaluar el alcance de la migración.
+
 # ¿Qué puede fallar en una migración de Odoo?
 1. Perdidas de información.
 2. Perdida de funcionalidades.
