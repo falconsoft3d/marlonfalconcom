@@ -10,6 +10,13 @@ author: Marlon Falcon Hernandez
 
 Se utiliza el atributo **decoration** para colocar colores en las vistas tree, este atributo se coloca en el tag **tree** de la vista. A continuación se muestra un ejemplo:
 
+1. decoration-muted = color gris
+2. decoration-warning = color amarillo
+3. decoration-danger = color rojo
+4. decoration-primary = color azul
+5. decoration-success = color verde
+
+
 ```xml
 <tree js_class="ticket_list_dashboard"
                   decoration-muted="state == 'resuelto'"
