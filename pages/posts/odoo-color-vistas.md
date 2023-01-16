@@ -8,8 +8,9 @@ author: Marlon Falcon Hernandez
 
 # Odoo colocar colores en vistas tree
 
-Se utiliza el atributo **decoration** para colocar colores en las vistas tree, este atributo se coloca en el tag **tree** de la vista. A continuación se muestra un ejemplo:
+Se utiliza el atributo **decoration** para colocar colores en las vistas *Tree* o Listas de *Odoo*, este atributo se coloca en el tag **tree** de la vista. A continuación se muestra un ejemplo:
 
+Colores:
 1. decoration-muted = color gris
 2. decoration-warning = color amarillo
 3. decoration-danger = color rojo
@@ -17,6 +18,7 @@ Se utiliza el atributo **decoration** para colocar colores en las vistas tree, e
 5. decoration-success = color verde
 
 
+Ejemplo:
 ```xml
 <tree js_class="ticket_list_dashboard"
                   decoration-muted="state == 'resuelto'"
