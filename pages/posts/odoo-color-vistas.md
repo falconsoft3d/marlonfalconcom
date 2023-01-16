@@ -8,9 +8,20 @@ author: Marlon Falcon Hernandez
 
 # Odoo colocar colores en vistas tree
 
-Se utiliza el atributo `decoration` para colocar colores en las vistas tree, este atributo se coloca en el tag `tree` de la vista.
+Se utiliza el atributo **decoration** para colocar colores en las vistas tree, este atributo se coloca en el tag **tree** de la vista. A continuación se muestra un ejemplo:
 
+```xml
+<tree js_class="ticket_list_dashboard"
+                  decoration-muted="state == 'resuelto'"
+                  decoration-warning="state == 'stop'"
+                  decoration-danger="state == 'borrador'"
+                  decoration-primary="state=='aprobado'"
+                  decoration-success="state=='trabajando'">
 ```
+
+Y todo el código de la vista tree quedaria asi:
+
+```xml
 <record id="view_tree_ticket_pro" model="ir.ui.view">
         <field name="name">view.tree.ticket.pro</field>
         <field name="model">ticket.pro</field>
