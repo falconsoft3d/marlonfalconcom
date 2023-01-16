@@ -1,14 +1,24 @@
 ---
-title: Odoo colocar colores en vistas tree
+title: ▷ Odoo colocar colores en vistas tree
 date: 2022/12/18
-description: Odoo colocar colores en vistas tree
+description: ▷ Odoo colocar colores en vistas tree
 tag: odoo, xml
 author: Marlon Falcon Hernandez
 ---
+import Image from 'next/image'
 
-# Odoo colocar colores en vistas tree
+# ▷ Odoo colocar colores en vistas tree
 
-Se utiliza el atributo **decoration** para colocar colores en las vistas *Tree* o Listas de *Odoo*, este atributo se coloca en el tag **tree** de la vista. A continuación se muestra un ejemplo:
+Se utiliza el atributo **decoration** para colocar colores en las vistas *Tree* o Listas en *Odoo*, este atributo se coloca en el tag **tree** de la vista. A continuación se muestra una imagen y un ejemplo:
+
+<Image
+  src="/images/posts/odoo-colores.png"
+  alt="odoo-erp"
+  width={1366}
+  height={359}
+  priority
+  className="next-image"
+/>
 
 Colores:
 1. decoration-muted = color gris
@@ -16,6 +26,7 @@ Colores:
 3. decoration-danger = color rojo
 4. decoration-primary = color azul
 5. decoration-success = color verde
+
 
 
 Ejemplo:
@@ -45,7 +56,7 @@ Y todo el código de la vista tree quedaria asi:
                 <field name="title"/>
                 <field name="prioridad" optional="show"/>
                 <field name="environment" optional="show"/>
-                <field name="numerical_priority" optional="show" string="P#" sum="sum"/>
+                <field name="numerical_priority" optional="show" string="P" sum="sum"/>
                 <field name="user_id" widget="many2one_avatar_user" optional="hide"/>
                 <field name="user_error_id" widget="many2one_avatar_user" optional="show"/>
                 <field name="user_work_id" optional="hidden" widget="many2one_avatar_user"/>
