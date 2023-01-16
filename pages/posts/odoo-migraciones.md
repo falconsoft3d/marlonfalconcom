@@ -88,9 +88,11 @@ Pude ser entre 1 y 3 meses dependiendo del alcance de la migración.
 # ¿Cuando es necesario migrar Odoo?
 1. Te recomiendo migrar Odoo cuando se acerca la fecha de fin de soporte de la versión que estas usando. O cuando necesitas una nueva funcionalidad que solo está disponible en la nueva versión de Odoo.
 
+Ejemplo: para el 2023 si estas en versión **8,9,10,11,12,13** de Odoo, te recomiendo migrar a la versión **16** de Odoo ERP.
+
 2. Si tu proyecto está mal implementado y quieres mejorar los procesos o rediseñar correctamente el proyecto.
 
-3. O cada 5 años.
+3. O cada 3 años.
 
 
 # Contactar un consultor de Odoo ERP para migrar tu proyecto.
