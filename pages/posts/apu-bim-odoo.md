@@ -10,7 +10,7 @@ author: Marlon Falcon Hernandez
 import Image from 'next/image'
 
 
-Las **Apus** de las siglas **A**nalisis de **P**recios **U**nitarios son las actividades o recursos **(Materiales, Mano de Obra, Equipos, Valores Porcentuales)** de un proyecto las cuales se pueden agrupar en un **APU**. En este post vamos a ver como crear un **APU** en **Odoo**.
+Las **Apus** de las siglas **A**nalisis de **P**recios **U**nitarios son las actividades o recursos **(Materiales, Mano de Obra, Equipos, Valores Porcentuales)** de un proyecto o de una obra en construcción en las cuales se pueden agrupar en un **APU**. En este post vamos a ver como crear un **APU** en **Odoo**.
 
 Paso 1
 <Image
