@@ -27,7 +27,7 @@ Si me contactas seguro son por cuatro motivos:
 
 ---
 
-1. Lo primero que te recomiendo es que revises mi tarifa de servicios, para que tengas una idea de los precios y algunos conceptos que es muy importante que tengamos claro ambos. A continuación te dejo un enlace a mi tarifa de servicios en [EUR](https://es.wikipedia.org/wiki/Euro), por favor leer detalladamente: [Forma de trabajo y tarifa de servicios](/doc/forma_de_trabajo_mfh.pdf)
+1. Lo primero que te recomiendo es que revises mi tarifa de servicios, para que tengas una idea de los precios y algunos conceptos que es muy importante que tengamos claro ambos. Hoy trabajajo desde **(50 [EUR](https://es.wikipedia.org/wiki/Euro)/hora)**, por favor leer detalladamente mi forma de trabajo si quieres conocer más: [Forma de trabajo y tarifa de servicios](/doc/forma_de_trabajo_mfh.pdf)
 
 <Image
   src="/images/posts/como-contratar-servicios-marlon-7.png"
@@ -38,7 +38,7 @@ Si me contactas seguro son por cuatro motivos:
   className="next-image"
 />
 
-2. Si estas de acuerdo con mis tarifa y forma de trabajo no sabes lo feliz que me pone. Puedes contactarme por medio de mi correo electrónico o por Whatsapp, para que podamos coordinar una cita y poder hablar de tus necesidades.
+2. Si estas de acuerdo con mis tarifa y forma de trabajo no sabes lo feliz que me pone. Puedes contactarme por medio de mi correo electrónico o por **Whatsapp**, para que podamos coordinar una cita y poder hablar de tus necesidades.
 
 - Email : [mfalconsoft@gmail.com](mailto:mfalconsoft@gmail.com)
 - Whatsapp : [+34 662 47 06 45](https://wa.me/34662470645)
