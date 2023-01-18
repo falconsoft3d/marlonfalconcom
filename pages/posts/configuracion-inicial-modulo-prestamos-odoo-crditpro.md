@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 # ▷ Configuración inicial módulo de prestamos de odoo erp creditpro
 
-Para parametrizar un módulo de crédito de Odoo llamado CreditPro, es necesario establecer ciertos parámetros como los siguientes:
+Para parametrizar un módulo de crédito de **Odoo** llamado **CreditPro**, es necesario establecer ciertos parámetros como los siguientes:
 1. Límites de crédito: establecer los límites máximos de crédito que se permitirán a los clientes.
 2. Tasa de interés: establecer la tasa de interés aplicable a los préstamos.
 3. Plazos de pago: establecer los plazos de pago disponibles para los clientes, ya sea en meses o años.
