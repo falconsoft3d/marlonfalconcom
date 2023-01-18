@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 # ▷ Límite de credito con el módulo de prestamos de odoo erp creditpro
 
-En el módulo de prestamos **CrditPro** el límite de riesgo en crédito se refiere a la cantidad máxima de dinero que una institución financiera está dispuesta a prestar a un individuo o empresa. Esto se basa en una evaluación del riesgo crediticio del prestatario, que puede incluir factores como su historial crediticio, ingresos y activos. El objetivo de establecer límites de riesgo es minimizar el riesgo de impagos y pérdidas financieras para la institución financiera.
+En el módulo de prestamos **CreditPro** el límite de riesgo en crédito se refiere a la cantidad máxima de dinero que una institución financiera está dispuesta a prestar a un individuo o empresa. Esto se basa en una evaluación del riesgo crediticio del prestatario, que puede incluir factores como su historial crediticio, ingresos y activos. El objetivo de establecer límites de riesgo es minimizar el riesgo de impagos y pérdidas financieras para la institución financiera.
 
 Por este motivo dentro de **CreditPro** hemos establecido un parámetro que nos permitirá limitar la aprobación de créditos a clientes que estén marcados con ciertos límites.
 
