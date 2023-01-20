@@ -17,7 +17,7 @@ Python 3 es la última versión del lenguaje de programación Python, mientras q
 
 3. Excepciones: Python 3 tiene un mecanismo de excepciones más claro y consistente que Python 2.
 
-4. Funciones integradas: Python 3 tiene algunas funciones integradas que no están disponibles en Python 2, como la función "print ()" y la función "input ()".
+4. Funciones integradas: Python 3 tiene algunas funciones integradas que no están disponibles en Python 2, como la función print () y la función input ().
 
 5. Sintaxis: Python 3 tiene algunas mejoras en la sintaxis en comparación con Python 2, lo que lo hace más fácil de leer y escribir.
 
