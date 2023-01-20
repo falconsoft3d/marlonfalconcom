@@ -13,8 +13,6 @@ La factura de interés suele ser separada del capital en un préstamo o crédito
 En algunos casos, el interés puede estar incluido en el precio de un producto o servicio. Por ejemplo, en el caso de un producto financiero como un bono, el precio de compra incluiría tanto el capital como el interés. Sin embargo, esto es menos común en el caso de productos y servicios no financieros.
 
 En el módulo **CreditPro** de **Odoo** **ERP** hemos incluido ambas posibilidades, usted puede definir desde configuración como se emitirán sus facturas de manera conjunta o separados.
-
-
 <Image
   src="/images/posts/facturar-credito-pendiente-01.png"
   alt="facturar-credito-pendiente"
@@ -27,7 +25,6 @@ En el módulo **CreditPro** de **Odoo** **ERP** hemos incluido ambas posibilidad
 Si seleccionamos:
 
 Factura única:  al aprobar el crédito se emitirá una factura donde se incluyen en un solo producto el capital y el interés.
-
 <Image
   src="/images/posts/facturar-credito-pendiente-02.png"
   alt="facturar-credito-pendiente"
@@ -38,7 +35,6 @@ Factura única:  al aprobar el crédito se emitirá una factura donde se incluye
 />
 
 Factura doble: al aprobar el crédito se generan dos facturas una por el capital y otra por el interés.
-
 <Image
   src="/images/posts/facturar-credito-pendiente-03.png"
   alt="facturar-credito-pendiente"
