@@ -2,7 +2,7 @@
 title: 7 Beneficios de un ERP para la Industria de la Construcción
 date: 2022/12/22
 description: 7 Beneficios de un ERP para la Industria de la Construcción
-tag: erp, construccion, bim20
+tag: erp, construccion, bim20, odoo-construccion
 author: Marlon Falcon Hernandez
 ---
 

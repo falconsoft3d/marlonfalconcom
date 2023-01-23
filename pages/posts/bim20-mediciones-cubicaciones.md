@@ -2,7 +2,7 @@
 title: Mediciones o cubicación en Odoo BIM 2.0
 date: 2022/12/18
 description: Mediciones o cubicación en Odoo BIM 2.0
-tag: bim20, odoo, construccion
+tag: bim20, odoo, construccion, odoo-construccion
 author: Marlon Falcon Hernandez
 ---
 
