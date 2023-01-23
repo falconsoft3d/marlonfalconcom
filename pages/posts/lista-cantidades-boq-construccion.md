@@ -2,7 +2,7 @@
 title: ▷ ¿Qué es las listas cantidades BOQ en construcción?
 date: 2023/1/9
 description: ▷ ¿Qué es las listas cantidades BOQ en construcción?
-tag: boq, odoo, revit
+tag: boq, odoo, revit, odoo-construccion
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'

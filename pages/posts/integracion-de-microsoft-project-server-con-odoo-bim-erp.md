@@ -2,7 +2,7 @@
 title: ▷ Integración de Microsoft Project Server con Odoo BIM ERP.
 date: 2023/01/16
 description: ▷ Integración de Microsoft Project Server con Odoo BIM ERP.
-tag: odoo, bim, construccion
+tag: odoo, bim, construccion, odoo-construccion
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'

@@ -2,7 +2,7 @@
 title: ▷ Metodología BIM para la construcción
 date: 2023/1/4
 description: ▷ Metodología BIM para la construcción
-tag: bim, construccion
+tag: bim, construccion, odoo-construccion
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'

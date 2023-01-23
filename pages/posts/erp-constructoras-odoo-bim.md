@@ -2,7 +2,7 @@
 title: ▷ ERP para Constructoras Odoo BIM
 date: 2023/1/9
 description: ▷ ERP para Constructoras Odoo BIM
-tag: revit, odoo, erp, constructoras, construcción
+tag: revit, odoo, erp, constructoras, construccion, odoo-construccion
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'

@@ -2,7 +2,7 @@
 title: ▷ Metodología para la implementación de Odoo BIM 2.0
 date: 2023/01/11
 description: ▷ Metodología para la implementación de Odoo BIM 2.0
-tag: odoo, erp, metodologia, bim
+tag: odoo, erp, metodologia, bim, odoo-construccion
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'

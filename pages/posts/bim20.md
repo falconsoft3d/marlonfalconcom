@@ -2,7 +2,7 @@
 title: Odoo BIM20
 date: 2022/12/19
 description: Odoo BIM20
-tag: odoo,bim20,construccion
+tag: odoo, bim20, construccion, odoo-construccion
 author: Marlon Falcon Hernandez
 ---
 

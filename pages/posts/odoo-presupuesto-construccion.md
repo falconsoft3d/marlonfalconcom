@@ -2,7 +2,7 @@
 title: ▷ Odoo presupuesto construcción
 date: 2023/1/15
 description: ▷ Odoo presupuesto construcción
-tag: odoo, bim, presupuesto, construccion
+tag: odoo, bim, presupuesto, construccion, odoo-construccion
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
