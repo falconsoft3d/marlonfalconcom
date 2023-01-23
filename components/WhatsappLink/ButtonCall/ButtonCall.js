@@ -8,7 +8,7 @@ export default function ButtonCall() {
             <div style={{ margin: 20 }}  >
               
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <h1>Agente Digitalizador Español (KIT Digital)</h1>
+              <h1>Agente Digitalizador Español</h1>
             </div>  
             <Link href="https://wa.me/34662470645" 
                   target="_blank"
