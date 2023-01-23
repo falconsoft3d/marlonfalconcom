@@ -1,8 +1,35 @@
 import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function ButtonCall() {
   return (
             <>
+            <div style={{ margin: 20 }}  >
+              
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <h1>Agente Digitalizador Español (KIT Digital)</h1>
+            </div>  
+            <Link href="https://wa.me/34662470645" 
+                  target="_blank"
+                  >
+              <a href='/kit-digital'>    
+                <div className='mt-2'>
+                    <Image
+                    src="/images/kit-digital-odoo.png"
+                    alt="kit-digital-odoo"
+                    width={918}
+                    height={106}
+                    priority
+                    className="next-image kit-digital-odoo"
+                    />
+                </div>
+              </a>  
+            </Link>
+            </div>
+
+            
+
                 <div className="container-button">
                     <a href="callto:+34662470645" target="_blank" rel="noopener noreferrer" 
                         className="button-call">LLAMAR +34 662 47 0645</a>
