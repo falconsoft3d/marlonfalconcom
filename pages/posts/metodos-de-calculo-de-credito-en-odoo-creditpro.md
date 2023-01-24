@@ -2,13 +2,13 @@
 title: ▷ Métodos de cálculo de prestamos con CreditPro en Odoo ERP
 date: 2023/01/24
 description: ▷ Métodos de cálculo de prestamos con CreditPro en Odoo ERP
-tag: odoo, credito, crditpro
+tag: odoo, credito, creditpro
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
 # ▷ Métodos de cálculo de prestamos con CreditPro en Odoo ERP
-En el módulo CreditPro existen varios métodos para calcular el monto de un crédito o prestamo, dependiendo del tipo de crédito y de la institución financiera que lo otorgue. Algunos de los métodos más comunes son:
+En el módulo **CreditPro** existen varios métodos para calcular el monto de un crédito o prestamo, dependiendo del tipo de crédito y de la institución financiera que lo otorgue. Algunos de los métodos más comunes son:
 
 1. El método de amortización francés: Este método se utiliza para calcular el monto de un crédito con una tasa de interés fija. El prestatario paga una cantidad fija cada mes, que incluye una parte del capital y el interés correspondiente.
 
