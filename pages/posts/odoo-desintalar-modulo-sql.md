@@ -11,6 +11,9 @@ import Image from 'next/image'
 Para desinstalar un módulo de odoo con SQL, debemos seguir los siguientes pasos:
 
 1. Ingresar a la base de datos de odoo con el usuario postgres
+```sql
+sudo -u postgres psql -d credit
+```
 
 2. Ejecutar el siguiente comando para saber el estado:
 ```sql
