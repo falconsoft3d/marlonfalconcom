@@ -2,7 +2,7 @@
 title: ▷ Pagos de cuotas de préstamos en CreditPro, Odoo ERP.
 date: 2023/01/30
 description: ▷ Pagos de cuotas de préstamos en CreditPro, Odoo ERP.
-tag: construcción
+tag: creditos, odoo, erp
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
@@ -42,5 +42,3 @@ Este proceso registra el pago como asiento contable y a la vez se registra dentr
   priority
   className="next-image"
 />
-
-
