@@ -23,7 +23,7 @@ Dentro de **CreditPro** hemos desarrollado la opción para reprogramar cuotas de
   className="next-image"
 />
 
-En verde las cuotas programadas
+En verde las cuotas programadas.
 
 <Image
   src="/images/posts/reprogramar-2.png"
