@@ -2,7 +2,7 @@
 title: ▷ Solicitud de crédito en Odoo ERP, módulo CreditPro
 date: 2023/01/30
 description: ▷ Solicitud de crédito en Odoo ERP, módulo CreditPro
-tag: odoo, erp, metodologia
+tag: odoo, erp, credito
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
