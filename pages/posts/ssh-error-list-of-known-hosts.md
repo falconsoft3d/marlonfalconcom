@@ -2,7 +2,7 @@
 title: ▷ Error conexión ssh list of known hosts
 date: 2022/12/18
 description: ▷ Error conexión ssh list of known hosts
-tag: php, 20pasos
+tag: ssh, error
 author: Marlon Falcon Hernandez
 ---
 
