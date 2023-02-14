@@ -8,6 +8,17 @@ author: Marlon Falcon Hernandez
 import Image from 'next/image'
 
 # ▷ Respaldo de Odoo por consola
+1. Creamos el archivo de respaldo de la base de datos y el archivo de respaldo de la carpeta filestore.
+´´´
+pg_dump -U odoo -h localhost -p 5432 credit > credit.dump
+´´´
+
+2. Copiamos el archivo de respaldo de la carpeta filestore.
+´´´
+scp -r
+/var/lib/odoo/.local/share/Odoo/filestore/db14-credit-ven/
+´´´
+
 Cuando tengamos el archivo .dump de la base de datos, podemos restaurarla en cualquier servidor de Odoo. Para ello, debemos seguir los siguientes pasos:
 
 1. Crear una base de datos en el servidor de Odoo donde vamos a restaurar la base de datos.
