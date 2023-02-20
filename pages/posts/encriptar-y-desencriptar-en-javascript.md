@@ -71,3 +71,7 @@ function decrypt_data(string) {
       }
 
 ```
+
+La encriptación se utiliza ampliamente en diferentes ámbitos, desde la protección de la privacidad en línea hasta la seguridad de la información confidencial en entornos empresariales y gubernamentales. Por ejemplo, la mayoría de los sitios web utilizan encriptación para proteger las transacciones en línea y la información de los usuarios, como nombres de usuario y contraseñas. Además, la encriptación también se utiliza en dispositivos móviles y aplicaciones de mensajería para proteger los mensajes y datos personales de los usuarios.
+
+En resumen, la encriptación es un proceso fundamental para proteger la privacidad y seguridad de la información en la era digital. Al utilizar técnicas de encriptación, podemos garantizar que solo las personas autorizadas puedan acceder y comprender la información, lo que es esencial para mantener la privacidad y la seguridad en línea.
