@@ -24,3 +24,13 @@ git clone https://github.com/falconsoft3d/docker-odoo-16.git
 cd docker-odoo-16
 docker-compose up -d
 ```
+
+Aunque te muestro como instalarlo con Docker puede que no sea lo mejor en tu caso, si quieres consulta a un experto en Odoo, puedes contactarme en los datos de contacto.
+## Datos de contacto
+- Nombre: Marlon Falcón Hernández
+- WhatsApp [+34662470645](https://web.whatsapp.com/send?phone=34662470645&text=)
+- GitHub [@falconsoft3d](https://github.com/falconsoft3d)
+- Youtube [@marlonfalconhdez](https://www.youtube.com/@marlonfalconhdez)
+- Telegram [@falconsoft]
+- Phone +34 (662) 47 0645
+- Email mfalconsoft@gmail.com
