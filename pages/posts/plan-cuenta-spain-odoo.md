@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 # Plan de cuentas España Odoo ERP
 
-Odoo por defecto trae un plan de cuentas para España, que te lo muestro a continuación:
+Odoo por defecto trae un plan de cuentas para España. Basado en el (Real Decreto 1514/2007, de 16 de noviembre, por el que se aprueba el Plan General de Contabilidad.) https://www.boe.es/biblioteca_juridica/publicacion.php?id=PUB-PB-2022-227. A continuación te mostramos el plan de cuentas de España para Odoo ERP.:
 
 | Codigo | Nombre | Tipo | Grupo |
 |--------|--------|------|-------|
