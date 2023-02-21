@@ -5,12 +5,23 @@ description: Docker instalar odoo 16 erp
 tag: docker, odoo
 author: Marlon Falcon Hernandez
 ---
+import Image from 'next/image'
 
 # Docker instalar odoo 16 erp
 
 Odoo es un software ERP de código abierto que permite a las empresas gestionar sus procesos de negocio de forma integral. Odoo es una plataforma de software de código abierto que permite a las empresas gestionar sus procesos de negocio de forma integral. Odoo es una plataforma de software de código abierto que permite a las empresas gestionar sus procesos de negocio de forma integral.
 
-Para instalar odoo 16 en docker solo debemos ejecutar los siguientes comandos:
+
+<Image
+  src="/images/posts/docker-odoo-16.png"
+  alt="odoo-erp"
+  width={1280}
+  height={720}
+  priority
+  className="next-image"
+/>
+
+## Para instalar odoo 16 en docker solo debemos ejecutar los siguientes comandos:
 
 Instalamos Docker y Docker Compose
 ```yml
@@ -25,7 +36,8 @@ cd docker-odoo-16
 docker-compose up -d
 ```
 
-Aunque te muestro como instalarlo con Docker puede que no sea lo mejor en tu caso, si quieres consulta a un experto en Odoo, puedes contactarme en los datos de contacto.
+Aunque te muestro como instalarlo con Docker puede que no sea lo mejor en tu proyecto, si quieres consulta a un experto en Odoo, puedes contactarme en los datos de contacto.
+
 ## Datos de contacto
 - Nombre: Marlon Falcón Hernández
 - WhatsApp [+34662470645](https://web.whatsapp.com/send?phone=34662470645&text=)
