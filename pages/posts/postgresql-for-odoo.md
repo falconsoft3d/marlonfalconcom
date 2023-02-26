@@ -158,6 +158,7 @@ http://cursos.marlonfalcon.cl:3000/customer?name=like.*S.A.*
 http://cursos.marlonfalcon.cl:3000/customer?select=contact_name_1,name
 http://cursos.marlonfalcon.cl:3000/specification_diameter?limit=2
 http://cursos.marlonfalcon.cl:3000/specification_diameter?limit=100&offset=0
+https://postgrest.org/en/stable/api.html?highlight=count#exact-count
 ```
 
 ```bash
