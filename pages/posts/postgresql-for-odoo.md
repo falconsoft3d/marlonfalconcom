@@ -134,3 +134,10 @@ sudo /etc/init.d/postgresql restart
 ```bash
 /etc/init.d/postgresql restart
 ```
+
+# Crear un usuario en PostgreSQL
+```bash
+sudo -u postgres psql
+\password postgres
+CREATE USER marlon PASSWORD 'password2022’;
+```
