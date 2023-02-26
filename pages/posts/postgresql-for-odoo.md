@@ -21,7 +21,6 @@ nano /etc/postgresql/14/main/postgresql.conf
 nano /etc/odoo/odoo.conf
 ```
 
-
 Listar las bases de datos
 ```bash
 su postgres
@@ -73,4 +72,33 @@ sudo -u postgres psql -d db10-chile-sii
 UPDATE res_users SET password='123', password_crypt='HASH' WHERE login='admin';
 ```
 
+Instalar pgAdmin4
+```bash
+apt-get update && apt-get upgrade -y
+apt  install docker.io docker-compose -y
+docker pull dpage/pgadmin4
+docker run -p 5050:80 --link db:db --name pgadmin4dev -e "PGADMIN_DEFAULT_EMAIL=mfalcon@ynext.cl"   -e "PGADMIN_DEFAULT_PASSWORD=secret" -d dpage/pgadmin4
+```
 
+## PostgreSQL Remoto desde local con PgAdmin
+```bash
+1- Accedemos a la siguiente ruta:
+nano /etc/postgresql/10/main/postgresql.conf
+listen_addresses = '*'
+
+2- Modificamos el fichero g_hba.conf
+nano /etc/postgresql/10/main/pg_hba.conf
+local all all peer
+
+# IPv4 local connections:
+host    all             all             127.0.0.1/32            md5
+host    all             all             213.94.10.53/32         md5
+host    all             all             137.184.129.0/32        md5
+host    all             all             83.59.221.55/32         md5
+host    all             all             172.17.0.3/32           md5
+
+3- Si no tienes el password de postgresql lo puedes establecer de la siguiente forma
+sudo -u postgres psql
+\password postgres
+\q
+```
