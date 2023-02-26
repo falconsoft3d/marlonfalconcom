@@ -94,6 +94,15 @@ docker pull dpage/pgadmin4
 docker run -p 5050:80 --link db:db --name pgadmin4dev -e "PGADMIN_DEFAULT_EMAIL=mfalcon@ynext.cl"   -e "PGADMIN_DEFAULT_PASSWORD=secret" -d dpage/pgadmin4
 ```
 
+Instalar PostgreSQL y pgAdmin4 con Docker
+```bash
+apt-get update && apt-get upgrade -y
+apt  install docker.io docker-compose -y
+docker pull postgres
+docker pull dpage/pgadmin4
+docker run --name db -e POSTGRES_PASSWORD=secret -d postgres
+```
+
 ## PostgreSQL Remoto desde local con PgAdmin
 ```bash
 1- Accedemos a la siguiente ruta:
@@ -115,4 +124,9 @@ host    all             all             172.17.0.3/32           md5
 sudo -u postgres psql
 \password postgres
 \q
+```
+
+# Reiniciar PostgreSQL
+```bash
+/etc/init.d/postgresql restart
 ```
