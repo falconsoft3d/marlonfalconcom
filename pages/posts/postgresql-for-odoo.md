@@ -146,7 +146,11 @@ CREATE USER marlon PASSWORD 'password2022’;
 # Run API REST the server
 
 ```bash
-docker run -d --rm --env PGRST_DB_ANON_ROLE='web_anon' --net=host -e PGRST_DB_URI="postgres://postgres:x1234567890@localhost/postgres"   postgrest/postgrest
+docker run -d --rm --env PGRST_DB_ANON_ROLE='web_anon' --net=host -e PGRST_DB_URI="postgres://postgres:x1234567890@localhost/db"   postgrest/postgrest
+```
+
+```bash
+http://demo.marlonfalcon.com:3000/customer?limit=25
 ```
 
 ```bash
