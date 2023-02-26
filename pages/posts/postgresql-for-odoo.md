@@ -150,7 +150,14 @@ docker run -d --rm --env PGRST_DB_ANON_ROLE='web_anon' --net=host -e PGRST_DB_UR
 ```
 
 ```bash
-http://demo.marlonfalcon.com:3000/customer?limit=25
+GET/POST/PUT/PATCH/DELETE requests.
+http://cursos.marlonfalcon.cl:3000/customer
+http://cursos.marlonfalcon.cl:3000/customer?limit=1
+http://cursos.marlonfalcon.cl:3000/customer?customer_id=eq.3720
+http://cursos.marlonfalcon.cl:3000/customer?name=like.*S.A.*
+http://cursos.marlonfalcon.cl:3000/customer?select=contact_name_1,name
+http://cursos.marlonfalcon.cl:3000/specification_diameter?limit=2
+http://cursos.marlonfalcon.cl:3000/specification_diameter?limit=100&offset=0
 ```
 
 ```bash
