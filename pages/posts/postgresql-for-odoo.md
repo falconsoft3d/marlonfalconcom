@@ -144,6 +144,13 @@ CREATE USER marlon PASSWORD 'password2022’;
 
 
 # Run API REST the server
+
+```bash
+docker run --rm --net=host \
+  -e PGRST_DB_URI="postgres://app_user:password@localhost/postgres" \
+  postgrest/postgrest
+```
+
 ```bash
 docker run -d --rm --net=host -e PGRST_DB_URI="postgres://postgres:x1234567890@localhost/postgres"   postgrest/postgrest
 ```
