@@ -146,6 +146,10 @@ CREATE USER marlon PASSWORD 'password2022’;
 # Run API REST the server
 
 ```bash
+docker run -d --rm --env PGRST_DB_ANON_ROLE='web_anon' --net=host -e PGRST_DB_URI="postgres://postgres:x1234567890@localhost/postgres"   postgrest/postgrest
+```
+
+```bash
 docker run --rm --net=host \
   -e PGRST_DB_URI="postgres://app_user:password@localhost/postgres" \
   postgrest/postgrest
@@ -153,4 +157,15 @@ docker run --rm --net=host \
 
 ```bash
 docker run -d --rm --net=host -e PGRST_DB_URI="postgres://postgres:x1234567890@localhost/postgres"   postgrest/postgrest
+```
+
+```bash
+fargate service create postgrest \
+  --lb postgrest --port HTTP:3000 \
+  --image 'registry.hub.docker.com/postgrest/postgrest' \
+  --num 1 \
+  --env PGRST_DB_URI='postgres://authenticator:secret1@HOST/startup' \
+  --env PGRST_DB_SCHEMA='api' \
+  --env PGRST_DB_ANON_ROLE='web_anon'
+  ℹ️ Created service postgrest
 ```
