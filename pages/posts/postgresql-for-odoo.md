@@ -111,7 +111,8 @@ listen_addresses = '*'
 
 2- Modificamos el fichero g_hba.conf
 nano /etc/postgresql/10/main/pg_hba.conf
-local all all peer
+adicionamos
+host  all  all 0.0.0.0/0 md5
 
 # IPv4 local connections:
 host    all             all             127.0.0.1/32            md5
@@ -119,11 +120,14 @@ host    all             all             213.94.10.53/32         md5
 host    all             all             137.184.129.0/32        md5
 host    all             all             83.59.221.55/32         md5
 host    all             all             172.17.0.3/32           md5
+host    all             all             0.0.0.0/0               md5
 
 3- Si no tienes el password de postgresql lo puedes establecer de la siguiente forma
 sudo -u postgres psql
 \password postgres
 \q
+
+sudo /etc/init.d/postgresql restart
 ```
 
 # Reiniciar PostgreSQL
