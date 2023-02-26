@@ -72,6 +72,20 @@ sudo -u postgres psql -d db10-chile-sii
 UPDATE res_users SET password='123', password_crypt='HASH' WHERE login='admin';
 ```
 
+Instalar PostgreSQL
+```bash
+apt-get update && apt-get upgrade -y
+apt-get install postgresql postgresql-contrib -y
+```
+
+Instalar PostgreSQL con Docker
+```bash
+apt-get update && apt-get upgrade -y
+apt  install docker.io docker-compose -y
+docker pull postgres
+docker run --name db -e POSTGRES_PASSWORD=secret -d postgres
+```
+
 Instalar pgAdmin4
 ```bash
 apt-get update && apt-get upgrade -y
