@@ -8,13 +8,41 @@ author: Marlon Falcon Hernandez
 import Image from 'next/image'
 
 # ▷ Plan de capacitación Odoo BIM 2.0
-En este post veremos el plan de capacitación para Odoo BIM 2.0. Partiremos de cero y aprenderemos a utilizar Odoo ERP y Odoo BIM 2.0.
+En este post veremos el plan de capacitación para Odoo BIM 2.0. Partiremos de cero y aprenderemos a utilizar Odoo ERP y Odoo BIM 2.0 para el estandar de 24 funciones.
+
+Si quieres ampliar otros puntos del módulo puedes ver esta lista con todos los videos: https://www.youtube.com/watch?v=ZTrDLcXGoxQ&list=PLJN7H8Mnf3k8HwJArk2g3o0pyRun4qyUL
+
+# ▷ 24 Funciones que veremos en las Clases.
+1. Presupuestos de Obra: Permite calcular presupuestos por APUs, Mediciones, Costos Directos, Costos Indirectos, etc.						
+2. Certificaciones de Avance: Tu presupuesto lo puedes certificar por porcentajes de avance o cantidad de metros cuadrados						
+3. Registro de Costes / Gastos: Cada vez que se realiza un gasto se registra en el sistema y se puede ver en el estado de pagos						
+4. Análisis de Coste / Beneficio: Se puede analizar el coste de cada Obra O proyecto y ver si es rentable o no						
+5. Método del Valor Ganado: Se puede calcular el valor ganado de cada Obra o Proyecto						
+6. Precios Unitarios: Se pueden cargar precios unitarios de obras anteriores y se pueden utilizar en las nuevas obras						
+7. Solicitudes de Mat. o Serv: Se pueden solicitar materiales o servicios a proveedores dede el proyecto integrandose con compras.						
+8. Estados de Pagos: Controla los estados de pagos de la obra						
+9. Reportes Varios: Múltiples reportes para controlar la obra y los presupuestos						
+10. Importaciones: Importa BOQ, BC3, Excel, XML, etc.						
+11. Asistencias de Obra: Ingreso de asistencias de obra para llevar el control de los trabajadores						
+12. Alquiler de Equipos: Controla el alquiler de equipos de obra tanto de proveedores como de la propia empresa.						
+13. Integración con Projects: Exporta los proyectos a Odoo Projects y viceversa						
+14. Integración con BC3: BC3 es un estándar de la industria de la construcción para la gestión de proyectos de construcción.						
+15. Integración con Excel: Permite exportar e importar datos a Excel.						
+16. Listas de Chequeos: Permite crear listas de chequeos para controlar la obra.						
+17. Plan de Calidad: Permite crear un plan de calidad para la obra.						
+18. Documentación de Obras: Permite crear documentos de la obra asociada a cada proyecto.						
+19. Tickets de Obras: Permite crear tickets de obra para controlar los trabajos pendientes o realizados.						
+20. Gastos Indirectos: Permite crear gastos indirectos de la obra.						
+21. Contrato de Obra.								
+22. ITE. Índices Ténicos Econ: Permite crear índices técnicos económicos para la obra asi simplificar la creacion de presupuestos						
+23. Fómula polinómicas: Crear fórmulas polinómicas para la creación de presupuestos.						
+24. Comparaciones de Presupuesto: Compara presupuestos de las obras para detectar diferencias.						
 
 
 # Clase 01: Introducción a Odoo ERP.
-En esta clase vamos a entender de forma simple como funciona Odoo ERP.
+En esta clase vamos a entender de forma simple como funciona Odoo ERP. Si bien no daremos nada del estandar 24 si veremos los puntos mas importantes para poder utilizar Odoo ERP. Tambien tienes el cursos funcional para que refuerce lo que veremos en esta clase.
 
-## Objetivos Clase 01:
+# Objetivos Clase 01:
 1. Crear Productos.
 2. Crear Clientes.
 3. Crear Proveedores.
@@ -45,147 +73,69 @@ En esta clase vamos a entender de forma simple como funciona Odoo ERP.
 13. Subir 5 adjuntos a los mensajes.
 
 
-# Clase 02: Conceptos básicos de Odoo BIM 2.0
-1. Que es Odoo BIM 2.0.
-2. Diagrama de flujo de Odoo BIM 2.0.
-3. Temas a impartir en Odoo BIM 2.0.
-4. Conceptos generales.
-5. Haberes y descuentos.
-6. Etapas.
-7. Objetos de Obras y Espacios.
-8. Mediciones.
-9. Estados de Pago.
-10. ITE.
-11. APUs. Análisis de Precios Unitarios.
+# Clase 02:
+El objetivo es capacitar el 38% del estandar de 24 funciones de Odoo BIM 2.0.
+* Departamentos.
+* Documentación de Obra.
+* Ticket de Obra.
+* Estados de Obras y Presupuestos.
+* Etapas de presupuesto.
+* Mediciones.
+* Espacios de Trabajos
+* ITE. (Índices Técnicos Económicos)
+* Importando desde APUs (precios unitarios)
+* Importado BC3 o Excel
+* Crear un presupuesto Manualmente
 
-## Tareas Clase 02:
-1. Preparar un precio unitario.
-2. Preparar una plantilla de precios unitarios.
-3. Preparar un Presupuesto para crearlo en la próxima clase.
+## Tareas clase 02:
+1. Crear 2 presupuestos de obra.
+2. Asignar 5 documentos a cada obra.
+3. Usar las mediciones en los presupuestos.
 
-
-# Clase 03: Presupuestos de construcción en Odoo BIM 2.0 (I)
-1. Crear un presupuesto Manualmente
-2. Plantilla
-3. Importado BC3 o Excel
-4. Importando desde conceptos 
-5. Importador BIM
-6. Plantillas BoQ
-7. Revit
-8. Mediante precios unitarios
-9. Desde un presupuesto de ventas
-10. Plantilla de APUs
-11. Función otros
-12. Subcontratos
-
-## Tareas Clase 03:
-1. Crear 2 presupuestos de construcción.
-2. Enviar por correo los reportes de los presupuestos de construcción.
-3. Crea un presupuesto de bim desde ventas.
+# Clase 03:
+El objetivo es capacitar el 50% del estandar de 24 funciones de Odoo BIM 2.0.
+* Haberes y descuentos.
+* Precios acordados.
+* Actualizar precios.
+* Actualizar precios según USD.
+* Duplicar presupuestos.
+* Comparar presupuestos.
+* Históricos de presupuestos
+* Lista de chequeos
 
 
-# Clase 04: Presupuestos de construcción en Odoo BIM 2.0 (II)
-1. Listas de costes
-2. Mediciones
-3. Actualizar precios
-4. Actualizar precios según tasa de cambio de moneda (USD)
-5. Modificar masivamente presupuestos
-6. Haberes y descuentos
-7. Comparar Presupuestos
-8. Histórico de presupuestos
-9. Precios unitarios
-10. Grupos
-11. Parámetros 
-12. Atributos
-13. Informes
+## Tareas clase 03:
+1. Crear 2 plantillas de haberes y descuentos.
+2. Trabajar con el histórico de presupuestos.
 
-## Tareas Clase 04:
-1. Crea mediciones para los presupuestos de construcción.
-2. Actualiza los precios de los presupuestos de construcción.
-3. Envía un reporte de comparación de presupuestos de construcción.
+## Video resumen Clase 03:
+https://www.youtube.com/watch?v=zRc86ZRty_4
 
-# Clase 05: Planificación de Obras en Odoo BIM 2.0
-1. Tipo de planificación
-2. Programación
-3. Integración con Microsoft Project
-4. Integración con CSV
-5. Balance de recursos
-6. Plantilla de recursos
 
-## Tareas Clase 05:
-1. Tome un presupuesto y programalo con Project.
-2. Tome un presupuesto y programalo con CSV.
+# Clase 04:
+El objetivo es capacitar el 63% del estandar de 24 funciones de Odoo BIM 2.0.
+* Certificaciones de avance.
+* Estados de pagos.
+* Crear facturas de venta.
 
-# Clase 06: Certificaciones de Obras en Odoo BIM 2.0
-1. Crear certificaciones por Etapas.
-2. Tipo Manual
-3. Tipo por etapas
-4. Tipo por líneas de medición
-5. Certificación masiva (Por cantidad y %, Por % acumulado, Por consumos)
-6. Informes
+# Clase 05:
+El objetivo es capacitar el 75% del estandar de 24 funciones de Odoo BIM 2.0.
+* Registro de gastos de obras.
+* Análisis de coste / beneficio.
+* Asistencia de obra.
 
-## Tareas Clase 06:
-1. Crear 2 certificaciones de obras.
+# Clase 06:
+El objetivo es capacitar el 79% del estandar de 24 funciones de Odoo BIM 2.0.
+* Integración con projects.
 
-# Clase 07: Estado de Pagos y Facturación.
-1. Crear estados de pagos.
-2. Crear facturas de ventas.
-3. Configurar el módulo para facturación.
-4. Retenciones por garantías.
-5. Factor de certificación.
-6. Estados de pagos desde certificación masiva.
-7. Crear facturas.
+# Clase 07:
+El objetivo es capacitar el 88% del estandar de 24 funciones de Odoo BIM 2.0.
+* Alquiler de equipos.
+* Plan de calidad.
 
-## Tareas Clase 07:
-1. Crea 10 etapas de un presupuesto con estados de pagos y facturas.
+# Clase 08:
+El objetivo es capacitar el 100% del estandar de 24 funciones de Odoo BIM 2.0.
+* Método del valor ganado: https://www.youtube.com/watch?v=ex65FDplwVo
+* Contrato de obra.
+* Fórmula polinómicas: https://www.youtube.com/watch?v=Q8PIsFuCXVA
 
-# Clase 08: Costes de Obras en Odoo BIM 2.0
-1. Recursos de tipo materiales
-2. Partes de obra
-3. Asistencias
-4. Herramientas
-5. Alquiler de equipos
-6. Costos de equipos
-7. Facturas de compras
-8. Asientos varios
-9. Saldos de apertura
-10. Informes
-
-## Tareas Clase 08:
-1. Crea Partes de obras y enviar informes de costos de obras.
-
-# Clase 09: Administración de Obras en Odoo BIM 2.0
-1. Plan de calidad
-2. Lista de chequeos
-3. tareas
-4. tickets
-5. Análisis del valor Ganado
-6. Costo beneficio a nivel de obras
-
-## Tareas Clase 09:
-1. Crea un plan de calidad.
-2. Crear una lista de chequeos.
-3. Crear tareas.
-4. Crear tickets.
-5. Revisar el Coste beneficio a nivel de obras.
-
-# Clase 10: Otras Funciones de Odoo BIM 2.0
-1. Solicitud de materiales
-2. Solicitud de servicios
-3. Alquiler de equipos
-4. Mantenimiento
-5. Útiles y herramientas
-6. Almacén Móvil
-7. Registro de combustible
-8. Documentación
-
-## Tareas Clase 09:
-1. Crea una solicitud de materiales.
-2. Crea una solicitud de servicios.
-3. Crea un alquiler de equipos.
-
-# Clase 10: Clase Práctica con presupuestos reales (I).
-En esta clase se trabajará con presupuestos reales de obras de construcción.
-
-# Clase 11: Clase Práctica con presupuestos reales (II).
-En esta clase se trabajará con presupuestos reales de obras de construcción.
