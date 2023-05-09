@@ -25,21 +25,24 @@ A continuación se presentan los Ejercicios de Odoo BIM.
 - Climatización: 2.000
 - Carpintería: 1.000
 
-6. Desde la Obra crea la ubicación para esa obra.
-7. Crea la solicitud de  materiales de la obra.
-8. Crea la solicitud de compra de los materiales de la obra.
-9. Dale entrada al almacén de los materiales de la obra.
-10. Crea la programación de la obra. Iniciando el 1/1 proximo y durara 1 año.
-11. Crea las etapas del proyecto.
-12. Crea un Haber y Descuento para el proyecto.
-13. Certifica el 10% de la obra en la primera etapa.
-14. Crea el estado de pago.
-15. Crea la factura desde el estado de pago.
-16. Crea una copia del presupuesto.
-17. Incrementa la copia en un 20%.
-18. Saca una comparativa entre el presupuesto y la copia.
-19. Asignale un parte de horas a la obra.
-20. Crea una orden de compra para la obra.
-21. Factura esa orden de compra.
-22. Revisa el beneficio de la obra.
-23. Crea un checklist para la obra.
+
+6. Saca el listado de materiales del presupuesto.
+7. Saca un reporte de presupuesto con recursos.
+8. Desde la Obra crea la ubicación para esa obra.
+9. Crea la solicitud de  materiales de la obra.
+10. Crea la solicitud de compra de los materiales de la obra.
+11. Dale entrada al almacén de los materiales de la obra.
+12. Crea la programación de la obra. Iniciando el 1/1 proximo y durara 1 año.
+13. Crea las etapas del proyecto.
+14. Crea un Haber y Descuento para el proyecto.
+15. Certifica el 10% de la obra en la primera etapa.
+16. Crea el estado de pago.
+17. Crea la factura desde el estado de pago.
+18. Crea una copia del presupuesto.
+19. Incrementa la copia en un 20%.
+20. Saca una comparativa entre el presupuesto y la copia.
+21. Asignale un parte de horas a la obra.
+22. Crea una orden de compra para la obra.
+23. Factura esa orden de compra.
+24. Revisa el beneficio de la obra.
+25. Crea un checklist para la obra.
