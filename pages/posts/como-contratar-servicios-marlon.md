@@ -27,7 +27,7 @@ Si me contactas seguro son por cuatro motivos:
 
 ---
 
-1. Lo primero que te recomiendo es que revises mi tarifa de servicios, para que tengas una idea de los precios y algunos conceptos que es muy importante que tengamos claro ambos. Hoy trabajajo desde **(50 [EUR](https://es.wikipedia.org/wiki/Euro)/hora)**, por favor leer detalladamente mi forma de trabajo si quieres conocer más: [Forma de trabajo y tarifa de servicios](/doc/forma_de_trabajo_mfh.pdf)
+1. Lo primero que te recomiendo es que revises mi tarifa de servicios, para que tengas una idea de los precios y algunos conceptos que es muy importante que tengamos claro ambos. Hoy trabajajo desde **(75 [EUR](https://es.wikipedia.org/wiki/Euro)/hora)**, por favor leer detalladamente mi forma de trabajo si quieres conocer más: [Forma de trabajo y tarifa de servicios](/doc/forma_de_trabajo_mfh.pdf)
 
 <Image
   src="/images/posts/como-contratar-servicios-marlon-7.png"
