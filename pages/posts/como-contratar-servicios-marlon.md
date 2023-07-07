@@ -53,7 +53,7 @@ Si me contactas seguro son por cuatro motivos:
 />
 
 
-3. Una ves que tengamos la cita, tendremos que hacer un levantamiento de requerimientos, para poder definir el alcance del proyecto y poder hacer un presupuesto. Para esto yo utilizo TicketPro donde anotamos cada uno de tus requerimiento. por ejemplo:
+3. Una ves que tengamos la cita, tendremos que hacer un levantamiento de requerimientos o reunión de toma de datos, para poder definir el alcance del proyecto y poder hacer un presupuesto. Para esto yo utilizo TicketPro donde anotamos cada uno de tus requerimiento. por ejemplo:
 - Instalar odoo en un servidor de AWS. Tiempo estimado **10 Horas**.
 - Hacer reporte de ventas en pdf con 10 columnas. Tiempo estimado **25 Horas**.
 - Hacer módulo para gestionar los creditos de los clientes. Tiempo estimado **20 Horas**.
@@ -81,7 +81,7 @@ Si me contactas seguro son por cuatro motivos:
   className="next-image"
 />
 
-5. Para iniciar el proyecto lo más seguro que te pedire el **50%** del presupuesto, para poder empezar a trabajar. Una ves que yo termine el proyecto, te pedire el **50%** restante para poder entregarte el proyecto.
+5. Para iniciar el proyecto lo más seguro que te pedire el **50%** del presupuesto, para poder empezar a trabajar. Una ves que yo termine el proyecto, te pedire el **50%** restante para poder entregarte el proyecto. Si el proyecto es grande superior a 600 horas lo más seguro es que los pagos seran con avances mensuales.
 
 <Image
   src="/images/posts/como-contratar-servicios-marlon-3.png"
@@ -103,7 +103,7 @@ Si me contactas seguro son por cuatro motivos:
   className="next-image"
 />
 
-7. Una vez terminado el desarrollo normalmente te ofrezco un mes de soporte gratuito, para que puedas revisar que todo este funcionando correctamente. Si necesitas mas soporte, te cobraré segun la velocidad de respuesta que necesites. Por ejemplo: **72h, 48h, 24h**. En el documento de tarifa de servicios te dejo los precios de los servicios de soporte.
+7. Una vez terminado el desarrollo normalmente te ofrezco planes de soporte de pago. Te cobraré segun la velocidad de respuesta que necesites. Por ejemplo: **72h, 48h, 24h**. En el documento de tarifa de servicios te dejo los precios de los servicios de soporte.
 
 <Image
   src="/images/posts/como-contratar-servicios-marlon-5.png"
