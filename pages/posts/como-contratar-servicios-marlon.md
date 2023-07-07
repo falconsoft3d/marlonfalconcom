@@ -58,7 +58,7 @@ Si me contactas seguro son por cuatro motivos:
 - Hacer reporte de ventas en pdf con 10 columnas. Tiempo estimado **25 Horas**.
 - Hacer módulo para gestionar los creditos de los clientes. Tiempo estimado **20 Horas**.
 - Hacer módulo para gestionar los pagos de los clientes. Tiempo estimado **20 Horas**.
-- Migrar las 3000 fatcuras de mi sistema actual a Odoo. Tiempo estimado **80 Horas**.
+- Migrar las 3000 facturas de mi sistema actual a Odoo. Tiempo estimado **80 Horas**.
 - y asi sucesivamente. *Ten en cuenta que en odoo puedes hacer lo que seas capaz de pagar*.
 
 <Image
