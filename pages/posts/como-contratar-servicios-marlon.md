@@ -103,7 +103,7 @@ Si me contactas seguro son por cuatro motivos:
   className="next-image"
 />
 
-7. Una vez terminado el desarrollo normalmente te ofrezco planes de soporte de pago. Te cobraré segun la velocidad de respuesta que necesites. Por ejemplo: **72h, 48h, 24h**. En el documento de tarifa de servicios te dejo los precios de los servicios de soporte.
+7. Una vez terminado el desarrollo te ofrezco planes de soporte de pago. Te cobraré segun la velocidad de respuesta que necesites. Por ejemplo: **72h, 48h, 24h**. En el documento de tarifa de servicios te dejo los precios de los servicios de soporte.
 
 <Image
   src="/images/posts/como-contratar-servicios-marlon-5.png"
