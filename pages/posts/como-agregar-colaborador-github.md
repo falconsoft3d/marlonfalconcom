@@ -52,7 +52,7 @@ Pasos para agregar colaboradores en Github:
   className="next-image"
 />
 
-5- Desde aqui puees copiar la url del repositorio y enviarla al colaborador para que pueda clonar el repositorio. Igual en el paso 4 el recibira un correo de invitación para colaborar en el repositorio.
+5- Desde aqui puedes copiar la url del repositorio y enviarla al colaborador para que pueda clonar el repositorio. Igual en el paso 4 el recibirá el colaborador un correo de invitación para unirse al repositorio.
 <Image
   src="/images/posts/github-05.png"
   alt="github"
