@@ -8,7 +8,7 @@ author: Marlon Falcon Hernandez
 import Image from 'next/image'
 
 #  ▷ Cómo Agregar Colaborador en Github
-Cuando trabajamos en un proyecto de código abierto, es muy importante que podamos agregar colaboradores para que nos ayuden a mejorar el código. En este post te voy a explicar como agregar colaboradores en Github. Ten en cuenta que el colaborador tiene que tener una cuenta en Github, ya que muchas empresas no permiten que sus empleados tengan cuenta en Github o utilizan otro sistema de control de versiones como Gitlab o Bitbucket.
+Cuando trabajamos en un proyecto de código abierto, es muy importante que podamos agregar colaboradores para que nos ayuden a mejorar el código. En este post te voy a explicar como agregar colaboradores en Github. Ten en cuenta que el colaborador tiene que tener una cuenta en Github, ya que muchas empresas utilizan otro sistema de control de versiones como Gitlab o Bitbucket.
 
 Pasos para agregar colaboradores en Github:
 
