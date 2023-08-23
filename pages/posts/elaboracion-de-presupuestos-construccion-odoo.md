@@ -34,7 +34,7 @@ Con Odoo BIM 2.0 podemos crear presupuestos de obras en forma de arbol y utiliza
   className="next-image"
 />
 
-## Contactactar ahora para implementar Odoo BIM 2.0
+## Contactar ahora para implementar Odoo BIM 2.0
 ```
 Nombre: Marlon Falcón Hernández
 WhatsApp +34662470645
