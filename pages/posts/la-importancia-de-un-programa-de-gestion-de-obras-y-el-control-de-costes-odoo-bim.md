@@ -1,13 +1,13 @@
 ---
-title: La importancia de un programa de gestión de obras y el control de costes con Odoo BIM
+title: La importancia de un programa de gestión de obras y el control de costes como Odoo BIM
 date: 2023/08/23
-description: La importancia de un programa de gestión de obras y el control de costes con Odoo BIM
+description: La importancia de un programa de gestión de obras y el control de costes como Odoo BIM
 tag: odoo, bim20
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# La importancia de un programa de gestión de obras y el control de costes con Odoo BIM
+# La importancia de un programa de gestión de obras y el control de costes como Odoo BIM
 
 La industria de la construcción ha experimentado una profunda transformación en las últimas décadas gracias a la incorporación de la tecnología en sus procesos. Uno de los avances más significativos ha sido la adopción de soluciones de software específicas para la gestión de obras y el control de costes. En este contexto, Odoo BIM se destaca como una herramienta integral que combina la gestión de proyectos con la metodología BIM (Building Information Modeling), ofreciendo una serie de ventajas que impactan directamente en la eficiencia y rentabilidad de los proyectos de construcción.
 
