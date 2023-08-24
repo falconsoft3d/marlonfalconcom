@@ -1,7 +1,7 @@
 ---
-title: 10 Pasos para elaborar un presupuesto de obra con Odoo BIM
+title: ▷ 10 Pasos para elaborar un presupuesto de obra con Odoo BIM
 date: 2023/08/24
-description: 10 Pasos para elaborar un presupuesto de obra con Odoo BIM
+description: ▷ 10 Pasos para elaborar un presupuesto de obra con Odoo BIM
 tag: erp, construccion, bim20, odoo-construccion
 author: Marlon Falcon Hernandez
 ---
