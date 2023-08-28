@@ -27,7 +27,7 @@ Desglose de Costes: Enumera cada partida con su respectivo precio y coste total,
 
 Plazos y Condiciones: Especifica fechas estimadas de inicio y finalización, garantías, condiciones de pago y otros términos legales.
 
-## Herramientas para Crear Modelos de Presupuesto de Obra
+## Herramientas para Crear Modelos de Presupuesto de Obra
 
 Existen varias herramientas para crear presupuestos de obra. Algunas de las opciones más comunes son:
 
@@ -36,7 +36,6 @@ Existen varias herramientas para crear presupuestos de obra. Algunas de las opci
 * Plantillas en Excel: Excel ofrece plantillas predefinidas más avanzadas, ideales para cálculos detallados y análisis. Son personalizables y permiten diseñar facturas.
 
 * Odoo BIM 2.0: Erp de construcción.
-
 
 ## Consejos para un Presupuesto Preciso
 
