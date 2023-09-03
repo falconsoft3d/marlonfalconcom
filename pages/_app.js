@@ -3,6 +3,7 @@ import Head from 'next/head'
 import '../styles/main.css'
 import Script from 'next/script';
 import WhatsappLink from '../components/WhatsappLink';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function Nextra({ Component, pageProps }) {
   return (
@@ -24,6 +25,8 @@ export default function Nextra({ Component, pageProps }) {
       </Head>
 
       <WhatsappLink />
+
+      <Analytics />
 
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=UA-232389777-1"
