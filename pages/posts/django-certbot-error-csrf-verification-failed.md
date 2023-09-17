@@ -10,7 +10,7 @@ author: Marlon Falcon Hernandez
 Cuando tengas problemas con el error **CSRF verification failed** en **Django** y **Certbot** puedes corregirlo de la siguiente manera.
 
 1. Busca el fichero settings.py en tu proyecto **Django**.
-2. Agrega la siguiente linea de codigo en el fichero **settings.py**.
+2. Agrega la siguiente linea de codigo en el fichero **settings.py**. En este caso agregamos el dominio de mi sitio web **marlonfalcon.com**.
 
 ```python
 CSRF_TRUSTED_ORIGINS = [
