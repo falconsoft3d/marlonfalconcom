@@ -20,7 +20,7 @@ Este curso esta destinado a usuarios que iniciaran en el mundo de Odoo, en este 
   className="next-image"
 />
 
-[ Link del Curso ](https://www.udemy.com/course/aprende-odoo-erp-16-ee-funcional-con-ejercicios-practicos/learn/lecture/35079706#overview)
+[ Link del Curso ](https://www.marloncursos.com/cursos/category/odoo-funcional/curso-funcional-de-odoo-erp-16/)
 
 Este es un curso para funcionales de Odoo donde explicamos los siguientes puntos:
 - Introducción al curso.
