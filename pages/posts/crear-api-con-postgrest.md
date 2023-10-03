@@ -68,3 +68,29 @@ sudo systemctl enable postgrest
 ```
 
 
+8. Ejemplo de uso
+```json
+[
+    {
+    "dim_id": 1,
+    "code_dim": "AC2.D76.3.S-1.5_2_48.3",
+    "code_mc": "AC2.D76.3.S",
+    "descripcion": "Abrazadera Clamp 2 brazos DIN 32676 B S DN40 Espesor 2mm OD1 48.3mm",
+    "dn1": "DN40",
+    "dn2": null,
+    "sch": null,
+    "espesor": "2mm",
+    "rating": null,
+    "od1": "48.3mm",
+    "od2": null,
+    "number_bolts": null,
+    "bolt_size": null,
+    "longitud_esparrago": null,
+    "dn1_pulgadas": 1.5,
+    "dn2_pulgadas": null,
+    "k": null
+    }
+]
+```
+
+
