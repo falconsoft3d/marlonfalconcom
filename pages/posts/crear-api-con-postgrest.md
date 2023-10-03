@@ -1,6 +1,6 @@
 ---
 title: ▷ Crear API con PostgREST
-date: 2023/02/26
+date: 2023/10/03
 description: ▷ Crear API con PostgREST
 tag: postgresql, api
 author: Marlon Falcon Hernandez
