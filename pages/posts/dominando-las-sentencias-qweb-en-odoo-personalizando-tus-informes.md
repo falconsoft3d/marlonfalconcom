@@ -2,7 +2,7 @@
 title: ▷ Dominando las sentencias QWEB en Odoo personalizando tus informes
 date: 2023/10/16
 description: ▷ Dominando las sentencias QWEB en Odoo personalizando tus informes
-tag: encriptacion, programacion
+tag: qweb, odoo
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
