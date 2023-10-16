@@ -2,7 +2,7 @@
 title: ▷ Encriptación y Desencriptación en Python: Conceptos Básicos y Ejemplos Prácticos
 date: 2023/10/16
 description: ▷ Encriptación y Desencriptación en Python: Conceptos Básicos y Ejemplos Prácticos
-tag: python, programacion, recursividad
+tag: python, programacion, encriptacion
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
