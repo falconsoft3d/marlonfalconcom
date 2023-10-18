@@ -1,6 +1,6 @@
 ---
 title: ▷ Plan de Implementación Odoo ERP BIM
-date: 2022/12/31
+date: 2023/10/18
 description: ▷ Plan de Implementación Odoo ERP BIM
 tag: odoo, bim, erp
 author: Marlon Falcon Hernandez
@@ -9,6 +9,15 @@ import Image from 'next/image'
 
 # ▷ Plan de Implementación Odoo ERP BIM
 En este artículo veremos las recomendaciones de implementacion de Odoo BIM.
+
+<Image
+  src="/images/bim20/bim-planificacion.png"
+  alt="owl-odoo"
+  width={1142}
+  height={590}
+  priority
+  className="next-image"
+/>
 
 ##  Recomendaciones para la implementación de Odoo ERP BIM
 1. Tomar dos meses la capacitaciones de Odoo BIM.

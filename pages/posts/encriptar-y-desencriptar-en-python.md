@@ -1,13 +1,13 @@
 ---
-title: ▷ Encriptación y Desencriptación en Python: Conceptos Básicos y Ejemplos Prácticos
+title: ▷ Encriptación y Desencriptación en Python Conceptos Básicos y Ejemplos Prácticos
 date: 2023/10/16
-description: ▷ Encriptación y Desencriptación en Python: Conceptos Básicos y Ejemplos Prácticos
+description: ▷ Encriptación y Desencriptación en Python Conceptos Básicos y Ejemplos Prácticos
 tag: python, programacion, encriptacion
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# ▷ Encriptación y Desencriptación en Python: Conceptos Básicos y Ejemplos Prácticos
+# ▷ Encriptación y Desencriptación en Python Conceptos Básicos y Ejemplos Prácticos
 
 La encriptación es un proceso fundamental en la seguridad de la información. Permite proteger datos sensibles al convertirlos en un formato ilegible, que solo puede ser restaurado a su estado original mediante un proceso de desencriptación. En Python, existen varias bibliotecas y técnicas para llevar a cabo este proceso. En este artículo, exploraremos los conceptos básicos de encriptación y desencriptación en Python y proporcionaremos ejemplos prácticos utilizando la biblioteca cryptography.
 
