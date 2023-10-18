@@ -54,4 +54,4 @@ ver que veremos: https://www.marlonfalcon.com/posts/plan-capacitacion-odoo-bim
 1. Se realiza la capacitación basica de odoo a los usuarios claves en dos semandas.
 2. Se hace la capacitacion de Odoo BIM en dos meses.
 3. Se implementa en 2 meses la parte contable solo en una empresa. Luego poco a poco se van creando empresas y se va implementando la contabilidad.
-4. Se implementa en los meses que se neecesite las funciones que el cliente pida mediante tickets.  
+4. Se implementa en los meses que se necesita las funciones que el cliente pida mediante tickets.  
