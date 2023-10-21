@@ -2,7 +2,7 @@
 title: ▷ La Ruta del Programador Odoo ERP
 date: 2023/10/18
 description: ▷ La Ruta del Programador Odoo ERP
-tag: odoo, bim, erp
+tag: odoo, erp, programador
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
