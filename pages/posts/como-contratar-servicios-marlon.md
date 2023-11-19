@@ -8,7 +8,7 @@ author: Marlon Falcon Hernandez
 import Image from 'next/image'
 
 #  ▷ Cómo contratar servicios de Marlon Falcon Hernandez
-Hola, muchas gracias por tomarte el tiempo de leer mi forma de trabajo y tarifa de servicios que es **(100 [EUR](https://es.wikipedia.org/wiki/Euro)/hora)**. En este post te voy a explicar como contratar mis servicios de desarrollo ya que siempre es bueno empezar correctamente. Estoy muy contento de que estes interesado en mis servicios, y espero que podamos trabajar juntos.
+Hola, muchas gracias por tomarte el tiempo de leer mi forma de trabajo y tarifa de servicios que es **(75 [EUR](https://es.wikipedia.org/wiki/Euro)/hora)**. En este post te voy a explicar como contratar mis servicios de desarrollo ya que siempre es bueno empezar correctamente. Estoy muy contento de que estes interesado en mis servicios, y espero que podamos trabajar juntos.
 
 <Image
   src="/images/trabajando-marlon-falcon.png"
@@ -27,7 +27,7 @@ Si me contactas seguro son por cuatro motivos:
 
 ---
 
-1. Lo primero que te recomiendo es que revises mi tarifa de servicios, para que tengas una idea de los precios y algunos conceptos que es muy importante que tengamos claro ambos. Hoy trabajajo desde **(100 [EUR](https://es.wikipedia.org/wiki/Euro)/hora)**, por favor leer detalladamente mi forma de trabajo si quieres conocer más: [Forma de trabajo y tarifa de servicios](/doc/forma_de_trabajo_mfh.pdf)
+1. Lo primero que te recomiendo es que revises mi tarifa de servicios, para que tengas una idea de los precios y algunos conceptos que es muy importante que tengamos claro ambos. Hoy trabajajo desde **(75 [EUR](https://es.wikipedia.org/wiki/Euro)/hora)**, por favor leer detalladamente mi forma de trabajo si quieres conocer más: [Forma de trabajo y tarifa de servicios](/doc/forma_de_trabajo_mfh.pdf)
 
 <Image
   src="/images/posts/como-contratar-servicios-marlon-7.png"
