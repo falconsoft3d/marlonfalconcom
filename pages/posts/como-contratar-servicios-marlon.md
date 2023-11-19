@@ -20,11 +20,10 @@ Hola, muchas gracias por tomarte el tiempo de leer mi forma de trabajo y tarifa 
 />
 
 Si me contactas seguro son por cuatro motivos:
-- Quieres comprar un módulo que yo he desarrollado. Te lo venderé por el coste de horas que me llevo desarrollarlo. Ejemplo si un reporte me llevo 30 horas, te lo venderé por 30 horas de trabajo.
-- Quieres un curso de SAP: En este momento no estoy haciendo cursos o servicios de SAP. Solo estoy enfocado en Odoo.
+- Quieres comprar un módulo que yo he desarrollado. Te lo venderemos por el coste de horas que nos llevo desarrollarlo. Ejemplo si un reporte me llevo 30 horas, te lo venderemos por 30 horas de trabajo multiplicado por la tarifa.
 - Quieres implementar Odoo o una vertical que he desarrollado como BIM, SIS, Creditos, etc. Cada vertical tiene su tarifa de servicios.
 - Quieres contratar mis servicios para desarrollar un módulo o implementar un proyecto en Odoo.
-
+- Quieres un curso de SAP: En este momento no estoy haciendo cursos o servicios de SAP. Solo estoy enfocado en Odoo ERP.
 ---
 
 1. Lo primero que te recomiendo es que revises mi tarifa de servicios, para que tengas una idea de los precios y algunos conceptos que es muy importante que tengamos claro ambos. Hoy trabajajo desde **(75 [EUR](https://es.wikipedia.org/wiki/Euro)/hora)**, por favor leer detalladamente mi forma de trabajo si quieres conocer más: [Forma de trabajo y tarifa de servicios](/doc/forma_de_trabajo_mfh.pdf)
@@ -81,7 +80,7 @@ Si me contactas seguro son por cuatro motivos:
   className="next-image"
 />
 
-5. Para iniciar el proyecto lo más seguro que te pedire el **50%** del presupuesto, para poder empezar a trabajar. Una ves que yo termine el proyecto, te pedire el **50%** restante para poder entregarte el proyecto. Si el proyecto es grande superior a 600 horas lo más seguro es que los pagos seran con avances mensuales.
+5. Para iniciar el proyecto lo más seguro que te pediré un anticipo de almenos un **50%** del presupuesto, para poder empezar a trabajar. Una ves que yo termine el proyecto, te pediré el **50%** restante para poder entregarte el proyecto. Si el proyecto es grande superior a 1000 horas lo más seguro es que los pagos seran con avances mensuales.
 
 <Image
   src="/images/posts/como-contratar-servicios-marlon-3.png"
@@ -92,7 +91,7 @@ Si me contactas seguro son por cuatro motivos:
   className="next-image"
 />
 
-6. Para entregar avance podemos hacer reuniones semanales con el resultado del trabajo realizado, para que puedas ver el avance del proyecto.
+6. Para entregar avance podemos hacer reuniones semanales con el resultado del trabajo realizado, para que puedas ver el avance del proyecto. Siempre te pediré que crees un ticket para que quede la trasavilidad de lo que se esta solicitando.
 
 <Image
   src="/images/posts/como-contratar-servicios-marlon-4.png"
