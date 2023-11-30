@@ -18,8 +18,8 @@ El primer paso es definir los datos maestros de tus productos. Estos son los cam
 * Categoría: Clasificación del producto (por ejemplo, material de construcción, herramienta, etc.).
 * Unidad de Medida: Establece cómo se mide el producto (litros, metros, unidades, etc.).
 * Precio de Venta y Costo: Define ambos precios para tener control financiero.
-* Tipo de Producto: Puede ser almacenable, servicio, consumible, etc.
-* Tipo BIM: Clasificación adicional como materiales, mano de obra, equipos, administrativo, producto virtual
+* Tipo de Producto: Puede ser almacenable, servicio o consumible. Recomendamos no usar consumible.
+* Tipo BIM: Clasificación adicional como materiales, mano de obra, equipos, administrativo (usado en funciones) , producto virtual
 
 2. Definimos la forma de generación de la referencia del producto.
 * 0100010001  (Código de la Empresa - Código de la Categoría - Código del Producto)
@@ -33,6 +33,11 @@ código de barra = 12 dígitos + 1 dígito de verificación
 * Mano de Obra (Perfil Albañil, Perfil Carpintero, etc)
 * Equipos (Andamios, Maquinaria, etc)
 * Servicios que compraremos o venderemos (Servicio de Transporte, Servicio de Alquiler de Maquinaria, etc)
+
+5. Definimos las reglas de permisos.
+* ¿Quién puede crear productos?
+* ¿Quién puede modificar productos?
+* ¿Quién puede eliminar productos?
 
 ## Conclusión:
 Crear un maestro de productos en Odoo ERP requiere atención al detalle y una comprensión clara de los productos que tu negocio maneja. Siguiendo estos pasos, podrás asegurar que tu sistema de ERP refleje de manera precisa y eficiente tu inventario y servicios ofrecidos.
