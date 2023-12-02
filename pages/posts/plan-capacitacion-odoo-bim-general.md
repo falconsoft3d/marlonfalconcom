@@ -18,7 +18,7 @@ En esta clase vamos a entender de forma simple como funciona Odoo ERP.
 1. Crear Productos.
 2. Crear Clientes.
 3. Crear Proveedores.
-4. Crear Oporunidad en el CRM.
+4. Crear Oportunidad en el CRM.
 5. Crear Cotización de Venta.
 6. Crear Albaran de Venta.
 7. Crear Factura de Venta.
@@ -33,7 +33,7 @@ En esta clase vamos a entender de forma simple como funciona Odoo ERP.
 1. Crear 10 Productos.
 2. Crear 10 Clientes.
 3. Crear 10 Proveedores.
-4. Crear 5 Oporunidad en el CRM.
+4. Crear 5 Oportunidad en el CRM.
 5. Crear 5 Cotización de Venta.
 6. Crear 5 Albaran de Venta.
 7. Crear 5 Factura de Venta.
@@ -151,10 +151,8 @@ En esta clase vamos a entender de forma simple como funciona Odoo ERP.
 9. Saldos de apertura
 10. Informes
 
-## Tareas Clase 08:
+## Clase 09:
 1. Crea Partes de obras y enviar informes de costos de obras.
-
-# Clase 09: Administración de Obras en Odoo BIM 2.0
 1. Plan de calidad
 2. Lista de chequeos
 3. tareas
@@ -179,13 +177,7 @@ En esta clase vamos a entender de forma simple como funciona Odoo ERP.
 7. Registro de combustible
 8. Documentación
 
-## Tareas Clase 09:
+## Tareas Clase 10:
 1. Crea una solicitud de materiales.
 2. Crea una solicitud de servicios.
 3. Crea un alquiler de equipos.
-
-# Clase 10: Clase Práctica con presupuestos reales (I).
-En esta clase se trabajará con presupuestos reales de obras de construcción.
-
-# Clase 11: Clase Práctica con presupuestos reales (II).
-En esta clase se trabajará con presupuestos reales de obras de construcción.
