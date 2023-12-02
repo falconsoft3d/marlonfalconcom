@@ -61,7 +61,7 @@ En esta clase vamos a entender de forma simple como funciona Odoo ERP. Si bien n
 1. Crear 10 Productos.
 2. Crear 10 Clientes.
 3. Crear 10 Proveedores.
-4. Crear 5 Oporunidad en el CRM.
+4. Crear 5 Oportunidad en el CRM.
 5. Crear 5 Cotización de Venta.
 6. Crear 5 Albaran de Venta.
 7. Crear 5 Factura de Venta.
