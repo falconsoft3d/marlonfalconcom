@@ -10,6 +10,8 @@ import Image from 'next/image'
 # ▷ Plan de capacitación Odoo BIM 2.0 General
 En este post veremos el plan de capacitación para Odoo BIM 2.0. Partiremos de cero y aprenderemos a utilizar Odoo ERP y Odoo BIM 2.0.
 
+Tambien les dejo el link de la [Manual de Implementación de Odoo BIM 2.0](https://docs.google.com/document/d/1MJtG4Q4WUOrk4sE5_tTmTYd61YK2-18JaRviAAMTV4E/edit?usp=sharing)
+
 
 # Clase 01: Introducción a Odoo ERP.
 En esta clase vamos a entender de forma simple como funciona Odoo ERP.
