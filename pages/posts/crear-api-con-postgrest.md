@@ -36,8 +36,10 @@ postgrest /opt/postgrest.conf
 
 5. Lo revisamos desde la web
 ```bash
-http://1.248.36.231:3000
-http://1.248.36.231:3000/dimensiones_tuberia?limit=10
+http://127.0.0.1:3000
+http://127.0.0.1:3000/dimensiones_tuberia?limit=10
+http://127.0.0.1:3000/materiales_tuberia?material=eq.s
+http://127.0.0.1:3000/materiales_tuberia?material_id=eq.1392
 ```
 
 6. Lo agregamos como servicio
