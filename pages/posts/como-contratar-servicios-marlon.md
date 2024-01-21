@@ -11,7 +11,7 @@ import Image from 'next/image'
 Hola, muchas gracias por tomarte el tiempo de leer mi forma de trabajo y tarifa de servicios que es **(50 [EUR](https://es.wikipedia.org/wiki/Euro)/hora)**. En este post te voy a explicar como contratar mis servicios de desarrollo ya que siempre es bueno empezar correctamente. Estoy muy contento de que estes interesado en mis servicios, y espero que podamos trabajar juntos. Esta tarifa puede variar en dependencia de la complejidad del proyecto o la disponibilidad de los recursos.
 
 Si quieres trabajar conmigo lo primero que te recomiendo es que tengas claro el diagrama de procesos de tu empresa, así será más simple entender donde tenemos que modificar, en este video te muestro gratis como hacerlo: 
-**(50 [Video: Diagrama de Procesos](https://www.youtube.com/watch?v=gZo1EhjLLG4)**
+**[Video: Diagrama de Procesos](https://www.youtube.com/watch?v=gZo1EhjLLG4)**
 
 <Image
   src="/images/trabajando-marlon-falcon.png"
