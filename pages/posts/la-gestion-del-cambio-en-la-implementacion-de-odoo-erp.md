@@ -1,6 +1,6 @@
 ---
 title: ▷ La Gestión del Cambio en la Implementación de un ERP
-date: 2023/10/16
+date: 2024/02/23
 description: ▷ La Gestión del Cambio en la Implementación de un ERP
 tag: encriptacion, programacion
 author: Marlon Falcon Hernandez
