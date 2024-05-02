@@ -12,7 +12,6 @@ import Image from 'next/image'
 ## ¿Qué es Odoo SH?
 **Odoo SH** es el servicio oficial de alojamiento en la nube proporcionado por Odoo. Es una plataforma en la nube que permite a las empresas alojar sus aplicaciones Odoo en un entorno seguro y escalable. Odoo SH ofrece una serie de ventajas, como la posibilidad de acceder a las aplicaciones desde cualquier lugar y en cualquier momento, la seguridad de los datos y la escalabilidad de la plataforma.
 
-
 <Image
   src="/images/posts/10-longer-branch-view.png"
   alt="owl-odoo"
@@ -34,6 +33,11 @@ Ponte en contacto con nuestro representante de Odoo para obtener más informaci�
 - **Seguridad de los datos:** Odoo SH ofrece un entorno seguro para alojar las aplicaciones, con copias de seguridad automáticas y medidas de seguridad avanzadas.
 - **Escalabilidad:** Odoo SH es una plataforma escalable que permite a las empresas adaptar el servicio a sus necesidades en función del crecimiento de la empresa.
 - **Trabajo en equipo:** Odoo SH permite que varias personas trabajen en un mismo proyecto simultáneamente, con la capacidad de configurar los permisos de cada usuario.
+- **Replicación en Vivo:** de todos los datos, garantiza que no se pierda información.
+- **Gestionemos de DNS:** Configura rutas personalizadas y deja que odoo sh gestione los DNS.
+- **Pasarelas de Correo electrónico ilimitadas:** Pasarelas de correo electrónico ilimitadas.
+- **Monitoreo 24/7:** Odoo monitorea y mantiene todos tus servidores por ti.
+- **Instalación perfectamente optimizada:** Hosting de primera categoría con instalación perfectamente optimizada, excelente hardware.
 
 ## Cómo trabajar con dos equipos en Odoo SH
 1. El cliente puede registrar la cuenta de Odoo SH a su nombre para asegurar la independencia de los datos en caso de cambios en los equipos.
