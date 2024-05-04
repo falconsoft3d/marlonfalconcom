@@ -8,9 +8,9 @@ author: Marlon Falcon Hernandez
 import Image from 'next/image'
 
 #  ▷ Cómo contratar servicios de Marlon Falcon Hernandez
-Hola, muchas gracias por tomarte el tiempo de leer mi forma de trabajo y tarifa de servicios desde **(75 [EUR](https://es.wikipedia.org/wiki/Euro)/hora)**. En este post te voy a explicar como contratar mis servicios de desarrollo ya que siempre es bueno empezar correctamente. Estoy muy contento de que estes interesado en mis servicios, y espero que podamos trabajar juntos. Esta tarifa puede variar en dependencia de la complejidad del proyecto o la disponibilidad de los recursos.
+Hola, muchas gracias por tomarte el tiempo de leer mi forma de trabajo y tarifa de servicios desde **(75 [EUR](https://es.wikipedia.org/wiki/Euro)/hora)**. En este post te voy a explicar como contratar mis servicios de desarrollo ya que siempre es bueno empezar correctamente. Estoy muy contento de que estes interesado en mis servicios, y espero que podamos trabajar juntos. Esta tarifa puede variar en dependencia de la complejidad del proyecto o la disponibilidad de los recursos. En este link te dejo un documento con mi forma de trabajo y tarifa de servicios: [FORMA DE TRABAJO Y TARIFA.PDF](/doc/forma_de_trabajo_mfh.pdf)
 
-Si quieres trabajar conmigo lo primero que te recomiendo es que tengas claro el diagrama de procesos de tu empresa, así será más simple entender donde tenemos que modificar, en este video te muestro gratis como hacerlo: 
+Si quieres trabajar ordenado te recomiendo es que tengas claro el diagrama de procesos de tu empresa o negocio, así será más simple entender donde tenemos que modificar, en este video te muestro como hacerlo: 
 **[Video: Diagrama de Procesos](https://www.youtube.com/watch?v=gZo1EhjLLG4)**
 
 <Image
