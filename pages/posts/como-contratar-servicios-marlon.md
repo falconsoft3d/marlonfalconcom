@@ -29,6 +29,8 @@ Si me contactas seguro son por cuatro motivos:
 - Quieres un curso de SAP: En este momento no estoy haciendo cursos o servicios de SAP. Solo estoy enfocado en Odoo ERP.
 ---
 
+# Pasos para contratar mis servicios
+
 1. Lo primero que te recomiendo es que revises mi tarifa de servicios, para que tengas una idea de los precios y algunos conceptos que es muy importante que tengamos claro ambos. Hoy trabajajo desde **(75 a 120 [EUR](https://es.wikipedia.org/wiki/Euro)/hora)**, por favor leer detalladamente mi forma de trabajo si quieres conocer más: [Forma de trabajo y tarifa de servicios](/doc/forma_de_trabajo_mfh.pdf)
 
 <Image
