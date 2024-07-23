@@ -8,7 +8,7 @@ author: Marlon Falcon Hernandez
 import Image from 'next/image'
 
 #  ▷ Cómo contratar servicios de Marlon Falcon Hernandez
-Hola, muchas gracias por tomarte el tiempo de leer mi forma de trabajo y tarifa de servicios desde **(75 a 120 [EUR](https://es.wikipedia.org/wiki/Euro)/hora)**. En este post te voy a explicar como contratar mis servicios de desarrollo ya que siempre es bueno empezar correctamente. Estoy muy contento de que estes interesado en mis servicios, y espero que podamos trabajar juntos. Esta tarifa puede variar en dependencia de la complejidad del proyecto o la disponibilidad de los recursos. En este link te dejo un documento con mi forma de trabajo y tarifa de servicios: [FORMA DE TRABAJO Y TARIFA.PDF](/doc/forma_de_trabajo_mfh.pdf)
+Hola, muchas gracias por tomarte el tiempo de leer mi forma de trabajo y tarifa de servicios desde **( 50 [EUR](https://es.wikipedia.org/wiki/Euro)/hora)**. En este post te voy a explicar como contratar mis servicios de desarrollo ya que siempre es bueno empezar correctamente. Estoy muy contento de que estes interesado en mis servicios, y espero que podamos trabajar juntos. Esta tarifa puede variar en dependencia de la complejidad del proyecto o la disponibilidad de los recursos. En este link te dejo un documento con mi forma de trabajo y tarifa de servicios: [FORMA DE TRABAJO Y TARIFA.PDF](/doc/forma_de_trabajo_mfh.pdf)
 
 Si quieres trabajar ordenado te recomiendo es que tengas claro el diagrama de procesos de tu empresa o negocio, así será más simple entender donde tenemos que modificar, en este video te muestro como hacerlo: 
 **[Video: Diagrama de Procesos](https://www.youtube.com/watch?v=gZo1EhjLLG4)**
@@ -31,7 +31,7 @@ Si me contactas seguro son por cuatro motivos:
 
 # Pasos para contratar mis servicios
 
-1. Lo primero que te recomiendo es que revises mi tarifa de servicios, para que tengas una idea de los precios y algunos conceptos que es muy importante que tengamos claro ambos. Hoy trabajajo desde **(75 a 120 [EUR](https://es.wikipedia.org/wiki/Euro)/hora)**, por favor leer detalladamente mi forma de trabajo si quieres conocer más: [Forma de trabajo y tarifa de servicios](/doc/forma_de_trabajo_mfh.pdf)
+1. Lo primero que te recomiendo es que revises mi tarifa de servicios, para que tengas una idea de los precios y algunos conceptos que es muy importante que tengamos claro ambos. Hoy trabajajo desde **( 50 [EUR](https://es.wikipedia.org/wiki/Euro)/hora)**, por favor leer detalladamente mi forma de trabajo si quieres conocer más: [Forma de trabajo y tarifa de servicios](/doc/forma_de_trabajo_mfh.pdf)
 
 <Image
   src="/images/posts/como-contratar-servicios-marlon-7.png"
