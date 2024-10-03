@@ -1,6 +1,6 @@
 ---
 title: Como odoo bim 20 hace parte de la metodologia
-date: 2022/12/27
+date: 2024/10/03
 description: Como odoo bim 20 hace parte de la metodologia
 tag: odoo, erp, bim, metodologia
 author: Marlon Falcon Hernandez
