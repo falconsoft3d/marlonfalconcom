@@ -24,7 +24,6 @@ Es decir nosotros basado en Odoo ERP le agregamos un sistema de control de presu
   className="next-image"
 />
 
-
 ## Descripción del Cargo
 El **Arquitecto Funcional Odoo BIM** es responsable de definir la arquitectura funcional de los módulos de [Odoo BIM 2.0 ERP](https://www.bim20.com/) Su rol incluye optimizar el uso del sistema y garantizar que los procesos de construcción estén bien integrados en el ERP, ayudando a clientes y usuarios a sacar el máximo provecho de la herramienta.
 
@@ -33,6 +32,15 @@ El **Arquitecto Funcional Odoo BIM** es responsable de definir la arquitectura f
 - Conocimiento en sistemas de **gestión de proyectos**.
 - Experiencia con sistemas de **gestión de presupuestos de obra**.
 - Excell para la elaboración de **presupuestos**.
+
+<Image
+  src="/images/revitd.png"
+  alt="arquitecto"
+  width={877}
+  height={885}
+  priority
+  className="next-image"
+/>
 
 ## Funciones del Arquitecto Funcional Odoo BIM
 - Colaborar en la **mejora continua** del sistema Odoo [Odoo BIM 2.0 ERP](https://www.bim20.com/).
