@@ -1,13 +1,13 @@
 ---
-title: Cargo Arquitecto Funcional Odoo BIM
+title: ▷ Cargo Arquitecto Funcional Odoo BIM
 date: 2024/10/17
-description: Cargo Arquitecto Funcional Odoo BIM
+description: ▷ Cargo Arquitecto Funcional Odoo BIM
 tag: arquitecto,bim,odoo
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# Cargo Arquitecto Funcional Odoo BIM
+# ▷ Cargo Arquitecto Funcional Odoo BIM
 En esta publicación, describiremos el puesto de **Arquitecto Funcional Odoo BIM 2.0** y sus principales responsabilidades y requisitos.
 
 ## ¿Qué es Odoo BIM 2.0?
