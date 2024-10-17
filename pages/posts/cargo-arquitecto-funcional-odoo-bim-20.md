@@ -36,8 +36,8 @@ El **Arquitecto Funcional Odoo BIM** es responsable de definir la arquitectura f
 <Image
   src="/images/revitd.png"
   alt="arquitecto"
-  width={877}
-  height={885}
+  width={711}
+  height={372}
   priority
   className="next-image"
 />
