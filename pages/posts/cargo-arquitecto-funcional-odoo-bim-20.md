@@ -30,6 +30,7 @@ El **Arquitecto Funcional Odoo BIM** es responsable de definir la arquitectura f
 - Experiencia en **Revit**.
 - Conocimiento en sistemas de **gestión de proyectos**.
 - Experiencia con sistemas de **gestión de presupuestos de obra**.
+- Excell para la elaboración de **presupuestos**.
 
 ## Funciones del Arquitecto Funcional Odoo BIM
 - Colaborar en la **mejora continua** del sistema Odoo BIM 2.0.
