@@ -66,7 +66,7 @@ El **Arquitecto Funcional Odoo BIM** es responsable de definir la arquitectura f
 - Seguimos el calendario de días festivos de **Valencia, España**.
 - Todas las solicitudes de los clientes se gestionan mediante un sistema de **tickets**.
 - Si un cliente nos contacta directamente, le dirigimos a los canales de comunicación establecidos.
-- El horario habitual es de **lunes a viernes de 9:00 a 18:00**.
+- El horario habitual es de **lunes a viernes de 9:00 a 18:00**. Este horario puede variar según el empleado, es decir, si un empleado prefiere trabajar de 8:00 a 17:00, se le permite hacerlo. Y es de su país.
 
 ## ¿Qué necesitas para trabajar con nosotros?
 - Una buena **conexión a internet**.
