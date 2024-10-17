@@ -13,6 +13,8 @@ En esta publicación, describiremos el puesto de **Arquitecto Funcional Odoo BIM
 ## ¿Qué es Odoo BIM 2.0?
 **Odoo BIM 2.0** es un ERP especializado en el sector de la construcción, desarrollado sobre la plataforma **Odoo ERP**. Este sistema integra la contabilidad de una empresa de construcción con la gestión de proyectos de construcción. Si deseas obtener más información sobre Odoo ERP, puedes visitar la página oficial: [Odoo BIM 2.0 ERP](https://www.bim20.com/). Es importanate saber que implementar Odoo BIM 2.0 No es implementar la metodología BIM, es implementar un ERP especializado en el sector de la construcción.
 
+Es decir nosotros basado en Odoo ERP le agregamos un sistema de control de presupuesto llamado BIM 2.0, para que puedas controlar tus proyectos de construcción de una forma más eficiente.
+
 <Image
   src="/images/arquitecto.png"
   alt="arquitecto"
@@ -24,7 +26,7 @@ En esta publicación, describiremos el puesto de **Arquitecto Funcional Odoo BIM
 
 
 ## Descripción del Cargo
-El **Arquitecto Funcional Odoo BIM** es responsable de definir la arquitectura funcional de los módulos de Odoo BIM. Su rol incluye optimizar el uso del sistema y garantizar que los procesos de construcción estén bien integrados en el ERP, ayudando a clientes y usuarios a sacar el máximo provecho de la herramienta.
+El **Arquitecto Funcional Odoo BIM** es responsable de definir la arquitectura funcional de los módulos de [Odoo BIM 2.0 ERP](https://www.bim20.com/) Su rol incluye optimizar el uso del sistema y garantizar que los procesos de construcción estén bien integrados en el ERP, ayudando a clientes y usuarios a sacar el máximo provecho de la herramienta.
 
 ## Requisitos del Cargo
 - Experiencia en **Revit**.
@@ -33,10 +35,10 @@ El **Arquitecto Funcional Odoo BIM** es responsable de definir la arquitectura f
 - Excell para la elaboración de **presupuestos**.
 
 ## Funciones del Arquitecto Funcional Odoo BIM
-- Colaborar en la **mejora continua** del sistema Odoo BIM 2.0.
-- Capacitar a los usuarios finales en el uso de los módulos de Odoo BIM.
+- Colaborar en la **mejora continua** del sistema Odoo [Odoo BIM 2.0 ERP](https://www.bim20.com/).
+- Capacitar a los usuarios finales en el uso de los módulos de [Odoo BIM 2.0 ERP](https://www.bim20.com/).
 - Configurar los módulos de Odoo BIM según los requerimientos del cliente.
-- Elaborar la **documentación técnica** y los manuales de usuario para los módulos de Odoo BIM.
+- Elaborar la **documentación técnica** y los manuales de usuario para los módulos de [Odoo BIM 2.0 ERP](https://www.bim20.com/).
 - Apoyar a los clientes durante la fase de implementación, ayudándolos a migrar a producción: carga de datos maestros (clientes, proveedores, productos) y presupuestos.
 - Participar en la gestión de ventas de los módulos de Odoo BIM en diferentes regiones.
 - Ofrecer soporte técnico y funcional a los clientes, asegurando el correcto funcionamiento de los módulos.
@@ -45,7 +47,7 @@ El **Arquitecto Funcional Odoo BIM** es responsable de definir la arquitectura f
 ## ¿Qué aprenderás?
 - A dominar el uso de **Odoo ERP**.
 - Conocimiento profundo de la **metodología BIM**.
-- Configuración avanzada de los módulos de Odoo BIM.
+- Configuración avanzada de los módulos de [Odoo BIM 2.0 ERP](https://www.bim20.com/).
 - Desarrollo de documentación técnica y manuales para el sistema.
 
 ## ¿Cómo trabajamos?
