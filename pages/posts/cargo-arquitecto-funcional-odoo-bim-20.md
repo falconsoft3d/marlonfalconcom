@@ -62,6 +62,7 @@ El **Arquitecto Funcional Odoo BIM** es responsable de definir la arquitectura f
 - Una buena **conexión a internet**.
 - Un **ordenador** adecuado para trabajar.
 - Un entorno de trabajo tranquilo para asegurar la concentración y productividad.
+- Una cuenta de Telegram y WhatsApp para comunicarte con el equipo.
 
 
 ## Contactactar ahora
