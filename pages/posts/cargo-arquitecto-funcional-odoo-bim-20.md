@@ -21,8 +21,8 @@ El Arquitecto Funcional Odoo BIM es el responsable de la definición de la arqui
 - Experiencia algun sistema de gestión de proyectos.
 - Experiencia en algún sistema de gestión de presupuesto de Obra.
 
-# Que funcines realiza el Arquitecto Funcional Odoo BIM
-- Ayudar en las mejoras del sistema.
+# Que funciones realiza el Arquitecto Funcional Odoo BIM
+- Ayudar en las mejoras del sistema bim 2.0.
 - Ayudar en la capacitación de los usuarios.
 - Realizar la configuración de los módulos de Odoo BIM.
 - Realizar la documentación de los módulos de Odoo BIM como manuales, presetación.
@@ -45,6 +45,7 @@ El Arquitecto Funcional Odoo BIM es el responsable de la definición de la arqui
 - Para los feriados usamos como guia a Valencia, España.
 - Si un cliente pide algo todo es por tickets.
 - Si un cliente pide directamente le recomendamos usar los grupo de comunicación.
+- Trabajamos normalmente de lunes a viernes de 9:00 a 18:00.
 
 # Que necesito para trabajar
 - Tener una buena conexión a internet.
