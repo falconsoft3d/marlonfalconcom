@@ -7,50 +7,50 @@ author: Marlon Falcon Hernandez
 ---
 
 # Cargo Arquitecto Funcional Odoo BIM
-En este post veremos la descripción del cargo de Arquitecto Funcional Odoo BIM 2.0.
+En esta publicación, describiremos el puesto de **Arquitecto Funcional Odoo BIM 2.0** y sus principales responsabilidades y requisitos.
 
-# Que es Odoo BIM 2.0
-Odoo BIM 2.0 es un ERP especializado en construcción, que esta desarrollado y corre sobre Odoo ERP, en esta web puedes concer más sobre Odoo ERP [Odoo BIM 2.0 ERP](https://www.bim20.com/).
+## ¿Qué es Odoo BIM 2.0?
+**Odoo BIM 2.0** es un ERP especializado en el sector de la construcción, desarrollado sobre la plataforma **Odoo ERP**. Este sistema integra la contabilidad de una empresa de construcción con la gestión de proyectos de construcción. Si deseas obtener más información sobre Odoo ERP, puedes visitar la página oficial: [Odoo BIM 2.0 ERP](https://www.bim20.com/). Es importanate saber que implementar Odoo BIM 2.0 No es implementar la metodología BIM, es implementar un ERP especializado en el sector de la construcción.
 
+## Descripción del Cargo
+El **Arquitecto Funcional Odoo BIM** es responsable de definir la arquitectura funcional de los módulos de Odoo BIM. Su rol incluye optimizar el uso del sistema y garantizar que los procesos de construcción estén bien integrados en el ERP, ayudando a clientes y usuarios a sacar el máximo provecho de la herramienta.
 
-# Descripción del Cargos
-El Arquitecto Funcional Odoo BIM es el responsable de la definición de la arquitectura funcional de los módulos de Odoo BIM.
+## Requisitos del Cargo
+- Experiencia en **Revit**.
+- Conocimiento en sistemas de **gestión de proyectos**.
+- Experiencia con sistemas de **gestión de presupuestos de obra**.
 
-# Requisitos del Cargo
-- Experiencia en Revit.
-- Experiencia algun sistema de gestión de proyectos.
-- Experiencia en algún sistema de gestión de presupuesto de Obra.
+## Funciones del Arquitecto Funcional Odoo BIM
+- Colaborar en la **mejora continua** del sistema Odoo BIM 2.0.
+- Capacitar a los usuarios finales en el uso de los módulos de Odoo BIM.
+- Configurar los módulos de Odoo BIM según los requerimientos del cliente.
+- Elaborar la **documentación técnica** y los manuales de usuario para los módulos de Odoo BIM.
+- Apoyar a los clientes durante la fase de implementación, ayudándolos a migrar a producción: carga de datos maestros (clientes, proveedores, productos) y presupuestos.
+- Participar en la gestión de ventas de los módulos de Odoo BIM en diferentes regiones.
+- Ofrecer soporte técnico y funcional a los clientes, asegurando el correcto funcionamiento de los módulos.
+- Recoger los **requerimientos de los clientes**, transferirlos a los programadores y validar los desarrollos en fase de prueba antes de su paso a producción.
 
-# Que funciones realiza el Arquitecto Funcional Odoo BIM
-- Ayudar en las mejoras del sistema bim 2.0.
-- Ayudar en la capacitación de los usuarios.
-- Realizar la configuración de los módulos de Odoo BIM.
-- Realizar la documentación de los módulos de Odoo BIM como manuales, presetación.
-- Ayudar a los clientes a salir a producción, ayudando en la etapa inicial de la implementación. Crear presupuestos al cliente, cargar maestros de clientes, proveedores, productos, etc.
-- Ayudar en la gestión de Venta de los módulos de Odoo BIM en diferentes zonas.
-- Ayudar en la fase de soporte de los módulos de Odoo BIM.
-- Ayuda a levantar requerimientos de los clientes y se lo pasa a los programadores. Luego lo valida en test para pasarlo a producción.
+## ¿Qué aprenderás?
+- A dominar el uso de **Odoo ERP**.
+- Conocimiento profundo de la **metodología BIM**.
+- Configuración avanzada de los módulos de Odoo BIM.
+- Desarrollo de documentación técnica y manuales para el sistema.
 
-# Que va aprender.
-- Aprenderá Odoo ERP.
-- Aprenderá La metodología BIM.
-- Aprenderá a configurar los módulos de Odoo BIM.
-- Aprenderá a realizar la documentación de los módulos de Odoo BIM.
+## ¿Cómo trabajamos?
+- Principalmente trabajamos de forma **remota**. Pero a veces viajamos a las oficinas de los clientes para reuniones o formaciones y la empresa se hace cargo de los gastos de viaje.
+- Utilizamos herramientas como **Telegram**, **Google Drive**, **Google Meet** y **Zoom** para comunicarnos y colaborar.
+- Con los clientes, nos comunicamos a través de **WhatsApp**, **Telegram** y **Google Meet**.
+- Iniciamos el día notificando en el grupo de trabajo y al final del día reportamos el progreso.
+- Seguimos el calendario de días festivos de **Valencia, España**.
+- Todas las solicitudes de los clientes se gestionan mediante un sistema de **tickets**.
+- Si un cliente nos contacta directamente, le dirigimos a los canales de comunicación establecidos.
+- El horario habitual es de **lunes a viernes de 9:00 a 18:00**.
 
-# Cómo trabajamos.
-- Trabajamos mayormente en remoto.
-- Usamos Telegram para comunicarnos mayormente, Google Drive, Google Meet, Zoom, etc.
-- Con los clientes usamos WhatsApp, Telegram y Google Meet.
-- Cuando iniciamos el día notificamos por el grupo y al final del día reportamos lo que hicimos.
-- Para los feriados usamos como guia a Valencia, España.
-- Si un cliente pide algo todo es por tickets.
-- Si un cliente pide directamente le recomendamos usar los grupo de comunicación.
-- Trabajamos normalmente de lunes a viernes de 9:00 a 18:00.
+## ¿Qué necesitas para trabajar con nosotros?
+- Una buena **conexión a internet**.
+- Un **ordenador** adecuado para trabajar.
+- Un entorno de trabajo tranquilo para asegurar la concentración y productividad.
 
-# Que necesito para trabajar
-- Tener una buena conexión a internet.
-- Tener una computadora.
-- Tener un lugar tranquilo para trabajar.
 
 ## Contactactar ahora
 ```
