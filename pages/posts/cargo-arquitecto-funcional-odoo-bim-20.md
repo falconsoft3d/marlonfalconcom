@@ -75,6 +75,12 @@ El **Arquitecto Funcional Odoo BIM** es responsable de definir la arquitectura f
 - Una cuenta de Telegram y WhatsApp para comunicarte con el equipo.
 
 
+## Plan de aprendizaje
+- Curso basico de bim 2.0 : https://www.bim20.com/curso-basico
+- Curso básico de Odoo
+- Curso avanzado de bim 2.0
+
+
 ## Contactactar ahora
 ```
 Nombre: Marlon Falcón Hernández
