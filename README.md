@@ -1,8 +1,6 @@
 # Marlon Falcon Website
 
-
-
-## Usar Node 22 en este proyecto
+## Usar Node 22 en este proyecto mio
 
 Este repo está configurado para usar Node 22. Hay varios archivos que fijan la versión para diferentes gestores de entorno:
 
