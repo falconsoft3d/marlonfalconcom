@@ -24,6 +24,12 @@
     "trailingComma": "none",
     "semi": false
   },
+  "engines": {
+    "node": ">=22 <23"
+  },
+  "volta": {
+    "node": "22"
+  },
   "devDependencies": {
     "next-sitemap": "^3.1.42"
   }
