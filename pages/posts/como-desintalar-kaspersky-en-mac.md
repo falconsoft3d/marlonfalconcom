@@ -8,11 +8,11 @@ author: Marlon Falcon Hernandez
 
 # Como Desinstalar Kaspersky en Mac
 
-Para desinstalar Kaspersky en un Mac, sigue estos pasos:
+Si ves la aplicación con un candado, significa que Kaspersky está protegiendo tu Mac. Para desinstalar Kaspersky en un Mac, sigue estos pasos:
 
 1. **Cerrar Kaspersky**: Asegúrate de que Kaspersky no esté en ejecución. Haz clic en el icono de Kaspersky en la barra de menús y selecciona "Salir".
 
-2. **Si usas MAcOS 10.15 o posterior**:
+2. **Si usas MAcOS**:
    - Abre https://support.kaspersky.com/common/uninstall/16048
     - Descarga la herramienta de desinstalación de Kaspersky para Mac. kavremover-mac.dmg
 
