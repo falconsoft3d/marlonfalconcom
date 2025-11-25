@@ -23,7 +23,7 @@ Si quieres trabajar ordenado te recomiendo es que tengas claro el diagrama de pr
 />
 
 Si me contactas seguro son por cuatro motivos:
-- Quieres implementar Odoo ERP en una constructora usando nuestra vertical BIM 2.0, Aqui te dejo el enlace para que nos contactes y conozcas más de nuestra solución: [Odoo BIM 2.0](https://www.bim20.com)
+- Quieres implementar Odoo ERP en una constructora usando nuestro módulo BIM 2.0, Aqui te dejo el enlace para que nos contactes y conozcas más de nuestra solución: [Odoo BIM 2.0](https://www.bim20.com)
 - Quieres comprar un módulo que yo he desarrollado. Te lo venderemos por el coste de horas que nos llevo desarrollarlo. Ejemplo si un reporte me llevo 30 horas, te lo venderemos por 30 horas de trabajo multiplicado por la tarifa.
 - Quieres implementar Odoo o una vertical que he desarrollado como SIS, Creditos, etc. Cada vertical tiene su tarifa de servicios.
 - Quieres contratar mis servicios para desarrollar un módulo o implementar un proyecto en Odoo ERP.
