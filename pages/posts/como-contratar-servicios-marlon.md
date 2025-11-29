@@ -57,13 +57,7 @@ Si me contactas seguro son por cuatro motivos:
 />
 
 
-3. Una ves que tengamos la cita, tendremos que hacer un levantamiento de requerimientos o reunión de toma de datos, para poder definir el alcance del proyecto y poder hacer un presupuesto. Para esto yo utilizo TicketPro donde anotamos cada uno de tus requerimiento. por ejemplo:
-- Instalar odoo en un servidor de AWS. Tiempo estimado **10 Horas**.
-- Hacer reporte de ventas en pdf con 10 columnas. Tiempo estimado **25 Horas**.
-- Hacer módulo para gestionar los creditos de los clientes. Tiempo estimado **20 Horas**.
-- Hacer módulo para gestionar los pagos de los clientes. Tiempo estimado **20 Horas**.
-- Migrar las 3000 facturas de mi sistema actual a Odoo. Tiempo estimado **80 Horas**.
-- y asi sucesivamente. *Ten en cuenta que en odoo puedes hacer lo que seas capaz de pagar*.
+3. Una ves que tengamos la cita. Tendremos que hacer un levantamiento conocido como DRF (Documento de Requerimientos Funcionales) o reunión de toma de datos, para poder definir el alcance del proyecto y poder hacer un presupuesto. Para esto yo utilizo TicketProo.com donde anotamos cada uno de tus requerimiento y tu equipo puede revisar y validar cada uno. por ejemplo:
 
 <Image
   src="/images/posts/como-contratar-servicios-marlon-1.png"
@@ -74,7 +68,7 @@ Si me contactas seguro son por cuatro motivos:
   className="next-image"
 />
 
-4. Con el listado de requerimientos, yo puedo hacer un presupuesto y enviártelo para que lo revises y me digas si estas de acuerdo con el presupuesto. En el punto 1 te dejo un enlace a mi tarifa de servicios, para que tengas una idea de los precios de mis servicios. *No doy precios cerrados si no tenemos claro el alcance del proyecto*.
+4. Con el DRF (Documento de Requerimientos Funcionales), podemos hacer un presupuesto y enviártelo para que lo revises y apruebes. En el punto 1 te dejo un enlace a mi tarifa de servicios, para que tengas una idea de los precios de mis servicios. *No doy precios cerrados si no tenemos claro el alcance del proyecto es decir el DRF es necesario*.
 
 <Image
   src="/images/posts/como-contratar-servicios-marlon-2.png"
