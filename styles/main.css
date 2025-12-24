@@ -64,6 +64,16 @@ img.next-image {
   color: #69778c;
 }
 
+/* Hide specific pages from navigation */
+.nav-line a[href="/kubatodo"] {
+  display: none !important;
+}
+/* Add more pages to hide here, for example:
+.nav-line a[href="/otra-pagina"] {
+  display: none !important;
+}
+*/
+
 .next-image {
   border-radius: 5px;
 }
