@@ -57,7 +57,7 @@ Si me contactas seguro son por cuatro motivos:
 />
 
 
-3. Una ves que tengamos la cita. Tendremos que hacer un levantamiento conocido como DRF (Documento de Requerimientos Funcionales) o reunión de toma de datos, para poder definir el alcance del proyecto y poder hacer un presupuesto. Para esto yo utilizo TicketProo.com donde anotamos cada uno de tus requerimiento y tu equipo puede revisar y validar cada uno. por ejemplo:
+3. Una ves que tengamos la cita. Tendremos que hacer un levantamiento conocido como **DRF (Documento de Requerimientos Funcionales)** o reunión de toma de datos, para poder definir el alcance del proyecto y poder hacer un presupuesto. Para esto yo utilizo [TicketProo.com](https://ticketproo.com)  donde anotamos cada uno de tus requerimiento y tu equipo puede revisar y validar cada uno. por ejemplo:
 
 <Image
   src="/images/posts/como-contratar-servicios-marlon-1.png"
@@ -68,13 +68,13 @@ Si me contactas seguro son por cuatro motivos:
   className="next-image"
 />
 
-4. Con el DRF (Documento de Requerimientos Funcionales), podemos hacer un presupuesto y enviártelo para que lo revises y apruebes. En el punto 1 te dejo un enlace a mi tarifa de servicios, para que tengas una idea de los precios de mis servicios. *No doy precios cerrados si no tenemos claro el alcance del proyecto es decir el DRF es necesario*.
+4. Con el **DRF (Documento de Requerimientos Funcionales)**, podemos hacer un presupuesto y enviártelo para que lo revises y apruebes. En el punto 1 te dejo un enlace a mi tarifa de servicios, para que tengas una idea de los precios de mis servicios. *No doy precios cerrados si no tenemos claro el alcance del proyecto es decir el DRF es necesario*.
 
 <Image
-  src="/images/posts/como-contratar-servicios-marlon-2.png"
+  src="/images/posts/forma-trabajo-marlon.png"
   alt="contratar-servicios-odoo"
-  width={800}
-  height={250}
+  width={920}
+  height={344}
   priority
   className="next-image"
 />
