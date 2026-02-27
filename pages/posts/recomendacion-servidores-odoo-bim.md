@@ -14,7 +14,7 @@ import Image from 'next/image'
 
 2. Memoria RAM: Se recomienda un mínimo de 32 GB de RAM para servidores Odoo BIM. Sin embargo, dependiendo del tamaño y la complejidad de los proyectos BIM, puede ser necesario aumentar la memoria a 64 GB o más para garantizar un rendimiento fluido.
 
-3. Almacenamiento SSD: Se recomienda utilizar almacenamiento SSD para servidores Odoo BIM, ya que ofrece velocidades de lectura y escritura más rápidas en comparación con los discos duros tradicionales. Esto es crucial para manejar grandes archivos BIM y garantizar tiempos de carga rápidos.
+3. Almacenamiento SSD: Se recomienda utilizar almacenamiento SSD para servidores Odoo BIM, ya que ofrece velocidades de lectura y escritura más rápidas en comparación con los discos duros tradicionales. Esto es crucial para manejar grandes archivos y garantizar tiempos de carga rápidos.
 
 4. Procesadores Potentes: Se recomienda utilizar procesadores de alta gama, como los Intel Xeon o AMD EPYC, para servidores Odoo BIM. Estos procesadores ofrecen múltiples núcleos y un alto rendimiento, lo que es esencial para manejar las cargas de trabajo intensivas de BIM. Al menos 8 núcleos se recomienda para garantizar un rendimiento óptimo.
 
