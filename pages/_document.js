@@ -26,6 +26,7 @@ export default function Document() {
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
+        <script defer data-project="dntmjqkfhehnzvutqrrd" src="https://falcondatabase.com/a.js"></script>
         {/* Aplica el tema guardado antes de pintar (oscuro por defecto); misma clave que next-themes */}
         <script
           dangerouslySetInnerHTML={{
