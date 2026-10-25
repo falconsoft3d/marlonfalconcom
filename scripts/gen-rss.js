@@ -14,7 +14,7 @@ async function generate() {
 
   await Promise.all(
     posts.map(async (name) => {
-      if (name.startsWith('index.')) return
+      if (name.startsWith('index.') || !/\.mdx?$/.test(name)) return
 
       const content = await fs.readFile(
         path.join(__dirname, '..', 'pages', 'posts', name)
@@ -26,7 +26,7 @@ async function generate() {
         url: '/posts/' + name.replace(/\.mdx?/, ''),
         date: frontmatter.data.date,
         description: frontmatter.data.description,
-        categories: frontmatter.data.tag.split(', '),
+        categories: (frontmatter.data.tag || '').split(', ').filter(Boolean),
         author: frontmatter.data.author
       })
     })

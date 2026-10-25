@@ -1,14 +1,14 @@
 ---
-title: ▷ Módulo TicketPro para la gestión de proyectos en odoo erp.
+title: ▷ Módulo TicketPro para la gestión de proyectos en Odoo ERP
 date: 2023/01/14
-description: ▷ Módulo TicketPro para la gestión de proyectos en odoo erp.
+description: ▷ TicketPro es un módulo de Odoo ERP para controlar proyectos, incidencias, horas y costes durante la implementación y el soporte.
 tag: odoo, erp, soporte, proyectos, ticketpro
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# ▷ Módulo TicketPro para la gestión de proyectos en odoo erp.
-**TicketPro** es un módulo de **Odoo ERP** desarrollado por Marlon que permite llevar el control de proyectos e incidencias durante la implementación y soporte de **Odoo ERP**. Este módulo permite llevar un control de los proyectos, incidencias, tareas, horas trabajadas, etc. Además, permite llevar un control de los costes de los proyectos, desarrollos y las incidencias.
+# ▷ Módulo TicketPro para la gestión de proyectos en Odoo ERP
+**TicketPro** es un módulo de **Odoo ERP** desarrollado por Marlon que permite llevar el control de proyectos e incidencias durante la implementación y el soporte de **Odoo ERP**. Este módulo permite llevar un control de los proyectos, incidencias, tareas, horas trabajadas, etc. Además, permite llevar un control de los costes de los proyectos, desarrollos y las incidencias.
 
 <Image
   src="/images/posts/ticketpro-odoo-1.png"
@@ -19,7 +19,7 @@ import Image from 'next/image'
   className="next-image"
 />
 
-En la vista *tree* podemos ver los estados de las tareas de cada proyecto. Además, podemos ver quien lo creo, el responsable y la fecha de creación.
+En la vista *tree* podemos ver los estados de las tareas de cada proyecto. Además, podemos ver quién la creó, el responsable y la fecha de creación.
 <Image
   src="/images/posts/ticketpro-odoo-2.png"
   alt="ticketpro-odoo-erp"
@@ -29,7 +29,7 @@ En la vista *tree* podemos ver los estados de las tareas de cada proyecto. Adem�
   className="next-image"
 />
 
-Para crear un **ticket** tenemos que asociarle un ticket y una nota que seria la descripción del ticket. Además, podemos asociarle un proyecto, un responsable, una categoría de ticket, prioridad,  etc.
+Para crear un **ticket** tenemos que indicarle un título y una nota, que sería la descripción del ticket. Además, podemos asociarle un proyecto, un responsable, una categoría de ticket, una prioridad, etc.
 
 <Image
   src="/images/posts/ticketpro-odoo-3.png"
@@ -40,7 +40,7 @@ Para crear un **ticket** tenemos que asociarle un ticket y una nota que seria la
   className="next-image"
 />
 
-El menú de módulos describe que hace cada módulo y como se puede configurar.
+El menú de módulos describe qué hace cada módulo y cómo se puede configurar.
 <Image
   src="/images/posts/ticketpro-odoo-4.png"
   alt="ticketpro-odoo-erp"
@@ -50,7 +50,7 @@ El menú de módulos describe que hace cada módulo y como se puede configurar.
   className="next-image"
 />
 
-En las notas de proyecto podemos ver las notas de cada reunión desde una nota podemos crear varios ticket asi sabemos el origen. Todo lo que se hable en reuniones se puede asociar a una nota de proyecto. Nada que no quede anotado en una nota de proyecto no se considerará como acuerdo.
+En las notas de proyecto podemos ver las notas de cada reunión. Desde una nota podemos crear varios tickets, así sabemos su origen. Todo lo que se hable en las reuniones se puede asociar a una nota de proyecto, y nada que no quede anotado en una nota de proyecto se considerará un acuerdo.
 <Image
   src="/images/posts/ticketpro-odoo-5.png"
   alt="ticketpro-odoo-erp"
@@ -60,7 +60,7 @@ En las notas de proyecto podemos ver las notas de cada reunión desde una nota p
   className="next-image"
 />
 
-Las categoría definen a que email de soporte se enviara la notifivacion de la incidencia. Además permite agrupar por módulos las incidencias.
+Las categorías definen a qué email de soporte se enviará la notificación de la incidencia. Además, permiten agrupar las incidencias por módulos.
 <Image
   src="/images/posts/ticketpro-odoo-6.png"
   alt="ticketpro-odoo-erp"

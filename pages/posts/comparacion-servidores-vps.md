@@ -1,15 +1,15 @@
 ---
-title: ▷ Comparación de Servidores VPS
+title: ▷ Comparación de servidores VPS
 date: 2025/08/27
-description: ▷ Comparación de Servidores VPS
+description: ▷ Comparativa de VPS con 16 GB de RAM en DigitalOcean, Hetzner y AWS EC2 para alojar ERP como Odoo - especificaciones y precios.
 tag: vps, servidores, odoo
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# ▷ Comparación de Servidores VPS
+# ▷ Comparación de servidores VPS
 
-En este artículo comparamos tres de las plataformas más populares de VPS con especificaciones de **al menos 16 GB de RAM y 2 CPU**: **DigitalOcean**, **Hetzner** y **AWS EC2**. Para usarlo como referencia al elegir un servidor VPS para proyectos que requieren buen rendimiento y estabilidad en proyectos de erps como Odoo.
+En este artículo comparamos tres de las plataformas más populares de VPS con especificaciones de **al menos 16 GB de RAM y 2 CPU**: **DigitalOcean**, **Hetzner** y **AWS EC2**. La idea es usarlo como referencia al elegir un servidor VPS para proyectos que requieren buen rendimiento y estabilidad, como los ERP tipo Odoo.
 
 <Image
   src="/images/server-vps.png"
@@ -71,3 +71,5 @@ En este artículo comparamos tres de las plataformas más populares de VPS con e
 - **AWS EC2** → Recomendado solo si necesitas el **ecosistema completo de AWS**, integración avanzada y escalabilidad global, aunque implica un coste elevado.
 
 ---
+
+Los precios son aproximados y corresponden a la fecha de publicación; los proveedores los actualizan con frecuencia, así que revísalos en su web antes de contratar.

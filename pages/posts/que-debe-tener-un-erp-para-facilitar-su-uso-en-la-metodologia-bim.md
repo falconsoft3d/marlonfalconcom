@@ -1,7 +1,7 @@
 ---
-title: ▷ Que debe tener un erp para facilitar su uso en la metodologia bim
+title: ▷ Qué debe tener un ERP para facilitar su uso en la metodología BIM
 date: 2024/10/03
-description: ▷ Que debe tener un erp para facilitar su uso en la metodologia bim
+description: ▷ Componentes y características que debe tener un ERP o Entorno Común de Datos (CDE) para facilitar el trabajo con la metodología BIM.
 tag: bim
 author: Marlon Falcon Hernandez
 ---
@@ -49,5 +49,5 @@ Un Entorno Común de Datos (CDE, o **Common Data Environment** en inglés) es fu
 - **Herramientas de Coordinación**: Incorporar herramientas que permitan superponer los diferentes modelos de disciplinas (arquitectura, estructuras, instalaciones) para detectar y gestionar posibles conflictos o colisiones.
 - **Reporte de Colisiones**: Generar reportes de problemas identificados para que puedan ser resueltos de manera oportuna.
 
-## Resumen un ERP o un Entorno Común de Datos (CDE) es Eficaz para BIM
+## Resumen: por qué un ERP o un Entorno Común de Datos (CDE) es eficaz para BIM
 Un CDE bien implementado facilita la colaboración, mejora la eficiencia y reduce errores en el desarrollo de proyectos BIM. Al ofrecer una plataforma segura y centralizada para la gestión de datos, permite que todos los participantes trabajen de manera sincronizada y con acceso a la información más actualizada. Esto, a su vez, contribuye a una **mejor planificación**, una **menor repetición de tareas** y una **ejecución más eficiente** del proyecto de construcción.

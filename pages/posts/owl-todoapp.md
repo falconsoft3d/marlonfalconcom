@@ -1,13 +1,15 @@
 ---
 title: TodoApp con Owl
 date: 2022/12/21
-description: TodoApp con Owl
+description: Ejemplo de una aplicación de tareas (TodoApp) con Owl usando componentes, un store reactivo, useRef, onMounted y useEnv.
 tag: owl
 author: Marlon Falcon Hernandez
 ---
 #  TodoApp con Owl
 
-Este es un ejemplo de un TodoApp con Owl
+Este es un ejemplo de una aplicación de tareas (TodoApp) con Owl. Es un paso más respecto a los ejemplos de hola mundo y contador, ya que introduce conceptos como el estado compartido entre componentes y las referencias a elementos del DOM.
+
+Puedes ver el ejemplo funcionando aquí:
 
 [03-todoapp](/owl-samples/03-todoapp/index.html)
 
@@ -139,3 +141,11 @@ mount(Root, document.body, { dev: true, env });
   </body>
 </html>
 ```
+
+## Cómo funciona
+
+- **TaskList** es una clase con la lógica de negocio: añadir, marcar como completada y eliminar tareas.
+- **createTaskStore** convierte esa clase en un objeto reactivo con `reactive`, que se comparte entre los componentes a través del entorno (`env`).
+- **useStore** es un hook propio que obtiene el store del entorno con `useEnv` y lo envuelve con `useState`, para que los componentes se vuelvan a renderizar cuando cambian las tareas.
+- **Task** muestra una tarea con su casilla de verificación y el botón para eliminarla.
+- **Root** contiene el campo de texto (enfocado al montar el componente gracias a `useRef` y `onMounted`) y recorre la lista de tareas con `t-foreach`. Al pulsar Enter se añade una nueva tarea.

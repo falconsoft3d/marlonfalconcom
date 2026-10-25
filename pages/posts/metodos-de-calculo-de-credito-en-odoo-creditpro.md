@@ -1,61 +1,57 @@
 ---
-title: ▷ Métodos de cálculo de prestamos con CreditPro en Odoo ERP
+title: ▷ Métodos de cálculo de préstamos con CreditPro en Odoo ERP
 date: 2023/01/24
-description: ▷ Métodos de cálculo de prestamos con CreditPro en Odoo ERP
+description: ▷ Diferencias entre los métodos de amortización francés, alemán y americano, y cómo se calculan los préstamos con CreditPro en Odoo ERP.
 tag: odoo, credito, creditpro
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# ▷ Métodos de cálculo de prestamos con CreditPro en Odoo ERP
-En el módulo **CreditPro** existen varios métodos para calcular el monto de un crédito o prestamo, dependiendo del tipo de crédito y de la institución financiera que lo otorgue. Algunos de los métodos más comunes son:
+# ▷ Métodos de cálculo de préstamos con CreditPro en Odoo ERP
+Existen varios métodos para calcular las cuotas de un crédito o préstamo, y cada institución financiera elige el que mejor se adapta a cada tipo de crédito. Algunos de los métodos más comunes son:
 
-1. El método de amortización francés: Este método se utiliza para calcular el monto de un crédito con una tasa de interés fija. El prestatario paga una cantidad fija cada mes, que incluye una parte del capital y el interés correspondiente.
+1. El método de amortización francés: el prestatario paga una cuota fija en cada periodo, que incluye una parte de capital y otra de intereses. Al principio la mayor parte de la cuota son intereses y, a medida que avanza el préstamo, la parte de capital amortizado va aumentando.
 
-2. El método de amortización alemán: Este método se utiliza para calcular el monto de un crédito con una tasa de interés variable. El prestatario paga una cantidad fija cada mes, pero la parte del capital que se amortiza varía cada mes.
+2. El método de amortización alemán: el prestatario amortiza la misma cantidad de capital en cada periodo. Como los intereses se calculan sobre el capital pendiente, que disminuye, la cuota total es más alta al principio y va bajando con el tiempo.
 
-3. El método de amortización americano: Este método se utiliza para calcular el monto de un crédito en el que el prestatario paga sólo intereses durante un período de tiempo determinado, y luego comienza a pagar tanto intereses como capital.
+3. El método de amortización americano: el prestatario paga solo intereses durante el plazo del préstamo y devuelve el capital íntegramente al final.
 
-Cada uno tiene sus aplicaciones y ventajas, es importante que se entienda bien cual de ellos se aplica a la situación específica para poder elegir el mejor crédito para usar en CreditPro en Odoo ERP.
+Cada uno tiene sus aplicaciones y ventajas, por lo que es importante entender bien cuál de ellos se ajusta a cada situación para elegir el más adecuado al configurar un crédito en CreditPro en Odoo ERP.
 
-El crédito francés y alemán son los más utilizados por lo que son los que hemos implementado en nuestro módulo para Odoo 16 ERP CreditPro. El crédito francés se refiere al sistema de crédito en el que las instituciones financieras prestan dinero a los prestatarios con una tasa de interés fija durante todo el plazo del préstamo. El crédito alemán se refiere al sistema de crédito en el que las instituciones financieras prestan dinero a los prestatarios con una tasa de interés variable, que puede cambiar durante el plazo del préstamo. Ambos sistemas tienen sus ventajas y desventajas.
+El método francés y el alemán son los más utilizados, por lo que son los que hemos implementado en nuestro módulo CreditPro para Odoo 16 ERP. Ambos pueden aplicarse tanto con una tasa de interés fija como variable; lo que los diferencia es cómo se reparte el pago entre capital e intereses. Cada uno tiene sus ventajas y desventajas.
 
-El crédito francés tiene varias ventajas y desventajas. 
+## Método francés
 
-Algunas de las principales ventajas son:
+Algunas de sus principales ventajas son:
 
-* Mayor estabilidad: La tasa de interés es fija, lo que significa que el prestatario sabe exactamente cuánto tendrá que pagar cada mes durante todo el plazo del préstamo. Esto le permite planificar mejor sus finanzas y evitar sorpresas.
+* Mayor estabilidad: la cuota es la misma en todos los periodos (con tasa fija), lo que permite al prestatario saber exactamente cuánto tendrá que pagar y planificar mejor sus finanzas.
+* Cuotas iniciales más bajas: al comienzo del préstamo la cuota es menor que en el método alemán, lo que facilita afrontar los primeros pagos.
+* Mayor aceptación: es el sistema más común, por lo que resulta familiar para los clientes y fácil de comparar entre distintas ofertas.
 
-* Mayor seguridad: La tasa de interés fija es menos volátil que la tasa de interés variable, lo que significa que el prestatario tiene menos riesgo de que su cuota mensual aumente significativamente.
-* Mayor transparencia: El prestatario sabe exactamente cuánto tendrá que pagar en total, incluyendo intereses y comisiones, lo que le permite comparar diferentes ofertas de crédito.
-Mayor aceptación: El crédito francés es más común y aceptado en general.
+Entre sus principales desventajas están:
+* Mayor costo total: como el capital se amortiza más despacio al principio, el prestatario paga más intereses en total que con el método alemán.
+* Amortización lenta al inicio: durante los primeros periodos la deuda pendiente baja poco, porque la mayor parte de la cuota son intereses.
 
-Entre las principales desventajas del crédito francés están:
-* Mayor costo: A menudo, la tasa de interés es más alta que la tasa de interés variable, lo que significa que el prestatario tendrá que pagar más intereses en total.
-* Menor flexibilidad: El prestatario no puede ajustar su cuota mensual en función de sus ingresos o circunstancias cambiantes.
-* Menor rentabilidad: Si las tasas de interés bajan, el prestatario no se beneficiará de las reducciones.
-* Menor capacidad de adaptación: El prestatario no puede adaptarse a las fluctuaciones del mercado financiero.
+## Método alemán
 
-El crédito alemán tiene varias ventajas y desventajas. Algunas de las principales ventajas son:
+Algunas de sus principales ventajas son:
 
-* Mayor flexibilidad: La tasa de interés es variable, lo que significa que el prestatario puede ajustar su cuota mensual en función
-* Ingresos o circunstancias cambiantes. Esto le permite adaptarse mejor a las fluctuaciones del mercado financiero.
-* Menor costo: A menudo, la tasa de interés es más baja que la tasa de interés fija, lo que significa que el prestatario tendrá que pagar menos intereses en total.
-* Mayor rentabilidad: Si las tasas de interés bajan, el prestatario se beneficiará de las reducciones.
+* Menor costo total: al amortizar más capital desde el principio, los intereses totales son menores.
+* La deuda baja más rápido: el capital pendiente disminuye de forma constante en cada periodo.
+* Cuotas decrecientes: el esfuerzo de pago se reduce con el paso del tiempo.
 
-Entre las principales desventajas del crédito alemán están:
-* Mayor incertidumbre: La tasa de interés es variable, lo que significa que el prestatario no sabe exactamente cuánto tendrá que pagar cada mes. Esto puede dificultar la planificación financiera.
-* Mayor riesgo: La tasa de interés variable es más volátil que la tasa de interés fija, lo que significa que el prestatario tiene más riesgo de que su cuota mensual aumente significativamente.
-* Menor transparencia: El prestatario no sabe exactamente cuánto tendrá que pagar en total, incluyendo intereses y comisiones, lo que dificulta comparar diferentes ofertas de crédito.
-* Menor aceptación: El crédito alemán es menos común y aceptado en general.
+Entre sus principales desventajas están:
+* Cuotas iniciales más altas: los primeros pagos son los más elevados, lo que exige una mayor capacidad de pago al inicio.
+* Menor estabilidad: la cuota cambia en cada periodo, lo que hace algo más compleja la planificación.
+* Menor aceptación: es menos común que el método francés.
 
-Ejemplos de cálculo de crédito método Francés vs Alemán:
+## Ejemplos de cálculo de crédito: método francés vs. alemán
 
-Aquí se muestran los dos métodos de cálculo para las mismas condiciones, en el caso del Francés el término amortizativo (Cuota) es  fijo y en el caso del Alemán es variable y lo que queda fijo es la cuota de amortización.
+Aquí se muestran los dos métodos de cálculo para las mismas condiciones: en el caso del francés, el término amortizativo (cuota) es fijo y, en el caso del alemán, es variable y lo que queda fijo es la cuota de amortización.
 
-Capital Inicial : 10000
-Años: 3
-Interés: 2%
+- Capital inicial: 10000
+- Años: 3
+- Interés: 2%
 
 <Image
   src="/images/posts/credito-calculo.png"
@@ -65,9 +61,3 @@ Interés: 2%
   priority
   className="next-image"
 />
-
-
-
-
-
-

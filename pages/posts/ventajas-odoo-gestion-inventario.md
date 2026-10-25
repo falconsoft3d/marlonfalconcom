@@ -1,7 +1,7 @@
 ---
 title: Ventajas Odoo ERP para la gestión de inventario
 date: 2022/12/27
-description: Ventajas Odoo ERP para la gestión de inventario
+description: Cinco ventajas del módulo de inventario de Odoo ERP, desde el control de stock en tiempo real hasta la integración con otras áreas.
 tag: odoo, inventario
 author: Marlon Falcon Hernandez
 ---
@@ -18,6 +18,6 @@ Odoo es un sistema de gestión empresarial que incluye un módulo de control de 
 
 4. Integración con otras áreas de la empresa: Odoo es un sistema integral que permite la integración con otras áreas de la empresa, como la facturación, la contabilidad y la gestión de proyectos. Esto facilita la toma de decisiones y la obtención de una visión global del negocio.
 
-5. Acceso desde cualquier lugar y dispositivo: Odoo es una aplicación web que se puede acceder desde cualquier lugar y dispositivo con conexión a Internet, lo que facilita la colaboración y el trabajo en equipo.
+5. Acceso desde cualquier lugar y dispositivo: Odoo es una aplicación web a la que se puede acceder desde cualquier lugar y dispositivo con conexión a Internet, lo que facilita la colaboración y el trabajo en equipo.
 
 En resumen, Odoo es un sistema de gestión empresarial completo que incluye un módulo de control de inventario muy potente y flexible, y que ofrece numerosas ventajas para mejorar la eficiencia y la productividad de tu empresa.

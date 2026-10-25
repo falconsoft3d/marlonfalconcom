@@ -1,7 +1,7 @@
 ---
 title: ▷ Crear API con PostgREST
 date: 2023/10/03
-description: ▷ Crear API con PostgREST
+description: ▷ Cómo generar automáticamente una API REST a partir de una base de datos PostgreSQL con PostgREST en Ubuntu 20.04.
 tag: postgresql, api
 author: Marlon Falcon Hernandez
 ---
@@ -9,15 +9,15 @@ import Image from 'next/image'
 
 # ▷ Crear API con PostgREST
 
-PostgREST es una herramienta que nos permite crear una API REST de forma automática a partir de una base de datos PostgreSQL. En este articulo veremos pasa a paso como configurarlo en ubuntu 20.04.
+PostgREST es una herramienta que nos permite crear una API REST de forma automática a partir de una base de datos PostgreSQL. Cada tabla o vista del esquema expuesto se convierte en un endpoint, y los filtros, la paginación y el orden se indican directamente en la URL, sin escribir código de backend. En este artículo veremos paso a paso cómo configurarlo en Ubuntu 20.04.
 
-1. Instalar PostgreRest
+1. Instalamos PostgREST
 
 ```bash
 sudo apt install postgrest
 ```
 
-2. Creamos el fichero de configuracion
+2. Creamos el fichero de configuración
 ```bash
 nano /opt/postgrest.conf
 ```
@@ -34,7 +34,7 @@ db-anon-role = "postgres"
 postgrest /opt/postgrest.conf
 ```
 
-5. Lo revisamos desde la web
+5. Lo revisamos desde el navegador
 ```bash
 http://127.0.0.1:3000
 http://127.0.0.1:3000/dimensiones_tuberia?limit=10
@@ -70,7 +70,7 @@ sudo systemctl enable postgrest
 ```
 
 
-8. Ejemplo de uso
+9. Ejemplo de uso
 ```json
 [
     {
@@ -95,4 +95,8 @@ sudo systemctl enable postgrest
 ]
 ```
 
+## Notas
 
+- En la URL, `?limit=10` limita el número de resultados y `columna=eq.valor` filtra por igualdad. PostgREST admite otros operadores como `gt`, `lt`, `like` o `in`.
+- Por seguridad, en producción no conviene usar el usuario `postgres` como rol anónimo (`db-anon-role`), ya que expondría toda la base de datos con permisos de superusuario. Lo recomendable es crear un rol específico con permisos solo de lectura sobre las tablas que quieras publicar.
+- Comprueba con `which postgrest` la ruta real del binario y ajusta la línea `ExecStart` del servicio si es necesario.

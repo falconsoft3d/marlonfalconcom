@@ -1,14 +1,17 @@
 ---
 title: Comandos de Kubernetes para Minikube
 date: 2022/12/18
-description: Comandos de Kubernetes para Minikube
+description: Comandos básicos para instalar Minikube y gestionar clústeres locales de Kubernetes, perfiles, nodos y memoria.
 tag: kubernetes, minikube
 author: Marlon Falcon Hernandez
 ---
 
 # Comandos de Kubernetes para Minikube
 
-Instalando Minikube
+Minikube permite ejecutar un clúster de Kubernetes en local, en tu propio ordenador, lo que resulta ideal para aprender y para probar despliegues antes de llevarlos a un entorno real. Estos son los comandos que más utilizo.
+
+## Instalar Minikube
+Ejemplo de instalación en macOS (Intel):
 ```bash
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64
 sudo install minikube-darwin-amd64 /usr/local/bin/minikube
@@ -16,53 +19,55 @@ sudo install minikube-darwin-amd64 /usr/local/bin/minikube
 minikube start
 ```
 
-Saber la versión.
+## Saber la versión
 ```bash
 kubectl version --output=yaml
 ```
 
-Mostrar el log.
+## Mostrar el log
 ```bash
 minikube logs
 ```
 
-Saber el IP.
+## Saber la IP
 ```bash
 minikube ip
 ```
 
-Directorio de configuración.
+## Directorios de configuración
 ```bash
 nano .kube
 nano .minikube
 ```
 
-Me lista los cluster
+## Listar los clústeres
 ```bash
 minikube profile list
 ```
 
-Creamos un cluster con dos nodos.
+## Crear un clúster con dos nodos
 ```bash
 minikube start --driver=docker -p clusterDesa --nodes=2
 ```
 
-Eliminamos un cluster
+## Eliminar un clúster
 ```bash
 minikube delete -p clusterDesa
 ```
 
-Cambiamos la memoria
+## Cambiar la memoria
 ```bash
 minikube config set memory 4G -p minikube
 ```
 
-Saber la memoria
+## Saber la memoria
 ```bash
 minikube config get memory
 ```
 
-Nos cambiamos de cluster
+## Cambiar de clúster
 ```bash
 minikube profile ClusterDesa
 ```
+
+Ten en cuenta que los nombres de perfil distinguen entre mayúsculas y minúsculas, así que deben escribirse igual que al crearlos.

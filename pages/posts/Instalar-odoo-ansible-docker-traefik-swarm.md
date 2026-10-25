@@ -1,29 +1,35 @@
 ---
-title: ▷ Instalar odoo ansible docker traefik swarm
+title: ▷ Instalar Odoo con Ansible, Docker, Traefik y Swarm
 date: 2023/01/12
-description: ▷ Instalar odoo ansible docker traefik swarm
+description: ▷ Despliega Odoo en un clúster Docker Swarm con Traefik como proxy inverso y certificados HTTPS, automatizando el servidor con Ansible.
 tag: odoo, traefik, docker, ansible, swarm
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# ▷ Instalar odoo ansible docker traefik swarm
-En este post vamos a instalar odoo con ansible, docker y traefik en un cluster de docker swarm. Odoo es un software de gestión empresarial que permite gestionar todo el ciclo de vida de una empresa, desde la gestión de clientes, ventas, compras, inventario, contabilidad, etc. Odoo es un software de código abierto, por lo que podemos modificarlo a nuestro gusto y necesidades. Odoo es una de las mejores soluciones de gestión empresarial que podemos encontrar en el mercado, y es totalmente gratuito.
+# ▷ Instalar Odoo con Ansible, Docker, Traefik y Swarm
+En este post vamos a instalar Odoo con Ansible, Docker y Traefik en un clúster de Docker Swarm. Odoo es un software de gestión empresarial que permite gestionar todo el ciclo de vida de una empresa: clientes, ventas, compras, inventario, contabilidad, etc. Su edición Community es de código abierto y gratuita, por lo que podemos modificarla según nuestros gustos y necesidades.
 
-repo: https://github.com/falconsoft3d/odoo-ansible-docker-traefik-swarm
+En esta arquitectura, cada herramienta tiene un papel:
 
-1. Asi quedaran las URLs
+- **Ansible** automatiza la preparación del servidor (instalación de Docker, inicialización de Swarm, despliegue de servicios).
+- **Docker Swarm** orquesta los contenedores de Odoo y PostgreSQL.
+- **Traefik** actúa como proxy inverso: enruta cada dominio al servicio correspondiente y obtiene automáticamente los certificados HTTPS de Let's Encrypt.
+
+Repositorio: https://github.com/falconsoft3d/odoo-ansible-docker-traefik-swarm
+
+1. Así quedarán las URLs
 ````
 http://traefik.demo.marlonfalcon.com/dashboard/#/
 http://swarm.demo.marlonfalcon.com/
 ````
 
-2. Creamos el server y copiamos la llave publica
+2. Creamos el servidor y copiamos la llave pública
 ````
 ssh-copy-id root@1.1.1.1
 ````
 
-3. Creamos los DNS
+3. Creamos los registros DNS
 ````
 A
 cuba.marlonfalcon.com -> 1.1.1.1
@@ -32,13 +38,13 @@ CNAME
 *.cuba.marlonfalcon.com -> cuba.marlonfalcon.com
 ````
 
-4. Hacemos el deploy
+4. Hacemos el despliegue
 ````
 cd deploy/ansible
 ansible-playbook -i inventories/cuba.marlonfalcon.com -e domain_name=cuba.marlonfalcon.com playbook-master.yml
 ````
 
-5. Instalamos Odoo con docker
+5. Instalamos Odoo con Docker
 ````
 version: '3.7'
 services:
@@ -100,3 +106,5 @@ networks:
   traefik:
     external: true
 ````
+
+Con las etiquetas (labels) de `deploy`, Traefik detecta el servicio de Odoo, redirige el tráfico HTTP a HTTPS y solicita el certificado para el dominio indicado. Recuerda cambiar las contraseñas de ejemplo de la base de datos antes de usar este archivo en producción.

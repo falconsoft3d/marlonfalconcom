@@ -1,20 +1,22 @@
 ---
-title: Creando Snippets para Dart en VsCode
+title: Creando snippets para Dart en VS Code
 date: 2022/12/24
-description: Creando Snippets para Dart en VsCode
+description: Cómo crear snippets personalizados para Dart y Flutter en Visual Studio Code y ahorrar tiempo al escribir código repetitivo.
 tag: vscode, dart, snippets
 author: Marlon Falcon Hernandez
 ---
 
-# Creando Snippets para Dart en VsCode
+# Creando snippets para Dart en VS Code
 
 import Image from 'next/image'
 
-Un Snippet es una pequeña porción de código que se puede insertar en el editor de código. Los snippets se pueden usar para insertar código repetitivo, como declaraciones o bloques de código completos.
+Un snippet es una pequeña porción de código que se puede insertar en el editor de código. Los snippets se pueden usar para insertar código repetitivo, como declaraciones o bloques de código completos.
 
 Los snippets se pueden crear para cualquier lenguaje de programación, pero en este caso vamos a crear snippets para Dart.
 
 ## Abrimos la paleta de comandos
+
+Se abre con `Ctrl+Shift+P` en Windows y Linux, o `Cmd+Shift+P` en macOS.
 
 <Image
   src="/images/posts/vs_code_snippets_1.png"
@@ -26,6 +28,8 @@ Los snippets se pueden crear para cualquier lenguaje de programación, pero en e
 />
 
 ## Buscamos el configurador de snippets
+
+Escribimos "snippets" y elegimos la opción para configurar los fragmentos de código de usuario (Snippets: Configure User Snippets).
 
 <Image
   src="/images/posts/vs_code_snippets_2.png"
@@ -49,6 +53,8 @@ Los snippets se pueden crear para cualquier lenguaje de programación, pero en e
 
 ## Creamos el snippet
 
+VS Code abre el archivo `dart.json`. Cada snippet tiene un nombre, un `prefix` (el texto que lo activa), un `body` (las líneas que se insertan) y una `description`. En este ejemplo creamos una pantalla de Flutter con un Scaffold; `${1:Home}` es un marcador que podemos reemplazar al insertar el snippet, y como aparece varias veces, se modifica en todos los sitios a la vez.
+
 <Image
   src="/images/posts/vs_code_snippets_4.png"
   alt="odoo9"
@@ -58,7 +64,7 @@ Los snippets se pueden crear para cualquier lenguaje de programación, pero en e
   className="next-image"
 />
 
-````
+```
 {
 	// Place your snippets for dart here. Each snippet is defined under a snippet name and has a prefix, body and 
 	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
@@ -97,3 +103,7 @@ Los snippets se pueden crear para cualquier lenguaje de programación, pero en e
 }
 ```
 
+
+## Usamos el snippet
+
+Guardamos el archivo y, en cualquier archivo `.dart`, escribimos `fl-screen` y pulsamos Enter o Tab. Se insertará la pantalla completa con el cursor sobre el nombre, listo para cambiarlo.

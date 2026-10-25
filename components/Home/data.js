@@ -1,19 +1,84 @@
 export const stats = [
-  { value: '200+', label: 'Proyectos' },
-  { value: '3000+', label: 'Módulos Odoo' },
-  { value: '28k', label: 'Seguidores YouTube' },
-  { value: '9', label: 'Países' }
+  { numero: 200, sufijo: '+', label: 'Proyectos', icono: 'folder', color: 'var(--p-blue)' },
+  { numero: 3000, sufijo: '+', label: 'Módulos Odoo', icono: 'box', color: 'var(--p-lavender)' },
+  { numero: 28, sufijo: 'k', label: 'Seguidores YouTube', icono: 'youtube', color: 'var(--p-pink)' },
+  { numero: 9, sufijo: '', label: 'Países', icono: 'globe', color: 'var(--p-green)' }
+]
+
+export const recorrido = [
+  {
+    anio: '1980',
+    pais: 'Cuba',
+    bandera: 'cu',
+    titulo: 'Nací en Cuba',
+    texto: 'Allí crecí y estudié Ingeniería Civil y el Máster en Arquitectura.'
+  },
+  {
+    anio: '2012',
+    pais: 'Chile',
+    bandera: 'cl',
+    titulo: 'Me mudé a Chile',
+    texto: 'En Santiago fundé Falcon Solutions y me certifiqué en SAP ERP.'
+  },
+  {
+    anio: '2019',
+    pais: 'España',
+    bandera: 'es',
+    titulo: 'Llegué a España',
+    texto: 'Hoy vivo en Valencia y trabajo con clientes de Europa y Latinoamérica.',
+    actual: true
+  }
 ]
 
 export const tecnologias = [
-  { nombre: 'Odoo', href: '/tags/odoo', wordmark: true },
-  { nombre: 'Python', logo: '/images/tech/python.svg', href: '/tags/python' },
-  { nombre: 'Django', logo: '/images/tech/django.svg', href: '/tags/django' },
-  { nombre: 'Flutter', logo: '/images/tech/flutter.svg', href: '/tags/flutter' },
-  { nombre: 'React', logo: '/images/tech/react.svg', href: '/tags/react' },
-  { nombre: 'Next.js', logo: '/images/tech/nextjs.svg', href: '/tags/nextjs' },
-  { nombre: 'Node.js', logo: '/images/tech/nodejs.svg', href: '/tags/nodejs' },
-  { nombre: 'Docker', logo: '/images/tech/docker.svg', href: '/tags/docker' }
+  {
+    nombre: 'Odoo',
+    href: '/tags/odoo',
+    wordmark: true,
+    explicacion: 'Un ERP de código abierto: reúne ventas, compras, inventario, contabilidad y más en un solo sistema.'
+  },
+  {
+    nombre: 'Python',
+    logo: '/images/tech/python.svg',
+    href: '/tags/python',
+    explicacion: 'Lenguaje de programación fácil de leer. Con él está hecho Odoo y muchas apps de datos e IA.'
+  },
+  {
+    nombre: 'Django',
+    logo: '/images/tech/django.svg',
+    href: '/tags/django',
+    explicacion: 'Framework de Python para crear webs y APIs de forma rápida y segura.'
+  },
+  {
+    nombre: 'Flutter',
+    logo: '/images/tech/flutter.svg',
+    href: '/tags/flutter',
+    explicacion: 'Herramienta de Google para crear apps de móvil (iOS y Android) con un único código.'
+  },
+  {
+    nombre: 'React',
+    logo: '/images/tech/react.svg',
+    href: '/tags/react',
+    explicacion: 'Librería de JavaScript para construir pantallas web interactivas a base de piezas reutilizables.'
+  },
+  {
+    nombre: 'Next.js',
+    logo: '/images/tech/nextjs.svg',
+    href: '/tags/nextjs',
+    explicacion: 'Framework sobre React para webs rápidas y bien posicionadas en Google. Esta web está hecha con él.'
+  },
+  {
+    nombre: 'Node.js',
+    logo: '/images/tech/nodejs.svg',
+    href: '/tags/nodejs',
+    explicacion: 'Permite usar JavaScript en el servidor para crear APIs y servicios.'
+  },
+  {
+    nombre: 'Docker',
+    logo: '/images/tech/docker.svg',
+    href: '/tags/docker',
+    explicacion: 'Empaqueta una aplicación con todo lo que necesita para que funcione igual en cualquier servidor.'
+  }
 ]
 
 export const verticales = [

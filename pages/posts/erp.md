@@ -1,7 +1,7 @@
 ---
 title: ¿Qué es un ERP?
 date: 2022/12/23
-description: Open Source
+description: Qué es un ERP o sistema de gestión empresarial, cómo funciona, qué ventajas aporta a una empresa y qué hay que tener en cuenta antes de implantarlo.
 tag: erp
 author: Marlon Falcon Hernandez
 ---

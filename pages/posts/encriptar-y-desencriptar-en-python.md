@@ -1,17 +1,17 @@
 ---
-title: ▷ Encriptación y Desencriptación en Python Conceptos Básicos y Ejemplos Prácticos
+title: ▷ Encriptación y desencriptación en Python, conceptos básicos y ejemplos prácticos
 date: 2023/10/16
-description: ▷ Encriptación y Desencriptación en Python Conceptos Básicos y Ejemplos Prácticos
+description: ▷ Conceptos básicos de encriptación y ejemplos prácticos en Python con la biblioteca cryptography y Fernet para cifrar textos y archivos.
 tag: python, programacion, encriptacion
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# ▷ Encriptación y Desencriptación en Python Conceptos Básicos y Ejemplos Prácticos
+# ▷ Encriptación y desencriptación en Python, conceptos básicos y ejemplos prácticos
 
-La encriptación es un proceso fundamental en la seguridad de la información. Permite proteger datos sensibles al convertirlos en un formato ilegible, que solo puede ser restaurado a su estado original mediante un proceso de desencriptación. En Python, existen varias bibliotecas y técnicas para llevar a cabo este proceso. En este artículo, exploraremos los conceptos básicos de encriptación y desencriptación en Python y proporcionaremos ejemplos prácticos utilizando la biblioteca cryptography.
+La encriptación es un proceso fundamental en la seguridad de la información. Permite proteger datos sensibles al convertirlos en un formato ilegible, que solo puede ser restaurado a su estado original mediante un proceso de desencriptación. En Python, existen varias bibliotecas y técnicas para llevar a cabo este proceso. En este artículo, exploraremos los conceptos básicos de encriptación y desencriptación en Python y proporcionaremos ejemplos prácticos utilizando la biblioteca `cryptography`.
 
-## ¿Qué es la Encriptación?
+## ¿Qué es la encriptación?
 La encriptación es el proceso de convertir información legible en un formato ilegible mediante un algoritmo y una clave. Este proceso se utiliza para proteger la confidencialidad de los datos, ya que solo las personas que tienen la clave adecuada pueden revertir el proceso y acceder a la información original.
 
 
@@ -26,7 +26,7 @@ pip install cryptography
 
 A continuación, exploraremos cómo encriptar y desencriptar datos en Python utilizando esta biblioteca.
 
-## Ejemplo 1: Encriptación y Desencriptación Simples
+## Ejemplo 1: encriptación y desencriptación simples
 En este primer ejemplo, mostraremos cómo encriptar una cadena de texto y luego desencriptarla utilizando cryptography.
 
 ```python
@@ -50,9 +50,9 @@ print("Texto encriptado:", texto_encriptado)
 print("Texto desencriptado:", texto_desencriptado)
 ```
 
-Este ejemplo utiliza la clase Fernet de cryptography para generar una clave de encriptación, encriptar el texto original y luego desencriptarlo.
+Este ejemplo utiliza la clase `Fernet` de `cryptography` (cifrado simétrico basado en AES) para generar una clave de encriptación, encriptar el texto original y luego desencriptarlo.
 
-## Ejemplo 2: Encriptación y Desencriptación de Archivos
+## Ejemplo 2: encriptación y desencriptación de archivos
 Puedes utilizar la encriptación para proteger archivos sensibles. Aquí, encriptaremos un archivo y luego lo desencriptaremos.
 
 ```python
@@ -83,7 +83,7 @@ print("Texto desencriptado desde el archivo:", texto_desencriptado)
 Este ejemplo encripta el texto y lo guarda en un archivo. Luego, lee el archivo, desencripta el contenido y lo muestra.
 
 
-## Ejemplo 3: Uso de Contraseñas
+## Ejemplo 3: uso de contraseñas
 En lugar de generar una clave aleatoria, puedes utilizar una contraseña para encriptar y desencriptar datos. Asegúrate de almacenar esta contraseña de manera segura, ya que se necesitará para desencriptar.
 
 ```python
@@ -110,7 +110,7 @@ print("Texto encriptado:", texto_encriptado)
 print("Texto desencriptado:", texto_desencriptado)
 ```
 
-Este ejemplo utiliza una contraseña para generar una clave de encriptación y luego encripta y desencripta el texto utilizando esa clave.
+Ten en cuenta que, en este ejemplo, la variable `contrasena` se define pero no se usa: la clave sigue generándose de forma aleatoria con `Fernet.generate_key()`. Para obtener realmente la clave a partir de una contraseña hay que usar una función de derivación de claves, como `PBKDF2HMAC` del módulo `cryptography.hazmat.primitives.kdf.pbkdf2`, junto con una sal (*salt*) aleatoria que debe guardarse para poder desencriptar después. La clave derivada se codifica en base64 URL-safe y se pasa a `Fernet`.
 
 ## Conclusión
 La encriptación y desencriptación son herramientas cruciales para proteger datos sensibles en aplicaciones y sistemas. Python ofrece bibliotecas como cryptography que facilitan la implementación de algoritmos de encriptación seguros. Sin embargo, ten en cuenta que la seguridad de tus datos depende en gran medida de la gestión adecuada de las claves de encriptación y las contraseñas. Asegúrate de almacenarlas de manera segura y seguir las mejores prácticas de seguridad en tu aplicación.

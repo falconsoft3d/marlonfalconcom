@@ -1,7 +1,7 @@
 ---
 title: ▷ Pagos de cuotas de préstamos en CreditPro, Odoo ERP.
 date: 2023/01/30
-description: ▷ Pagos de cuotas de préstamos en CreditPro, Odoo ERP.
+description: ▷ Métodos de pago de cuotas de préstamos y cómo registrar pagos masivos de cuotas con el módulo CreditPro de Odoo ERP.
 tag: creditos, odoo, erp
 author: Marlon Falcon Hernandez
 ---
@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 # ▷ Pagos de cuotas de préstamos en CreditPro, Odoo ERP.
 
-Hay varios métodos para pagar las cuotas de un crédito o prestamos en el módulo CreditPro de Odoo ERP, estos son:
+Hay varios métodos para pagar las cuotas de un crédito o préstamo en el módulo CreditPro de Odoo ERP. Estos son:
 
 1. Débito automático: se autoriza a la institución financiera a debitar la cuota mensual directamente de una cuenta bancaria.
 2. Transferencia electrónica: se realiza una transferencia electrónica desde una cuenta bancaria al prestamista.
@@ -17,11 +17,11 @@ Hay varios métodos para pagar las cuotas de un crédito o prestamos en el módu
 4. Pagos en sucursal: se realiza el pago en una sucursal de la institución financiera.
 5. Pagos por teléfono: se realiza el pago llamando a un número telefónico proporcionado por la institución financiera.
 
-Es importante elegir un método de pago que sea conveniente y seguro, y asegurarse de realizar los pagos a tiempo para evitar cargos por pago tardío y dañar el historial crediticio.
+Es importante elegir un método de pago que sea conveniente y seguro, y asegurarse de realizar los pagos a tiempo para evitar cargos por pago tardío y no dañar el historial crediticio.
 
-Dentro de CreditPro, módulo diseñado para Odoo en su versión 16, contamos con una aplicación para realizar los pagos de las cuotas y tenerlos relacionados con las líneas del crédito. A esta aplicación la hemos llamado Pagos masivos.
+Dentro de CreditPro, un módulo diseñado para la versión 16 de Odoo, contamos con una aplicación para realizar los pagos de las cuotas y tenerlos relacionados con las líneas del crédito. A esta aplicación la hemos llamado Pagos masivos.
 
-Seleccionando el cliente, el crédito y el monto a pagar, se llenan las posibles cuotas a pagar, teniendo en cuenta las pendientes de pago y las que alcance a pagar con el monto introducido.
+Seleccionando el cliente, el crédito y el monto a pagar, se rellenan las posibles cuotas a pagar, teniendo en cuenta las pendientes de pago y las que alcanza a cubrir el monto introducido.
 
 <Image
   src="/images/posts/pago-cuotas-prestamos.png"

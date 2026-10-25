@@ -1,12 +1,12 @@
 ---
-title: Que es un ERP especializado en TMS Transporte
+title: "Qué es un ERP especializado en TMS (transporte)"
 date: 2024/09/12
-description: Que es un ERP especializado en TMS Transporte
+description: "Qué es un ERP especializado en transporte o TMS y qué módulos debe incluir - flotas, rutas, conductores, órdenes, facturación y KPIs."
 tag: tms, erp
 author: Marlon Falcon Hernandez
 ---
 
-# Que es un ERP especializado en TMS Transporte.
+# Qué es un ERP especializado en TMS (transporte)
 
 Un **ERP especializado en transporte**, también conocido como **TMS** (Transportation Management System), es una plataforma que permite a las empresas gestionar de manera eficiente y optimizada todas las operaciones relacionadas con el transporte de mercancías. Un buen sistema TMS debe incluir una serie de módulos y funcionalidades para satisfacer las necesidades de una empresa de transporte.
 
@@ -19,7 +19,7 @@ Un **ERP especializado en transporte**, también conocido como **TMS** (Transpor
 ## 2. Planificación de Rutas y Optimización
 - **Planificación de rutas**: Herramienta que sugiera y optimice las mejores rutas en función de la distancia, condiciones del tráfico, tiempos de entrega y costos.
 - **Optimización de carga**: Capacidad para asignar cargas a los vehículos de manera eficiente, maximizando el uso del espacio y minimizando los viajes vacíos.
-- **Costos de rutas**: Cálculo automático de los costos por kilómetro, incluyendo peajes, combustible, salarios de conductores, y más.
+- **Costos de rutas**: Cálculo automático de los costos por kilómetro, incluyendo peajes, combustible, salarios de conductores y más.
 - **Planificación de rutas múltiples**: Gestión de rutas complejas con múltiples paradas y destinos.
 
 ## 3. Gestión de Conductores
@@ -55,7 +55,7 @@ Un **ERP especializado en transporte**, también conocido como **TMS** (Transpor
 - **Gestión de cobros y pagos**: Control de cuentas por cobrar y por pagar, con notificaciones automáticas para cobros vencidos o pagos pendientes.
 
 ## 9. Reportes e Indicadores de Desempeño (KPIs)
-- **KPIs de operación**: Indicadores clave de rendimiento como tiempo de entrega, tiempos de inactividad de vehículos, eficiencia de rutas, costos por kilómetro, y rendimiento del conductor.
+- **KPIs de operación**: Indicadores clave de rendimiento como tiempo de entrega, tiempos de inactividad de vehículos, eficiencia de rutas, costos por kilómetro y rendimiento del conductor.
 - **Informes de mantenimiento**: Reportes sobre el estado y rendimiento de la flota, próximos mantenimientos y vida útil de los vehículos.
 - **Panel de control**: Un dashboard centralizado con información actualizada sobre las operaciones, costes y eficiencia del transporte.
 
@@ -66,7 +66,7 @@ Un **ERP especializado en transporte**, también conocido como **TMS** (Transpor
 
 ## 11. Integración con Otros Sistemas
 - **ERP y sistemas de gestión de almacenes (WMS)**: Integración con otros sistemas empresariales como el ERP principal de la empresa o el sistema de gestión de almacenes para optimizar el flujo de información.
-- **Plataformas de e-commerce y proveedores logísticos**: Conectividad con plataformas de comercio electrónico, plataformas de marketplace, y proveedores logísticos para facilitar la asignación y seguimiento de envíos.
+- **Plataformas de e-commerce y proveedores logísticos**: Conectividad con plataformas de comercio electrónico, plataformas de marketplace y proveedores logísticos para facilitar la asignación y seguimiento de envíos.
 
 ## 12. Módulo de Evaluación de Desempeño y Calidad
 - **Evaluación de entregas**: Seguimiento de la calidad del servicio, como la puntualidad en las entregas y la satisfacción del cliente.
@@ -75,4 +75,4 @@ Un **ERP especializado en transporte**, también conocido como **TMS** (Transpor
 
 ## Conclusión
 
-Un **TMS dentro de un ERP especializado en transporte** debe ser una herramienta robusta y flexible que permita a la empresa optimizar la gestión de sus vehículos, conductores, rutas y costos operativos. Además de cubrir las funciones operativas básicas, debe ofrecer integración con otros sistemas empresariales, proporcionar visibilidad en tiempo real, y asegurar el cumplimiento normativo, todo ello con un enfoque en la eficiencia y la rentabilidad del transporte.
+Un **TMS dentro de un ERP especializado en transporte** debe ser una herramienta robusta y flexible que permita a la empresa optimizar la gestión de sus vehículos, conductores, rutas y costos operativos. Además de cubrir las funciones operativas básicas, debe ofrecer integración con otros sistemas empresariales, proporcionar visibilidad en tiempo real y asegurar el cumplimiento normativo, todo ello con un enfoque en la eficiencia y la rentabilidad del transporte.

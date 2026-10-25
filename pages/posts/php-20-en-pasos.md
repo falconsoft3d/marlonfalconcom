@@ -1,13 +1,13 @@
 ---
-title: Php en 20 pasos
+title: PHP en 20 pasos
 date: 2022/12/18
-description: Php en 20 pasos
+description: Guía rápida de PHP con más de 20 ejemplos básicos - variables, operadores, condicionales, ciclos, arreglos, funciones y POO.
 tag: php, 20pasos
 author: Marlon Falcon Hernandez
 ---
 
-# Php en 20 pasos
-Php es un lenguaje de programación de uso general de código del lado del servidor originalmente diseñado para el desarrollo web de contenido dinámico. Con php coloque más de 20 pasos ...
+# PHP en 20 pasos
+PHP es un lenguaje de programación de uso general que se ejecuta del lado del servidor y que fue diseñado originalmente para el desarrollo web de contenido dinámico. En este artículo he reunido más de 20 pasos con ejemplos cortos para repasar lo básico del lenguaje.
 
 ## 1. Instalación
 ```bash
@@ -15,15 +15,15 @@ brew install php
 ```
 
 ## 2. Programa
-En php debes crear un archivo con la extensión .php, por ejemplo: hola_mundo.php
+En PHP debes crear un archivo con la extensión .php, por ejemplo: hola_mundo.php
 ```php
 <?php
   echo 'Hola mundo';
 
   ?>
+```
 
-
-## 2. Comentarios
+## 3. Comentarios
 ```php
   // Esto es un comentario
 
@@ -33,12 +33,12 @@ En php debes crear un archivo con la extensión .php, por ejemplo: hola_mundo.ph
   */
 ```
 
-## 3. Constantes
+## 4. Constantes
 ```php
   define('PI', 3.1416);
 ```
 
-## 4. Variables
+## 5. Variables
 ```php
   $nombre = 'Juan';
   $edad = 20;
@@ -46,7 +46,7 @@ En php debes crear un archivo con la extensión .php, por ejemplo: hola_mundo.ph
   $esMayor = true;
 ```
 
-## 5. Operadores de asignación
+## 6. Operadores de asignación
 ```php
   $d = 10;
   $d += 2; // 12
@@ -55,7 +55,7 @@ En php debes crear un archivo con la extensión .php, por ejemplo: hola_mundo.ph
   $d %= 6; // 4
 ```
 
-## 6. Operadores relacionales
+## 7. Operadores relacionales
 ```php
   $a = 10;
   $b = 20;
@@ -63,7 +63,7 @@ En php debes crear un archivo con la extensión .php, por ejemplo: hola_mundo.ph
   $a != $b; // True
 ```
 
-## 7. Operadores lógicos
+## 8. Operadores lógicos
 ```php
   $a = 10;
   $b = 20;
@@ -74,7 +74,7 @@ En php debes crear un archivo con la extensión .php, por ejemplo: hola_mundo.ph
   !$a == 10; // False
 ```
 
-## 8. Operadores de incremento y decremento
+## 9. Operadores de incremento y decremento
 ```php
   $a = 10;
   $a++; // 11
@@ -83,7 +83,7 @@ En php debes crear un archivo con la extensión .php, por ejemplo: hola_mundo.ph
   --$a; // 10
 ```
 
-## 9. Operadores de comparación
+## 10. Operadores de comparación
 ```php
   $a = 10;
   $b = 20;
@@ -92,7 +92,7 @@ En php debes crear un archivo con la extensión .php, por ejemplo: hola_mundo.ph
   $a <=> $a; // 0
 ```
 
-## 10. Operadores de cadena
+## 11. Operadores de cadena
 ```php
   $a = 'Hola';
   $b = 'Mundo';
@@ -100,7 +100,8 @@ En php debes crear un archivo con la extensión .php, por ejemplo: hola_mundo.ph
   $a .= $b; // HolaMundo
 ```
 
-## 11. Operadores de arreglo
+## 12. Operadores de arreglo
+Ten en cuenta que el operador `+` entre arreglos hace una unión por claves: si ambos arreglos tienen las mismas claves (como en este ejemplo, 0, 1 y 2), se conservan los valores del primero. Para concatenar arreglos indexados se usa `array_merge`.
 ```php
   $a = [1, 2, 3];
   $b = [4, 5, 6];
@@ -112,7 +113,7 @@ En php debes crear un archivo con la extensión .php, por ejemplo: hola_mundo.ph
   $a !== $b; // True
 ```
 
-## 12. Funciones
+## 13. Funciones
 ```php
   function suma($a, $b) {
     return $a + $b;
@@ -121,7 +122,7 @@ En php debes crear un archivo con la extensión .php, por ejemplo: hola_mundo.ph
   suma(1, 2); // 3
 ```
 
-## 13. Condicionales
+## 14. Condicionales
 ```php
   $a = 10;
   $b = 20;
@@ -135,7 +136,7 @@ En php debes crear un archivo con la extensión .php, por ejemplo: hola_mundo.ph
   }
 ```
 
-## 14. Ciclos
+## 15. Ciclos
 ```php
   $a = 10;
   $b = 20;
@@ -164,7 +165,7 @@ En php debes crear un archivo con la extensión .php, por ejemplo: hola_mundo.ph
   }
 ```
 
-## 15. Arreglos
+## 16. Arreglos
 ```php
   $a = [1, 2, 3];
   $a = array(1, 2, 3);
@@ -180,7 +181,7 @@ En php debes crear un archivo con la extensión .php, por ejemplo: hola_mundo.ph
   ];
 ```
 
-## 16. If ternario
+## 17. If ternario
 ```php
   $a = 10;
   $b = 20;
@@ -188,7 +189,7 @@ En php debes crear un archivo con la extensión .php, por ejemplo: hola_mundo.ph
   $resultado = $a > $b ? 'a es mayor que b' : 'a es menor que b';
 ```
 
-## 17. If Else
+## 18. If Else
 ```php
   $a = 10;
   $b = 20;
@@ -201,7 +202,7 @@ En php debes crear un archivo con la extensión .php, por ejemplo: hola_mundo.ph
 ```
 
 
-## 17. Switch
+## 19. Switch
 ```php
   $a = 10;
 
@@ -217,7 +218,7 @@ En php debes crear un archivo con la extensión .php, por ejemplo: hola_mundo.ph
   }
 ```
 
-## 18. Funciones
+## 20. Funciones
 ```php
   function suma($a, $b) {
     return $a + $b;
@@ -227,7 +228,7 @@ En php debes crear un archivo con la extensión .php, por ejemplo: hola_mundo.ph
 ```
 
 
-## 19. Funciones anónimas
+## 21. Funciones anónimas
 ```php
   $suma = function($a, $b) {
     return $a + $b;
@@ -236,7 +237,7 @@ En php debes crear un archivo con la extensión .php, por ejemplo: hola_mundo.ph
   $suma(1, 2); // 3
 ```
 
-## 20. Funciones recursivas
+## 22. Funciones recursivas
 ```php
   function factorial($n) {
     if ($n == 0) {
@@ -249,7 +250,7 @@ En php debes crear un archivo con la extensión .php, por ejemplo: hola_mundo.ph
   factorial(5); // 120
 ```
 
-## 21. Funciones con parámetros por defecto
+## 23. Funciones con parámetros por defecto
 ```php
   function suma($a, $b = 0) {
     return $a + $b;
@@ -259,7 +260,7 @@ En php debes crear un archivo con la extensión .php, por ejemplo: hola_mundo.ph
   suma(1, 2); // 3
 ```
 
-## 22. Funciones con parámetros variables
+## 24. Funciones con parámetros variables
 ```php
   function suma(...$numeros) {
     $resultado = 0;
@@ -272,7 +273,7 @@ En php debes crear un archivo con la extensión .php, por ejemplo: hola_mundo.ph
   suma(1, 2, 3, 4, 5); // 15
 ```
 
-## 23. POO
+## 25. POO
 ```php
     class Persona {
         public $nombre;
@@ -294,7 +295,7 @@ $persona = new Persona('Juan', 'Perez', 20);
 $persona->saludar(); // Hola, mi nombre es Juan Perez
 ```
 
-## 24. POO Herencia
+## 26. POO Herencia
 ```php
     class Persona {
         public $nombre;
@@ -330,17 +331,3 @@ $estudiante = new Estudiante('Juan', 'Perez', 20, 'Ingeniería');
 
 $estudiante->saludar(); // Hola, mi nombre es Juan Perez y estudio Ingeniería
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-    

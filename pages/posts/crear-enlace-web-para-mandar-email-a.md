@@ -1,15 +1,15 @@
 ---
-title: ▷ Crear enlace web para mandar email desde la web.
+title: ▷ Crear un enlace web para enviar un email desde la web
 date: 2023/1/4
-description: ▷ Crear enlace web para mandar email desde la web.
+description: ▷ Cómo usar mailto en una etiqueta a de HTML para abrir el correo con destinatario, asunto y cuerpo ya rellenos.
 tag: mail, link, html
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# ▷ Crear enlace web para mandar email desde la web.
+# ▷ Crear un enlace web para enviar un email desde la web
 
-Las etiquetas a permiten crear enlaces web para mandar email desde la web. Para crear un enlace web para mandar email desde la web, se debe utilizar la etiqueta a con el atributo href, y dentro de este atributo se debe especificar el email del destinatario, el asunto del email y el cuerpo del email.
+La etiqueta `a` de HTML permite crear enlaces que, al hacer clic, abren el cliente de correo del usuario con un nuevo mensaje. Para ello se utiliza el atributo `href` con el esquema `mailto:`, y dentro de él se puede especificar el email del destinatario, el asunto y el cuerpo del mensaje.
 
 ## Sintaxis
 
@@ -17,6 +17,13 @@ Las etiquetas a permiten crear enlaces web para mandar email desde la web. Para 
 <a href="mailto:demo@example.com?subject=Asunto del correo!&body=Hola Marlon!">demo@example.com</a>
 ```
 
-1. mailto: Especifica el email del destinatario.
-2. subject: Especifica el asunto del email.
-3. body: Especifica el cuerpo del email.
+1. **mailto**: especifica el email del destinatario.
+2. **subject**: especifica el asunto del email.
+3. **body**: especifica el cuerpo del email.
+
+## Consejos
+
+- El primer parámetro va después de `?` y los siguientes se separan con `&`.
+- También puedes añadir destinatarios en copia con `cc` y en copia oculta con `bcc`.
+- Para mayor compatibilidad, codifica los espacios y caracteres especiales (por ejemplo, el espacio como `%20`).
+- Ten en cuenta que el enlace solo funciona si el usuario tiene configurado un cliente de correo en su dispositivo.

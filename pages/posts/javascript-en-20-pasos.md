@@ -1,15 +1,15 @@
 ---
-title: javascript en 20 pasos
+title: "JavaScript en 20 pasos"
 date: 2022/12/18
-description: javascript en 20 pasos
+description: "Repaso rápido de JavaScript con ejemplos de variables, operadores, bucles, funciones, clases, promesas, fetch, async/await, módulos y eventos."
 tag: javascript, 20pasos
 author: Marlon Falcon Hernandez
 ---
 
-# javascript en 20 pasos
-Javascript es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos,​ basado en prototipos, imperativo, débilmente tipado y dinámico. En Javascript me pase de 20 pasos ...
+# JavaScript en 20 pasos
+JavaScript es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos, basado en prototipos, imperativo, débilmente tipado y dinámico. Con JavaScript me pasé de los 20 pasos: aquí tienes 27.
 
-## 1. Imprmir consola
+## 1. Imprimir en consola
 ````javascript
 console.log('Hola mundo');
 ````
@@ -44,7 +44,7 @@ d *= 2; // 20
 d %= 6; // 4
 ````
 
-## Operadores relacionales
+## 6. Operadores relacionales
 ````javascript
 let a = 10;
 let b = 20;
@@ -52,7 +52,7 @@ a == b; // False
 a != b; // True
 ````
 
-## 6. Operadores lógicos
+## 7. Operadores lógicos
 ````javascript
 let a = 10;
 let b = 20;
@@ -62,21 +62,21 @@ a == 10 || b == 20; // True
 ````
 
 
-## 7. Operadores de incremento y decremento
+## 8. Operadores de incremento y decremento
 ````javascript
 let a = 10;
 a++; // 11
 a--; // 10
 ````
 
-## 8. Ciclo For
+## 9. Ciclo for
 ````javascript
 for (let i = 0; i < 10; i++) {
   console.log(i);
 }
 ````
 
-## 9. Ciclo While
+## 10. Ciclo while
 ````javascript
 let i = 0;
 while (i < 10) {
@@ -85,7 +85,7 @@ while (i < 10) {
 }
 ````
 
-## 10. Map
+## 11. Map
 ````javascript
 const numeros = [1, 2, 3, 4, 5];
 const dobles = numeros.map(function (numero) {
@@ -95,7 +95,7 @@ const dobles = numeros.map(function (numero) {
 console.log(dobles); // [2, 4, 6, 8, 10]
 ````
 
-## 11. Filter
+## 12. Filter
 ````javascript
 const numeros = [1, 2, 3, 4, 5];
 const pares = numeros.filter(function (numero) {
@@ -106,7 +106,7 @@ const pares = numeros.filter(function (numero) {
 console.log(pares); // [2, 4]
 ````
 
-## 11. Funciones
+## 13. Funciones
 ````javascript
 function sumar(a, b) {
   return a + b;
@@ -115,14 +115,14 @@ function sumar(a, b) {
 console.log(sumar(1, 2)); // 3
 ````
 
-## 12. Funciones flecha
+## 14. Funciones flecha
 ````javascript
 const sumar = (a, b) => a + b;
 
 console.log(sumar(1, 2)); // 3
 ````
 
-## 13. Clases
+## 15. Clases
 ````javascript
 class Persona {
   constructor(nombre, edad) {
@@ -140,7 +140,7 @@ const marlon = new Persona('Marlon', 20);
 marlon.saludar(); // Hola, me llamo Marlon
 ````
 
-## 14. Herencia
+## 16. Herencia
 ````javascript
 class Persona {
   constructor(nombre, edad) {
@@ -170,7 +170,7 @@ const marlon = new Estudiante('Marlon', 20, 'Ingeniería en Sistemas');
 marlon.saludar(); // Hola, me llamo Marlon y estudio Ingeniería en Sistemas
 ````
 
-## 15. Promesas
+## 17. Promesas
 ````javascript
 const promesa = new Promise((resolve, reject) => {
   setTimeout(() => {
@@ -184,7 +184,7 @@ promesa.then((resultado) => {
 ````
 
 
-## 16. Fetch
+## 18. Fetch
 ````javascript
 
 fetch('https://jsonplaceholder.typicode.com/users')
@@ -192,7 +192,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
   .then((users) => console.log(users));
 ````
 
-## 17. Async/Await
+## 19. Async/Await
 ````javascript
 
 async function getUsers() {
@@ -204,7 +204,7 @@ async function getUsers() {
 getUsers();
 ````
 
-## 18. Template Strings
+## 20. Template strings
 ````javascript
 const nombre = 'Marlon';
 const edad = 20;
@@ -212,7 +212,7 @@ const edad = 20;
 console.log(`Hola, me llamo ${nombre} y tengo ${edad} años`);
 ````
 
-## 19. Destructuring
+## 21. Destructuring
 ````javascript
 const persona = {
   nombre: 'Marlon',
@@ -228,7 +228,7 @@ const { nombre, edad, direccion: { ciudad } } = persona;
 console.log(nombre, edad, ciudad); // Marlon 20 La Paz
 ````
 
-## 20. Spread Operator
+## 22. Spread operator
 ````javascript
 const frutasVerdes = ['Kiwi', 'Manzana', 'Pera'];
 const frutasRojas = ['Fresa', 'Naranja', 'Sandía'];
@@ -239,7 +239,7 @@ console.log(todasLasFrutas); // ['Kiwi', 'Manzana', 'Pera', 'Fresa', 'Naranja', 
 ````
 
 
-## 21. Importar y exportar módulos
+## 23. Importar y exportar módulos
 ````javascript
 
 // modulo.js
@@ -252,7 +252,7 @@ import { nombre, edad } from './modulo';
 console.log(nombre, edad); // Marlon 20
 ````
 
-## 22. Importar y exportar módulos por defecto
+## 24. Importar y exportar módulos por defecto
 ````javascript
 
 // modulo.js
@@ -270,7 +270,7 @@ import persona from './modulo';
 console.log(persona.nombre, persona.edad); // Marlon 20
 ````
 
-## 23. HTML con JavaScript
+## 25. HTML con JavaScript
 ````javascript
 const div = document.createElement('div');
 div.innerHTML = 'Hola mundo';
@@ -278,7 +278,7 @@ div.innerHTML = 'Hola mundo';
 document.body.appendChild(div);
 ````
 
-## 24. Eventos
+## 26. Eventos
 ````javascript
 const button = document.querySelector('button');
 
@@ -287,7 +287,7 @@ button.addEventListener('click', () => {
 });
 ````
 
-## 25. Eventos con parámetros
+## 27. Eventos con parámetros
 ````javascript
 const button = document.querySelector('button');
 

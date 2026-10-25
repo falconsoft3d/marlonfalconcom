@@ -1,7 +1,7 @@
 ---
 title: Crear un CRUD con React
 date: 2022/12/21
-description: Crear un CRUD con React
+description: Tutorial para crear un CRUD con React, reactstrap y Bootstrap, con modales para insertar y editar y carga de datos con Axios o fetch.
 tag: react, crud, bootstrap
 author: Marlon Falcon Hernandez
 ---
@@ -10,9 +10,13 @@ author: Marlon Falcon Hernandez
 import Image from 'next/image'
 
 
-Un [crud](/tags/crud) es una aplicación que permite crear, leer, actualizar y eliminar datos. En este tutorial vamos a crear un crud con React, para ello vamos a utilizar el framework Bootstrap para darle un poco de estilo a nuestra aplicación.
+Un [CRUD](/tags/crud) es una aplicación que permite crear, leer, actualizar y eliminar datos (Create, Read, Update, Delete). En este tutorial vamos a crear un CRUD con React y, para darle un poco de estilo a nuestra aplicación, vamos a utilizar el framework Bootstrap a través de la librería reactstrap.
 
-link: https://github.com/crud-demos/react-crud
+Código completo: https://github.com/crud-demos/react-crud
+
+## Dependencias
+
+Además de un proyecto de React, necesitamos instalar estas librerías: `npm install bootstrap reactstrap axios react-icons`.
 
 <Image
   src="/images/posts/react-crud.png"
@@ -22,6 +26,10 @@ link: https://github.com/crud-demos/react-crud
   priority
   className="next-image"
 />
+
+## Componente principal
+
+En `App.js` guardamos la lista de personas en el estado con `useState` y definimos las funciones para insertar, editar, eliminar y reiniciar los datos. También podemos cargar usuarios de ejemplo desde la API pública JSONPlaceholder, con Axios o con fetch.
 
 src/App.js
 
@@ -177,6 +185,10 @@ function App() {
 export default App;
 ```
 
+## Modal para insertar
+
+El modal de inserción recoge los datos del formulario y añade la nueva persona al principio de la lista.
+
 src/components/AddModal/AddModal.js
 
 ```jsx
@@ -275,6 +287,10 @@ export default function AddModal(props) {
     )
 }
 ```
+
+## Modal para editar
+
+El modal de edición muestra los datos actuales de la persona seleccionada y, al guardar, reemplaza el registro que tiene el mismo `id`.
 
 src/components/EditModal/EditModal.js
 ```jsx
@@ -394,6 +410,8 @@ export default function EditModal(props) {
 
 ```
 
+## Pie de página
+
 src/components/Footer/Footer.js
 ```jsx
 import React from 'react'
@@ -421,3 +439,7 @@ export default function Footer() {
     )
 }
 ```
+
+## Nota
+
+En este ejemplo los datos solo viven en el estado del componente, así que se pierden al recargar la página. En una aplicación real, cada operación (insertar, editar y eliminar) haría la llamada correspondiente a una API para guardar los cambios en el servidor. Ten en cuenta además que generar el `id` con `data.length + 1` puede repetir identificadores después de borrar registros.

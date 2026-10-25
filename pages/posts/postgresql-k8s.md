@@ -1,14 +1,18 @@
 ---
 title: Ejecutar PostgreSQL en Kubernetes
 date: 2022/12/21
-description: Ejecutar PostgreSQL en Kubernetes
+description: Cómo desplegar PostgreSQL en Kubernetes con un ConfigMap, un volumen persistente NFS, un Deployment y un Service de tipo NodePort.
 tag: kubernetes, postgresql
 author: Marlon Falcon Hernandez
 ---
 
 # Ejecutar PostgreSQL en Kubernetes
 
-Comandos para ejecutar PostgreSQL en Kubernetes.
+Kubernetes permite desplegar PostgreSQL como un contenedor más, pero al tratarse de una base de datos hay que prestar especial atención a la persistencia: los datos deben guardarse en un volumen que sobreviva a los reinicios del pod. En este ejemplo, pensado para un clúster de pruebas, se usa un volumen NFS y se expone la base de datos fuera del clúster con un Service de tipo NodePort.
+
+## Comandos
+
+Estos son los comandos para clonar el ejemplo, desplegarlo, revisar los logs, conectarse con `psql` y, finalmente, eliminar los recursos:
 ```
 git clone https://github.com/kubernetes-spain/postgresql-k8s.git
 cd postgresql-k8s
@@ -19,6 +23,16 @@ kubectl logs pod/psql-itwl-dev-01-594c7468c7-p9k9l -f
 psql db -h 192.168.50.11 -p 30100 -U user
 kubectl delete -f postgresql.yaml
 ```
+
+## El fichero postgresql.yaml
+
+El manifiesto define cinco recursos:
+
+- **ConfigMap:** variables de entorno de PostgreSQL (base de datos, usuario, contraseña y ruta de datos).
+- **PersistentVolume:** un volumen de 1 GiB alojado en un servidor NFS.
+- **PersistentVolumeClaim:** la solicitud de almacenamiento que enlaza con el volumen anterior mediante etiquetas.
+- **Deployment:** el pod con la imagen oficial de `postgres`, que monta el volumen en `/var/lib/postgresql/data`.
+- **Service (NodePort):** expone el puerto 5432 en el puerto 30100 de cada nodo del clúster.
 
 postgresql.yaml
 ```
@@ -118,4 +132,4 @@ spec:
       protocol: TCP
 ```
 
-
+**Nota:** en producción no conviene guardar la contraseña en un ConfigMap; lo recomendable es usar un Secret de Kubernetes y, para bases de datos, un StatefulSet o un operador de PostgreSQL.

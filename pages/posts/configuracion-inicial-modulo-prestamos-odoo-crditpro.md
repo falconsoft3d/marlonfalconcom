@@ -1,15 +1,16 @@
 ---
-title: ▷ Configuración inicial módulo de prestamos de odoo erp creditpro 
+title: ▷ Configuración inicial del módulo de préstamos CreditPro para Odoo ERP
 date: 2023/01/18
-description: ▷ Configuración inicial módulo de prestamos de odoo erp creditpro
+description: ▷ Parámetros que hay que configurar en CreditPro, el módulo de préstamos para Odoo - usuarios, productos, contactos y el propio módulo.
 tag: odoo, erp, credito, credipro
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# ▷ Configuración inicial módulo de prestamos de odoo erp creditpro
+# ▷ Configuración inicial del módulo de préstamos CreditPro para Odoo ERP
 
-Para parametrizar un módulo de crédito de **Odoo** llamado **CreditPro**, es necesario establecer ciertos parámetros como los siguientes:
+Para parametrizar el módulo de crédito de **Odoo** llamado **CreditPro**, es necesario establecer ciertos parámetros como los siguientes:
+
 1. Límites de crédito: establecer los límites máximos de crédito que se permitirán a los clientes.
 2. Tasa de interés: establecer la tasa de interés aplicable a los préstamos.
 3. Plazos de pago: establecer los plazos de pago disponibles para los clientes, ya sea en meses o años.
@@ -19,13 +20,13 @@ Para parametrizar un módulo de crédito de **Odoo** llamado **CreditPro**, es n
 7. Sistemas de información: establecer los sistemas de información necesarios para llevar a cabo el proceso de solicitud, aprobación y desembolso de los préstamos.
 8. Proceso de cumplimiento: establecer los procesos necesarios para cumplir con las regulaciones y leyes aplicables al otorgamiento de créditos.
 
-Es importante tener en cuenta que estos parámetros pueden variar dependiendo del país o región donde se esté ofreciendo el servicio de crédito. Además, es recomendable que se revise y actualice periódicamente estos parámetros para asegurar que cumplen con las regulaciones y leyes en vigor y para adaptarse a las necesidades del mercado.
+Es importante tener en cuenta que estos parámetros pueden variar dependiendo del país o región donde se esté ofreciendo el servicio de crédito. Además, es recomendable revisar y actualizar periódicamente estos parámetros para asegurar que cumplen con las regulaciones y leyes en vigor y para adaptarse a las necesidades del mercado.
 
-Nuestro módulo de gestion credito **CreditPro** requiere de varios parámetros configurables en diferentes menús de Odoo que van desde a nivel de usuarios, productos, contactos o el propio modelo de créditos
+Nuestro módulo de gestión de créditos **CreditPro** requiere varios parámetros configurables en diferentes menús de Odoo: a nivel de usuarios, productos, contactos o del propio modelo de créditos.
 
-Parámetros a nivel de usuario
+## Parámetros a nivel de usuario
 
-Permisología que va desde aprobar créditos, reprogramar cuotas hasta el permiso de que documentos podremos ver
+Permisos que van desde aprobar créditos o reprogramar cuotas hasta qué documentos podremos ver.
 
 <Image
   src="/images/posts/creditpro-odoo-m-01.png"
@@ -36,7 +37,7 @@ Permisología que va desde aprobar créditos, reprogramar cuotas hasta el permis
   className="next-image"
 />
 
-Además desde las preferencias del usuario definiremos el almacén, el diario de pago y la cuenta analitica que usara en el sistema.
+Además, desde las preferencias del usuario definiremos el almacén, el diario de pago y la cuenta analítica que usará en el sistema.
 
 <Image
   src="/images/posts/creditpro-odoo-m-02.png"
@@ -47,9 +48,9 @@ Además desde las preferencias del usuario definiremos el almacén, el diario de
   className="next-image"
 />
 
-Parámetros a nivel de productos
+## Parámetros a nivel de productos
 
-Desde la categoría de los productos  se pueden definir el tipo de crédito, la categoría de crédito, el interés y el máximo % a financiar, esto permite aplicarle diferentes % de interés o financiación a varias gamas de productos.
+Desde la categoría de los productos se pueden definir el tipo de crédito, la categoría de crédito, el interés y el porcentaje máximo a financiar. Esto permite aplicar diferentes porcentajes de interés o financiación a distintas gamas de productos.
 
 
 <Image
@@ -61,9 +62,9 @@ Desde la categoría de los productos  se pueden definir el tipo de crédito, la 
   className="next-image"
 />
 
-Parámetros a nivel de Partner
+## Parámetros a nivel de contacto (partner)
 
-Límites de riesgo de crédito
+En la ficha del contacto se definen los límites de riesgo de crédito.
 
 <Image
   src="/images/posts/creditpro-odoo-m-04.png"
@@ -75,11 +76,12 @@ Límites de riesgo de crédito
 />
 
 
-Parámetros del propio módulo de crédito
+## Parámetros del propio módulo de crédito
 
-Menú Configuración
-Configuración/Tipo de crédito: Se define nombre y descripción
-Configuración/Frecuencia:  Se establecen la frecuencia y las cuotas permitidas por cada frecuencia
+En el menú Configuración encontramos:
+
+- **Configuración / Tipo de crédito**: se definen el nombre y la descripción.
+- **Configuración / Frecuencia**: se establecen la frecuencia y las cuotas permitidas para cada frecuencia.
 
 <Image
   src="/images/posts/creditpro-odoo-m-05.png"
@@ -90,7 +92,7 @@ Configuración/Frecuencia:  Se establecen la frecuencia y las cuotas permitidas 
   className="next-image"
 />
 
-Configuración/Cuotas: Se definen las cuotas que se usarán
+- **Configuración / Cuotas**: se definen las cuotas que se usarán.
 
 <Image
   src="/images/posts/creditpro-odoo-m-06.png"
@@ -101,7 +103,7 @@ Configuración/Cuotas: Se definen las cuotas que se usarán
   className="next-image"
 />
 
-Configuración general
+### Configuración general
 
 <Image
   src="/images/posts/creditpro-odoo-m-07.png"
@@ -112,6 +114,11 @@ Configuración general
   className="next-image"
 />
 
-Desde esta vista podremos definir parámetros para facturación de mora, desde el importe hasta las condiciones en que se aplicará, se definen los usuarios que aprobaron créditos, si la facturación será Capital + interés (junto o separado en dos facturas) y el Flujo de automatización a lograr una vez ejecutemos aprobar el crédito,(desde aprobar el crédito, hasta crear el pago del valor inicial) según se defina.
+Desde esta vista podremos definir:
+
+- Los parámetros para la facturación de la mora, desde el importe hasta las condiciones en que se aplicará.
+- Los usuarios que aprueban créditos.
+- Si la facturación de capital e interés será conjunta o separada en dos facturas.
+- El flujo de automatización que se ejecutará al aprobar el crédito (desde la aprobación hasta la creación del pago del valor inicial), según se defina.
 
 

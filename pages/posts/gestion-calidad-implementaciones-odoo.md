@@ -1,7 +1,7 @@
 ---
 title: Gestión de calidad en implementaciones Odoo ERP
 date: 2022/12/27
-description: Gestión de calidad en implementaciones Odoo ERP
+description: Por qué la gestión de la calidad es clave en un proyecto de implementación de Odoo ERP y qué prácticas incluye, desde los objetivos hasta las pruebas.
 tag: odoo, erp
 author: Marlon Falcon Hernandez
 ---
@@ -21,11 +21,11 @@ La gestión de la calidad también implica la implementación de un sistema de c
 En resumen, la gestión de la calidad es fundamental en cualquier proyecto de implementación de Odoo ERP. Asegurar que el sistema se implemente y funcione correctamente es esencial para obtener el máximo beneficio de él y para garantizar que la empresa pueda operar de manera eficiente y efectiva. La gestión de la calidad incluye la definición de objetivos claros, la documentación detallada de los procesos, la participación y comunicación constante con todos los interesados.
 
 
-# Contactar un consultor de Odoo
+## Contactar con un consultor de Odoo
 - Nombre: Marlon Falcón Hernández
 - WhatsApp [+34662470645](https://web.whatsapp.com/send?phone=34662470645&text=)
 - GitHub [@falconsoft3d](https://github.com/falconsoft3d)
-- Youtube [@marlonfalconhdez](https://www.youtube.com/@marlonfalconhdez)
+- YouTube [@marlonfalconhdez](https://www.youtube.com/@marlonfalconhdez)
 - Telegram [@falconsoft]
 - Phone +34 (662) 47 0645
 - Email mfalconsoft@gmail.com

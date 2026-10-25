@@ -1,15 +1,15 @@
 ---
-title: JQuery en 20 pasos
+title: "jQuery en 20 pasos"
 date: 2023/2/20
-description: JQuery en 20 pasos
+description: "Aprende lo esencial de jQuery en 20 pasos, con selectores, atributos, estilos, eventos, Ajax, animaciones y recorrido del DOM."
 tag: jquery, 20pasos
 author: Marlon Falcon Hernandez
 ---
 
-# JQuery en 20 pasos
-JQuery es una librería de JavaScript que nos permite simplificar la forma de interactuar con los elementos del DOM, así como realizar peticiones asíncronas a servidores. En este acrticulo aprenderemos Jquery en 20 pasos ...
+# jQuery en 20 pasos
+jQuery es una librería de JavaScript que nos permite simplificar la forma de interactuar con los elementos del DOM, así como realizar peticiones asíncronas a servidores. En este artículo aprenderemos jQuery en 20 pasos.
 
-## 1. Leer desde una CDN
+## 1. Cargar desde una CDN
 ```html
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 ```
@@ -161,3 +161,66 @@ $('.post').fadeIn();
 // Desvanecer un elemento
 $('.post').fadeToggle();
 ```
+
+## 15. Leer y escribir el valor de los formularios
+```javascript
+// Leer el valor de un input
+$('#nombre').val();
+
+// Escribir el valor de un input
+$('#nombre').val('Marlon');
+```
+
+## 16. Recorrer elementos
+```javascript
+// Ejecutar una función por cada elemento seleccionado
+$('.post').each(function(index) {
+  console.log(index, $(this).text());
+});
+```
+
+## 17. Navegar por el DOM
+```javascript
+// Buscar elementos descendientes
+$('.post').find('p');
+
+// Obtener el elemento padre
+$('.post').parent();
+
+// Obtener el ancestro más cercano que coincida con el selector
+$('.post').closest('section');
+```
+
+## 18. Comprobar y alternar clases
+```javascript
+// Comprobar si un elemento tiene una clase
+$('.post').hasClass('active');
+
+// Agregar la clase si no la tiene o quitarla si la tiene
+$('.post').toggleClass('active');
+```
+
+## 19. Propiedades y atributos data
+```javascript
+// Leer y escribir propiedades, por ejemplo en un checkbox
+$('#acepto').prop('checked');
+$('#acepto').prop('checked', true);
+
+// Leer un atributo data-id
+$('.post').data('id');
+```
+
+## 20. Petición Ajax completa
+```javascript
+$.ajax({
+  url: 'https://jsonplaceholder.typicode.com/posts/1',
+  method: 'GET',
+  dataType: 'json'
+}).done(function(data) {
+  // Código a ejecutar si la petición tiene éxito
+}).fail(function(error) {
+  // Código a ejecutar si la petición falla
+});
+```
+
+Con estos 20 pasos tienes una base sólida para trabajar con jQuery. Hoy en día muchas de estas tareas pueden hacerse con JavaScript nativo, pero jQuery sigue presente en muchísimos proyectos, entre ellos en partes del frontend de Odoo.

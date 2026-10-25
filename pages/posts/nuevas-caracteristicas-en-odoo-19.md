@@ -1,7 +1,7 @@
 ---
 title: ▷ Nuevas características en Odoo 19
 date: 2025/09/08
-description: ▷ Nuevas características en Odoo 19
+description: ▷ Principales novedades de Odoo 19 - IA y analíticas, nuevas integraciones, automatización, escalabilidad, sostenibilidad (ESG) y cumplimiento normativo.
 tag: odoo, odoo-19, erp, inteligencia-artificial
 author: Marlon Falcon Hernandez
 ---
@@ -19,9 +19,9 @@ La IA se adapta al contexto de trabajo diario, procesando textos para escribir, 
 
 ## Integraciones Fluidas con Plataformas Externas
 
-Odoo 19 destaca por sus integraciones seamless con plataformas externas, facilitando la conexión con eCommerce, sistemas de pagos y CRM. Se han agregado nuevos proveedores de pagos como Nuvei, Paymob, DPO, Redsyn e Iyzico, junto con integraciones para marketplaces como Shopee y Lazada. En eCommerce, se incluyen conexiones con Google Merchant Center, Gelato (para impresión bajo demanda) y tiendas en redes sociales como Meta y TikTok, optimizando el SEO y la migración a OWL para páginas más rápidas.
+Odoo 19 destaca por sus integraciones fluidas con plataformas externas, facilitando la conexión con eCommerce, sistemas de pagos y CRM. Se han agregado nuevos proveedores de pagos como Nuvei, Paymob, DPO, Redsys e Iyzico, junto con integraciones para marketplaces como Shopee y Lazada. En eCommerce, se incluyen conexiones con Google Merchant Center, Gelato (para impresión bajo demanda) y tiendas en redes sociales como Meta y TikTok, optimizando el SEO y la migración a OWL para páginas más rápidas.
 
-Para CRM y ventas, las actualizaciones incluyen cotizaciones mejoradas y sincronización mejorada con VoIP y aplicaciones de discusión, permitiendo registro de llamadas y sincronización con dispositivos móviles. En el punto de venta (POS), se integra con cajeros automáticos Glory y vales de comida (Viva Wallet), con un modo oscuro y recargas en tiempo real para una experiencia más fluida. Estas integraciones reducen discrepancias de datos y mejoran la sincronización entre inventario, contabilidad y ventas, haciendo que Odoo sea más interoperable con ecosistemas externos.
+Para CRM y ventas, las actualizaciones incluyen cotizaciones mejoradas y una mejor sincronización con VoIP y aplicaciones de discusión, permitiendo registro de llamadas y sincronización con dispositivos móviles. En el punto de venta (POS), se integra con cajeros automáticos Glory y vales de comida (Viva Wallet), con un modo oscuro y recargas en tiempo real para una experiencia más fluida. Estas integraciones reducen discrepancias de datos y mejoran la sincronización entre inventario, contabilidad y ventas, haciendo que Odoo sea más interoperable con ecosistemas externos.
 
 ## Herramientas de Automatización para Procesos Empresariales
 

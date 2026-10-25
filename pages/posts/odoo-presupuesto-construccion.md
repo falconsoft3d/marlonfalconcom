@@ -1,7 +1,7 @@
 ---
 title: ▷ Odoo presupuesto construcción
 date: 2023/1/15
-description: ▷ Odoo presupuesto construcción
+description: ▷ Cómo crear presupuestos de obra por partidas con estructura de árbol en Odoo usando el módulo Odoo BIM 2.0.
 tag: odoo, bim, presupuesto, construccion, odoo-construccion
 author: Marlon Falcon Hernandez
 ---
@@ -9,9 +9,9 @@ import Image from 'next/image'
 
 # ▷ Odoo presupuesto construcción
 
-Con el módulo **Odoo BIM 2.0** podemos generar presupuestos por partidas de obra, para ello se debe configurar el producto como partida de obra. A continuación se muestra como se vería un presupuesto de obra.
+Con el módulo **Odoo BIM 2.0** podemos generar presupuestos por partidas de obra, para ello se debe configurar el producto como partida de obra. A continuación se muestra cómo se vería un presupuesto de obra.
 
-Ten en cuenta que en la construcción los presupuestos tienen por lo general una estructura de árbol, por lo que se debe configurar el producto como partida de obra. Donde un proyecto tiene varios presupuestos y estos estan compuesto por capítulos que se organizan en partidas de obra y estas a su ves se desglosan en subpartidas o recurso.
+Ten en cuenta que en la construcción los presupuestos tienen por lo general una estructura de árbol, por lo que se debe configurar el producto como partida de obra. Un proyecto tiene varios presupuestos, y estos están compuestos por capítulos que se organizan en partidas de obra, que a su vez se desglosan en subpartidas o recursos.
 
 <Image
   src="/images/posts/odoo-bim-presupuesto-01.png"
@@ -22,7 +22,7 @@ Ten en cuenta que en la construcción los presupuestos tienen por lo general una
   className="next-image"
 />
 
-Los conceptos que componen el árbol de presupuesto pueden de ser en los proyectos de tipo Partida, Capítulo, Función, Materiales, Mano de Obra, Equipos, Subcontratos, etc.
+Los conceptos que componen el árbol de presupuesto pueden ser de tipo Partida, Capítulo, Función, Materiales, Mano de Obra, Equipos, Subcontratos, etc.
 
 <Image
   src="/images/posts/odoo-bim-presupuesto-02.png"
@@ -33,7 +33,7 @@ Los conceptos que componen el árbol de presupuesto pueden de ser en los proyect
   className="next-image"
 />
 
-Los presupuestos de obras de construcción se muestran de 4 vistas diferentes: Presupuesto, Ejecución, Programación y Certificación.
+Los presupuestos de obras de construcción se muestran en 4 vistas diferentes: Presupuesto, Ejecución, Programación y Certificación.
 
 <Image
   src="/images/posts/odoo-bim-presupuesto-03.png"
@@ -44,7 +44,7 @@ Los presupuestos de obras de construcción se muestran de 4 vistas diferentes: P
   className="next-image"
 />
 
-Desde el árbol de presupuesto podemos crear la estructura de árbol de presupuesto, para ello se debe seleccionar el producto y dar click en el botón derecho y seleccionar la opción **Crear Hijo**.
+Desde el árbol de presupuesto podemos crear su estructura. Para ello se debe seleccionar el concepto, hacer clic con el botón derecho y seleccionar la opción **Crear Hijo**.
 
 <Image
   src="/images/posts/odoo-bim-presupuesto-04.png"

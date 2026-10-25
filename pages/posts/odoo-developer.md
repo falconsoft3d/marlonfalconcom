@@ -1,13 +1,13 @@
 ---
-title: ▷ Desarrollador de Odoo | ¿Necesitas desarrollar de Odoo?
+title: ▷ Desarrollador de Odoo | ¿Necesitas desarrollar en Odoo?
 date: 2022/12/29
-description: ▷ Desarrollador de Odoo | ¿Necesitas desarrollar de Odoo?
+description: ▷ Qué hace un desarrollador de Odoo ERP, qué habilidades técnicas y de comunicación necesita y dónde puede trabajar.
 tag: odoo
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# ▷ Desarrollador de Odoo | ¿Necesitas desarrollar de Odoo?
+# ▷ Desarrollador de Odoo | ¿Necesitas desarrollar en Odoo?
 
 Un desarrollador de Odoo ERP es un profesional que se dedica a la creación y mejora de aplicaciones de software para la plataforma de gestión empresarial Odoo. Esta plataforma es una solución completa de ERP (Enterprise Resource Planning o Planificación de Recursos Empresariales) que incluye módulos para la gestión de ventas, compras, finanzas, proyectos, inventario, fabricación, recursos humanos y más.
 
@@ -19,11 +19,11 @@ La demanda de profesionales capacitados en Odoo es cada vez mayor, ya que cada v
 
 En resumen, un desarrollador de Odoo es un profesional clave en el desarrollo y mantenimiento de aplicaciones de software para la plataforma de gestión empresarial Odoo. Su trabajo consiste en utilizar lenguajes de programación y bases de datos para crear y personalizar módulos y aplicaciones, y en comprender y satisfacer las necesidades de los usuarios finales. Con su conocimiento técnico y habilidades de comunicación y trabajo en equipo, pueden ayudar a mejorar la eficiencia y productividad de las empresas que utilizan la plataforma Odoo.
 
-# Contacta un Desarrollador de Odoo ERP 
+# Contacta con un desarrollador de Odoo ERP
 - Nombre: Marlon Falcón Hernández
 - WhatsApp [+34662470645](https://web.whatsapp.com/send?phone=34662470645&text=)
 - GitHub [@falconsoft3d](https://github.com/falconsoft3d)
-- Youtube [@marlonfalconhdez](https://www.youtube.com/@marlonfalconhdez)
+- YouTube [@marlonfalconhdez](https://www.youtube.com/@marlonfalconhdez)
 - Telegram [@falconsoft]
 - Phone +34 (662) 47 0645
 - Email mfalconsoft@gmail.com

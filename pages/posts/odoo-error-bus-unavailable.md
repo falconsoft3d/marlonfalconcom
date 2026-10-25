@@ -1,13 +1,19 @@
 ---
 title: Odoo error bus unavailable
 date: 2022/12/18
-description: Odoo error bus unavailable
+description: Cómo resolver el error "bus unavailable" de Odoo configurando el puerto de longpolling y Nginx como proxy inverso.
 tag: odoo, nginx, odoo-error
 author: Marlon Falcon Hernandez
 ---
 # Odoo error bus unavailable
 
-Configuramos el fichero de configuración de Odoo ERP.
+El error **bus unavailable** suele aparecer cuando Odoo se ejecuta con workers (modo multiproceso) detrás de un proxy como Nginx. En ese modo, las notificaciones en tiempo real (chat, avisos, etc.) no las atiende el puerto principal 8069, sino un proceso aparte que escucha en el puerto de longpolling (8072 por defecto). Si el proxy no redirige las peticiones de `/longpolling` a ese puerto, el bus de Odoo deja de funcionar.
+
+La solución tiene dos partes: configurar Odoo y configurar Nginx.
+
+## 1. Configuración de Odoo
+
+Editamos el fichero de configuración de Odoo ERP:
 ````
 nano /etc/odoo/odoo.conf
 ````
@@ -24,7 +30,11 @@ limit_time_real = 1200
 limit_time_cpu = 600
 ````
 
-Configuramos el fichero de configuración de Nginx.
+Lo importante aquí es activar `proxy_mode`, definir el `longpolling_port` y tener `workers` mayor que 0.
+
+## 2. Configuración de Nginx
+
+Editamos el fichero de configuración de Nginx:
 ````
 cd /etc/nginx/sites-available
 nano default
@@ -75,3 +85,7 @@ server {
 }
 
 ````
+
+La clave está en el bloque `location /longpolling`, que envía esas peticiones al upstream `odoochat` (puerto 8072). Después de guardar, comprueba la configuración con `nginx -t` y reinicia Nginx y Odoo.
+
+**Nota:** a partir de Odoo 16, el longpolling se sustituyó por websockets. En esas versiones el parámetro se llama `gevent_port` y la ruta que hay que redirigir es `/websocket`, añadiendo además las cabeceras de Upgrade y Connection.

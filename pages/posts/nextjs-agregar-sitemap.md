@@ -1,22 +1,22 @@
 ---
-title: Agregar sitemap a NextJS
+title: Agregar sitemap a Next.js
 date: 2022/12/18
-description: Agregar sitemap a NextJS
+description: Cómo generar automáticamente el sitemap y el robots.txt de un sitio Next.js con la librería next-sitemap.
 tag: nextjs
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# Agregar sitemap a NextJS
-Es muy importante para los buscadores como Google, Bing, etc. tener un sitemap de nuestra página web, es muy útil para que los buscadores puedan indexar nuestra página web, es muy útil para que los buscadores puedan encontrar nuestra página web, es muy útil para que los buscadores puedan rastrear nuestra página web, etc.
+# Agregar sitemap a Next.js
+Para buscadores como Google o Bing es muy importante que nuestra página web tenga un sitemap. Se trata de un archivo XML con la lista de URL del sitio que ayuda a los buscadores a encontrar, rastrear e indexar todas nuestras páginas.
 
-Instalación de la librería
+## Instalación de la librería
 ```bash
 npm i next-sitemap -D
 ```
 
-Creamos el fichero next-sitemap.config.js
-En el fichero next-sitemap.config.js agregamos el siguiente código:
+## Crear el fichero next-sitemap.config.js
+En la raíz del proyecto creamos el fichero next-sitemap.config.js con el siguiente código:
 ```js
 /** @type {import('next-sitemap').IConfig} */
 // Default code you can customize according to your requirements.
@@ -27,8 +27,8 @@ module.exports = {
     }
 ```
 
-Configuramos el fichero next.config.js
-En el fichero next.config.js agregamos el siguiente código:
+## Configurar el script postbuild
+En el fichero package.json agregamos el script `postbuild`, que se ejecuta automáticamente después de `next build`:
 ```js
 "scripts": {
     "dev": "next dev",
@@ -39,7 +39,10 @@ En el fichero next.config.js agregamos el siguiente código:
 },
 ```
 
-Si lo quieres probar local puedes ejecutar el siguiente comando:
+## Probar en local
+Si lo quieres probar en local, puedes ejecutar el siguiente comando:
 ```bash
 npm run build
 ```
+
+Al terminar, encontrarás los archivos `sitemap.xml` y `robots.txt` en la carpeta `public`. Después solo queda enviar la URL del sitemap a Google Search Console.

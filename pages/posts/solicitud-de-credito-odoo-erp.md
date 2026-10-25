@@ -1,7 +1,7 @@
 ---
 title: ▷ Solicitud de crédito en Odoo ERP, módulo CreditPro
 date: 2023/01/30
-description: ▷ Solicitud de crédito en Odoo ERP, módulo CreditPro
+description: ▷ Cómo funciona el flujo de solicitud de crédito a partir de las ventas en CreditPro, el módulo de gestión de créditos para Odoo 16.
 tag: odoo, erp, credito
 author: Marlon Falcon Hernandez
 ---
@@ -27,11 +27,11 @@ Los documentos que se suelen requerir para una solicitud de crédito pueden vari
 * Informe de crédito: Un informe de crédito es un historial de las deudas que ha tenido el solicitante, y puede ser utilizado por la entidad financiera para evaluar la capacidad del solicitante para reembolsar el préstamo.
 * Garantías: Puede ser necesario aportar garantías para respaldar la solicitud de crédito, como propiedades o vehículos.
 
-Es importante tener en cuenta que pueden solicitar documentos adicionales si es necesario.
+Es importante tener en cuenta que se pueden solicitar documentos adicionales si es necesario.
 
-En CreditPro,  nuestro módulo de gestión de créditos para Odoo 16, generamos un flujo de solicitud  de crédito a partir de las ventas, donde según los permisos del usuario solo podrá hacer una venta si cuenta con un crédito aprobado o el pago del 100% del valor de la venta.
+En CreditPro, nuestro módulo de gestión de créditos para Odoo 16, generamos un flujo de solicitud de crédito a partir de las ventas, donde según los permisos del usuario solo podrá hacer una venta si cuenta con un crédito aprobado o el pago del 100% del valor de la venta.
 
-Además este usuario solo va a llenar los datos necesarios para solicitar el crédito el cual será marcado como solicitado y enviará una notificación al encargado de aprobar los créditos para su análisis.
+Además, este usuario solo va a llenar los datos necesarios para solicitar el crédito, que quedará marcado como solicitado, y se enviará una notificación al encargado de aprobar los créditos para su análisis.
 
 <Image
   src="/images/posts/solicitud-credito-1.png"
@@ -52,7 +52,7 @@ Además este usuario solo va a llenar los datos necesarios para solicitar el cr�
 />
 
 
-El encargado de solicitar el crédito junto al cliente deben llenar datos como
+El encargado de solicitar el crédito, junto al cliente, debe llenar datos como:
 
 * Producto a vender
 * Codeudor
@@ -63,6 +63,6 @@ El encargado de solicitar el crédito junto al cliente deben llenar datos como
 * Categoría
 * % de financiación
 
-Una vez llenos solo deberá accionar en solicitud y ya estará listo este paso, solo queda esperar a que se apruebe el crédito para seguir el proceso
+Una vez completados, solo deberá accionar la solicitud y este paso estará listo. Después, solo queda esperar a que se apruebe el crédito para seguir con el proceso.
 
 

@@ -1,7 +1,7 @@
 ---
-title: La importancia de un programa de gestión de obras y el control de costes como Odoo BIM
+title: "La importancia de un programa de gestión de obras y el control de costes como Odoo BIM"
 date: 2023/08/23
-description: La importancia de un programa de gestión de obras y el control de costes como Odoo BIM
+description: "Beneficios de usar un programa de gestión de obras y control de costes como Odoo BIM en planificación, colaboración, costes y documentación."
 tag: odoo, bim20
 author: Marlon Falcon Hernandez
 ---
@@ -26,11 +26,11 @@ BIM es una metodología que implica la creación y gestión de modelos digitales
   className="next-image"
 />
 
-## Beneficios de un programa de gestión de obras y control de costes con Odoo BIM:
+## Beneficios de un programa de gestión de obras y control de costes con Odoo BIM
 
 Mejora de la planificación: Odoo BIM permite crear presupuestos desde modelos digitales detallados de las estructuras a construir. Esto facilita una planificación más precisa al identificar posibles conflictos y problemas antes de que ocurran en el sitio de construcción. Además, la programación se vuelve más realista al considerar el tiempo necesario para cada tarea.
 
-Colaboración eficiente: El trabajo en equipo es esencial en la construcción. Odoo BIM fomenta la colaboración entre arquitectos, ingenieros, contratistas y otros profesionales involucrados en el proyecto. Todos pueden acceder a un único modelo compartido, lo que reduce la posibilidad de errores de comunicación y garantiza que todos estén en la misma página.
+Colaboración eficiente: El trabajo en equipo es esencial en la construcción. Odoo BIM fomenta la colaboración entre arquitectos, ingenieros, contratistas y otros profesionales involucrados en el proyecto. Todos pueden acceder a un único modelo compartido, lo que reduce la posibilidad de errores de comunicación y garantiza que todos trabajen con la misma información.
 
 Control de costes: La gestión de costes es crucial en la construcción. Odoo BIM permite estimar los costes con mayor precisión al tener en cuenta todos los elementos del proyecto, desde materiales hasta mano de obra y plazos. Esto ayuda a evitar costosos desvíos presupuestarios y a tomar decisiones informadas para optimizar los gastos.
 

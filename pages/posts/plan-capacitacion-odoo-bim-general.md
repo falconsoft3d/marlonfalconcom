@@ -1,7 +1,7 @@
 ---
 title: ▷ Plan de capacitación Odoo BIM 2.0 General
 date: 2023/03/07
-description: ▷ Plan de capacitación Odoo BIM 2.0 General
+description: ▷ Temario completo de capacitación en Odoo ERP y Odoo BIM 2.0, clase a clase, con objetivos y tareas prácticas.
 tag: odoo, bim
 author: Marlon Falcon Hernandez
 ---
@@ -10,45 +10,45 @@ import Image from 'next/image'
 # ▷ Plan de capacitación Odoo BIM 2.0 General
 En este post veremos el plan de capacitación para Odoo BIM 2.0. Partiremos de cero y aprenderemos a utilizar Odoo ERP y Odoo BIM 2.0.
 
-Tambien les dejo el link de la [Manual de Implementación de Odoo BIM 2.0](https://docs.google.com/document/d/1MJtG4Q4WUOrk4sE5_tTmTYd61YK2-18JaRviAAMTV4E/edit?usp=sharing)
+También les dejo el enlace al [Manual de Implementación de Odoo BIM 2.0](https://docs.google.com/document/d/1MJtG4Q4WUOrk4sE5_tTmTYd61YK2-18JaRviAAMTV4E/edit?usp=sharing)
 
 
-# Clase 01: Introducción a Odoo ERP.
-En esta clase vamos a entender de forma simple como funciona Odoo ERP.
+# Clase 01: Introducción a Odoo ERP
+En esta clase vamos a entender de forma simple cómo funciona Odoo ERP.
 
 ## Objetivos Clase 01:
 1. Crear Productos.
 2. Crear Clientes.
 3. Crear Proveedores.
-4. Crear Oportunidad en el CRM.
-5. Crear Cotización de Venta.
-6. Crear Albaran de Venta.
+4. Crear una Oportunidad en el CRM.
+5. Crear una Cotización de Venta.
+6. Crear Albarán de Venta.
 7. Crear Factura de Venta.
 8. Crear Orden de Compra.
-9. Crear Albaran de Compra.
+9. Crear Albarán de Compra.
 10. Crear Factura de Compra.
-11. Pagar Factura de Venta y Compras.
-12. Envio de mensajes entre los usuarios de Odoo.
+11. Pagar Facturas de Venta y Compra.
+12. Enviar mensajes entre los usuarios de Odoo.
 13. Subir adjuntos a los mensajes.
 
 ## Tareas Clase 01:
 1. Crear 10 Productos.
 2. Crear 10 Clientes.
 3. Crear 10 Proveedores.
-4. Crear 5 Oportunidad en el CRM.
-5. Crear 5 Cotización de Venta.
-6. Crear 5 Albaran de Venta.
-7. Crear 5 Factura de Venta.
-8. Crear 5 Orden de Compra.
-9. Crear 5 Albaran de Compra.
-10. Crear 5 Factura de Compra.
-11. Pagar 5 Factura de Venta y Compras.
+4. Crear 5 Oportunidades en el CRM.
+5. Crear 5 Cotizaciones de Venta.
+6. Crear 5 Albaranes de Venta.
+7. Crear 5 Facturas de Venta.
+8. Crear 5 Órdenes de Compra.
+9. Crear 5 Albaranes de Compra.
+10. Crear 5 Facturas de Compra.
+11. Pagar 5 Facturas de Venta y Compra.
 12. Enviar 5 mensajes entre los usuarios de Odoo.
 13. Subir 5 adjuntos a los mensajes.
 
 
 # Clase 02: Conceptos básicos de Odoo BIM 2.0
-1. Que es Odoo BIM 2.0.
+1. Qué es Odoo BIM 2.0.
 2. Diagrama de flujo de Odoo BIM 2.0.
 3. Temas a impartir en Odoo BIM 2.0.
 4. Conceptos generales.
@@ -67,10 +67,10 @@ En esta clase vamos a entender de forma simple como funciona Odoo ERP.
 
 
 # Clase 03: Presupuestos de construcción en Odoo BIM 2.0 (I)
-1. Crear un presupuesto Manualmente
+1. Crear un presupuesto manualmente
 2. Plantilla
-3. Importado BC3 o Excel
-4. Importando desde conceptos 
+3. Importando BC3 o Excel
+4. Importando desde conceptos
 5. Importador BIM
 6. Plantillas BoQ
 7. Revit
@@ -83,7 +83,7 @@ En esta clase vamos a entender de forma simple como funciona Odoo ERP.
 ## Tareas Clase 03:
 1. Crear 2 presupuestos de construcción.
 2. Enviar por correo los reportes de los presupuestos de construcción.
-3. Crea un presupuesto de bim desde ventas.
+3. Crear un presupuesto de BIM desde Ventas.
 
 
 # Clase 04: Presupuestos de construcción en Odoo BIM 2.0 (II)
@@ -93,11 +93,11 @@ En esta clase vamos a entender de forma simple como funciona Odoo ERP.
 4. Actualizar precios según tasa de cambio de moneda (USD)
 5. Modificar masivamente presupuestos
 6. Haberes y descuentos
-7. Comparar Presupuestos
+7. Comparar presupuestos
 8. Histórico de presupuestos
 9. Precios unitarios
 10. Grupos
-11. Parámetros 
+11. Parámetros
 12. Atributos
 13. Informes
 
@@ -115,21 +115,21 @@ En esta clase vamos a entender de forma simple como funciona Odoo ERP.
 6. Plantilla de recursos
 
 ## Tareas Clase 05:
-1. Tome un presupuesto y programalo con Project.
-2. Tome un presupuesto y programalo con CSV.
+1. Tome un presupuesto y prográmelo con Project.
+2. Tome un presupuesto y prográmelo con CSV.
 
 # Clase 06: Certificaciones de Obras en Odoo BIM 2.0
-1. Crear certificaciones por Etapas.
-2. Tipo Manual
+1. Crear certificaciones por etapas.
+2. Tipo manual
 3. Tipo por etapas
 4. Tipo por líneas de medición
-5. Certificación masiva (Por cantidad y %, Por % acumulado, Por consumos)
+5. Certificación masiva (por cantidad y %, por % acumulado, por consumos)
 6. Informes
 
 ## Tareas Clase 06:
 1. Crear 2 certificaciones de obras.
 
-# Clase 07: Estado de Pagos y Facturación.
+# Clase 07: Estados de Pago y Facturación
 1. Crear estados de pagos.
 2. Crear facturas de ventas.
 3. Configurar el módulo para facturación.
@@ -153,33 +153,35 @@ En esta clase vamos a entender de forma simple como funciona Odoo ERP.
 9. Saldos de apertura
 10. Informes
 
-## Clase 09:
-1. Crea Partes de obras y enviar informes de costos de obras.
+## Tareas Clase 08:
+1. Crear partes de obra y enviar informes de costes de obra.
+
+# Clase 09: Calidad, tareas y control de obras
 1. Plan de calidad
 2. Lista de chequeos
-3. tareas
-4. tickets
-5. Análisis del valor Ganado
-6. Costo beneficio a nivel de obras
+3. Tareas
+4. Tickets
+5. Análisis del valor ganado
+6. Coste-beneficio a nivel de obras
 
 ## Tareas Clase 09:
-1. Crea un plan de calidad.
+1. Crear un plan de calidad.
 2. Crear una lista de chequeos.
 3. Crear tareas.
 4. Crear tickets.
-5. Revisar el Coste beneficio a nivel de obras.
+5. Revisar el coste-beneficio a nivel de obras.
 
-# Clase 10: Otras Funciones de Odoo BIM 2.0
+# Clase 10: Otras funciones de Odoo BIM 2.0
 1. Solicitud de materiales
 2. Solicitud de servicios
 3. Alquiler de equipos
 4. Mantenimiento
 5. Útiles y herramientas
-6. Almacén Móvil
+6. Almacén móvil
 7. Registro de combustible
 8. Documentación
 
 ## Tareas Clase 10:
-1. Crea una solicitud de materiales.
-2. Crea una solicitud de servicios.
-3. Crea un alquiler de equipos.
+1. Crear una solicitud de materiales.
+2. Crear una solicitud de servicios.
+3. Crear un alquiler de equipos.

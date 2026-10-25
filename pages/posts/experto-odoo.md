@@ -1,7 +1,7 @@
 ---
 title: Experto Odoo ERP
 date: 2022/12/22
-description: Experto Odoo ERP
+description: Por qué contar con un experto en Odoo ERP al implantar la plataforma, desde la planificación y la personalización hasta la formación y el soporte.
 tag: odoo, experto, marlon
 author: Marlon Falcon Hernandez
 ---
@@ -28,12 +28,12 @@ Además, los expertos en Odoo pueden brindar capacitación y soporte a su equipo
 
 En resumen, los expertos en Odoo pueden ser una valiosa adición a su equipo empresarial al brindar asesoramiento y soporte en todas las etapas de la implementación y uso de la plataforma. Su conocimiento y experiencia pueden ayudar a su empresa a aprovechar al máximo todas las características y beneficios de Odoo y a adaptar la plataforma a las necesidades específicas de su negocio.
 
-Si gustas te dejo mis datos de contacto por si quieres contactarme:
+Si lo desea, le dejo mis datos de contacto:
 
 - Nombre: Marlon Falcón Hernández
 - WhatsApp [+34662470645](https://web.whatsapp.com/send?phone=34662470645&text=)
 - GitHub [@falconsoft3d](https://github.com/falconsoft3d)
-- Youtube [@marlonfalconhdez](https://www.youtube.com/@marlonfalconhdez)
+- YouTube [@marlonfalconhdez](https://www.youtube.com/@marlonfalconhdez)
 - Telegram [@falconsoft]
 - Phone +34 (662) 47 0645
 - Email mfalconsoft@gmail.com

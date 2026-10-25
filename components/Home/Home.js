@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import Icon from '../Icon'
+import MatrixRain from './MatrixRain'
+import CountUp from './CountUp'
+import posts from '../../data/posts.json'
 import {
+  recorrido,
   stats,
   tecnologias,
   verticales,
@@ -13,6 +17,7 @@ import {
 } from './data'
 
 const WHATSAPP = 'https://wa.me/34662470645'
+const titulos = ['Ingeniero Civil', 'Máster en Arquitectura', 'Consultor SAP ERP']
 
 function A({ href, className, children, ...rest }) {
   if (href.startsWith('/')) {
@@ -31,9 +36,65 @@ function A({ href, className, children, ...rest }) {
   )
 }
 
+const MESES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic']
+const COLORES = ['var(--p-blue)', 'var(--p-lavender)', 'var(--p-pink)', 'var(--p-green)', 'var(--p-yellow)', 'var(--p-peach)']
+const limpiar = (s = '') => s.replace(/^▷\s*/, '').trim()
+
+// Completa cada artículo destacado con fecha, etiquetas y descripción del índice de posts.
+// Los enlaces a /tags/... son series: muestran cuántos artículos tienen.
+const destacados = articulos.map((a, i) => {
+  const color = COLORES[i % COLORES.length]
+  const tag = a.href.startsWith('/tags/') && a.href.slice(6)
+  if (tag) {
+    const total = posts.filter((p) => p.tags.includes(tag)).length
+    return { ...a, color, serie: total, etiquetas: ['serie', tag], descripcion: `Colección de ${total} artículos.` }
+  }
+  const post = posts.find((p) => `/posts/${p.slug}` === a.href)
+  if (!post) return { ...a, color, etiquetas: [] }
+  const titulo = limpiar(post.title)
+  const descripcion = limpiar(post.description)
+  const [y, m, d] = (post.date || '').split('-')
+  return {
+    ...a,
+    color,
+    titulo,
+    descripcion: descripcion !== titulo ? descripcion : '',
+    etiquetas: post.tags.slice(0, 3),
+    fecha: post.date && { dia: Number(d), mes: MESES[Number(m) - 1], anio: y }
+  }
+})
+
+// Banderas en SVG: los emojis de bandera no se ven en Windows
+const BANDERAS = {
+  cu: (
+    <svg viewBox="0 0 30 20" aria-hidden="true">
+      <rect width="30" height="20" fill="#002a8f" />
+      <path d="M0 4h30v4H0zM0 12h30v4H0z" fill="#fff" />
+      <path d="M0 0l13 10L0 20z" fill="#cf142b" />
+      <path d="m5.2 7.2.7 2.1h2.2l-1.8 1.3.7 2.1-1.8-1.3-1.8 1.3.7-2.1-1.8-1.3h2.2z" fill="#fff" />
+    </svg>
+  ),
+  cl: (
+    <svg viewBox="0 0 30 20" aria-hidden="true">
+      <rect width="30" height="20" fill="#fff" />
+      <rect y="10" width="30" height="10" fill="#d52b1e" />
+      <rect width="10" height="10" fill="#0039a6" />
+      <path d="m5 2.4.8 2.4h2.5l-2 1.5.8 2.4-2.1-1.5-2.1 1.5.8-2.4-2-1.5h2.5z" fill="#fff" />
+    </svg>
+  ),
+  es: (
+    <svg viewBox="0 0 30 20" aria-hidden="true">
+      <rect width="30" height="20" fill="#aa151b" />
+      <rect y="5" width="30" height="10" fill="#f1bf00" />
+    </svg>
+  )
+}
+
 const dominio = (url) => url.replace(/^https?:\/\//, '').replace(/\/$/, '')
 
 export default function Home() {
+  const [matrix, setMatrix] = useState(false)
+
   return (
     <div className="home">
       {/* Hero */}
@@ -57,33 +118,83 @@ export default function Home() {
               <A href="/posts/como-contratar-servicios-marlon" className="btn btn-ghost">
                 Cómo contratarme
               </A>
-              <A href="/resume_marlon_falcon.pdf" className="btn btn-ghost">
+              <A href="/cv" className="btn btn-ghost">
                 <Icon name="file" size={16} /> Ver CV
               </A>
             </div>
           </div>
 
-          <div className="hero-photo">
+          <div
+            className="hero-photo"
+            onMouseEnter={() => setMatrix(true)}
+            onMouseLeave={() => setMatrix(false)}
+            onClick={() => setMatrix(!matrix)}
+          >
             <div className="hero-grid" aria-hidden="true" />
-            <div className="hero-frame">
+            <div className={`hero-frame${matrix ? ' matrix-on' : ''}`}>
               <img src="/images/marlon_yellow.png" alt="Marlon Falcón Hernández" width={600} height={600} />
+              <MatrixRain activo={matrix} />
             </div>
             <div className="hero-badge">
               <img src="/images/tech/python.svg" alt="" width={22} height={22} />
               <span>Odoo · Python</span>
             </div>
+            <div className="hero-paella">
+              <span className="hero-paella-icon" aria-hidden="true">
+                🥘
+              </span>
+              Vivo en Valencia, España
+            </div>
+            <ul className="hero-titles" aria-label="Titulaciones">
+              {titulos.map((t, i) => (
+                <li key={t} style={{ '--c': ['var(--p-yellow)', 'var(--p-pink)', 'var(--p-green)'][i % 3] }}>
+                  <span className="hero-cap" aria-hidden="true">
+                    <Icon name="cap" size={16} />
+                  </span>
+                  {t}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
         <div className="inner">
-          <dl className="stats">
+          <div className="stats">
             {stats.map((s) => (
               <div className="stat" key={s.label}>
-                <dt>{s.label}</dt>
-                <dd>{s.value}</dd>
+                <span className="stat-icon" style={{ '--c': s.color }}>
+                  <Icon name={s.icono} size={22} />
+                </span>
+                <div>
+                  <p className="stat-value">
+                    <CountUp fin={s.numero} sufijo={s.sufijo} />
+                  </p>
+                  <p className="stat-label">{s.label}</p>
+                </div>
               </div>
             ))}
-          </dl>
+          </div>
+        </div>
+      </section>
+
+      {/* Recorrido */}
+      <section className="band">
+        <div className="inner">
+          <h2 className="section-title center">Dónde he vivido</h2>
+          <p className="section-lede center">Tres países que han marcado mi forma de trabajar.</p>
+          <ol className="timeline">
+            {recorrido.map((r) => (
+              <li key={r.anio} className={`tl-item${r.actual ? ' actual' : ''}`}>
+                <span className="tl-flag">{BANDERAS[r.bandera]}</span>
+                <span className="tl-year">
+                  {r.anio}
+                  {r.actual && <em>Hoy</em>}
+                </span>
+                <h3 className="tl-title">{r.titulo}</h3>
+                <p className="tl-text">{r.texto}</p>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
@@ -97,13 +208,17 @@ export default function Home() {
           </p>
           <div className="tech-row">
             {tecnologias.map((t) => (
-              <A key={t.nombre} href={t.href} className="tech" title={t.nombre}>
+              <A key={t.nombre} href={t.href} className="tech" aria-describedby={`tip-${t.nombre}`}>
                 {t.wordmark ? (
                   <span className="odoo-wordmark">odoo</span>
                 ) : (
                   <img src={t.logo} alt="" width={36} height={36} loading="lazy" />
                 )}
                 <span className="tech-name">{t.nombre}</span>
+                <span className="tech-tip" id={`tip-${t.nombre}`} role="tooltip">
+                  <strong>{t.nombre}</strong>
+                  {t.explicacion}
+                </span>
               </A>
             ))}
           </div>
@@ -191,7 +306,7 @@ export default function Home() {
 
       {/* Certificaciones, artículos y API */}
       <section className="band">
-        <div className="inner narrow">
+        <div className="inner">
           <h2 className="section-title">Certificaciones</h2>
           {certificaciones.map((c) => (
             <A key={c.nombre} href={c.imagen} className="card card-link cert">
@@ -207,21 +322,58 @@ export default function Home() {
             </A>
           ))}
 
-          <h2 className="section-title spaced">Artículos destacados</h2>
-          <ul className="articles">
-            {articulos.map((a) => (
-              <li key={a.href}>
-                <A href={a.href} className="article">
-                  <span>{a.titulo}</span>
-                  <Icon name="arrow" size={16} />
-                </A>
-              </li>
-            ))}
-          </ul>
-          <A href="/posts" className="btn btn-ghost more">
-            Ver todos los artículos <Icon name="arrow" size={16} />
-          </A>
+        </div>
 
+        <div className="inner">
+          <div className="section-head spaced feat-head">
+            <div>
+              <h2 className="section-title">Artículos destacados</h2>
+              <p className="section-lede">Guías y lecturas recomendadas para empezar.</p>
+            </div>
+            <A href="/posts" className="btn btn-ghost">
+              Ver todos los artículos <Icon name="arrow" size={16} />
+            </A>
+          </div>
+          <div className="feat-grid">
+            {destacados.map((a) => (
+              <A key={a.href} href={a.href} className="feat">
+                <span className="feat-date" style={{ '--c': a.color }} aria-hidden={!a.fecha && !a.serie}>
+                  {a.fecha ? (
+                    <>
+                      <span className="feat-month">{a.fecha.mes}</span>
+                      <span className="feat-day">{a.fecha.dia}</span>
+                      <span className="feat-year">{a.fecha.anio}</span>
+                    </>
+                  ) : a.serie ? (
+                    <>
+                      <span className="feat-month">serie</span>
+                      <span className="feat-day">{a.serie}</span>
+                      <span className="feat-year">posts</span>
+                    </>
+                  ) : (
+                    <Icon name="book" size={22} />
+                  )}
+                </span>
+                <span className="feat-body">
+                  {a.etiquetas.length > 0 && (
+                    <span className="feat-tags">
+                      {a.etiquetas.map((t) => (
+                        <span key={t}>#{t}</span>
+                      ))}
+                    </span>
+                  )}
+                  <span className="feat-title">{a.titulo}</span>
+                  {a.descripcion && <span className="feat-desc">{a.descripcion}</span>}
+                </span>
+                <span className="feat-arrow" aria-hidden="true">
+                  <Icon name="arrow" size={16} />
+                </span>
+              </A>
+            ))}
+          </div>
+        </div>
+
+        <div className="inner">
           <h2 className="section-title spaced">API</h2>
           <div className="terminal">
             <div className="terminal-bar" aria-hidden="true">
@@ -230,7 +382,7 @@ export default function Home() {
               <i />
             </div>
             <div className="terminal-body">
-              <span className="muted"># API para generar contraseñas aleatorias</span>
+              <span># API para generar contraseñas aleatorias</span>
               <A href="/api/password/21" className="terminal-cmd">
                 <span className="prompt">$</span> curl marlonfalcon.com/api/password/21
               </A>
@@ -291,10 +443,14 @@ export default function Home() {
           border-bottom: 1px solid var(--border);
         }
         .home .band-hero {
-          margin-top: -2rem;
+          margin-top: -2.5rem;
           padding-top: 3rem;
-          background: radial-gradient(60% 80% at 85% 20%, rgba(59, 130, 246, 0.16), transparent 70%),
-            radial-gradient(40% 60% at 0% 100%, rgba(59, 130, 246, 0.08), transparent 70%);
+          background: radial-gradient(60% 80% at 85% 20%, var(--glow), transparent 70%),
+            radial-gradient(40% 60% at 0% 100%, rgba(230, 184, 203, 0.3), transparent 70%);
+        }
+        html.dark .home .band-hero {
+          background: radial-gradient(60% 80% at 85% 20%, var(--glow), transparent 70%),
+            radial-gradient(40% 60% at 0% 100%, rgba(181, 174, 207, 0.12), transparent 70%);
         }
         .home .inner {
           max-width: 1120px;
@@ -382,7 +538,7 @@ export default function Home() {
         .home .hero-grid {
           position: absolute;
           inset: -8%;
-          background-image: radial-gradient(rgba(96, 165, 250, 0.35) 1px, transparent 1px);
+          background-image: radial-gradient(rgba(181, 174, 207, 0.7) 1px, transparent 1px);
           background-size: 14px 14px;
           mask-image: radial-gradient(closest-side, #000 40%, transparent);
           -webkit-mask-image: radial-gradient(closest-side, #000 40%, transparent);
@@ -394,7 +550,7 @@ export default function Home() {
           overflow: hidden;
           transform: rotate(-4deg);
           border: 1px solid rgba(255, 255, 255, 0.12);
-          box-shadow: 0 30px 80px -20px rgba(59, 130, 246, 0.45), 0 0 0 8px rgba(59, 130, 246, 0.08);
+          box-shadow: 0 30px 80px -20px var(--glow), 0 0 0 8px var(--tint);
         }
         .home .hero-frame img {
           width: 100%;
@@ -402,6 +558,25 @@ export default function Home() {
           object-fit: cover;
           margin: 0;
           transform: rotate(4deg) scale(1.1);
+          transition: filter 0.5s;
+        }
+        .home .hero-frame {
+          transition: border-color 0.5s, box-shadow 0.5s;
+        }
+        .home .hero-frame.matrix-on {
+          border-color: rgba(0, 255, 65, 0.45);
+          box-shadow: 0 30px 80px -20px rgba(0, 255, 65, 0.45), 0 0 0 8px rgba(0, 255, 65, 0.08);
+        }
+        .home .hero-frame.matrix-on img {
+          filter: grayscale(1) contrast(1.2) brightness(0.4) sepia(1) hue-rotate(70deg) saturate(2.5);
+        }
+        .home .matrix-rain {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          transform: rotate(4deg) scale(1.1);
+          pointer-events: none;
         }
         .home .hero-badge {
           position: absolute;
@@ -412,15 +587,110 @@ export default function Home() {
           gap: 0.5rem;
           padding: 0.6rem 0.9rem;
           border-radius: 0.9rem;
-          background: rgba(23, 26, 33, 0.85);
+          background: color-mix(in srgb, var(--surface-2) 88%, transparent);
           backdrop-filter: blur(8px);
           border: 1px solid var(--border);
           font-size: 0.85rem;
           color: var(--text-strong);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
         }
         .home .hero-badge img {
           margin: 0;
+        }
+        .home .hero-titles {
+          position: absolute;
+          top: 16%;
+          right: -16%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.6rem;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+        .home .hero-titles > li {
+          display: flex;
+          align-items: center;
+          gap: 0.55rem;
+          margin: 0;
+          padding: 0.45rem 0.85rem 0.45rem 0.45rem;
+          border: 1px solid var(--border);
+          border-radius: 999px;
+          background: color-mix(in srgb, var(--surface-2) 90%, transparent);
+          backdrop-filter: blur(8px);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          color: var(--text-strong);
+          font-size: 0.85rem;
+          white-space: nowrap;
+          font-variation-settings: 'wght' 600;
+          animation: hero-title-in 0.6s both;
+        }
+        .home .hero-titles > li:nth-child(2) {
+          margin-left: 1.25rem;
+          animation-delay: 0.12s;
+        }
+        .home .hero-titles > li:nth-child(3) {
+          animation-delay: 0.24s;
+        }
+        .home .hero-titles > li::before {
+          content: none;
+        }
+        .home .hero-cap {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 1.9rem;
+          height: 1.9rem;
+          border-radius: 50%;
+          background: var(--c);
+          color: #2a2622;
+        }
+        .home .hero-paella {
+          position: absolute;
+          right: -10%;
+          bottom: 4%;
+          display: flex;
+          align-items: center;
+          gap: 0.55rem;
+          padding: 0.45rem 0.9rem 0.45rem 0.45rem;
+          border: 1px solid var(--border);
+          border-radius: 999px;
+          background: color-mix(in srgb, var(--surface-2) 90%, transparent);
+          backdrop-filter: blur(8px);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          color: var(--text-strong);
+          font-size: 0.85rem;
+          white-space: nowrap;
+          font-variation-settings: 'wght' 600;
+          animation: hero-title-in 0.6s 0.36s both;
+        }
+        .home .hero-paella-icon {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 1.9rem;
+          height: 1.9rem;
+          border-radius: 50%;
+          background: var(--p-peach);
+          font-size: 1.05rem;
+          line-height: 1;
+          transition: transform 0.4s;
+        }
+        .home .hero-paella:hover .hero-paella-icon {
+          transform: rotate(-20deg) scale(1.15);
+        }
+        @keyframes hero-title-in {
+          from {
+            opacity: 0;
+            transform: translateX(12px);
+          }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .home .hero-titles > li,
+          .home .hero-paella {
+            animation: none;
+          }
         }
 
         .home .stats {
@@ -431,13 +701,34 @@ export default function Home() {
         }
         .home .stat {
           display: flex;
-          flex-direction: column-reverse;
+          align-items: center;
+          gap: 1rem;
           padding: 1.1rem 1.25rem;
           border: 1px solid var(--border);
           border-radius: 1rem;
           background: var(--surface);
+          transition: transform 0.2s, box-shadow 0.2s;
         }
-        .home .stat dd {
+        .home .stat:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 16px 40px -24px var(--glow);
+        }
+        .home .stat-icon {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          width: 3rem;
+          height: 3rem;
+          border-radius: 0.9rem;
+          background: var(--c);
+          color: #2a2622;
+          transition: transform 0.3s;
+        }
+        .home .stat:hover .stat-icon {
+          transform: rotate(-8deg) scale(1.08);
+        }
+        .home .stat-value {
           margin: 0;
           font-size: 1.8rem;
           line-height: 1.1;
@@ -445,11 +736,11 @@ export default function Home() {
           font-variation-settings: 'wght' 750;
           font-variant-numeric: tabular-nums;
         }
-        .home .stat dt {
-          margin: 0.25rem 0 0;
+        .home .stat-label {
+          margin: 0.2rem 0 0;
           font-size: 0.85rem;
+          line-height: 1.3;
           color: var(--muted);
-          font-variation-settings: 'wght' 450;
         }
 
         /* Botones */
@@ -464,25 +755,167 @@ export default function Home() {
           font-variation-settings: 'wght' 600;
           transition: background-color 0.15s, border-color 0.15s, transform 0.15s;
         }
-        .home .btn-primary {
+        .home .btn.btn-primary {
           background: var(--accent);
-          color: #fff;
+          color: var(--on-accent);
         }
-        .home .btn-primary:hover {
+        .home .btn.btn-primary:hover {
           background: var(--accent-hover);
           transform: translateY(-1px);
         }
-        .home .btn-ghost {
+        .home .btn.btn-ghost {
           border: 1px solid var(--border);
           color: var(--text);
           background: transparent;
         }
-        .home .btn-ghost:hover {
+        .home .btn.btn-ghost:hover {
           border-color: var(--accent-2);
           color: var(--text-strong);
         }
-        .home .btn.more {
-          margin-top: 1.25rem;
+
+        /* Recorrido */
+        .home .timeline {
+          position: relative;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.5rem;
+          margin: 1rem 0 0;
+          padding: 0;
+          list-style: none;
+        }
+        /* Línea que une los países */
+        .home .timeline::before {
+          content: '';
+          position: absolute;
+          top: 1.9rem;
+          left: 16.66%;
+          right: 16.66%;
+          height: 3px;
+          border-radius: 3px;
+          background: linear-gradient(90deg, var(--p-blue), var(--p-pink), var(--p-yellow));
+        }
+        .home .timeline > .tl-item {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 0;
+          padding: 0 0.5rem;
+          text-align: center;
+        }
+        .home .timeline > .tl-item::before {
+          content: none;
+        }
+        .home .tl-flag {
+          position: relative;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 3.8rem;
+          height: 3.8rem;
+          border-radius: 50%;
+          background: var(--surface-2);
+          border: 3px solid var(--border);
+          box-shadow: 0 10px 30px -12px var(--glow);
+          transition: transform 0.3s;
+        }
+        .home .tl-flag svg {
+          width: 2.1rem;
+          height: 1.4rem;
+          border-radius: 3px;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+        }
+        .home .tl-item:hover .tl-flag {
+          transform: translateY(-4px) rotate(-6deg);
+        }
+        .home .tl-item.actual .tl-flag {
+          border-color: var(--p-yellow);
+        }
+        .home .tl-item.actual .tl-flag::after {
+          content: '';
+          position: absolute;
+          inset: -8px;
+          border-radius: 50%;
+          border: 2px solid var(--p-yellow);
+          animation: tl-pulso 2.2s ease-out infinite;
+        }
+        @keyframes tl-pulso {
+          from {
+            opacity: 0.8;
+            transform: scale(0.9);
+          }
+          to {
+            opacity: 0;
+            transform: scale(1.35);
+          }
+        }
+        .home .tl-year {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          margin-top: 1rem;
+          font-size: 1.6rem;
+          line-height: 1;
+          color: var(--text-strong);
+          font-variation-settings: 'wght' 800;
+          font-variant-numeric: tabular-nums;
+          letter-spacing: -0.02em;
+        }
+        .home .tl-year em {
+          padding: 0.15rem 0.5rem;
+          border-radius: 999px;
+          background: var(--p-yellow);
+          color: #2a2622;
+          font-size: 0.7rem;
+          font-style: normal;
+          letter-spacing: 0.02em;
+          font-variation-settings: 'wght' 650;
+        }
+        .home .tl-title {
+          margin: 0.5rem 0 0.25rem;
+          font-size: 1.05rem;
+          color: var(--text-strong);
+        }
+        .home .tl-text {
+          margin: 0;
+          max-width: 30ch;
+          font-size: 0.9rem;
+          line-height: 1.5;
+          color: var(--muted);
+        }
+        @media (max-width: 700px) {
+          .home .timeline {
+            grid-template-columns: 1fr;
+            gap: 1.75rem;
+            padding-left: 0.5rem;
+          }
+          .home .timeline::before {
+            top: 1.9rem;
+            bottom: 1.9rem;
+            left: 2.35rem;
+            right: auto;
+            width: 3px;
+            height: auto;
+            background: linear-gradient(180deg, var(--p-blue), var(--p-pink), var(--p-yellow));
+          }
+          .home .timeline > .tl-item {
+            display: grid;
+            grid-template-columns: 3.8rem 1fr;
+            column-gap: 1rem;
+            align-items: start;
+            text-align: left;
+          }
+          .home .tl-flag {
+            grid-row: span 3;
+          }
+          .home .tl-year {
+            margin-top: 0.2rem;
+          }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .home .tl-item.actual .tl-flag::after {
+            animation: none;
+          }
         }
 
         /* Tecnologías */
@@ -505,6 +938,90 @@ export default function Home() {
         .home .tech:hover {
           border-color: var(--border);
           background: var(--bg);
+        }
+        .home .tech {
+          position: relative;
+        }
+        .home .tech-tip {
+          position: absolute;
+          bottom: calc(100% + 12px);
+          left: 50%;
+          z-index: 5;
+          width: 230px;
+          padding: 0.75rem 0.9rem;
+          border: 1px solid var(--border);
+          border-radius: 0.8rem;
+          background: var(--surface-2);
+          box-shadow: 0 18px 40px -16px rgba(0, 0, 0, 0.35);
+          color: var(--text);
+          font-size: 0.82rem;
+          line-height: 1.45;
+          text-align: left;
+          pointer-events: none;
+          opacity: 0;
+          transform: translate(var(--tx, -50%), 6px);
+          transition: opacity 0.18s, transform 0.18s;
+        }
+        .home .tech-tip strong {
+          display: block;
+          margin-bottom: 0.2rem;
+          color: var(--text-strong);
+        }
+        .home .tech-tip::after {
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          width: 10px;
+          height: 10px;
+          margin-top: -5px;
+          border-right: 1px solid var(--border);
+          border-bottom: 1px solid var(--border);
+          background: var(--surface-2);
+          transform: translateX(-50%) rotate(45deg);
+        }
+        .home .tech:hover .tech-tip,
+        .home .tech:focus-visible .tech-tip {
+          opacity: 1;
+          transform: translate(var(--tx, -50%), 0);
+        }
+        /* En los extremos de la fila, el tooltip se alinea al borde para no salirse de la pantalla */
+        .home .tech:first-child .tech-tip {
+          --tx: 0;
+          left: 0;
+        }
+        .home .tech:first-child .tech-tip::after {
+          left: 2.2rem;
+        }
+        .home .tech:last-child .tech-tip {
+          --tx: 0;
+          left: auto;
+          right: 0;
+        }
+        .home .tech:last-child .tech-tip::after {
+          left: auto;
+          right: 1.4rem;
+        }
+        @media (max-width: 960px) {
+          .home .tech:nth-child(4n + 1) .tech-tip {
+            --tx: 0;
+            left: 0;
+          }
+          .home .tech:nth-child(4n + 1) .tech-tip::after {
+            left: 2.2rem;
+          }
+          .home .tech:nth-child(4n) .tech-tip {
+            --tx: 0;
+            left: auto;
+            right: 0;
+          }
+          .home .tech:nth-child(4n) .tech-tip::after {
+            left: auto;
+            right: 1.4rem;
+          }
+          .home .tech-tip {
+            width: 200px;
+          }
         }
         .home .tech img {
           margin: 0;
@@ -551,9 +1068,9 @@ export default function Home() {
           background: var(--surface-2);
         }
         .home .card-link:hover {
-          border-color: rgba(96, 165, 250, 0.6);
+          border-color: var(--tint-border);
           transform: translateY(-2px);
-          box-shadow: 0 16px 40px -20px rgba(59, 130, 246, 0.5);
+          box-shadow: 0 16px 40px -20px var(--glow);
         }
         .home .card-compact {
           padding: 1.2rem;
@@ -567,8 +1084,8 @@ export default function Home() {
           margin-bottom: 1rem;
           border-radius: 0.75rem;
           color: var(--accent-2);
-          background: rgba(59, 130, 246, 0.12);
-          border: 1px solid rgba(59, 130, 246, 0.25);
+          background: var(--tint);
+          border: 1px solid var(--tint-border);
         }
         .home .card-icon.small {
           width: 2rem;
@@ -612,24 +1129,23 @@ export default function Home() {
         .home .project-cover span {
           font-size: 2.4rem;
           letter-spacing: -0.04em;
-          color: rgba(255, 255, 255, 0.92);
+          color: rgba(42, 38, 34, 0.82);
           font-variation-settings: 'wght' 800;
-          text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
         .home .cover-0 {
-          background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+          background: linear-gradient(135deg, var(--p-blue), var(--p-lavender));
         }
         .home .cover-1 {
-          background: linear-gradient(135deg, #312e81, #6366f1);
+          background: linear-gradient(135deg, var(--p-pink), var(--p-peach));
         }
         .home .cover-2 {
-          background: linear-gradient(135deg, #0c4a6e, #0ea5e9);
+          background: linear-gradient(135deg, var(--p-yellow), var(--p-beige));
         }
         .home .cover-3 {
-          background: linear-gradient(135deg, #4c1d95, #8b5cf6);
+          background: linear-gradient(135deg, var(--p-green), var(--p-blue));
         }
         .home .cover-4 {
-          background: linear-gradient(135deg, #134e4a, #14b8a6);
+          background: linear-gradient(135deg, var(--p-lavender), var(--p-pink));
         }
         .home .project-body {
           display: flex;
@@ -652,43 +1168,126 @@ export default function Home() {
           border: 1px solid var(--border);
         }
 
-        /* Artículos */
-        .home .articles {
-          margin: 1.25rem 0 0;
-          padding: 0;
-          list-style: none;
-          border-top: 1px solid var(--border);
-        }
-        .home .articles > li {
-          margin: 0;
-          padding: 0;
-          border-bottom: 1px solid var(--border);
-        }
-        .home .articles > li::before {
-          content: none;
-        }
-        .home .article {
+        /* Artículos destacados */
+        .home .feat-head {
           display: flex;
-          align-items: center;
+          align-items: flex-end;
           justify-content: space-between;
           gap: 1rem;
-          padding: 0.95rem 0.25rem;
+          flex-wrap: wrap;
+          margin-bottom: 2rem;
+        }
+        .home .feat-head .section-lede {
+          margin-bottom: 0;
+        }
+        .home .feat-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+        }
+        .home .feat {
+          display: flex;
+          align-items: center;
+          gap: 1.1rem;
+          padding: 1rem 1.2rem 1rem 1rem;
+          border: 1px solid var(--border);
+          border-radius: 1rem;
+          background: var(--surface);
           color: var(--text);
           text-decoration: none;
-          font-variation-settings: 'wght' 550;
-          transition: color 0.15s, padding 0.15s;
+          transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
         }
-        .home .article svg {
+        .home .feat:hover {
+          border-color: var(--tint-border);
+          transform: translateY(-2px);
+          box-shadow: 0 16px 40px -24px var(--glow);
+        }
+        .home .feat-date {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          width: 4.25rem;
+          height: 4.6rem;
+          border-radius: 0.8rem;
+          background: var(--c);
+          color: #2a2622;
+          line-height: 1;
+          box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.06);
+        }
+        .home .feat-month {
+          font-size: 0.68rem;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          font-variation-settings: 'wght' 650;
+          opacity: 0.75;
+        }
+        .home .feat-day {
+          margin: 0.2rem 0 0.15rem;
+          font-size: 1.55rem;
+          letter-spacing: -0.02em;
+          font-variation-settings: 'wght' 800;
+          font-variant-numeric: tabular-nums;
+        }
+        .home .feat-year {
+          font-size: 0.68rem;
+          opacity: 0.7;
+          font-variant-numeric: tabular-nums;
+        }
+        .home .feat-body {
+          display: flex;
+          flex-direction: column;
+          gap: 0.3rem;
+          flex: 1;
+          min-width: 0;
+        }
+        .home .feat-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.4rem;
+          font-size: 0.72rem;
           color: var(--muted);
-          transition: transform 0.15s, color 0.15s;
         }
-        .home .article:hover {
+        .home .feat-title {
+          font-size: 1rem;
+          line-height: 1.35;
           color: var(--text-strong);
-          padding-left: 0.6rem;
+          font-variation-settings: 'wght' 650;
         }
-        .home .article:hover svg {
+        .home .feat-desc {
+          font-size: 0.85rem;
+          line-height: 1.45;
+          color: var(--muted);
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        .home .feat-arrow {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          width: 2rem;
+          height: 2rem;
+          border-radius: 50%;
+          border: 1px solid var(--border);
+          color: var(--muted);
+          transition: color 0.15s, border-color 0.15s, transform 0.15s;
+        }
+        .home .feat:hover .feat-arrow {
           color: var(--accent-2);
+          border-color: var(--tint-border);
           transform: translateX(3px);
+        }
+        @media (max-width: 760px) {
+          .home .feat-grid {
+            grid-template-columns: 1fr;
+          }
+          .home .feat-arrow {
+            display: none;
+          }
         }
 
         /* API */
@@ -703,8 +1302,8 @@ export default function Home() {
           display: flex;
           gap: 0.4rem;
           padding: 0.7rem 0.9rem;
-          background: var(--surface);
-          border-bottom: 1px solid var(--border);
+          background: #161920;
+          border-bottom: 1px solid #262b36;
         }
         .home .terminal-bar i {
           width: 10px;
@@ -723,17 +1322,18 @@ export default function Home() {
           flex-direction: column;
           gap: 0.4rem;
           padding: 1rem 1.1rem;
+          color: #8b95a7;
           font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
           font-size: 0.88rem;
           overflow-x: auto;
         }
         .home .terminal-cmd {
-          color: var(--text-strong);
+          color: #f3f4f6;
           text-decoration: none;
           white-space: nowrap;
         }
         .home .terminal-cmd:hover {
-          color: var(--accent-2);
+          color: var(--p-blue);
         }
         .home .prompt {
           color: #22c55e;
@@ -766,7 +1366,7 @@ export default function Home() {
           transition: border-color 0.15s, transform 0.15s;
         }
         .home .contact-tile:hover {
-          border-color: rgba(96, 165, 250, 0.6);
+          border-color: var(--tint-border);
           transform: translateY(-2px);
         }
         .home .contact-name {
@@ -792,7 +1392,60 @@ export default function Home() {
             grid-template-columns: repeat(4, 1fr);
           }
         }
+        @media (max-width: 1180px) {
+          .home .hero-titles {
+            right: -6%;
+          }
+          .home .hero-paella {
+            right: -4%;
+          }
+        }
         @media (max-width: 820px) {
+          .home .hero-titles {
+            top: auto;
+            bottom: 20%;
+            right: -0.5rem;
+            gap: 0.4rem;
+          }
+          .home .hero-titles > li {
+            font-size: 0.75rem;
+            padding: 0.3rem 0.7rem 0.3rem 0.3rem;
+          }
+          .home .hero-titles > li:nth-child(2) {
+            margin-left: 0;
+          }
+          /* En móvil las titulaciones van en fila bajo la foto y la paella arriba a la derecha */
+          .home .hero-photo {
+            margin-bottom: 4.5rem;
+          }
+          .home .hero-titles {
+            top: calc(100% + 0.9rem);
+            bottom: auto;
+            left: 50%;
+            right: auto;
+            width: max-content;
+            max-width: calc(100vw - 2.5rem);
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            transform: translateX(-50%);
+          }
+          .home .hero-paella {
+            top: 3%;
+            bottom: auto;
+            right: -0.5rem;
+            font-size: 0.75rem;
+            padding: 0.3rem 0.7rem 0.3rem 0.3rem;
+          }
+          .home .hero-paella-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            font-size: 0.85rem;
+          }
+          .home .hero-cap {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
           .home .band {
             padding: 3.5rem 0;
           }

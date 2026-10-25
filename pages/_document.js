@@ -11,6 +11,11 @@ export default function Document() {
     <Html lang="es">
       <Head>
         <meta name="robots" content="follow, index" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#a8cfe3" />
         <meta name="description" content={meta.description} />
         <meta property="og:site_name" content={meta.title} />
         <meta property="og:description" content={meta.description} />
@@ -21,10 +26,11 @@ export default function Document() {
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
-        {/* El diseño es oscuro: fija el tema de next-themes antes de hidratar */}
+        {/* Aplica el tema guardado antes de pintar (oscuro por defecto); misma clave que next-themes */}
         <script
           dangerouslySetInnerHTML={{
-            __html: "try{localStorage.setItem('theme','dark')}catch(e){}document.documentElement.classList.add('dark')"
+            __html:
+              "(function(){var t='dark';try{var s=localStorage.getItem('theme');if(s==='light'||s==='dark'){t=s}else{localStorage.setItem('theme',t)}}catch(e){}var h=document.documentElement;h.classList.toggle('dark',t==='dark');h.style.colorScheme=t})()"
           }}
         />
       </Head>

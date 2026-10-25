@@ -1,25 +1,26 @@
 ---
-title: Comandos para Linux
+title: "Comandos para Linux"
 date: 2022/12/18
-description: Comandos para Linux
+description: "Chuleta de comandos básicos de Linux para administrar un servidor, como SSH, usuarios, disco, servicios, permisos y copia de archivos."
 tag: linux
 author: Marlon Falcon Hernandez
 ---
 
 # Comandos para Linux
 
+Esta es una recopilación de los comandos de Linux que más uso en el día a día al administrar servidores (muchos de ellos con Odoo). Los ejemplos están pensados para distribuciones basadas en Debian/Ubuntu.
 
-Conectarse a un servidor con el comando ssh.
+Copiar nuestra clave pública al servidor para conectarnos por ssh sin contraseña.
 ```
 ssh-copy-id root@159.89.29.1
 ```
 
-Cambiamos la contraseña al usuario root.
+Cambiar la contraseña del usuario actual (root, si hemos entrado como root).
 ```
 passwd
 ```
 
-Mostrar espacio del disco duro.
+Mostrar el espacio del disco duro.
 ```
 df -h
 ```
@@ -34,67 +35,67 @@ Actualizar el sistema operativo.
 apt-get update && apt-get upgrade -y
 ```
 
-Crear una carpeta y dar permiso.
+Crear una carpeta y asignarla al usuario odoo.
 ```
 mkdir /opt/extra-addons
 chown odoo: /opt/extra-addons/ -R
 ```
 
-Editamos un fichero con Nano.
+Editar un fichero con Nano.
 ```
 nano /etc/odoo/odoo.conf
 ```
 
-Mostrar procesos con palabra clave ejemplo: chro
+Mostrar los procesos que contienen una palabra clave, por ejemplo: chro.
 ```
 ps aux | grep chro
 ```
 
-Reiniciamos un servicio.
+Reiniciar un servicio.
 ```
 service odoo restart
 ```
 
-Paramos un servicio.
+Detener un servicio.
 ```
 service odoo stop
 ```
 
-Iniciamos un servicio.
+Iniciar un servicio.
 ```
 service odoo start
 ```
 
-Instalamos un programa
+Instalar un programa.
 ```
 apt-get install htop
 ```
 
-Ver tamaño de una carpeta
+Ver el tamaño de una carpeta.
 ```
 du -hc
 du -sh /opt/extra-addons/
 ```
 
 
-Vemos los recursos del sistema
+Ver los recursos del sistema.
 ```
 htop
 ```
 
-Borramos un directorio
+Borrar un directorio (con cuidado: no pide confirmación).
 ```
 sudo rm -r carpeta
 ```
 
-Generamos una clave pública.
+Generar una clave pública.
 ```
 ssh-keygen
 cat ~/.ssh/id_rsa.pub
 ```
 
 
-Copiar con scp, el comando scp permite copiar archivos y directorios de un equipo a otro. Para copiar un archivo de un equipo a otro, se utiliza el siguiente comando:
+Copiar con scp. El comando scp permite copiar archivos y directorios de un equipo a otro a través de SSH. Por ejemplo, para descargar una carpeta completa de un servidor a nuestro escritorio:
 ```bash
 scp -r root@123.12.12.2:/opt/extra-addons/ Desktop/
 ```

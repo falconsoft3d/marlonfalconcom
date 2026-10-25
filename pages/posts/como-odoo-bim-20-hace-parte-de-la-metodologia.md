@@ -1,32 +1,33 @@
 ---
-title: Como odoo bim 20 hace parte de la metodologia
+title: Cómo Odoo BIM 2.0 forma parte de la metodología BIM
 date: 2024/10/03
-description: Como odoo bim 20 hace parte de la metodologia
+description: Por qué integrar BIM 2.0 en Odoo para presupuestos, certificaciones y materiales encaja con los principios de la metodología BIM.
 tag: odoo, erp, bim, metodologia
 author: Marlon Falcon Hernandez
 ---
 
-# Como odoo bim 20 hace parte de la metodologia
+# Cómo Odoo BIM 2.0 forma parte de la metodología BIM
 
-La integración de un módulo como BIM 2.0 dentro de un ERP que conecta con Odoo para gestionar procesos como presupuesto, certificación y solicitud de materiales puede justificarse como parte de la metodología BIM porque aborda la gestión integral de información del proyecto en varias etapas del ciclo de vida de la construcción. Aquí te doy algunos puntos clave para justificar esta integración como parte de BIM:
+La integración de un módulo como BIM 2.0 dentro de Odoo para gestionar procesos como presupuesto, certificación y solicitud de materiales puede justificarse como parte de la metodología BIM porque aborda la gestión integral de información del proyecto en varias etapas del ciclo de vida de la construcción. Aquí te doy algunos puntos clave para justificar esta integración como parte de BIM:
 
- 1. Gestión Centralizada de Datos: La metodología BIM se basa en la centralización de la información, permitiendo que todos los participantes tengan acceso a los datos relevantes del proyecto. El módulo BIM 20 integrado con Odoo cumple con este principio al permitir que la información del presupuesto, certificación y materiales esté disponible para todos los interesados, evitando silos de información.
+1. **Gestión centralizada de datos**: la metodología BIM se basa en la centralización de la información, permitiendo que todos los participantes tengan acceso a los datos relevantes del proyecto. El módulo BIM 2.0 integrado con Odoo cumple con este principio al permitir que la información del presupuesto, certificación y materiales esté disponible para todos los interesados, evitando silos de información.
 
-2. Flujo de Trabajo Automatizado y Coordinación: BIM busca mejorar la eficiencia y reducir errores mediante la coordinación automatizada. El hecho de que el módulo gestione el presupuesto y las solicitudes de materiales ayuda a alinear los flujos de trabajo y mejorar la coordinación, que es uno de los objetivos de la metodología BIM, reduciendo las discrepancias entre el diseño y la ejecución.
+2. **Flujo de trabajo automatizado y coordinación**: BIM busca mejorar la eficiencia y reducir errores mediante la coordinación automatizada. El hecho de que el módulo gestione el presupuesto y las solicitudes de materiales ayuda a alinear los flujos de trabajo y mejorar la coordinación, que es uno de los objetivos de la metodología BIM, reduciendo las discrepancias entre el diseño y la ejecución.
 
- 3. Certificación y Control de Avance: La certificación del avance de la obra permite controlar y validar lo ejecutado respecto al modelo planificado, una práctica clave dentro de BIM que busca asegurar que lo que se construye sigue fielmente la planificación. Este módulo permite la validación constante del progreso frente al presupuesto, promoviendo transparencia y control en todas las etapas.
+3. **Certificación y control de avance**: la certificación del avance de la obra permite controlar y validar lo ejecutado respecto al modelo planificado, una práctica clave dentro de BIM que busca asegurar que lo que se construye sigue fielmente la planificación. Este módulo permite la validación constante del progreso frente al presupuesto, promoviendo transparencia y control en todas las etapas.
 
- 4. Trazabilidad y Datos en Tiempo Real: BIM se enfoca también en mantener la trazabilidad de las decisiones y los recursos utilizados. Al utilizar un módulo como BIM 20 dentro del ERP, es posible tener acceso a información actualizada y en tiempo real sobre los materiales solicitados, el avance del proyecto y los presupuestos. Esto facilita la toma de decisiones informadas, otro pilar esencial de la metodología BIM.
+4. **Trazabilidad y datos en tiempo real**: BIM se enfoca también en mantener la trazabilidad de las decisiones y los recursos utilizados. Al utilizar un módulo como BIM 2.0 dentro del ERP, es posible tener acceso a información actualizada y en tiempo real sobre los materiales solicitados, el avance del proyecto y los presupuestos. Esto facilita la toma de decisiones informadas, otro pilar esencial de la metodología BIM.
 
- 5. Integración Multidisciplinar: BIM fomenta la colaboración entre diferentes disciplinas (arquitectura, ingeniería, construcción, etc.). Un módulo que conecta todos estos aspectos —como el presupuesto, la certificación y la solicitud de materiales— permite que todos los equipos trabajen en conjunto y con la misma información, mejorando la colaboración y reduciendo el riesgo de errores.
+5. **Integración multidisciplinar**: BIM fomenta la colaboración entre diferentes disciplinas (arquitectura, ingeniería, construcción, etc.). Un módulo que conecta todos estos aspectos —como el presupuesto, la certificación y la solicitud de materiales— permite que todos los equipos trabajen en conjunto y con la misma información, mejorando la colaboración y reduciendo el riesgo de errores.
 
 En resumen, la integración de BIM 2.0 con Odoo permite coordinar los recursos, el presupuesto y las etapas de construcción de una manera eficiente, vinculando cada aspecto financiero y logístico directamente con el modelo de proyecto. Esto cumple con los principios de la metodología BIM, que abogan por una visión integral y coordinada de toda la información relevante a lo largo del ciclo de vida del proyecto.
 
-Datos de contacto
+## Datos de contacto
+
 - Nombre: Marlon Falcón Hernández
-- WhatsApp [+34662470645](https://web.whatsapp.com/send?phone=34662470645&text=)
-- GitHub [@falconsoft3d](https://github.com/falconsoft3d)
-- Youtube [@marlonfalconhdez](https://www.youtube.com/@marlonfalconhdez)
-- Telegram [@falconsoft]
-- Phone +34 (662) 47 0645
-- Email mfalconsoft@gmail.com
+- WhatsApp: [+34662470645](https://web.whatsapp.com/send?phone=34662470645&text=)
+- GitHub: [@falconsoft3d](https://github.com/falconsoft3d)
+- YouTube: [@marlonfalconhdez](https://www.youtube.com/@marlonfalconhdez)
+- Telegram: @falconsoft
+- Teléfono: +34 (662) 47 0645
+- Email: mfalconsoft@gmail.com

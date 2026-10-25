@@ -1,50 +1,50 @@
 ---
 title: Mis links de interés
 date: 2022/12/18
-description: Mis links de interés
+description: Recopilación de herramientas y servicios web que uso para videollamadas, diseño, DNS, dominios, cursos, servidores y despliegue.
 tag: links, tools, web
 author: Marlon Falcon Hernandez
 ---
 
 # Mis links de interés
 
-Aplicaciones para video llamadas
+Aplicaciones para videollamadas
 - https://whereby.com
 
-Aplicaciones para grabar videos
+Aplicaciones para grabar vídeos
 - https://www.loom.com
 
-Aplicaciones para Diseño
+Aplicaciones para diseño
 - https://www.canva.com
 - https://www.excalidraw.com
 
-Aplicaciones gestion de DNS
+Aplicaciones de gestión de DNS
 - https://www.cloudflare.com
 - https://www.dnschecker.com
 
 Aplicaciones para compra de dominios
 - https://www.namecheap.com
 
-Aplicaciones para cursos online.
+Aplicaciones para cursos en línea
 - https://www.coursera.com
 - https://www.udemy.com
 - https://www.platzi.com
 
-Maestrias y cursos en España.
+Másteres y cursos en España
 - https://www.emagister.com/master/
 
-Aplicaciones para Servidores VPS
+Aplicaciones para servidores VPS
 - https://www.hetzner.cloud
 - https://www.digitalocean.com
 
 Aplicaciones para despliegue de aplicaciones
 - https://www.vercel.com
 
-Herramientas de generación de Codigo QR
+Herramientas de generación de códigos QR
 - https://es.qr-code-generator.com
 
-Aplicaciones para gestión de visitas
+Aplicaciones para analítica de visitas
 - https://splitbee.io
 
-Liberias para React
+Librerías para React
 - https://ant.design

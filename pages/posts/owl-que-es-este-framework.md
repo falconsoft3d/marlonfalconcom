@@ -1,30 +1,30 @@
 ---
-title: Que es OWL Framework
+title: Qué es OWL Framework
 date: 2022/12/18
-description: NodeJs Odoo RPC
+description: Qué es OWL (Odoo Web Library), el framework de JavaScript creado por Odoo, por qué existe y cuáles son sus ventajas y desventajas.
 tag: owl, odoo
 author: Marlon Falcon Hernandez
 ---
 
-# Que es OWL Framework
-OWL viene de las siglas de Odoo Web Library es un framework de javascript que nos permite crear aplicaciones web de forma rapida y sencilla, este framework esta basado en el framework de ReactJs, pero con algunas mejoras y optimizaciones. OWL es muy libiano con un peso menor a 20kb.
+# Qué es OWL Framework
+OWL viene de las siglas de Odoo Web Library. Es un framework de JavaScript que nos permite crear aplicaciones web de forma rápida y sencilla. Está inspirado en frameworks como React y Vue, pero con algunas mejoras y optimizaciones pensadas para Odoo: componentes basados en clases, plantillas XML (QWeb), hooks y un sistema de reactividad propio. OWL es muy liviano, con un peso menor a 20 kB.
 
 
-# Por que Odoo creo OWL Framework
-Odoo tuvo que crear un framework de javascript para poder crear aplicaciones que permitan herencias de plantillas, esto es muy importante para Odoo ya que Odoo es un framework de desarrollo de aplicaciones web, y Odoo necesita que sus aplicaciones web puedan ser heredadas por otras aplicaciones de Odoo.
+# Por qué Odoo creó OWL Framework
+Odoo tuvo que crear un framework de JavaScript para poder construir aplicaciones que permitan la herencia de plantillas. Esto es muy importante para Odoo, ya que Odoo es un framework de desarrollo de aplicaciones web y necesita que sus aplicaciones puedan ser extendidas y modificadas por otros módulos de Odoo sin tocar el código original.
 
 
 ## Ventajas de OWL Framework
-- Rapidez
-- Sencillez
-- Optimizacion
-- Facil de aprender
-- Facil de usar
-- Facil de mantener
-- Facil de escalar
-- Facil de integrar con Odoo
+- Rapidez.
+- Sencillez.
+- Optimización.
+- Fácil de aprender.
+- Fácil de usar.
+- Fácil de mantener.
+- Fácil de escalar.
+- Fácil de integrar con Odoo.
 
 
 ## Desventajas de OWL Framework
 - No es tan popular como ReactJs, Angular, VueJs y otros frameworks.
-- No es tan facil de aprender como ReactJs, Angular, VueJs y otros frameworks.
+- Tiene menos documentación, ejemplos y comunidad que ReactJs, Angular o VueJs, por lo que puede costar más encontrar ayuda al empezar.

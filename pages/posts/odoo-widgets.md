@@ -1,7 +1,7 @@
 ---
 title: Odoo widgets para la versión 16
 date: 2022/12/18
-description: Odoo widgets para la versión 16
+description: Ejemplos de widgets útiles en las vistas de Odoo 16 - many2one_avatar_user, priority, monetary, boolean_toggle y badge.
 tag: odoo
 author: Marlon Falcon Hernandez
 ---
@@ -9,7 +9,11 @@ author: Marlon Falcon Hernandez
 
 import Image from 'next/image'
 
-many2one_avatar_user
+Los widgets permiten cambiar la forma en que un campo se muestra y se edita en las vistas de Odoo, sin modificar el modelo. Se indican con el atributo `widget` en la definición del campo dentro de la vista XML. Estos son algunos de los que más uso en la versión 16.
+
+## many2one_avatar_user
+
+Muestra un campo Many2one a usuarios junto con su avatar.
 ````
 <field name="user_id" widget="many2one_avatar_user" options="{'clickable': '1'}"/>
 ````
@@ -23,7 +27,9 @@ many2one_avatar_user
   className="next-image"
 />
 
-priority
+## priority
+
+Muestra el campo como estrellas para marcar la prioridad de un registro.
 ```
 <field name="priority" optional="hide" widget="priority"/>
 ```
@@ -36,7 +42,9 @@ priority
   className="next-image"
 />
 
-monetary
+## monetary
+
+Formatea un importe con el símbolo de la moneda indicada en `currency_field`.
 ```
 <field name="amount_total" widget="monetary" options="{'currency_field': 'currency_id'}"/>
 ```
@@ -48,7 +56,9 @@ monetary
   className="next-image"
 />
 
-boolean_toggle
+## boolean_toggle
+
+Muestra un campo booleano como un interruptor que se puede activar o desactivar directamente.
 ```
 <field name="active" widget="boolean_toggle"/>
 ```
@@ -61,7 +71,9 @@ boolean_toggle
   className="next-image"
 />
 
-badge
+## badge
+
+Muestra el valor como una etiqueta de color. Con los atributos `decoration-*` se elige el color según una condición.
 ```
 <field name="state" widget="badge" decoration-info="state == 'draft'" decoration-success="state == 'posted'"/>
 ```
@@ -73,10 +85,3 @@ badge
   height={143}
   className="next-image"
 />
-
-
-
-
-
-
-

@@ -1,7 +1,7 @@
 ---
 title: ▷ Las 10 metodologías de proyecto más usadas con ERP
 date: 2022/12/28
-description: ▷ Las 10 metodologías de proyecto más usadas con ERP
+description: ▷ Waterfall, Agile, Scrum, PRINCE2 y otras metodologías de gestión de proyectos utilizadas en implementaciones de ERP como Odoo.
 tag: odoo, erp, metodologia
 author: Marlon Falcon Hernandez
 ---
@@ -28,16 +28,16 @@ Las 10 metodologías de proyecto más utilizadas en la implementación de sistem
 
 4. Lean: es un enfoque basado en la eliminación de desperdicios y la maximización del valor a través de la simplificación y la mejora continua.
 
-5. Six Sigma: es una metodología de mejora de procesos que se centra en la eliminación de errores y la maximización de la eficiencia.
+5. Six Sigma: es una metodología de mejora de procesos que se centra en reducir la variabilidad y los defectos para maximizar la calidad y la eficiencia.
 
-6. PMI: es una metodología de gestión de proyectos basada en el estándar de la Asociación de Gerencia de Proyectos (PMI, por sus siglas en inglés).
+6. PMI: es un enfoque de gestión de proyectos basado en la guía PMBOK del Project Management Institute (PMI).
 
-7. PRINCE2: es una metodología de gestión de proyectos basada en el Reino Unido que se enfoca en la entrega de proyectos de manera eficiente y efectiva.
+7. PRINCE2: es una metodología de gestión de proyectos originada en el Reino Unido que se enfoca en la entrega de proyectos de manera eficiente y efectiva.
 
-8. Crystal: es una metodología de gestión de proyectos que se centra en la adaptación a las necesidades específicas del proyecto y del equipo.
+8. Crystal: es una familia de metodologías ágiles que se centra en la adaptación a las necesidades específicas del proyecto y del equipo.
 
-9. RUP: es una metodología de desarrollo de software basada en iteraciones y en la entrega continua de software funcional.
+9. RUP (Rational Unified Process): es una metodología de desarrollo de software basada en iteraciones y organizada en fases (inicio, elaboración, construcción y transición).
 
-10. XP: es una metodología de desarrollo de software basada en la entrega continua de código funcional y en la colaboración constante entre desarrolladores y clientes.
+10. XP (Extreme Programming): es una metodología de desarrollo de software basada en la entrega continua de código funcional y en la colaboración constante entre desarrolladores y clientes.
 
 Es importante tener en cuenta que cada metodología tiene sus propias ventajas y desventajas, y que la elección de la metodología adecuada dependerá de las necesidades específicas del proyecto de Odoo ERP y del equipo.

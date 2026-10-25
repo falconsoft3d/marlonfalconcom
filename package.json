@@ -2,9 +2,11 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "dev": "next",
-    "build": "node ./scripts/gen-rss.js && next build",
+    "dev": "node ./scripts/gen-posts-index.js && next",
+    "build": "node ./scripts/gen-rss.js && node ./scripts/gen-posts-index.js && next build",
     "start": "next start",
+    "cv:pdf": "node ./scripts/gen-cv-pdf.js",
+    "webs:shots": "node ./scripts/gen-webs-shots.js",
     "postbuild": "next-sitemap"
   },
   "dependencies": {

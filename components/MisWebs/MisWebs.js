@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 const toUrl = (web) => (/^https?:\/\//.test(web) ? web : `https://${web}`)
 
@@ -16,7 +17,12 @@ export default function MisWebs() {
 
   return (
     <div className="mis-webs">
-      <h4>Mis webs</h4>
+      <div className="mis-webs-head">
+        <h4>Mis webs</h4>
+        <Link href="/webs">
+          <a className="mis-webs-all">Ver con capturas →</a>
+        </Link>
+      </div>
       <ul>
         {webs.map((item) => (
           <li key={item.id}>
@@ -33,8 +39,20 @@ export default function MisWebs() {
           padding: 2.5rem 0;
           border-top: 1px solid var(--border);
         }
+        .mis-webs-head {
+          display: flex;
+          align-items: baseline;
+          justify-content: space-between;
+          gap: 1rem;
+          margin-bottom: 1rem;
+        }
+        .mis-webs .mis-webs-all {
+          font-size: 0.8rem;
+          font-weight: 500;
+          color: var(--accent-2);
+        }
         .mis-webs h4 {
-          margin: 0 0 1rem;
+          margin: 0;
           font-size: 0.8rem;
           text-transform: uppercase;
           letter-spacing: 0.06em;

@@ -1,16 +1,16 @@
 ---
-title: ▷ Integración de Microsoft Project Server con Odoo BIM ERP.
+title: ▷ Integración de Microsoft Project Server con Odoo BIM ERP
 date: 2023/01/16
-description: ▷ Integración de Microsoft Project Server con Odoo BIM ERP.
+description: ▷ Cómo exportar presupuestos de Odoo BIM 2.0 a Microsoft Project en XML y volver a importarlos para planificar obras de construcción.
 tag: odoo, bim, construccion, odoo-construccion
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# ▷ Integración de Microsoft Project Server con Odoo BIM ERP.
-Microsoft Project es un software de gestión de proyectos profesionales que permite mantener un control sobre todos los procesos y tareas para conseguir una planificación y ejecución óptima. En este articulo veremos como integrar Microsoft Project Server con Odoo BIM ERP.
+# ▷ Integración de Microsoft Project Server con Odoo BIM ERP
+Microsoft Project es un software de gestión de proyectos profesionales que permite mantener un control sobre todos los procesos y tareas para conseguir una planificación y ejecución óptima. En este artículo veremos cómo integrar Microsoft Project Server con Odoo BIM ERP.
 
-Odoo BIM 2.0 es un Módulo diseñado para Odoo 16 que permite la gestión de obra desde la oportunidad de negocio hasta la facturación. Es un ERP que permite la planificación, ejecución y control de obras constructivas tales como edificaciones, viviendas, industrias, reformas, instalaciones, etc.
+Odoo BIM 2.0 es un módulo diseñado para Odoo 16 que permite la gestión de obra desde la oportunidad de negocio hasta la facturación. Es un ERP que permite la planificación, ejecución y control de obras constructivas tales como edificaciones, viviendas, industrias, reformas, instalaciones, etc.
 
 <Image
   src="/images/posts/odoo-project.png"
@@ -21,7 +21,7 @@ Odoo BIM 2.0 es un Módulo diseñado para Odoo 16 que permite la gestión de obr
   className="next-image"
 />
 
-El ERP Odoo BIM 2.0 contiene el cálculo de la duración de cada partida en función de las horas de trabajo planificadas, tomando como referencia el tiempo más desfavorable dentro de la partida y expresando en días la duración de la misma. Además permite usar relaciones entre las partidas para definir sus predecesoras con varios criterios.
+El ERP Odoo BIM 2.0 contiene el cálculo de la duración de cada partida en función de las horas de trabajo planificadas, tomando como referencia el tiempo más desfavorable dentro de la partida y expresando en días la duración de la misma. Además, permite usar relaciones entre las partidas para definir sus predecesoras con varios criterios.
 
 <Image
   src="/images/posts/odoo-project-01.png"
@@ -33,10 +33,10 @@ El ERP Odoo BIM 2.0 contiene el cálculo de la duración de cada partida en func
 />
 
 ## Datos de ejemplo:
-Colocación bloque de hormigón  e=14 cm 1 cara a vista  cantidad     100 m2
-horas hábiles x día para este presupuesto 9 horas, esto está en los datos de BIM en configuración.
+- Partida: colocación de bloque de hormigón, e=14 cm, 1 cara vista. Cantidad: 100 m2.
+- Horas hábiles por día para este presupuesto: 9 horas (este dato se define en la configuración de BIM).
 
-En esta partida se introdujeron dos tipos de fuerza de trabajo albañil y ayudante y un equipo , habría que calcular el tiempo a considerar dividiendo cant de horas/ disponibilidad.  hay que seleccionar el que mayor tiempo a considerar tiene, que en este caso sería el equipo Hormigonera 0.50 horas por lo que este sería el valor a trabajar, luego lo afectaríamos por la cantidad definida en el presupuesto para esa partida. Ejemplo 100m2 x 0.50 horas = 50 horas y este valor a su vez lo dividimos entre 9 horas y nos da 5.55 días y ese sería el valor a usar para calcular la fecha de fin y llevarlo al Gantt.
+En esta partida se introdujeron dos tipos de mano de obra (albañil y ayudante) y un equipo. Para cada recurso se calcula el tiempo a considerar dividiendo la cantidad de horas entre su disponibilidad, y se selecciona el que tiene el mayor tiempo, que en este caso sería el equipo hormigonera, con 0,50 horas. Este valor se multiplica por la cantidad definida en el presupuesto para esa partida: 100 m2 x 0,50 horas = 50 horas. A su vez, dividimos este valor entre 9 horas y obtenemos 5,55 días, que sería el valor a usar para calcular la fecha de fin y llevarlo al diagrama de Gantt.
 
 ## Integración de Odoo ERP con Microsoft Project
 Hemos diseñado la interacción del ERP Odoo 16 BIM 2.0 con Microsoft Project de manera que, desde un presupuesto creado, podremos exportar un fichero en formato XML el cual se puede abrir con Microsoft Project cargando datos como la lista de tareas en función de las partidas del presupuesto con su tiempo de ejecución calculado, la disponibilidad de los recursos y las relaciones de dependencias entre ellas.
@@ -74,9 +74,9 @@ Ejemplo de presupuesto exportado a Microsoft Project.
   className="next-image"
 />
 
-Además incorporamos que se puedan crear certificaciones de avance de obras mediante la importación de estos fichero siempre que se haya marcado algún nivel de avance en las actividades del proyecto.
+Además, hemos incorporado la posibilidad de crear certificaciones de avance de obra mediante la importación de estos ficheros, siempre que se haya marcado algún nivel de avance en las actividades del proyecto.
 
-Con esta integración logramos aprovechar las ventajas de ambos software haciendo que sea más fácil para el usuario final la administración y planificación de proyectos de construcción.
+Con esta integración logramos aprovechar las ventajas de ambos programas, haciendo que sea más fácil para el usuario final la administración y planificación de proyectos de construcción.
 
 
 

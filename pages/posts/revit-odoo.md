@@ -1,7 +1,7 @@
 ---
 title: ▷ Importar desde Revit a Odoo
 date: 2023/1/9
-description: ▷ Importar desde Revit a Odoo
+description: ▷ Cómo exportar el listado de materiales (BoQ) de un modelo de Revit e importarlo como presupuesto en Odoo con el módulo BIM 2.0.
 tag: revit, odoo
 author: Marlon Falcon Hernandez
 ---
@@ -9,11 +9,11 @@ import Image from 'next/image'
 
 # ▷ Importar desde Revit a Odoo
 
-**Odoo ERP** con el módulo [BIM 2.0](/posts/odoo-construccion) permite importar desde [Revit](/posts/revit) el listado de materiales utilizando el formato BoQ (bill of quantities). Odoo es un ERP open source que permite gestionar la información de una empresa, desde la facturación, compras, ventas, inventarios, contabilidad, etc. 
+**Odoo ERP** con el módulo [BIM 2.0](/posts/odoo-construccion) permite importar desde [Revit](/posts/revit) el listado de materiales utilizando el formato BoQ (bill of quantities). Odoo es un ERP open source que permite gestionar la información de una empresa, como la facturación, las compras, las ventas, los inventarios o la contabilidad.
 
-Revit es un software de modelado 3D paramétrico, que permite crear modelos BIM (Building Information Modeling) para la construcción.
+Revit es un software de modelado 3D paramétrico que permite crear modelos BIM (Building Information Modeling) para la construcción.
 
-para importar los materiales desde **Revit** a **Odoo** seguiremos los siguientes pasos:
+Para importar los materiales desde **Revit** a **Odoo** seguiremos los siguientes pasos:
 
 1- Creamos nuestro modelo BIM en Revit.
 <Image
@@ -26,7 +26,7 @@ para importar los materiales desde **Revit** a **Odoo** seguiremos los siguiente
 />
 
 
-2- Vamos al menu de tabla de planificación y seleccionamos la opción de exportar a excel.
+2- Vamos al menú de tabla de planificación y seleccionamos la opción de exportar a Excel.
 <Image
   src="/images/posts/odoo-revit-a2.png"
   alt="owl-odoo"
@@ -36,7 +36,7 @@ para importar los materiales desde **Revit** a **Odoo** seguiremos los siguiente
   className="next-image"
 />
 
-3- Exportamos el codigo y las cantidades de los materiales.
+3- Exportamos el código y las cantidades de los materiales.
 <Image
   src="/images/posts/odoo-revit-a3.png"
   alt="owl-odoo"
@@ -46,7 +46,7 @@ para importar los materiales desde **Revit** a **Odoo** seguiremos los siguiente
   className="next-image"
 />
 
-4- En el módulo de BIM 2.0 en Odoo, seleccionamos la opción de importar desde excel.
+4- En el módulo de BIM 2.0 en Odoo, seleccionamos la opción de importar desde Excel.
 <Image
   src="/images/posts/odoo-revit-a4.png"
   alt="owl-odoo"
@@ -65,3 +65,5 @@ para importar los materiales desde **Revit** a **Odoo** seguiremos los siguiente
   priority
   className="next-image"
 />
+
+De esta forma, el presupuesto en Odoo parte directamente de las cantidades del modelo BIM, sin tener que transcribirlas a mano, lo que ahorra tiempo y reduce errores.

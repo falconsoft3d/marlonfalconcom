@@ -1,7 +1,7 @@
 ---
 title: Ventajas de usar un ERP en empresas de construcción
 date: 2022/12/22
-description: Ventajas de usar un ERP en empresas de construcción
+description: Principales ventajas de implantar un ERP en una empresa de construcción, desde la eficiencia hasta la seguridad de los datos.
 tag: erp
 author: Marlon Falcon Hernandez
 ---
@@ -21,4 +21,4 @@ Un sistema de gestión empresarial (ERP, por sus siglas en inglés) es un softwa
 
 5. Mayor seguridad: Un ERP permite a las empresas controlar el acceso a la información y garantizar la seguridad de los datos.
 
-En resumen, un ERP puede ayudar a las empresas de construcción a mejorar la eficiencia, la toma de decisiones, la visibilidad, la flexibilidad y la seguridad de sus operaciones y procesos
+En resumen, un ERP puede ayudar a las empresas de construcción a mejorar la eficiencia, la toma de decisiones, la visibilidad, la flexibilidad y la seguridad de sus operaciones y procesos.

@@ -1,15 +1,15 @@
 ---
-title: ▷ Desarrollador de Django | ¿Necesitas desarrollar de Django?
+title: ▷ Desarrollador de Django | ¿Necesitas un desarrollador de Django?
 date: 2022/12/29
-description: ▷ Desarrollador de Django | ¿Necesitas desarrollar de Django?
+description: ▷ Qué hace un desarrollador de Django, qué conocimientos necesita y un ejemplo práctico de API con Django.
 tag: django, developer
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# ▷ Desarrollador de Django | ¿Necesitas desarrollar de Django?
+# ▷ Desarrollador de Django | ¿Necesitas un desarrollador de Django?
 
-Un desarrollador de Django es un profesional de la informática que se especializa en el uso del framework de Django para el desarrollo de aplicaciones web. Django es un marco de código abierto escrito en Python que se utiliza ampliamente para el desarrollo de aplicaciones web robustas y escalables.
+Un desarrollador de Django es un profesional de la informática que se especializa en el uso del framework Django para el desarrollo de aplicaciones web. Django es un framework de código abierto escrito en Python que se utiliza ampliamente para el desarrollo de aplicaciones web robustas y escalables.
 
 Los desarrolladores de Django tienen un conocimiento profundo de Python y de cómo utilizar Django para crear aplicaciones web de alta calidad. Además de tener habilidades de programación sólidas, también deben tener una comprensión profunda de los principios de diseño y arquitectura de software, así como de cómo integrar Django con otras tecnologías y plataformas web.
 
@@ -17,10 +17,10 @@ Un desarrollador de Django típicamente trabaja en un equipo de desarrollo de so
 
 Para ser un desarrollador de Django exitoso, es importante tener una buena comprensión de los principios y patrones de diseño de software y saber cómo aplicarlos en el desarrollo de aplicaciones web. También es esencial tener habilidades de comunicación y trabajo en equipo para poder colaborar efectivamente con otros miembros del equipo de desarrollo.
 
-En resumen, un desarrollador de Django es un profesional de la informática altamente cualificado que utiliza el marco de Django para el desarrollo de aplicaciones web de alta calidad. Con una comprensión sólida de Python y de los principios de diseño y arquitectura de software, los desarrolladores de Django son esenciales para el éxito de cualquier proyecto de desarrollo de aplicaciones web.
+En resumen, un desarrollador de Django es un profesional de la informática altamente cualificado que utiliza el framework Django para el desarrollo de aplicaciones web de alta calidad. Con una comprensión sólida de Python y de los principios de diseño y arquitectura de software, los desarrolladores de Django son esenciales para el éxito de cualquier proyecto de desarrollo de aplicaciones web.
 
 
-Ejemplo de como crear una API con Django: https://github.com/django-spain/django_mysql_api
+Ejemplo de cómo crear una API con Django: https://github.com/django-spain/django_mysql_api
 
 ```python
 from django.http import JsonResponse
@@ -90,11 +90,11 @@ class CompanyView(View):
         return JsonResponse(datos)
 ```
 
-# Contacta un Desarrollador de Django
+## Contacta con un desarrollador de Django
 - Nombre: Marlon Falcón Hernández
 - WhatsApp [+34662470645](https://web.whatsapp.com/send?phone=34662470645&text=)
 - GitHub [@falconsoft3d](https://github.com/falconsoft3d)
-- Youtube [@marlonfalconhdez](https://www.youtube.com/@marlonfalconhdez)
+- YouTube [@marlonfalconhdez](https://www.youtube.com/@marlonfalconhdez)
 - Telegram [@falconsoft]
 - Phone +34 (662) 47 0645
 - Email mfalconsoft@gmail.com

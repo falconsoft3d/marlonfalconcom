@@ -1,12 +1,12 @@
 ---
-title: ▷ 10 Pasos para elaborar un presupuesto de obra con Odoo BIM
+title: ▷ 10 pasos para elaborar un presupuesto de obra con Odoo BIM
 date: 2023/08/24
-description: ▷ 10 Pasos para elaborar un presupuesto de obra con Odoo BIM
+description: ▷ Guía paso a paso para crear un presupuesto de obra en Odoo BIM - obra, almacén, etapas, conceptos, mediciones e informes.
 tag: erp, construccion, bim20, odoo-construccion
 author: Marlon Falcon Hernandez
 ---
 
-# 10 Pasos para elaborar un presupuesto de obra con Odoo BIM
+# 10 pasos para elaborar un presupuesto de obra con Odoo BIM
 import Image from 'next/image'
 
 Cuando nos encontramos en los primeros pasos de establecer nuestra empresa de instalaciones y un potencial cliente solicita un presupuesto para un proyecto, se nos presenta una única oportunidad para impactar positivamente y asegurar la obtención del trabajo. Surge entonces la interrogante crucial: ¿cómo logramos este cometido?
@@ -16,8 +16,9 @@ La estrategia que emerge es la de "dividir y conquistar". Al fragmentar el desaf
 A continuación, exploraremos los 10 pasos para crear un presupuesto de obra en el ERP Odoo BIM y así lograr el éxito en la obtención de proyectos.
 
 
-## Paso 1: Creamos la Obra o Proyecto de construcción.
-Desde el módulo BIM creamos la obra selecciondo el cliente y le ponemos un nombre del cliente.
+## Paso 1: Creamos la obra o proyecto de construcción
+Desde el módulo BIM creamos la obra seleccionando el cliente y le asignamos un nombre.
+
 <Image
   src="/images/bim20/10-pasos-bim-01.png"
   alt="apus-odoo-bim"
@@ -27,8 +28,9 @@ Desde el módulo BIM creamos la obra selecciondo el cliente y le ponemos un nomb
   className="next-image"
 />
 
-## Paso 2: Creamos el almacén de la obra.
-En la pestaña de la obra Inventario pulsamos el boton Almacén, esto hara que se asocie a la obra un almacen para gestionar los materiales de la obra.
+## Paso 2: Creamos el almacén de la obra
+En la pestaña Inventario de la obra pulsamos el botón Almacén. Esto hará que se asocie a la obra un almacén para gestionar sus materiales.
+
 <Image
   src="/images/bim20/10-pasos-bim-02.png"
   alt="apus-odoo-bim"
@@ -38,8 +40,8 @@ En la pestaña de la obra Inventario pulsamos el boton Almacén, esto hara que s
   className="next-image"
 />
 
-## Paso 3: Creamos el presupuesto desde la Obra.
-Desde la Obra creamos el presupuesto, este presupuesto se asocia a la obra y al cliente.
+## Paso 3: Creamos el presupuesto desde la obra
+Desde la obra creamos el presupuesto, que queda asociado a la obra y al cliente.
 
 <Image
   src="/images/bim20/10-pasos-bim-03.png"
@@ -51,7 +53,7 @@ Desde la Obra creamos el presupuesto, este presupuesto se asocia a la obra y al 
 />
 
 ## Paso 4: Creamos las etapas del presupuesto
-Le colocamos una fecha de terminación superior a la fecha de inicio, esto hara que se cree una etapa si pulsamos el Boton etapas.
+Le asignamos una fecha de terminación posterior a la fecha de inicio; así, al pulsar el botón Etapas, se crearán las etapas del presupuesto.
 
 <Image
   src="/images/bim20/10-pasos-bim-04.png"
@@ -62,7 +64,7 @@ Le colocamos una fecha de terminación superior a la fecha de inicio, esto hara 
   className="next-image"
 />
 
-## Paso 5: Asociamos los haberes y descuentos.
+## Paso 5: Asociamos los haberes y descuentos
 Los haberes y descuentos se utilizan para agregar gastos indirectos al presupuesto de construcción.
 
 <Image
@@ -74,12 +76,12 @@ Los haberes y descuentos se utilizan para agregar gastos indirectos al presupues
   className="next-image"
 />
 
-## Paso 6: Creamos los conceptos que se van a presupuestar en el proyecto.
-Desde el presupuesto entramos para crear los conceptos que usaremos en la Obra. que pueden ser:
+## Paso 6: Creamos los conceptos que se van a presupuestar en el proyecto
+Desde el presupuesto creamos los conceptos que usaremos en la obra, que pueden ser:
 * Capítulos
 * Partidas
 * Materiales
-* Mano de Obra
+* Mano de obra
 * Equipos
 * Funciones
 
@@ -102,8 +104,9 @@ Cada concepto tiene:
 />
 
 
-## Paso 7: Vista de arbol de conceptos de la obra.
-Odoo BIM permite crear un arbol de presupuesto de obra, este arbol se puede exportar a Excel y a PDF.
+## Paso 7: Vista de árbol de conceptos de la obra
+Odoo BIM permite crear un árbol de presupuesto de obra, que se puede exportar a Excel y a PDF.
+
 <Image
   src="/images/bim20/10-pasos-bim-07.png"
   alt="apus-odoo-bim"
@@ -113,8 +116,9 @@ Odoo BIM permite crear un arbol de presupuesto de obra, este arbol se puede expo
   className="next-image"
 />
 
-## Paso 8: Llenamos los datos del concepto.
-En los conceptos se utilizan el producto de Odoo para relacionar los materiales, mano de obra y equipos. Tambien se puede relacionar con las funciones de Odoo BIM.
+## Paso 8: Rellenamos los datos del concepto
+En los conceptos se utiliza el producto de Odoo para relacionar los materiales, la mano de obra y los equipos. También se pueden relacionar con las funciones de Odoo BIM.
+
 <Image
   src="/images/bim20/10-pasos-bim-08.png"
   alt="apus-odoo-bim"
@@ -124,8 +128,9 @@ En los conceptos se utilizan el producto de Odoo para relacionar los materiales,
   className="next-image"
 />
 
-## Paso 9: Agregamos mediciones a los conceptos.
-En los presupuestos de Odoo BIM se pueden utilizar mediciones para calcular las cantidades de las partidas, esto es importante para dejar un registro de las mediciones de la obra.
+## Paso 9: Agregamos mediciones a los conceptos
+En los presupuestos de Odoo BIM se pueden utilizar mediciones para calcular las cantidades de las partidas. Esto es importante para dejar un registro de las mediciones de la obra.
+
 <Image
   src="/images/bim20/10-pasos-bim-09.png"
   alt="apus-odoo-bim"
@@ -136,7 +141,7 @@ En los presupuestos de Odoo BIM se pueden utilizar mediciones para calcular las 
 />
 
 
-## Paso 10: Generamos los reportes de presupuesto de obra.
+## Paso 10: Generamos los reportes de presupuesto de obra
 Desde el presupuesto de obra se pueden generar reportes de Excel y PDF.
 
 <Image
@@ -148,7 +153,7 @@ Desde el presupuesto de obra se pueden generar reportes de Excel y PDF.
   className="next-image"
 />
 
-Podemos generar diferentes reportes de presupuesto de obra, como:
+Podemos generar diferentes reportes de presupuesto de obra:
 
 <Image
   src="/images/bim20/10-pasos-bim-11.png"
@@ -159,7 +164,7 @@ Podemos generar diferentes reportes de presupuesto de obra, como:
   className="next-image"
 />
 
-## Contactactar ahora para implementar Odoo BIM en su empresa
+## Contactar ahora para implementar Odoo BIM en su empresa
 ```
 Nombre: Marlon Falcón Hernández
 WhatsApp +34662470645

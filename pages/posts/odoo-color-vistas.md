@@ -1,7 +1,7 @@
 ---
 title: ▷ Odoo colocar colores en vistas tree
 date: 2022/12/18
-description: ▷ Odoo colocar colores en vistas tree
+description: ▷ Cómo usar los atributos decoration-* para colorear las filas de las vistas tree (lista) en Odoo según el valor de un campo.
 tag: odoo, xml
 author: Marlon Falcon Hernandez
 ---
@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 # ▷ Odoo colocar colores en vistas tree
 
-Se utiliza el atributo **decoration** para colocar colores en las vistas *Tree* o Listas en *Odoo*, este atributo se coloca en el tag **tree** de la vista. A continuación se muestra una imagen y un ejemplo:
+Se utilizan los atributos `decoration-*` para colocar colores en las vistas *Tree* o de lista en *Odoo*. Estos atributos se colocan en la etiqueta **tree** de la vista y reciben una condición en Python: cuando la condición se cumple, la fila completa se muestra con el color correspondiente. A continuación se muestra una imagen y un ejemplo:
 
 <Image
   src="/images/posts/odoo-colores.png"
@@ -39,7 +39,7 @@ Ejemplo:
                   decoration-success="state=='trabajando'">
 ```
 
-Y todo el código de la vista tree quedaria asi:
+Y todo el código de la vista tree quedaría así:
 
 ```xml
 <record id="view_tree_ticket_pro" model="ir.ui.view">
@@ -89,3 +89,5 @@ Y todo el código de la vista tree quedaria asi:
         </field>
     </record>
 ```
+
+Fíjate en que los atributos `decoration-*` también se pueden aplicar a un campo concreto, como ocurre con el campo `state` junto con el widget `badge`, para colorear solo esa columna en lugar de toda la fila.

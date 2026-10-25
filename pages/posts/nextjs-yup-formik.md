@@ -1,14 +1,14 @@
 ---
-title: NextJS con validacion con Yup y Formik
+title: Validación de formularios en Next.js con Yup y Formik
 date: 2022/12/19
-description: NextJS con validacion con Yup y Formik
+description: Cómo validar formularios en Next.js con Formik y Yup, con un ejemplo completo de formulario de inicio de sesión.
 tag: nextjs, react, formik, yup
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# NextJS con validacion con Yup y Formik
-Yup y formik son librerias que nos permiten validar formularios de una manera muy sencilla.
+# Validación de formularios en Next.js con Yup y Formik
+Formik y Yup son librerías que nos permiten gestionar y validar formularios en React y Next.js de una manera muy sencilla. Formik se encarga del estado del formulario (valores, errores y envío), mientras que Yup permite definir un esquema de validación con reglas como campos obligatorios, formatos de email o longitudes mínimas.
 
 # Instalación
 ```bash
@@ -16,6 +16,12 @@ npm i yup formik
 ```
 
 # Ejemplo
+En este ejemplo creamos una página de inicio de sesión. Se usa el hook `useFormik` con tres elementos principales:
+
+- `initialValues`: los valores iniciales de los campos (email y contraseña).
+- `validationSchema`: el esquema de Yup con las reglas de validación; en este caso, ambos campos son obligatorios.
+- `onSubmit`: la función que se ejecuta al enviar el formulario si la validación es correcta. Aquí llama a la función `login` del contexto de autenticación, muestra una notificación y redirige al panel.
+
 ```js
 import React, { useState } from 'react'
 import Link from 'next/link';
@@ -143,3 +149,5 @@ function initialValues() {
     };
 }
 ```
+
+Los campos del formulario se conectan a Formik mediante `formik.handleChange` y `formik.values`, y los errores de validación están disponibles en `formik.errors`, por lo que podemos mostrarlos junto a cada campo. Para validar también el formato del email, bastaría con usar `Yup.string().email()` en el esquema.

@@ -1,14 +1,27 @@
 ---
-title: Odoo cargar datos python con un fichero csv utilizando rpc
+title: Odoo, cargar datos con Python desde un fichero CSV utilizando RPC
 date: 2022/12/18
-description: Odoo cargar datos python con un fichero csv utilizando rpc
+description: Script de Python que lee un fichero CSV y crea contactos en Odoo mediante XML-RPC, comprobando antes si ya existen.
 tag: odoo, python, rpc
 author: Marlon Falcon Hernandez
 ---
 
-# Odoo cargar datos python con un fichero csv utilizando rpc
+# Odoo: cargar datos con Python desde un fichero CSV utilizando RPC
 
-Código ejemplo
+Odoo expone una API externa mediante XML-RPC que permite leer, crear y modificar registros desde cualquier script, sin necesidad de entrar en la interfaz. Es muy útil para migraciones o cargas masivas de datos.
+
+En este ejemplo se leen contactos desde un fichero `data.csv` y se crean en el modelo `res.partner`. El fichero debe tener, al menos, las columnas `name`, `email` y `phone`.
+
+## Cómo funciona el script
+
+1. Se conecta al servidor de Odoo con el endpoint `common` y obtiene el `uid` del usuario con `login`.
+2. Recorre el CSV línea a línea con `csv.DictReader`.
+3. Para cada fila, busca si ya existe un contacto con ese nombre (`search`).
+4. Si no existe, lo crea con `create`; si existe, lo omite.
+
+Recuerda ajustar `host`, `port`, `db`, `user` y `password` a los de tu instalación.
+
+## Código de ejemplo
 
 ```
 import xmlrpc.client

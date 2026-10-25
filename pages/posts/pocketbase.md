@@ -1,14 +1,16 @@
 ---
 title: ▷ Instalación de PocketBase
 date: 2022/12/31
-description: ▷ Instalación de PocketBase
+description: ▷ Qué es PocketBase y cómo instalarlo con Docker Compose en pocos pasos.
 tag: pocketbase, docker, dockercompose
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
 # ▷ Instalación de PocketBase
-PocketBase es una aplicación de código abierto para la gestión de bases de datos escrita en Go. Es una aplicación web que se ejecuta en el navegador y se puede usar en cualquier dispositivo con acceso a Internet. PocketBase es una aplicación de código abierto para la gestión de bases de datos. Es una aplicación web que se ejecuta en el navegador y se puede usar en cualquier dispositivo con acceso a Internet.
+PocketBase es un backend de código abierto escrito en Go que se distribuye como un único ejecutable. Incluye una base de datos SQLite embebida, una API REST, autenticación de usuarios, almacenamiento de archivos, suscripciones en tiempo real y un panel de administración web al que se accede desde el navegador. Es una opción muy práctica para prototipos y aplicaciones pequeñas o medianas.
+
+En este artículo lo instalamos con Docker Compose.
 
 # Creamos el fichero docker-compose.yml
 ```yaml
@@ -35,12 +37,16 @@ services:
       retries: 5
 ```
 
-Ejecutamos el comando
+Cambia `/path/to/data` (y opcionalmente `/path/to/public`) por las carpetas de tu servidor donde se guardarán los datos.
+
+Ejecutamos el comando:
 ```bash
 docker-compose up -d
 ```
 
-Verificamos que el contenedor se haya creado
+Verificamos que el contenedor se haya creado:
 ```bash
 docker ps
 ```
+
+Una vez en marcha, el panel de administración está disponible en `http://localhost:8090/_/`, donde podrás crear la cuenta de administrador y empezar a definir tus colecciones.

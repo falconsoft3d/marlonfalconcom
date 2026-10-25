@@ -1,7 +1,7 @@
 ---
 title: ▷ Importancia de la Identificación de Stakeholders y Líderes de Cambio
 date: 2024/02/23
-description: ▷ Importancia de la Identificación de Stakeholders y Líderes de Cambio
+description: ▷ Por qué identificar a los stakeholders y líderes de cambio es clave al implantar un ERP, y cinco estrategias para involucrarlos en el proyecto.
 tag: odoo, erp
 author: Marlon Falcon Hernandez
 ---

@@ -1,7 +1,7 @@
 ---
 title: ▷ Revit vs Odoo ERP
 date: 2023/1/9
-description: ▷ Revit vs Odoo ERP
+description: ▷ Comparativa de las principales ventajas de Revit, software de modelado BIM, y Odoo ERP, sistema de gestión empresarial.
 tag: revit, odoo, erp
 author: Marlon Falcon Hernandez
 ---
@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 # ▷ Revit vs Odoo ERP
 
-En este post vamos a comparar las principales ventajas de **Revit** y **Odoo ERP**. Es bueno señalar que odoo es un erp y revit es un software de modelado 3D paramétrico, que permite crear modelos BIM (Building Information Modeling) para la construcción. Por lo que si bien podemos ser comparables, no son lo mismo.
+En este post vamos a comparar las principales ventajas de **Revit** y **Odoo ERP**. Es bueno señalar que Odoo es un ERP y Revit es un software de modelado 3D paramétrico que permite crear modelos BIM (Building Information Modeling) para la construcción. Por lo tanto, aunque se puedan comparar, no son lo mismo.
 
 <Image
   src="/images/posts/odoo-vs-revit.png"
@@ -40,3 +40,5 @@ Revit es un software de diseño y documentación de edificios utilizado principa
 3. Documentación: Revit permite generar documentos y planos de alta calidad automáticamente a partir del modelo 3D.
 
 4. Análisis de edificios: Revit ofrece herramientas para realizar análisis de edificios, como análisis de energía y simulación de flujo de aire.
+
+En resumen, Revit y Odoo no compiten entre sí, sino que se complementan: Revit se centra en el diseño y la información del modelo del edificio, mientras que Odoo gestiona la parte empresarial del proyecto, como los presupuestos, las compras o la facturación. Integrar ambos permite aprovechar los datos del modelo BIM en la gestión de la empresa.

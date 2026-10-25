@@ -1,18 +1,18 @@
 ---
-title: ▷ Cómo crear partidas usando drag and drop en Odoo BIM.
+title: ▷ Cómo crear partidas usando drag and drop en Odoo BIM
 date: 2023/01/16
-description: ▷ Cómo crear partidas usando drag and drop en Odoo BIM.
+description: ▷ Importa partidas de presupuesto en Odoo BIM 2.0 arrastrando y soltando archivos BC3 sobre los capítulos.
 tag: odoo, bim, construccion
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# ▷ Cómo crear partidas usando drag and drop en Odoo BIM.
-Las interfaces Drag-and-Drop posibilitan arrastrar y soltar archivos en una página web. ¿Entonces por qué no hacer que esto sea parte del ERP Odoo BIM 2.0?.
+# ▷ Cómo crear partidas usando drag and drop en Odoo BIM
+Las interfaces drag and drop (arrastrar y soltar) permiten mover archivos directamente a una página web. Entonces, ¿por qué no hacer que esto sea parte del ERP Odoo BIM 2.0?
 
-El módulo BIM 2.0 (Vertical Construcción) en versión Odoo 16, busca crearle todas las facilidades posibles al usuario final para conformar sus presupuestos, es por eso que se incluye esta tecnología de Drag and drop dentro de la vista árbol de presupuesto, permitiendo arrastrar ficheros en formato BC3 sobre los capítulos, creando inmediatamente las partidas que contiene este fichero.
+El módulo BIM 2.0 (vertical de construcción) para Odoo 16 busca dar al usuario final todas las facilidades posibles para elaborar sus presupuestos. Por eso incluye la tecnología drag and drop dentro de la vista de árbol del presupuesto, que permite arrastrar ficheros en formato BC3 sobre los capítulos y crear inmediatamente las partidas que contiene el fichero.
 
-De esta manera podremos usar archivos que tengamos en nuestro ordenador o simplemente descargarlos de bases de datos online como [Precio Centro](https://online.preciocentro.com/ArktecGest/CentroOnline?ID=CentroOnlineDEMO)
+El formato BC3 (FIEBDC-3) es el estándar de intercambio de bases de precios de construcción en España. De esta manera podremos usar archivos que tengamos en nuestro ordenador o simplemente descargarlos de bases de datos online como [Precio Centro](https://online.preciocentro.com/ArktecGest/CentroOnline?ID=CentroOnlineDEMO).
 
 <Image
   src="/images/posts/odoo-bim-drag-and-drop-1.png"
@@ -23,7 +23,7 @@ De esta manera podremos usar archivos que tengamos en nuestro ordenador o simple
   className="next-image"
 />
 
-y una vez que lo tengamos, sin tener que pasar por un proceso de importación o copiarlo recurso por recurso, pues hacemos  “Arrastrar y soltar” y el ERP Odoo BIM 2.0 se encarga del resto por usted.
+Una vez que tengamos el archivo, sin pasar por un proceso de importación ni copiar recurso por recurso, simplemente lo arrastramos y soltamos, y el ERP Odoo BIM 2.0 se encarga del resto.
 
 <Image
   src="/images/posts/odoo-bim-drag-and-drop-2.png"

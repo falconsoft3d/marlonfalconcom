@@ -1,16 +1,16 @@
 ---
 title: ▷ Envío de email con Odoo
 date: 2023/01/12
-description: ▷ Envío de email con Odoo
+description: ▷ Cómo enviar un email desde un módulo de Odoo usando una plantilla de correo (mail.template) y el método send_mail.
 tag: odoo, desarrolloodoo, python, email
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
 # ▷ Envío de email con Odoo
-En este post vamos a ver como enviar un email con Odoo usando la libreria de python email.
+En este post vamos a ver cómo enviar un email desde un módulo de Odoo usando las plantillas de correo (`mail.template`). Odoo incluye su propio sistema de envío de correo, por lo que no es necesario usar directamente librerías de Python: basta con definir una plantilla y llamar a su método `send_mail`. Para que los correos salgan, el servidor de correo saliente (SMTP) debe estar configurado en Ajustes.
 
-1. Creamos la plantilla data/template_response.xml
+1. Creamos la plantilla `data/template_response.xml` y la añadimos a la clave `data` del `__manifest__.py`. En ella definimos el modelo al que se asocia, el remitente, el destinatario, el asunto y el cuerpo en HTML. Las expresiones del tipo `${object.campo}` se sustituyen por los valores del registro al enviar el correo:
 ```xml
 <odoo>
     <data noupdate="0">
@@ -46,7 +46,7 @@ En este post vamos a ver como enviar un email con Odoo usando la libreria de pyt
 </odoo>
 ```
 
-2. Creamos el modelo y mandamos el email.
+2. Desde el método del modelo obtenemos la plantilla con `self.env.ref` (usando su identificador externo, `modulo.id_de_la_plantilla`) y enviamos el email con `send_mail`. El parámetro `force_send=True` envía el correo inmediatamente en lugar de dejarlo en la cola:
 ```py
 template = self.env.ref('l10n_cl_facturae_sii.email_template_response_customer',False)
 
@@ -56,3 +56,7 @@ mail = template.send_mail(self.id, force_send=True) #envia mail
                 self.state_dte_partner = 'sent'
         return res
 ```
+
+Además de enviar el correo, el ejemplo registra un mensaje en el chatter del documento con `message_post` y actualiza su estado.
+
+**Nota:** la sintaxis `${...}` en las plantillas corresponde a versiones antiguas de Odoo. A partir de Odoo 15, los campos como `email_from` o `subject` usan la sintaxis `{{ object.campo }}` y el cuerpo HTML se escribe con QWeb (`t-out`).

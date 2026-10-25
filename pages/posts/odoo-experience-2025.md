@@ -1,7 +1,7 @@
 ---
 title: ▷ Odoo Experience 2025
 date: 2025/09/15
-description: ▷ Odoo Experience 2025
+description: ▷ Odoo Experience 2025 en Bruselas - el evento anual de Odoo y la presentación de Odoo 19, con novedades en IA, analíticas e integraciones.
 tag: odoo, odoo-experience, odoo-19, erp, inteligencia-artificial
 author: Marlon Falcon Hernandez
 ---
@@ -13,9 +13,9 @@ El mundo de la tecnología empresarial está a punto de vivir uno de sus momento
 
 ## Un Evento de Alcance Global
 
-Odoo Experience 2025 se llevará a cabo en el **Brussels Expo**, un venue icónico que acogerá a más de 40.000 asistentes de más de 150 países. Considerado el evento número uno en tecnología y negocios en Europa, y el principal dedicado a soluciones open-source para empresas, el programa incluye más de 400 charlas inspiradoras, 7 masterclasses, talleres prácticos y oportunidades de networking inigualables. Los temas abarcarán desde mejores prácticas en desarrollo y funcionalidades hasta estrategias para el crecimiento empresarial, con sesiones de preguntas y respuestas para una interacción directa.
+Odoo Experience 2025 se llevará a cabo en el **Brussels Expo**, un recinto icónico que acogerá a más de 40.000 asistentes de más de 150 países. Considerado el evento número uno en tecnología y negocios en Europa, y el principal dedicado a soluciones open-source para empresas, el programa incluye más de 400 charlas inspiradoras, 7 masterclasses, talleres prácticos y oportunidades de networking inigualables. Los temas abarcarán desde mejores prácticas en desarrollo y funcionalidades hasta estrategias para el crecimiento empresarial, con sesiones de preguntas y respuestas para una interacción directa.
 
-El evento no solo es educativo, sino también festivo. Las noches incluirán fiestas con ceremonias de premios, zonas de juegos, comida y bebidas deliciosas, y cuatro conciertos en vivo, destacando la actuación de la Odoo Band. Para una experiencia premium, los pases exclusivos ofrecen almuerzos y cenas caterizadas, acceso a eventos nocturnos con barra libre y entradas a los conciertos, fomentando un ambiente de celebración y colaboración dentro de la comunidad Odoo.
+El evento no solo es educativo, sino también festivo. Las noches incluirán fiestas con ceremonias de premios, zonas de juegos, comida y bebidas deliciosas, y cuatro conciertos en vivo, destacando la actuación de la Odoo Band. Para una experiencia premium, los pases exclusivos ofrecen almuerzos y cenas con catering, acceso a eventos nocturnos con barra libre y entradas a los conciertos, fomentando un ambiente de celebración y colaboración dentro de la comunidad Odoo.
 
 ## La Estrella del Show: Odoo 19 y Sus Novedades
 

@@ -1,27 +1,29 @@
 ---
-title: Script de Linux en 20 pasos
+title: "Script de Linux en 20 pasos"
 date: 2022/12/18
-description: Script de Linux en 20 pasos
+description: "Aprende lo básico de los scripts de Bash en Linux en 20 pasos - variables, condicionales, bucles, funciones, arreglos y archivos."
 tag: linux, 20pasos, bash
 author: Marlon Falcon Hernandez
 ---
 
 # Script de Linux en 20 pasos
-Script de Linux es un lenguaje de programación de código abierto para Linux.
+Un script de shell es un archivo de texto con una serie de comandos que el intérprete (en Linux, normalmente Bash) ejecuta uno tras otro. Sirve para automatizar tareas repetitivas como copias de seguridad, despliegues o instalaciones. Bash es software libre y viene instalado por defecto en la mayoría de distribuciones.
 
 ## 1. Instalación
+Si tu sistema no lo tiene, puedes instalarlo en Debian o Ubuntu con:
 ```bash
 sudo apt install bash
 ```
 
 ## 2. Programa
-En script de Linux debes crear un archivo con la extensión .sh, por ejemplo: index.sh
+Debes crear un archivo con la extensión .sh, por ejemplo: index.sh. La primera línea (shebang) indica qué intérprete debe ejecutar el script.
 ```bash
 #!/bin/bash
 echo "Hello World"
 ```
 
 ## 3. Permisos
+Damos permisos de ejecución al archivo:
 ```bash
 chmod +x index.sh
 ```
@@ -146,7 +148,8 @@ do
 done
 ```
 
-## 14. File
+## 14. Escribir en un archivo
+El operador `>>` añade el texto al final del archivo (lo crea si no existe):
 ```bash
 #!/bin/bash
 
@@ -156,7 +159,7 @@ read name
 echo $name >> names.txt
 ```
 
-## 15. Ejecutar codigo python
+## 15. Ejecutar código Python
 ```bash
 #!/bin/bash
 
@@ -172,7 +175,8 @@ END
 wget https://raw.githubusercontent.com/marlon360/r.mest/main/README.md
 ```
 
-## 17. hacer pull a un repo de github
+## 17. Clonar un repositorio de GitHub
+Añade después de `git clone` la URL del repositorio:
 ```bash
 #!/bin/bash
 
@@ -201,6 +205,8 @@ mkdir pages
 mkdir pages
 touch pages/index.html
 ```
+
+Con estos 20 pasos tienes las bases para escribir tus propios scripts. Un buen consejo es poner las variables entre comillas (por ejemplo, `"$name"`) para evitar errores cuando contienen espacios o están vacías.
 
 
 

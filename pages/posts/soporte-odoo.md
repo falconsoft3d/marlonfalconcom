@@ -1,7 +1,7 @@
 ---
 title: Soporte Odoo
 date: 2022/12/19
-description: Soporte Odoo
+description: Qué es el soporte de Odoo ERP, quién lo ofrece, qué tipos existen y qué incluye.
 tag: odoo
 author: Marlon Falcon Hernandez
 ---
@@ -11,17 +11,24 @@ import Image from 'next/image'
 
 El soporte de Odoo ERP es el proceso de acompañamiento que se brinda a los usuarios de un producto o servicio para que puedan sacarle el máximo provecho. El soporte puede ser brindado por el mismo fabricante del producto o servicio o por terceros.
 
-El soporte de Odoo es brindado por la empresa Odoo S.A. y por terceros. Odoo S.A. brinda soporte a través de su sitio web y de su comunidad de usuarios. Los terceros brindan soporte a través de su sitio web y de su comunidad de usuarios.
+En el caso de Odoo, lo ofrecen tanto la empresa Odoo S.A. como terceros (partners y consultores independientes). Odoo S.A. brinda soporte a través de su sitio web, principalmente para clientes de la edición Enterprise, y cuenta además con una amplia comunidad de usuarios. Los terceros ofrecen sus servicios a través de sus propios canales.
 
-# Existen diferentes tipos de soporte:
-1. Soporte < 72 horas.
-2. Soporte < 48 horas.
-3. Soporte < 24 horas.
+## Tipos de soporte
 
-# Ventajas del soporte
+Según el tiempo de respuesta acordado:
+
+1. Soporte con respuesta en menos de 72 horas.
+2. Soporte con respuesta en menos de 48 horas.
+3. Soporte con respuesta en menos de 24 horas.
+
+## Ventajas del soporte
+
 1. Asistencia técnica.
 2. Resolución de problemas.
 3. Respaldo de datos.
 
-# Que no incluye el soporte
+## Qué no incluye el soporte
+
 1. Desarrollo de módulos.
+
+El desarrollo de nuevas funcionalidades o módulos a medida se gestiona normalmente como un proyecto aparte. Antes de contratar un servicio de soporte, conviene revisar qué tiempos de respuesta y qué tareas cubre exactamente.

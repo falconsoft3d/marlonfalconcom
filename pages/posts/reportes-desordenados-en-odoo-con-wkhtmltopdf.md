@@ -1,7 +1,7 @@
 ---
 title: ▷ Solución al problema de reportes desordenados en Odoo con wkhtmltopdf
 date: 2025/09/08
-description: ▷ Solución al problema de reportes desordenados en Odoo con wkhtmltopdf
+description: ▷ Cómo evitar reportes PDF desordenados en Odoo configurando report.url para que wkhtmltopdf use la dirección local.
 tag: wkhtmltopdf, odoo, pdf, reportes
 author: Marlon Falcon Hernandez
 ---
@@ -40,3 +40,11 @@ Además, si trabajas con proxy inverso (Nginx o Apache), habilita el modo proxy 
 proxy_set_header Host $host;
 proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 proxy_set_header X-Forwarded-Proto https;
+```
+
+---
+
+## Resultado
+Después de guardar los parámetros y reiniciar Odoo (y Nginx, si cambiaste su configuración), vuelve a generar el reporte. Al acceder por la dirección local, wkhtmltopdf ya no depende del certificado SSL, del DNS ni de las redirecciones, y el PDF debería mostrarse con sus estilos y columnas en su sitio.
+
+Si el problema persiste, revisa también que tengas instalada la versión de wkhtmltopdf recomendada por Odoo (la 0.12.x con Qt parcheado), ya que otras versiones pueden generar resultados distintos.

@@ -1,14 +1,17 @@
 ---
-title: Como usar AsyncStorage en React Native con Expo
+title: Cómo usar AsyncStorage en React Native con Expo
 date: 2022/12/20
-description: Como usar SSyncStorage en React Native con Expo
+description: Cómo guardar, leer y borrar datos en el dispositivo con AsyncStorage en una app de React Native con Expo.
 tag: reactnative, expo, AsyncStorage
 author: Marlon Falcon Hernandez
 ---
 
-# Como usar AsyncStorage en React Native con Expo
+# Cómo usar AsyncStorage en React Native con Expo
 
-En este post vamos a ver como usar AsyncStorage en React Native con Expo.
+En este post vamos a ver cómo usar AsyncStorage en React Native con Expo. AsyncStorage es un sistema de almacenamiento clave-valor, persistente y asíncrono, que permite guardar datos sencillos en el dispositivo (por ejemplo, preferencias o el nombre del usuario) y recuperarlos aunque se cierre la app.
+
+En el ejemplo, el usuario escribe su nombre, lo guardamos con `setItem`, lo leemos al abrir la app con `getItem` y lo borramos con `removeItem`:
+
 ```js
 import { StatusBar } from 'expo-status-bar';
 import React, {useState, useEffect} from 'react';
@@ -113,3 +116,6 @@ const styles = StyleSheet.create({
 });
 ```
 
+## Nota
+
+En las versiones actuales de React Native, `AsyncStorage` ya no se incluye en el paquete `react-native`. Instálalo con `npx expo install @react-native-async-storage/async-storage` e impórtalo con `import AsyncStorage from '@react-native-async-storage/async-storage'`; el resto del código funciona igual. Recuerda que solo admite cadenas de texto: para guardar objetos, conviértelos con `JSON.stringify` y recupéralos con `JSON.parse`.

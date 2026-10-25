@@ -1,21 +1,36 @@
 ---
 title: ▷ Demo 01 - Desarrollo Hola Mundo Odoo
 date: 2023/01/12
-description: ▷ Demo 01 - Desarrollo Hola Mundo Odoo
+description: ▷ Primer módulo de Odoo paso a paso, con manifiesto, modelo, vistas, menús y permisos de acceso para un "hola mundo" funcional.
 tag: odoo, desarrolloodoo, python
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
 # ▷ Demo 01 - Desarrollo Hola Mundo Odoo
-En este post haremos un hola mundo en Odoo, para ello vamos a crear un modulo llamado 01_hello_world.
+En este post haremos un "hola mundo" en Odoo. Para ello vamos a crear un módulo llamado `01_hello_world` con un modelo sencillo de mascotas (`ej.pet`), sus vistas de lista y formulario, y un menú para acceder a ellas.
 
-1. Creamos el modulo 01_hello_world
+La estructura final del módulo será la siguiente:
+
+```
+01_hello_world/
+├── __init__.py
+├── __manifest__.py
+├── models/
+│   ├── __init__.py
+│   └── ej_pet.py
+├── security/
+│   └── ir.model.access.csv
+└── views/
+    └── views.xml
+```
+
+1. Creamos la carpeta del módulo `01_hello_world` dentro de una ruta incluida en el `addons_path` de Odoo.
 ```
 mkdir 01_hello_world
 ```
 
-2. Creamos el archivo __manifest__.py
+2. Creamos el archivo `__manifest__.py`, que describe el módulo: nombre, versión, autor, dependencias y archivos de datos que debe cargar.
 ```python
 ##############################################################################
 #
@@ -56,8 +71,7 @@ mkdir 01_hello_world
 }
 ```
 
-3. Creamos el archivo views.xml
-views/ej_pet_views.xml
+3. Creamos el archivo de vistas `views/views.xml` (el nombre debe coincidir con el declarado en la clave `data` del manifiesto). En él definimos la vista de formulario, la vista de lista, la acción de ventana y los menús.
 ```xml
 <?xml version="1.0" encoding="UTF-8"?> 
 <odoo> 
@@ -105,7 +119,7 @@ views/ej_pet_views.xml
 </odoo>
 ```
 
-4. Creamos el archivo ej_pet.py
+4. Creamos el modelo en `models/ej_pet.py`. Aquí se definen los campos que tendrá cada mascota.
 ```python
 # -*- coding: utf-8 -*-
 from odoo import api, fields, models
@@ -121,4 +135,24 @@ class EjPet(models.Model):
 
 ```
 
-Te dejo el repositorio de github con el codigo completo: https://github.com/Odoo-10-test/trucos_odoo/tree/master/ejemplo_modulos/01_hello_world
+5. Creamos los archivos `__init__.py` para que Python cargue el modelo. En la raíz del módulo:
+```python
+from . import models
+```
+
+Y en `models/__init__.py`:
+```python
+from . import ej_pet
+```
+
+6. Creamos el archivo `security/ir.model.access.csv` con los permisos de acceso al modelo. Sin él, Odoo mostrará un aviso y los usuarios no podrán ver los registros:
+```
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ej_pet_user,ej.pet.user,model_ej_pet,base.group_user,1,1,1,1
+```
+
+7. Reiniciamos Odoo, activamos el modo desarrollador, actualizamos la lista de aplicaciones e instalamos el módulo. Aparecerá un nuevo menú **Pets** desde el que podremos crear nuestras primeras mascotas.
+
+**Nota:** el manifiesto también referencia una imagen en `static/description/banner.jpg`. Es opcional, pero si la declaras conviene que exista para que el módulo se muestre correctamente en la lista de aplicaciones.
+
+Te dejo el repositorio de GitHub con el código completo: https://github.com/Odoo-10-test/trucos_odoo/tree/master/ejemplo_modulos/01_hello_world

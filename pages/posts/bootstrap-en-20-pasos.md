@@ -1,21 +1,23 @@
 ---
 title: Bootstrap en 20 pasos
 date: 2022/12/18
-description: Bootstrap en 20 pasos
+description: Chuleta de Bootstrap en 20 pasos con ejemplos de rejilla, tablas, formularios, botones, modales, imágenes e iconos.
 tag: python, 20pasos, bootstrap
 author: Marlon Falcon Hernandez
 ---
 
 # Bootstrap en 20 pasos
-Bootstrap es un framework de código abierto para diseño de sitios y aplicaciones web.
+Bootstrap es un framework de código abierto para el diseño de sitios y aplicaciones web. Proporciona una rejilla (grid) responsiva, estilos para tipografía, formularios y botones, y componentes listos para usar como modales o alertas, de modo que podemos maquetar rápidamente sin escribir mucho CSS propio.
+
+**Nota:** los ejemplos de este post usan clases de Bootstrap 3 (`glyphicon`, `col-md-offset-*`, `btn-default`, `img-responsive`, etc.). En Bootstrap 4 y 5 algunas cambiaron: por ejemplo, `col-md-offset-4` pasó a ser `offset-md-4`, `img-responsive` pasó a ser `img-fluid` y los Glyphicons se eliminaron (hoy se suelen usar Bootstrap Icons).
 
 ## 1. Instalación
 ```bash
 npm install bootstrap
 ```
 
-## 2. Programa
-En bootstrap debes crear un archivo con la extensión .html, por ejemplo: index.html
+## 2. Estructura básica
+Para empezar, crea un archivo con la extensión .html, por ejemplo, index.html, e incluye en él el CSS y el JavaScript de Bootstrap:
 ```html
 <!DOCTYPE html>
 <html lang="es">
@@ -43,7 +45,8 @@ En bootstrap debes crear un archivo con la extensión .html, por ejemplo: index.
 </html>
 ```
 
-## 3. row
+## 3. Filas (row)
+El sistema de rejilla de Bootstrap divide cada fila en 12 columnas.
 ```html
 <div class="row">
   <div class="col-md-6">.col-md-6</div>
@@ -51,7 +54,7 @@ En bootstrap debes crear un archivo con la extensión .html, por ejemplo: index.
 </div>
 ```
 
-## 4. columnas
+## 4. Columnas
 ```html
 <div class="row">
   <div class="col-md-4">.col-md-4</div>
@@ -68,14 +71,14 @@ En bootstrap debes crear un archivo con la extensión .html, por ejemplo: index.
 </div>
 ```
 
-## 4. centrar div
+### Centrar un div
 ```html
 <div class="row">
   <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
 </div>
 ```
 
-## 5. centrar texto
+### Centrar texto
 ```html
 <div class="row">
   <div class="col-md-4 col-md-offset-4 text-center">.col-md-4 .col-md-offset-4</div>
@@ -162,7 +165,7 @@ En bootstrap debes crear un archivo con la extensión .html, por ejemplo: index.
 </button>
 ```
 
-## 9. Botones con iconos
+## 9. Varios botones con iconos
 ```html
 <button type="button" class="btn btn-default btn-lg">
   <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
@@ -219,14 +222,14 @@ En bootstrap debes crear un archivo con la extensión .html, por ejemplo: index.
 <div class="alert alert-danger" role="alert">...</div>
 ```
 
-## 12. Imagenes
+## 12. Imágenes
 ```html
 <img src="..." class="img-rounded">
 <img src="..." class="img-circle">
 <img src="..." class="img-thumbnail">
 ```
 
-## 13. Imagenes responsivas
+## 13. Imágenes responsivas
 ```html
 <img src="..." class="img-responsive" alt="Responsive image">
 ```
@@ -262,7 +265,7 @@ En bootstrap debes crear un archivo con la extensión .html, por ejemplo: index.
 <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
 ```
 
-## 16 Formualario Login
+## 16. Formulario de login
 ```html
 <form class="form-signin">
   <h2 class="form-signin-heading">Please sign in</h2>
@@ -279,7 +282,7 @@ En bootstrap debes crear un archivo con la extensión .html, por ejemplo: index.
 </form>
 ```
 
-## 17. Background
+## 17. Fondo destacado (jumbotron)
 ```html
 <div class="jumbotron">
   <h1>Hello, world!</h1>
@@ -288,7 +291,7 @@ En bootstrap debes crear un archivo con la extensión .html, por ejemplo: index.
 </div>
 ```
 
-## 18. textareas
+## 18. Textareas
 ```html
 <div class="form-group">
   <label for="exampleTextarea">Example textarea</label>
@@ -296,7 +299,7 @@ En bootstrap debes crear un archivo con la extensión .html, por ejemplo: index.
 </div>
 ```
 
-## 19. Input
+## 19. Input de archivo
 ```html
 <div class="form-group">
   <label for="exampleInputFile">File input</label>
@@ -327,33 +330,3 @@ En bootstrap debes crear un archivo con la extensión .html, por ejemplo: index.
     </select>
 </div>
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

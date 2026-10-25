@@ -1,12 +1,12 @@
 ---
 title: ¿Por qué una empresa constructora necesita un sistema web ERP?
 date: 2022/12/22
-description: ¿Por qué una empresa constructora necesita un sistema web ERP?
+description: Ventajas de un sistema web ERP para una empresa constructora - información centralizada, control de proyectos y decisiones en tiempo real.
 tag: construccion, erp
 author: ¿Por qué una empresa constructora necesita un sistema web ERP?
 ---
 
-# Presupuesto por análisis de precios unitarios en construcción
+# ¿Por qué una empresa constructora necesita un sistema web ERP?
 
 Un sistema ERP (Enterprise Resource Planning) es una herramienta esencial para cualquier empresa constructora que desee optimizar y automatizar sus procesos de negocio. Un sistema web ERP le permite a la empresa llevar un registro centralizado de toda su información y datos relacionados con el negocio, incluyendo inventario, compras, ventas, contabilidad y recursos humanos.
 

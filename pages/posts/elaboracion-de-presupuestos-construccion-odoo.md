@@ -1,7 +1,7 @@
 ---
 title: Elaboración de presupuestos de construcción con Odoo ERP
 date: 2023/08/23
-description: Elaboración de presupuestos de construcción con Odoo ERP
+description: Cómo elaborar presupuestos de obra civil, edificación e instalaciones en Odoo ERP con la vertical de construcción Odoo BIM 2.0.
 tag: odoo, bim20
 author: Marlon Falcon Hernandez
 ---
@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 # Elaboración de presupuestos de construcción con Odoo ERP
 
-Odoo BIM 2.0 es una vertical de construcción que permite la elaboración de presupuestos de Obra Civil, Edificación, Instalaciones, etc. con Odoo ERP. Esta vertical esta desarrollada por Marlon Falcon Hernandez y esta disponible desde la versión 14 de Odoo.
+Odoo BIM 2.0 es una vertical de construcción que permite la elaboración de presupuestos de obra civil, edificación, instalaciones, etc. con Odoo ERP. Esta vertical está desarrollada por Marlon Falcón Hernández y está disponible desde la versión 14 de Odoo.
 
 <Image
   src="/images/bim20/elaboracion-de-presupuestos-construccion-odoo-01.png"
@@ -20,10 +20,10 @@ Odoo BIM 2.0 es una vertical de construcción que permite la elaboración de pre
   className="next-image"
 />
 
-Este módulo de construcción ha sido implementado en España, Chile, Venezuela y Republica Dominicana, casi siempre acompañado de los módulos de contabilidad, compras, ventas, inventario, etc. de Odoo ERP.
+Este módulo de construcción ha sido implementado en España, Chile, Venezuela y República Dominicana, casi siempre acompañado de los módulos de contabilidad, compras, ventas, inventario, etc. de Odoo ERP.
 
 
-Con Odoo BIM 2.0 podemos crear presupuestos de obras en forma de arbol y utilizando precios unitarios o APUs. Los presupuestos se pueden crear desde cero o importarlos desde un Excel, CSV o XML.
+Con Odoo BIM 2.0 podemos crear presupuestos de obras en forma de árbol utilizando precios unitarios o APUs. Los presupuestos se pueden crear desde cero o importarlos desde un Excel, CSV o XML.
 
 <Image
   src="/images/bim20/elaboracion-de-presupuestos-construccion-odoo-02.png"

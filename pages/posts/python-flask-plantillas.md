@@ -1,13 +1,18 @@
 ---
-title: Python flask plantillas
+title: "Python Flask plantillas"
 date: 2022/12/18
-description: Python flask plantillas
+description: "Cómo usar plantillas Jinja2 en Flask con Bootstrap - renderizar HTML, pasar variables, herencia de plantillas, condicionales y bucles."
 tag: python, flask, bootstrap
 author: Marlon Falcon Hernandez
 ---
 
-# Python flask plantillas
-## Plantillas con flask y bootstrap
+# Python Flask plantillas
+
+Flask usa el motor de plantillas **Jinja2** para generar páginas HTML dinámicas. Las plantillas se guardan en una carpeta llamada `templates`, junto al archivo de la aplicación, y se cargan con la función `render_template`. En este post vemos tres ejemplos: una plantilla simple con Bootstrap, la herencia de plantillas y el uso de variables, condicionales y bucles.
+
+## Plantillas con Flask y Bootstrap
+
+La ruta principal devuelve el archivo `templates/index.html`:
 
 template.py
 ```python
@@ -46,7 +51,10 @@ templates/index.html
 </html>
 ```
 
-## Plantillas con flask con herecias
+## Plantillas con Flask con herencia
+
+La herencia permite definir una plantilla base con la estructura común (cabecera, estilos, scripts) y que las demás plantillas solo rellenen los bloques que cambian. La plantilla hija usa `extends` para indicar de qué plantilla hereda y `block` para definir el contenido. Además, pasamos la variable `name` desde Flask y la mostramos con dobles llaves.
+
 template.py
 ```python
 from flask import Flask
@@ -94,7 +102,10 @@ templates/base/base.html
 </html>
 ```
 
-## Plantillas con flask con herecias y tags
+## Plantillas con Flask con herencia y etiquetas
+
+Jinja2 también tiene etiquetas de control: `if` para condicionales y `for` para recorrer listas. En este ejemplo la ruta `/user/<name>` recibe el nombre desde la URL y pasa a la plantilla el nombre, la edad y una lista.
+
 template.py
 ```python
 from flask import Flask
@@ -157,3 +168,7 @@ templates/index.html
  </body>
 </html>
 ```
+
+## Nota
+
+Los enlaces a Bootstrap y jQuery de los ejemplos corresponden a versiones antiguas. En un proyecto nuevo es mejor cargar la versión actual de Bootstrap desde un CDN oficial (como jsDelivr), siguiendo las instrucciones de su documentación. Ten en cuenta también que en el tercer ejemplo el condicional solo muestra el mensaje si `age` es mayor que 18, así que con el valor 17 no aparecerá.

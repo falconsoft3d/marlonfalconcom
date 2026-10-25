@@ -1,14 +1,13 @@
 ---
-title: Servicios Odoo
+title: "Servicios Odoo"
 date: 2022/12/19
-description: Creando una clave publica ssh en windows
+description: "Servicios de Odoo ERP desde la versión 8 hasta la 16 - implementación, desarrollo, consultoría, soporte, migración e integración."
 tag: odoo
 author: Servicios Odoo
 ---
 
 # Servicios Odoo
 
-## Servicios Odoo
 Diferentes servicios que ofrecemos en Odoo ERP. Desde la versión 8 hasta la versión 16.
 
 1. Implementación de Odoo
@@ -31,20 +30,20 @@ Un programador de Odoo puede ofrecer una amplia gama de servicios, desde la inst
 
 1. Instalación y configuración de Odoo: un programador de Odoo puede ayudar a una empresa a instalar y configurar la plataforma de manera rápida y sencilla. Esto incluye la configuración de la base de datos, la instalación de módulos esenciales y la integración de Odoo con otras aplicaciones y sistemas empresariales.
 
-3. Personalización de módulos: un programador de Odoo puede personalizar los módulos existentes de Odoo o crear módulos completamente nuevos para adaptar la plataforma a las necesidades específicas de una empresa. Por ejemplo, un programador de Odoo podría crear un módulo para llevar un seguimiento de los proyectos de ingeniería de una empresa o un módulo para gestionar la relación con los clientes.
+2. Personalización de módulos: un programador de Odoo puede personalizar los módulos existentes de Odoo o crear módulos completamente nuevos para adaptar la plataforma a las necesidades específicas de una empresa. Por ejemplo, un programador de Odoo podría crear un módulo para llevar un seguimiento de los proyectos de ingeniería de una empresa o un módulo para gestionar la relación con los clientes.
 
-4. Integración de Odoo con otras aplicaciones: un programador de Odoo puede ayudar a una empresa a integrar Odoo con otras aplicaciones y sistemas empresariales, como CRM, sistemas de facturación o plataformas de e-commerce. Esto permite que los datos y procesos de diferentes áreas de la empresa se integren y sean accesibles desde una única plataforma.
+3. Integración de Odoo con otras aplicaciones: un programador de Odoo puede ayudar a una empresa a integrar Odoo con otras aplicaciones y sistemas empresariales, como CRM, sistemas de facturación o plataformas de e-commerce. Esto permite que los datos y procesos de diferentes áreas de la empresa se integren y sean accesibles desde una única plataforma.
 
-5. Soporte y mantenimiento: un programador de Odoo también puede ofrecer soporte técnico y mantenimiento de la plataforma para asegurar que Odoo esté siempre funcionando de manera óptima. Esto incluye la solución de problemas técnicos, la actualización de la plataforma y el seguimiento de las necesidades de la empresa para asegurar que Odoo siempre cumpla con sus requisitos.
+4. Soporte y mantenimiento: un programador de Odoo también puede ofrecer soporte técnico y mantenimiento de la plataforma para asegurar que Odoo esté siempre funcionando de manera óptima. Esto incluye la solución de problemas técnicos, la actualización de la plataforma y el seguimiento de las necesidades de la empresa para asegurar que Odoo siempre cumpla con sus requisitos.
 
 
 
-## Contactar un consultor de servicios de odoo.
-Ingeniero en construcción civil y master en arquitectura
+## Contactar con un consultor de servicios de Odoo
+Ingeniero en construcción civil y máster en arquitectura.
 - Nombre: Marlon Falcón Hernández
 - WhatsApp [+34662470645](https://web.whatsapp.com/send?phone=34662470645&text=)
 - GitHub [@falconsoft3d](https://github.com/falconsoft3d)
-- Youtube [@marlonfalconhdez](https://www.youtube.com/@marlonfalconhdez)
+- YouTube [@marlonfalconhdez](https://www.youtube.com/@marlonfalconhdez)
 - Telegram [@falconsoft]
 - Phone +34 (662) 47 0645
 - Email mfalconsoft@gmail.com

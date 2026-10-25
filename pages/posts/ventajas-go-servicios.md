@@ -1,7 +1,7 @@
 ---
-title: Ventajas de Go para el desarrollo de servicios web
+title: "Ventajas de Go para el desarrollo de servicios web"
 date: 2022/12/19
-description: Ventajas de Go para el desarrollo de servicios web
+description: "Por qué Go es una buena opción para desarrollar servicios web - velocidad, facilidad de uso, escalabilidad, seguridad y comunidad."
 tag: go
 author: Marlon Falcon Hernandez
 ---

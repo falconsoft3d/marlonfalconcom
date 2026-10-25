@@ -1,12 +1,26 @@
 ---
-title: NodeJs Simple Login
+title: Node.js Simple Login
 date: 2022/12/18
-description: NodeJs Simple Login
+description: Ejemplo de un login sencillo en Node.js con Express, Passport (estrategia local), sesiones y vistas EJS.
 tag: nodejs, express, passport, ejs
 author: Marlon Falcon Hernandez
 ---
 
-# NodeJs Simple Login
+# Node.js Simple Login
+
+En este ejemplo vamos a crear un sistema de login muy sencillo con Node.js. Usaremos **Express** como servidor web, **Passport** con su estrategia local para validar usuario y contraseña, **express-session** para mantener la sesión iniciada y **EJS** como motor de plantillas para las vistas.
+
+## Instalación de dependencias
+
+En una carpeta nueva, inicializa el proyecto e instala los paquetes necesarios:
+
+`npm init -y`
+
+`npm install express passport passport-local express-session cookie-parser ejs`
+
+## Servidor
+
+El archivo principal define la estrategia de autenticación (en este ejemplo, un usuario fijo), la serialización del usuario en la sesión y las rutas. La ruta `/` solo es accesible si el usuario está autenticado; en caso contrario, se le redirige a `/login`.
 
 server.js
 
@@ -75,6 +89,10 @@ passport.authenticate('local', { successRedirect: '/',
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log('App listening on port ' + port));
 ```
+
+## Vistas
+
+Las vistas se guardan en la carpeta `views`. La página principal, que solo se muestra tras iniciar sesión:
 
 views/index.ejs
 ```html
@@ -145,6 +163,8 @@ views/index.ejs
 </html>
 ```
 
+Y el formulario de login, que envía el usuario y la contraseña por `POST` a la ruta `/login`:
+
 views/login.ejs
 ```html
 <!DOCTYPE html>
@@ -207,3 +227,9 @@ views/login.ejs
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </html>
 ```
+
+## Probar el ejemplo
+
+Ejecuta `node server.js` y abre `http://localhost:8080` en el navegador. Como no has iniciado sesión, te redirigirá al formulario de login, donde podrás entrar con el usuario y la contraseña definidos en `server.js`.
+
+**Nota:** es un ejemplo didáctico. En una aplicación real, los usuarios deben guardarse en una base de datos con las contraseñas cifradas (por ejemplo, con bcrypt) y el secreto de la sesión debe leerse de una variable de entorno. Además, en las versiones recientes de Passport (0.6 o superior), `req.logout()` es asíncrono y recibe una función de callback.

@@ -1,7 +1,7 @@
 ---
 title: ▷ Qué es la metodología BIM
 date: 2023/1/10
-description: ▷ Qué es la metodología BIM
+description: ▷ Qué es la metodología BIM, sus características, ventajas, niveles de madurez y principales herramientas de software.
 tag: bim
 author: Marlon Falcon Hernandez
 ---
@@ -59,4 +59,4 @@ Cada uno de estos programas tiene funcionalidades que se adaptan a diferentes ne
 
 La metodología BIM está cambiando la industria de la construcción y la forma en que se diseñan, construyen y gestionan los edificios. Esta metodología no solo mejora la eficiencia y reduce los costos, sino que también permite una construcción más sostenible al optimizar el uso de recursos y reducir el impacto ambiental.
 
-En muchos países, la adopción de BIM está siendo impulsada por gobiernos que ya exigen su uso para proyectos públicos, dado su potencial para garantizar transparencia, calidad y eficiencia. En definitiva, BIM es mucho más que una herra
+En muchos países, la adopción de BIM está siendo impulsada por gobiernos que ya exigen su uso para proyectos públicos, dado su potencial para garantizar transparencia, calidad y eficiencia. En definitiva, BIM es mucho más que una herramienta de software: es una nueva forma de trabajar que pone la información del proyecto en el centro y la comparte entre todos los participantes durante todo el ciclo de vida del edificio.

@@ -1,7 +1,7 @@
 ---
-title: ▷ Recomendaciones para implementar odoo bim con dos equipos en Odoo SH
+title: ▷ Recomendaciones para implementar Odoo BIM con dos equipos en Odoo SH
 date: 2024/05/02
-description: ▷ Recomendaciones para implementar odoo bim con dos equipos en Odoo SH
+description: ▷ Qué es Odoo SH, sus ventajas y cómo organizar la implementación de Odoo BIM cuando trabajan dos equipos de desarrollo.
 tag: odoo, erp, bim, odoo-sh, sh
 author: Marlon Falcon Hernandez
 ---
@@ -33,11 +33,11 @@ Ponte en contacto con nuestro representante de Odoo para obtener más informaci�
 - **Seguridad de los datos:** Odoo SH ofrece un entorno seguro para alojar las aplicaciones, con copias de seguridad automáticas y medidas de seguridad avanzadas.
 - **Escalabilidad:** Odoo SH es una plataforma escalable que permite a las empresas adaptar el servicio a sus necesidades en función del crecimiento de la empresa.
 - **Trabajo en equipo:** Odoo SH permite que varias personas trabajen en un mismo proyecto simultáneamente, con la capacidad de configurar los permisos de cada usuario.
-- **Replicación en Vivo:** de todos los datos, garantiza que no se pierda información.
-- **Gestionemos de DNS:** Configura rutas personalizadas y deja que odoo sh gestione los DNS.
-- **Pasarelas de Correo electrónico ilimitadas:** Pasarelas de correo electrónico ilimitadas.
+- **Replicación en vivo:** la replicación de todos los datos garantiza que no se pierda información.
+- **Gestión de DNS:** Configura rutas personalizadas y deja que Odoo SH gestione los DNS.
+- **Pasarelas de correo electrónico ilimitadas:** Sin límite en el número de pasarelas de correo.
 - **Monitoreo 24/7:** Odoo monitorea y mantiene todos tus servidores por ti.
-- **Instalación perfectamente optimizada:** Hosting de primera categoría con instalación perfectamente optimizada, excelente hardware.
+- **Instalación perfectamente optimizada:** Hosting de primera categoría con instalación perfectamente optimizada y excelente hardware.
 
 ## Cómo trabajar con dos equipos en Odoo SH
 1. El cliente puede registrar la cuenta de Odoo SH a su nombre para asegurar la independencia de los datos en caso de cambios en los equipos.
@@ -54,7 +54,7 @@ Ponte en contacto con nuestro representante de Odoo para obtener más informaci�
 
 4. Cada equipo debe tener su propio ambiente de desarrollo en Odoo SH para trabajar de forma independiente.
 
-5. Designa un responsable de integración que una los cambios de ambos equipos en un ambiente de pruebas, detectando posibles problemas tempranamente.
+5. Designa un responsable de integración que una los cambios de ambos equipos en un ambiente de pruebas, para detectar posibles problemas a tiempo.
 
 6. Una vez probados los cambios en el ambiente de pruebas, aplícalos en el ambiente de producción.
 
@@ -62,12 +62,12 @@ Ponte en contacto con nuestro representante de Odoo para obtener más informaci�
 
 8. En lo que respecta a la configuración de módulos, es fundamental realizarla inicialmente en el entorno de producción y luego generar una copia en el entorno de pruebas para verificar su correcto funcionamiento. Esto asegura que los ambientes de producción y prueba se mantengan sincronizados y se eviten posibles desincronizaciones. Sin embargo, es importante tener en cuenta que este proceso cambia cuando se trata de soporte, ya que en ese caso se realiza en sentido inverso.
 
-## Contactar un consultor de servicios de odoo.
-Ingeniero en construcción civil y master en arquitectura
+## Contactar con un consultor de servicios de Odoo
+Ingeniero en construcción civil y máster en arquitectura.
 - Nombre: Marlon Falcón Hernández
 - WhatsApp [+34662470645](https://web.whatsapp.com/send?phone=34662470645&text=)
 - GitHub [@falconsoft3d](https://github.com/falconsoft3d)
-- Youtube [@marlonfalconhdez](https://www.youtube.com/@marlonfalconhdez)
+- YouTube [@marlonfalconhdez](https://www.youtube.com/@marlonfalconhdez)
 - Telegram [@falconsoft]
 - Phone +34 (662) 47 0645
 - Email mfalconsoft@gmail.com

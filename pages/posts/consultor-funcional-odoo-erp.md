@@ -1,7 +1,7 @@
 ---
 title: Consultor funcional Odoo ERP 16
 date: 2022/12/27
-description: Consultor funcional Odoo ERP 16
+description: Qué hace un consultor funcional de Odoo ERP 16, cuáles son sus funciones y qué tener en cuenta al contratar uno.
 tag: odoo, erp
 author: Marlon Falcon Hernandez
 ---
@@ -26,11 +26,11 @@ El trabajo de un consultor funcional de Odoo también puede incluir la formació
 
 En resumen, un consultor funcional de Odoo es un experto en el uso y personalización del software de gestión empresarial Odoo, y su trabajo consiste en ayudar a las empresas a optimizar y automatizar sus procesos de negocio utilizando la plataforma. Si está interesado en contratar a un consultor funcional de Odoo para su empresa, asegúrese de buscar a alguien con una sólida comprensión tanto de Odoo como de los procesos de negocio de su empresa.
 
-# Contactar un consultor funcional de Odoo ERP
+## Contactar con un consultor funcional de Odoo ERP
 - Nombre: Marlon Falcón Hernández
-- WhatsApp [+34662470645](https://web.whatsapp.com/send?phone=34662470645&text=)
-- GitHub [@falconsoft3d](https://github.com/falconsoft3d)
-- Youtube [@marlonfalconhdez](https://www.youtube.com/@marlonfalconhdez)
-- Telegram [@falconsoft]
-- Phone +34 (662) 47 0645
-- Email mfalconsoft@gmail.com
+- WhatsApp: [+34662470645](https://web.whatsapp.com/send?phone=34662470645&text=)
+- GitHub: [@falconsoft3d](https://github.com/falconsoft3d)
+- YouTube: [@marlonfalconhdez](https://www.youtube.com/@marlonfalconhdez)
+- Telegram: @falconsoft
+- Teléfono: +34 (662) 47 0645
+- Email: mfalconsoft@gmail.com

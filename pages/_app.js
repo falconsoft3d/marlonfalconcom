@@ -3,6 +3,7 @@ import Head from 'next/head'
 import '../styles/main.css'
 import Script from 'next/script';
 import WhatsappLink from '../components/WhatsappLink';
+import SiteHeader from '../components/SiteHeader';
 import { Analytics } from '@vercel/analytics/react';
 
 export default function Nextra({ Component, pageProps }) {
@@ -55,6 +56,7 @@ export default function Nextra({ Component, pageProps }) {
             })();
         `}
         </Script>
+      <SiteHeader />
       <Component {...pageProps} />
     </>
   )

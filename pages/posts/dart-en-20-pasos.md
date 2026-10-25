@@ -1,14 +1,16 @@
 ---
 title: Dart en 20 pasos
 date: 2022/12/24
-description: Dart en 20 pasos
+description: Guía rápida de Dart en 20 pasos con ejemplos de variables, operadores, condicionales, bucles, funciones, listas y mapas.
 tag: dart, 20pasos
 author: Auditoría Odoo ERP
 ---
 
 # Dart en 20 pasos
 
-Dart es un lenguaje de programación desarrollado por Google, que se ejecuta en una máquina virtual de código abierto llamada Dart VM. Dart es un lenguaje orientado a objetos, con tipado estático opcional, sintaxis de estilo C, y soporte para programación funcional y programación reactiva.
+Dart es un lenguaje de programación de código abierto desarrollado por Google. Puede ejecutarse en su propia máquina virtual (Dart VM), compilarse a código nativo o a JavaScript, y es el lenguaje con el que se desarrollan las aplicaciones de Flutter. Es un lenguaje orientado a objetos, con tipado estático e inferencia de tipos, sintaxis de estilo C y soporte para programación funcional y asíncrona.
+
+En esta guía repasamos lo esencial del lenguaje en 20 pasos cortos, cada uno con un ejemplo.
 
 ## 1. Instalación
 ````bash
@@ -16,7 +18,7 @@ brew install dart
 ````
 
 ## 2. Programa
-En dart debes crear un archivo con la extensión .dart, por ejemplo: hola_mundo.dart
+En Dart debes crear un archivo con la extensión `.dart`, por ejemplo `hola_mundo.dart`, y ejecutarlo con `dart run hola_mundo.dart`.
 ````dart
 void main() {
     print('Hola mundo');
@@ -186,7 +188,7 @@ void main() {
   String saludar5(String nombre, {String mensaje = 'Hola'}) => '$mensaje $nombre';
 ````
 
-## 19 Listas
+## 19. Listas
 ````dart
   List<int> numeros = [1, 2, 3, 4, 5];
   List<String> ciudades = ['Quito', 'Guayaquil', 'Cuenca'];
@@ -203,7 +205,7 @@ void main() {
   print(ciudades);
 ````
 
-## 20 Diccionarios
+## 20. Mapas (diccionarios)
 ````dart
   Map<String, dynamic> persona = {
     'nombre': 'Juan',
@@ -225,4 +227,6 @@ void main() {
   print(persona);
 ````
 
+## Conclusión
 
+Con estos 20 pasos tienes una base para leer y escribir código en Dart. A partir de aquí, el siguiente paso natural es profundizar en clases, *null safety* y programación asíncrona (`Future`, `async` y `await`), conceptos que usarás constantemente si desarrollas con Flutter.

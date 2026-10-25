@@ -41,13 +41,13 @@ export default function ButtonCall() {
           display: flex;
           justify-content: center;
         }
-        .button-call {
+        .container-button .button-call {
               align-items: center;
-              background-color: #0A66C2;
+              background-color: #a8cfe3;
               border: 0;
               border-radius: 100px;
               box-sizing: border-box;
-              color: #ffffff;
+              color: #1f2d36;
               cursor: pointer;
               display: inline-flex;
               font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -72,15 +72,15 @@ export default function ButtonCall() {
               text-decoration: none;
             }
 
-            .button-call:hover,
-            .button-call:focus { 
-              background-color: #16437E;
-              color: #ffffff;
+            .container-button .button-call:hover,
+            .container-button .button-call:focus { 
+              background-color: #93c2db;
+              color: #1f2d36;
             }
 
-            .button-call:active {
-              background: #09223b;
-              color: rgb(255, 255, 255, .7);
+            .container-button .button-call:active {
+              background: #7fb5d2;
+              color: #1f2d36;
             }
 
             .button-18:disabled { 

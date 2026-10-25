@@ -1,7 +1,7 @@
 ---
 title: ▷ ¿Qué es Revit?
 date: 2023/1/9
-description: ▷ ¿Qué es Revit?
+description: ▷ Qué es Revit, el software BIM de Autodesk para diseñar y documentar edificios, y cuáles son sus principales ventajas.
 tag: revit, bim, 3d
 author: Marlon Falcon Hernandez
 ---

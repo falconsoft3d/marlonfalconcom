@@ -1,18 +1,18 @@
 ---
-title: Conectarnos con magento usando python
+title: Conectarnos con Magento usando Python
 date: 2022/12/21
-description: Conectarnos con magento usando python
+description: Cómo conectarse a la API XML-RPC de Magento 1 desde Python para listar pedidos, productos y tiendas, y cómo filtrar resultados.
 tag: python, magento, rpc
 author: Marlon Falcon Hernandez
 ---
 
-# Conectarnos con magento usando python
+# Conectarnos con Magento usando Python
 
-XML-RPC (Remote Procedure Call) es un protocolo de llamada a procedimiento remoto que usa XML para codificar los datos y HTTP como protocolo de transmisión de mensajes.1
+XML-RPC (Remote Procedure Call) es un protocolo de llamada a procedimiento remoto que usa XML para codificar los datos y HTTP como protocolo de transmisión de mensajes. Magento 1 ofrece una API XML-RPC/SOAP con la que podemos consultar y modificar pedidos, productos, clientes, etc. Desde Python podemos usarla directamente con el módulo estándar `xmlrpc.client`, lo que resulta muy útil, por ejemplo, para integrar Magento con Odoo.
 
-link: https://devdocs.magento.com/guides/m1x/api/soap/introduction.html
+Documentación: https://devdocs.magento.com/guides/m1x/api/soap/introduction.html
 
-Lista de Comandos de la API de Magento
+## Lista de comandos de la API de Magento
 ```
 [cart[0m: create, info, license, order, totals
 [cart_coupon[0m: add, remove
@@ -48,7 +48,8 @@ Lista de Comandos de la API de Magento
 [sales_order_shipment[0m: addComment, addTrack, create, getCarriers, info, list, removeTrack, sendInfo
 ```
 
-## Listar totas las ordenes de ventas de Magento
+## Listar todos los pedidos de venta de Magento
+Primero iniciamos sesión en la API, lo que nos devuelve un identificador de sesión que usaremos en el resto de llamadas:
 ```
 # -- coding: utf-8 --
 import xmlrpc.client
@@ -64,20 +65,20 @@ sales = proxy.call(session, 'sales_order.list', args)
 print(sales)
 ```
 
-## Version de Magento
+## Versión de Magento
 ```
 magento = proxy.call(session, 'magento.info')
 print(magento)
 ```
 
-## Listar una Tienda específica
+## Listar una tienda específica
 ```
 args =  [{'store_id':'1'}]
 store = proxy.call(session, 'core_store.list', args)
 print(store)
 ```
 
-## Listar Productos con PPRINT
+## Listar productos con pprint
 ```
 import pprint
 args =  []
@@ -85,7 +86,8 @@ product = proxy.call(session, 'catalog_product.list', args)
 pprint.pprint(product)
 ```
 
-## Operadores SQL
+## Operadores de filtrado
+Los métodos `list` aceptan filtros sobre los campos, con los siguientes operadores:
 ```
 from => After the given timestamp
 to => Before the given timestamp
@@ -103,10 +105,15 @@ gteq => Greater than or equal to
 lteq => Less than or equal to
 ```
 
-## SQL
+## Filtrar resultados
+Ejemplo de filtrado de pedidos por fecha de creación:
 ```
 args =  [ {'created_at':{'from':'2020-03-16 00:00:00'}}]
 args =  [{'created_at':[{'key':'created_at','value':{'key':'eq','value':'2020-03-16 18:48:35'}}]}]
 sales = proxy.call(session, 'sales_order.list', args)
 pprint.pprint(sales)
 ```
+
+## Nota
+
+Esta API XML-RPC corresponde a Magento 1, que dejó de tener soporte oficial en 2020. En Magento 2 (Adobe Commerce) se utiliza la API REST o GraphQL.

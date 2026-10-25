@@ -43,7 +43,12 @@ const MENU = [
     links: [
       ['/', 'Inicio'],
       ['/posts', 'Artículos'],
+      ['/categorias', 'Categorías'],
       ['/cursos', 'Cursos'],
+      ['/libros', 'Libros'],
+      ['/imagenes', 'Imágenes'],
+      ['/webs', 'Mis webs'],
+      ['/cv', 'Currículum'],
       ['/contacto', 'Contacto']
     ]
   }

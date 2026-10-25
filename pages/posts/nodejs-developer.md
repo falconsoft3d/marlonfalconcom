@@ -1,15 +1,15 @@
 ---
-title: ▷ Desarrollador de NodeJS | ¿Necesitas desarrollar de NodeJS?
+title: ▷ Desarrollador de Node.js | ¿Necesitas un desarrollador de Node.js?
 date: 2022/12/29
-description: ▷ Desarrollador de NodeJS | ¿Necesitas desarrollar de NodeJS?
+description: ▷ Qué hace un desarrollador de Node.js, qué conocimientos necesita y un ejemplo de servidor con Express y plantillas EJS.
 tag: nodejs, developer
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# ▷ Desarrollador de NodeJS | ¿Necesitas desarrollar de NodeJS?
+# ▷ Desarrollador de Node.js | ¿Necesitas un desarrollador de Node.js?
 
-Un desarrollador de Node.js es un profesional de la informática que se especializa en el uso del lenguaje de programación JavaScript y su plataforma de ejecución Node.js. Node.js es una plataforma de código abierto que permite a los desarrolladores crear aplicaciones web escalables y de alto rendimiento.
+Un desarrollador de Node.js es un profesional de la informática que se especializa en el uso del lenguaje de programación JavaScript y el entorno de ejecución Node.js. Node.js es un entorno de código abierto, basado en el motor V8 de Chrome, que permite ejecutar JavaScript en el servidor y a los desarrolladores crear aplicaciones web escalables y de alto rendimiento.
 
 Un desarrollador de Node.js trabaja en el diseño y la implementación de aplicaciones web y servicios en línea utilizando Node.js. También puede trabajar en la integración de aplicaciones con bases de datos y otras herramientas de software.
 
@@ -17,7 +17,9 @@ Para convertirse en un desarrollador de Node.js, es necesario tener una sólida 
 
 En la actualidad, Node.js es una tecnología muy demandada en el mundo de la informática y la industria de las aplicaciones web. Muchas empresas están buscando desarrolladores de Node.js experimentados para crear aplicaciones web de alta calidad y de alto rendimiento. Si estás interesado en convertirte en un desarrollador de Node.js, es importante adquirir experiencia y conocimientos en JavaScript y otras tecnologías web relevantes. También puedes considerar obtener un título en informática o completar una certificación en desarrollo de Node.js para demostrar tus habilidades y conocimientos.
 
-## ¿Ejemplo de codigo en  Node.js?
+## Ejemplo de código en Node.js
+
+A continuación, un ejemplo sencillo de servidor con Express que incluye middlewares, rutas que devuelven JSON y texto, archivos estáticos y una vista renderizada con el motor de plantillas EJS.
 
 ```js
 index.js 
@@ -115,15 +117,15 @@ index.ejs
 </html>
 ```
 
-ver más https://github.com/nodejs-usa/express-nodejs-hola-mundo
+Ver más: https://github.com/nodejs-usa/express-nodejs-hola-mundo
 
 
-# Contacta un Desarrollador de NodeJS
+# Contacta con un desarrollador de Node.js
 - Nombre: Marlon Falcón Hernández
 - WhatsApp [+34662470645](https://web.whatsapp.com/send?phone=34662470645&text=)
 - GitHub [@falconsoft3d](https://github.com/falconsoft3d)
 - Youtube [@marlonfalconhdez](https://www.youtube.com/@marlonfalconhdez)
 - Telegram [@falconsoft]
-- Phone +34 (662) 47 0645
+- Teléfono +34 (662) 47 0645
 - Email mfalconsoft@gmail.com
 

@@ -1,14 +1,17 @@
 ---
-title: Crear un layout en NextJS
+title: Crear un layout en Next.js
 date: 2022/12/21
-description: Crear un layout en NextJS
+description: Cómo crear un componente Layout en Next.js con cabecera, barra de navegación y pie de página comunes a todas las páginas.
 tag: nextjs, react
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# Crear un layout en NextJS
-Un layout es un componente que se va a renderizar en todas las páginas de nuestra aplicación. En este post vamos a ver como podemos crear un layout en NextJS.
+# Crear un layout en Next.js
+Un layout es un componente que se renderiza en todas las páginas de nuestra aplicación y que contiene los elementos comunes, como la cabecera, el menú de navegación o el pie de página. Así evitamos repetir ese código en cada página. En este post vamos a ver cómo podemos crear un layout en Next.js.
+
+## Componente Layout
+El componente recibe el contenido de cada página a través de la prop `children` y lo coloca entre la barra de navegación y el pie de página.
 
 Layout.js
 ```js
@@ -36,6 +39,9 @@ export default function Layout({children}) {
   );
 }
 ```
+
+## Barra de navegación
+La barra de navegación usa clases de Bootstrap y muestra unos enlaces u otros según si el usuario ha iniciado sesión.
 
 NavBar.js
 ```js
@@ -76,3 +82,6 @@ export default function NavBar() {
   );
 }
 ```
+
+## Usar el layout
+Para aplicarlo a todas las páginas, basta con envolver el componente de la página con `Layout` en el fichero `_app.js`, de forma que cada página se renderice como `children` del layout.

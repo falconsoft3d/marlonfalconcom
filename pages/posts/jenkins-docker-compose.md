@@ -1,7 +1,7 @@
 ---
 title: ▷ Instalación de Jenkins con Docker Compose
 date: 2022/12/30
-description: ▷ Instalación de Jenkins con Docker Compose
+description: ▷ Cómo instalar Jenkins con Docker Compose, obtener la contraseña inicial de administrador y desplegarlo también con Docker Swarm.
 tag: jenkins, docker, dockercompose
 author: Marlon Falcon Hernandez
 ---
@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 # ▷ Instalación de Jenkins con Docker Compose
 
-Docker Compose es una herramienta para definir y ejecutar aplicaciones Docker de múltiples contenedores. Con Compose, usa un archivo YAML para configurar los servicios de su aplicación. Luego, con un solo comando, crea e inicia todos los servicios desde su configuración. Para obtener más información sobre todos los comandos de Compose, vea la lista de comandos de Compose.
+Jenkins es un servidor de automatización de código abierto muy utilizado para integración y despliegue continuos (CI/CD). Una forma cómoda de instalarlo es con Docker Compose, una herramienta para definir y ejecutar aplicaciones Docker de múltiples contenedores. Con Compose se usa un archivo YAML para configurar los servicios de la aplicación y, luego, con un solo comando se crean e inician todos los servicios definidos en esa configuración.
 
 
 <Image
@@ -55,7 +55,7 @@ apt-get update && apt-get upgrade -y
 apt  install docker.io docker-compose -y
 ```
 
-## Tambien lo podemos clonar
+## También lo podemos clonar
 ```
 git clone https://github.com/falconsoft3d/jenkis-docker-compose.git
 cd jenkis-docker-compose
@@ -67,13 +67,13 @@ docker-compose up -d
 ```
 
 ## Ver la llave de acceso de Jenkins en docker
-Esta clave se genera aleatoriamente, por lo que debe copiarla y pegarla en la página de inicio de sesión de Jenkins para completar la configuración inicial.
+Esta clave se genera aleatoriamente, por lo que debemos copiarla y pegarla en la página de inicio de Jenkins (http://localhost:8080) para completar la configuración inicial. Sustituye el ID del contenedor del ejemplo por el tuyo, que puedes ver con `docker ps`.
 ```
 docker exec 79dc42e0a318 cat /var/jenkins_home/secrets/initialAdminPassword
 ```
 
-## Instalación de Jenkis pero con Docker Swarm
-Docker Swarm es un servicio de orquestación de contenedores nativo de Docker. Con Docker Swarm, puede crear un clúster de Docker y administrarlo. Docker Swarm incluye un orquestador de clúster y un conjunto de herramientas de administración de clúster.
+## Instalación de Jenkins con Docker Swarm
+Docker Swarm es un servicio de orquestación de contenedores nativo de Docker. Con Docker Swarm podemos crear un clúster de Docker y administrarlo. Docker Swarm incluye un orquestador de clúster y un conjunto de herramientas de administración de clúster.
 ```
 git clone https://github.com/falconsoft3d/jenkis-docker-compose.git
 cd jenkis-docker-compose

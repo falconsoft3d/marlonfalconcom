@@ -1,14 +1,14 @@
 ---
 title: Comandos para compactar archivos en Linux
 date: 2022/12/20
-description: Comandos para compactar archivos en Linux
+description: Comandos para comprimir y descomprimir archivos .tar.gz, .tar, .gz y .zip en Linux.
 tag: linux
 author: Marlon Falcon Hernandez
 ---
 
 # Comandos para compactar archivos en Linux
 
-La compactación de archivos es una forma de reducir el tamaño de un archivo, lo que permite que se transfiera más rápido y ocupe menos espacio en el disco. En Linux, podemos usar los siguientes comandos para comprimir y descomprimir archivos.
+La compactación de archivos es una forma de reducir el tamaño de un archivo, lo que permite que se transfiera más rápido y ocupe menos espacio en el disco. En Linux podemos usar los siguientes comandos para comprimir y descomprimir archivos.
 
 Archivos .tar.gz:
 ```
@@ -34,3 +34,5 @@ Archivos .zip:
 Comprimir: zip archivo.zip carpeta
 Descomprimir: unzip archivo.zip
 ```
+
+Ten en cuenta que `tar` por sí solo solo empaqueta (no comprime); la opción `z` añade la compresión con gzip. Para comprimir una carpeta completa con zip, usa `zip -r`.

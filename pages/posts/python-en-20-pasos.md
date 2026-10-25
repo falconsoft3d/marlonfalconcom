@@ -1,13 +1,13 @@
 ---
 title: Python en 20 pasos
 date: 2022/12/18
-description: Python en 20 pasos
+description: Guía rápida de Python con más de 20 ejemplos básicos - variables, operadores, condicionales, ciclos, funciones, listas, clases, archivos y más.
 tag: python, 20pasos
 author: Marlon Falcon Hernandez
 ---
 
 # Python en 20 pasos
-Python es un lenguaje de programación interpretado cuya filosofía hace hincapié en una sintaxis que favorezca un código legible. Con python coloque más de 20 pasos ...
+Python es un lenguaje de programación interpretado cuya filosofía hace hincapié en una sintaxis que favorezca un código legible. En este artículo he reunido más de 20 pasos con ejemplos cortos para repasar lo básico del lenguaje.
 
 ## 1. Instalación
 ````bash
@@ -15,7 +15,7 @@ brew install python
 ````
 
 ## 2. Programa
-En python debes crear un archivo con la extensión .py, por ejemplo: hola_mundo.py
+En Python debes crear un archivo con la extensión .py, por ejemplo: hola_mundo.py
 ````python
 print('Hola mundo')
 ````
@@ -73,7 +73,7 @@ a == 10 or b == 30 # True
 not(a == 10 and b == 20) # False
 ````
 
-## 8. Condicional IF
+## 9. Condicional IF
 ````python
 a = 10
 b = 20
@@ -85,7 +85,8 @@ else:
     print('a es diferente a 10 y 20')
 ````
 
-## 9. Condicional SWITCH
+## 10. Condicional SWITCH
+Python no tiene una sentencia `switch` como otros lenguajes. El siguiente bloque muestra la idea general, pero desde Python 3.10 la forma correcta es usar `match` con `case` (y `case _` como caso por defecto), sin `break`; en versiones anteriores se suele usar `if`/`elif` o un diccionario.
 ````python
 a = 10
 b = 20
@@ -101,13 +102,13 @@ switch(a):
         break
 ````
 
-## 10. Ciclo FOR
+## 11. Ciclo FOR
 ````python
 for i in range(10):
     print(i)
 ````
 
-## 11. Ciclo WHILE
+## 12. Ciclo WHILE
 ````python
 i = 0
 while i < 10:
@@ -115,7 +116,7 @@ while i < 10:
     i += 1
 ````
 
-## 12. Funciones
+## 13. Funciones
 ````python
 def suma(a, b):
     return a + b
@@ -148,9 +149,9 @@ def suma(**kwargs):
     print(kwargs['a'] + kwargs['b'])
 
 suma(a=10, b=20)
+````
 
-
-## 12. Listas
+## 14. Listas
 ````python
 lista = [1, 2, 3, 4, 5]
 lista.append(6)
@@ -161,11 +162,11 @@ lista.sort()
 lista.clear()
 ````
 
-## 13. Tuplas
+## 15. Tuplas
 ````python
 tupla = (1, 2, 3, 4, 5)
 ````
-## 14. Diccionarios
+## 16. Diccionarios
 ````python
 diccionario = {
     'nombre': 'Juan',
@@ -178,7 +179,7 @@ diccionario.pop('edad')
 diccionario.clear()
 ````
 
-## 15. Clases
+## 17. Clases
 ````python
 class Persona:
     def __init__(self, nombre, edad, estatura):
@@ -198,7 +199,7 @@ persona.hablar('Hola, cómo estás')
 persona.caminar()
 ````
 
-## 16. Herencia
+## 18. Herencia
 ````python
 class Persona:
     def __init__(self, nombre, edad, estatura):
@@ -227,7 +228,7 @@ empleado.caminar()
 empleado.trabajar()
 ````
 
-## 17. Módulos
+## 19. Módulos
 ````python
 # modulo.py
 def saludar(nombre):
@@ -238,7 +239,7 @@ import modulo
 
 modulo.saludar('Juan')
 ````
-## 18. Manejo de errores
+## 20. Manejo de errores
 ````python
 try:
     numero = int(input('Ingrese un número: '))
@@ -247,7 +248,7 @@ except:
     print('Debes ingresar un número')
 ````
 
-## 19. Archivos
+## 21. Archivos
 ````python
 archivo = open('archivo.txt', 'w')
 archivo.write('Hola mundo')
@@ -258,7 +259,7 @@ print(archivo.read())
 archivo.close()
 ````
 
-## 20. Manejo de fechas
+## 22. Manejo de fechas
 ````python
 from datetime import datetime
 
@@ -273,7 +274,7 @@ print(fecha.second)
 print(fecha.microsecond)
 ````
 
-## 21. Manejo de expresiones regulares
+## 23. Manejo de expresiones regulares
 ````python
 import re
 
@@ -286,7 +287,7 @@ else:
     print('No se encontró el patrón')
 ````
 
-## 22. Manejo de hilos
+## 24. Manejo de hilos
 ````python
 import threading
 
@@ -297,7 +298,7 @@ hilo = threading.Thread(target=hola)
 hilo.start()
 ````
 
-## 23. Api REST
+## 25. API REST
 ````python
 import requests
 
@@ -313,7 +314,7 @@ response = requests.post(url, params=params)
 response.json()
 ````
 
-## 24. Api SOAP
+## 26. API SOAP
 ````python
 from zeep import Client
 
@@ -324,7 +325,7 @@ result = client.service.FahrenheitToCelsius(100)
 print(result)
 ````
 
-## 25. try except else finally
+## 27. Try, except, else y finally
 ````python
 try:
     print(10 / 2)
@@ -336,7 +337,7 @@ finally:
     print('Fin del programa')
 ````
 
-## 26. Imprimir en consola
+## 28. Imprimir en consola
 ````python
 print('Hola mundo')
 print(10)

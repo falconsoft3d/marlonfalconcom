@@ -1,12 +1,14 @@
 ---
 title: Python 20 Ejemplos
 date: 2022/12/18
-description: Python 20 Ejemplos
+description: Más de 20 ejemplos prácticos en Python - primos, factorial, Fibonacci, palíndromos, ordenación, matrices, cálculos numéricos, random y más.
 tag: python, 20pasos
 author: Marlon Falcon Hernandez
 ---
 
 # Python 20 Ejemplos
+
+Una colección de ejemplos cortos en Python para practicar la lógica de programación: funciones, recursividad, listas, diccionarios, clases y algunos cálculos matemáticos. Cada ejemplo se puede copiar en un archivo `.py` y ejecutar directamente.
 
 ## 1. Números primos
 ````python
@@ -66,7 +68,7 @@ if __name__ == '__main__':
     run()
 ````
 
-## 4. Palindromo
+## 4. Palíndromo
 ````python
 def palindromo(palabra):
     palabra = palabra.replace(' ', '')
@@ -89,7 +91,7 @@ if __name__ == '__main__':
     run()
 ````
 
-## 5. Palabras mas largas
+## 5. Palabra más larga
 ````python
 
 def run():
@@ -105,7 +107,7 @@ if __name__ == '__main__':
     run()
 ````
 
-## 6. Palabras mas cortas
+## 6. Palabra más corta
 ````python
 def run():
     frase = input('Escribe una frase: ')
@@ -120,7 +122,7 @@ if __name__ == '__main__':
     run()
 ````
 
-## 7. Ordenar Arreglo
+## 7. Ordenar una lista
 ````python
 def run():
     numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -131,7 +133,7 @@ if __name__ == '__main__':
     run()
 ````
 
-## 8. Ordenar Arreglo de Objetos
+## 8. Ordenar una lista de objetos
 ````python
 class Persona:
     def __init__(self, nombre, edad):
@@ -156,7 +158,7 @@ if __name__ == '__main__':
     run()
 ````
 
-## 9. Sumar lista
+## 9. Sumar una lista
 ````python
 
 def run():
@@ -201,7 +203,7 @@ if __name__ == '__main__':
     run()
 ````
 
-## 12. Calculo de matriz
+## 12. Matriz transpuesta
 ````python
 
 def run():
@@ -224,7 +226,7 @@ if __name__ == '__main__':
 ````
 
 
-## 13. Calculo de derivada
+## 13. Cálculo de una derivada
 ````python
 
 def run():
@@ -238,7 +240,7 @@ if __name__ == '__main__':
     run()
 ````
 
-## 14. Calculo de integral
+## 14. Cálculo de una integral
 ````python
 import math
 
@@ -253,7 +255,7 @@ if __name__ == '__main__':
     run()
 ````
 
-## 15. Calculo de raiz cuadrada
+## 15. Cálculo de la raíz cuadrada
 ````python
 import math
 
@@ -266,7 +268,7 @@ if __name__ == '__main__':
     run()
 ````
 
-## 16. Calculo de raiz cuadrada con Newton
+## 16. Cálculo de la raíz cuadrada con el método de Newton
 ````python
 
 def run():
@@ -285,7 +287,7 @@ if __name__ == '__main__':
     run()
 ````
 
-## 16. Calculo de le teoria de la relatividad
+## 17. Cálculo de la energía según la teoría de la relatividad (E = mc²)
 ````python
 import math
 
@@ -299,7 +301,7 @@ if __name__ == '__main__':
     run()
 ````
 
-## 17. Calculo de la constante de Planck
+## 18. Constante de Planck
 ````python
 
 def run():
@@ -311,7 +313,7 @@ if __name__ == '__main__':
     run()
 ````
 
-## 18. Calculo de la constante de Avogadro
+## 19. Constante de Avogadro
 ````python
 
 def run():
@@ -323,7 +325,7 @@ if __name__ == '__main__':
     run()
 ````
 
-## 18. Codigo de barra ean13
+## 20. Dígito de control de un código de barras EAN-13
 ````python
 import random
 
@@ -349,7 +351,7 @@ if __name__ == '__main__':
 ````
 
 
-## 19 Varias formas de random
+## 21. Varias formas de generar números aleatorios
 ````python
 import random
 
@@ -375,7 +377,7 @@ if __name__ == '__main__':
     run()
 ````
 
-## 20. Calculo de pi
+## 22. Cálculo aproximado de pi
 ````python
 
 def run():
@@ -390,34 +392,3 @@ def run():
 if __name__ == '__main__':
     run()
 ````
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

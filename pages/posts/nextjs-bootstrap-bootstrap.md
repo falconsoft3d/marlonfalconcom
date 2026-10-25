@@ -1,26 +1,30 @@
 ---
-title: Trabajando con Bootstrap en NextJS
+title: Trabajando con Bootstrap en Next.js
 date: 2022/12/21
-description: Trabajando con Bootstrap en NextJS
+description: Cómo instalar y usar Bootstrap y los temas de Bootswatch en un proyecto Next.js, incluido el JavaScript de Bootstrap.
 tag: nextjs, bootstrap, bootswatch
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# Trabajando con Bootstrap en NextJS
-Bootstrap es una librería de CSS que nos permite crear interfaces de usuario de forma rápida y sencilla. En este post vamos a ver como podemos trabajar con Bootstrap en NextJS. bootswatch es una librería de Bootstrap que nos permite usar temas de Bootstrap de forma sencilla.
+# Trabajando con Bootstrap en Next.js
+Bootstrap es una librería de CSS que nos permite crear interfaces de usuario de forma rápida y sencilla. En este post vamos a ver cómo podemos trabajar con Bootstrap en Next.js. Bootswatch es una colección de temas gratuitos para Bootstrap que nos permite cambiar el aspecto de la web de forma sencilla.
 
-Instalación de la librería
+## Instalación de la librería
 ```bash
 npm i bootstrap bootswatch
 ```
 
-Tenemo que importar el css
+## Importar el CSS
+Tenemos que importar el CSS de Bootstrap:
 ```js
 import "bootstrap/dist/css/bootstrap.min.css"; // Import bootstrap CSS
 ```
 
-Luego agregamos el siguiente código en el fichero _app.js
+Si queremos usar un tema de Bootswatch, importamos su CSS en lugar del de Bootstrap, por ejemplo `bootswatch/dist/darkly/bootstrap.min.css`.
+
+## Configurar _app.js
+Luego agregamos el siguiente código en el fichero _app.js. Este ejemplo procede de un proyecto con autenticación, por eso incluye rutas protegidas; lo importante para Bootstrap es la importación del CSS y el `useEffect` que carga el JavaScript de Bootstrap:
 
 ```bash
 import '../styles/globals.css'
@@ -59,3 +63,4 @@ function MyApp({ Component, pageProps }) {
 export default MyApp
 ```
 
+El JavaScript de Bootstrap se carga dentro de `useEffect` porque necesita el objeto `document`, que solo existe en el navegador; si lo importáramos directamente, fallaría durante el renderizado en el servidor.

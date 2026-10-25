@@ -1,15 +1,25 @@
 ---
-title: Formulario php para enviar datos a Odoo ERP
+title: Formulario PHP para enviar datos a Odoo ERP
 date: 2022/12/18
-description: Formulario php para enviar datos a Odoo ERP
+description: Ejemplo de formulario web en PHP que crea iniciativas (leads) en el CRM de Odoo ERP mediante peticiones JSON-RPC con cURL.
 tag: php,odoo
 author: Marlon Falcon Hernandez
 ---
 
-# Formulario php para enviar datos a Odoo ERP
+# Formulario PHP para enviar datos a Odoo ERP
 
+Un caso muy habitual es tener un formulario de contacto en una web hecha en PHP y querer que cada envío llegue directamente al CRM de Odoo como una nueva iniciativa (lead). Para ello podemos usar la API JSON-RPC de Odoo desde PHP con cURL.
 
-Ejemplo
+## Cómo funciona
+
+1. Se muestra un formulario con nombre, apellidos, teléfono, email, provincia y comentarios.
+2. Al enviarlo, el script recoge los datos.
+3. Se hace login en Odoo con el servicio `common` para obtener el identificador del usuario.
+4. Con ese identificador se llama al servicio `object` para crear un registro en el modelo `crm.lead`.
+
+Los campos `specify_origin` y `construction_province` del ejemplo son campos personalizados; si no los tienes en tu base de datos, elimínalos o sustitúyelos por los tuyos. Recuerda también cambiar la URL, la base de datos, el usuario y la contraseña.
+
+## Ejemplo
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -189,3 +199,5 @@ Ejemplo
   </body>
 </html>
 ```
+
+**Nota de seguridad:** en un formulario público conviene validar y escapar los datos recibidos antes de construir el JSON (por ejemplo, generándolo con `json_encode`), enviar el formulario por `POST` y no dejar las credenciales de Odoo escritas en el código.

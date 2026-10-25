@@ -1,7 +1,7 @@
 ---
 title: Profesor Odoo ERP 16
 date: 2022/12/27
-description: Profesor Odoo ERP 16
+description: Qué hace un profesor de Odoo ERP, qué conocimientos necesita y cuánto cuesta aproximadamente la hora de formación en Odoo.
 tag: odoo, erp
 author: Marlon Falcon Hernandez
 ---
@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 # Profesor Odoo ERP 16
 
-Odoo 16 ERP es una plataforma de software de código abierto que ofrece una amplia gama de soluciones empresariales, desde la gestión contable y la gestión de relaciones con clientes hasta la contabilidad y la gestión de inventario. Si su empresa está considerando implementar Odoo, es importante contar con un profesor en la plataforma para garantizar una implementación y uso eficientes.
+Odoo 16 ERP es una plataforma de software de código abierto que ofrece una amplia gama de soluciones empresariales, desde la contabilidad y la gestión de relaciones con clientes hasta la gestión de inventario. Si su empresa está considerando implementar Odoo, es importante contar con un profesor en la plataforma para garantizar una implementación y uso eficientes.
 
 <Image
   src="/images/profesor-marlon-falcon-odoo-erp.png"
@@ -30,14 +30,14 @@ Para ser un profesor de Odoo ERP, es necesario tener una sólida comprensión de
 
 En resumen, un profesor de Odoo ERP es un experto en el uso y enseñanza del software de gestión empresarial Odoo. Su trabajo consiste en enseñar a otros cómo usar y aprovechar al máximo el software, así como proporcionar soporte técnico a los usuarios. Para ser un profesor de Odoo ERP, es necesario tener una sólida comprensión del software y habilidades de enseñanza y comunicación para poder transmitir de manera clara y efectiva el conocimiento a otros.
 
-# ¿Cuánto me Cuesta la hora de un profesor en Odoo?
-Por mi experiencia en Odoo y sacando información de la web, el precio de un profesor en Odoo se encuentra entre  **50€ - 100€** la hora, pero esto puede variar dependiendo de la empresa que contrates.
+# ¿Cuánto cuesta la hora de un profesor de Odoo?
+Por mi experiencia en Odoo y según la información disponible en la web, el precio de un profesor de Odoo se encuentra entre **50€ - 100€** la hora, pero esto puede variar dependiendo de la empresa que contrates.
 
-# Contactar un profesor Odoo ERP
+# Contactar con un profesor de Odoo ERP
 - Nombre: Marlon Falcón Hernández
 - WhatsApp [+34662470645](https://web.whatsapp.com/send?phone=34662470645&text=)
 - GitHub [@falconsoft3d](https://github.com/falconsoft3d)
-- Youtube [@marlonfalconhdez](https://www.youtube.com/@marlonfalconhdez)
+- YouTube [@marlonfalconhdez](https://www.youtube.com/@marlonfalconhdez)
 - Telegram [@falconsoft]
 - Phone +34 (662) 47 0645
 - Email mfalconsoft@gmail.com

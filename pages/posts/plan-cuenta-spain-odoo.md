@@ -1,7 +1,7 @@
 ---
 title: Plan de cuentas España Odoo ERP
 date: 2023/02/21
-description: Plan de cuentas España Odoo ERP
+description: El plan de cuentas español (PGC 2007) que trae Odoo con la localización de España, junto con ejemplos de asientos de venta, compra y pagos.
 tag: odoo, erp
 author: Marlon Falcon Hernandez
 ---
@@ -9,9 +9,9 @@ import Image from 'next/image'
 
 # Plan de cuentas España Odoo ERP
 
-Odoo ERP por defecto cuando instalas la localización española trae un plan de cuentas para España que esta basado en el [Real Decreto 1514/2007, de 16 de noviembre, por el que se aprueba el Plan General de Contabilidad.](https://www.boe.es/biblioteca_juridica/publicacion.php?id=PUB-PB-2022-227) A continuación te mostramos el plan de cuentas junto con los asientos de venta y compra más usados:
+Cuando instalas la localización española, Odoo ERP trae por defecto un plan de cuentas para España basado en el [Real Decreto 1514/2007, de 16 de noviembre, por el que se aprueba el Plan General de Contabilidad.](https://www.boe.es/biblioteca_juridica/publicacion.php?id=PUB-PB-2022-227) A continuación te mostramos el plan de cuentas junto con los asientos de venta y compra más usados:
 
-| Codigo | Nombre | Tipo | Grupo |
+| Código | Nombre | Tipo | Grupo |
 |--------|--------|------|-------|
 |100000|Capital social|Pasivos no-circulantes|100 Capital social|
 |101000|Fondo social|Pasivos no-circulantes|101 Fondo social|
@@ -652,6 +652,8 @@ Odoo ERP por defecto cuando instalas la localización española trae un plan de 
 
 # Asiento de Factura de Venta
 
+Factura de venta de 500,00 € más un 21 % de IVA. Se carga el total en la cuenta del cliente y se abonan la venta y el IVA repercutido.
+
 | Cuenta | Concepto | Debe | Haber |
 |--------|--------|------|-------|
 |700000| Ventas de mercaderías en España	Materiales Varios	|0,00 |500,00|	
@@ -661,6 +663,8 @@ Odoo ERP por defecto cuando instalas la localización española trae un plan de 
 
 # Asiento Pago de Factura de Venta
 
+Al cobrar la factura, se carga el importe en el banco y se salda la cuenta del cliente.
+
 | Cuenta | Concepto | Debe | Haber |
 |--------|--------|------|-------|
 |431200| Banco BBVA  - 21/02/2023	|605,00|0,00 |	
@@ -668,6 +672,8 @@ Odoo ERP por defecto cuando instalas la localización española trae un plan de 
 
 
 # Asiento de Factura de Compra
+
+Factura de compra de 49,00 € más un 21 % de IVA soportado, que queda pendiente de pago al acreedor.
 
 | Cuenta | Concepto | Debe | Haber |
 |--------|--------|------|-------|
@@ -678,6 +684,8 @@ Odoo ERP por defecto cuando instalas la localización española trae un plan de 
 
 
 # Asiento Pago de Factura de Compra
+
+Al pagar la factura, se salda la cuenta del acreedor contra el banco.
 
 | Cuenta | Concepto | Debe | Haber |
 |--------|--------|------|-------|

@@ -1,14 +1,20 @@
 ---
-title: Python tkinter sqlite crud
+title: Python Tkinter SQLite CRUD
 date: 2022/12/20
-description: Python tkinter sqlite crud
+description: Cómo crear una aplicación de escritorio CRUD de productos con Python, Tkinter y SQLite.
 tag: python, sqlite, tkinter 
 author: Conexión a base de datos SQLite con Python
 ---
 
-# Python tkinter sqlite crud
+# Python Tkinter SQLite CRUD
 
-Tkiner es una librería de python que nos permite crear interfaces gráficas de usuario. En este tutorial vamos a crear una aplicación CRUD con Python y SQLite.
+Tkinter es la librería estándar de Python para crear interfaces gráficas de usuario. En este tutorial vamos a crear una aplicación CRUD (crear, leer, actualizar y eliminar) de productos con Python y SQLite, sin instalar nada adicional, ya que tanto `tkinter` como `sqlite3` vienen incluidos en Python.
+
+## Preparar la base de datos
+
+La aplicación usa un archivo `database.db` con una tabla `product` que debe existir antes de ejecutarla. Puedes crearla con cualquier cliente de SQLite usando esta sentencia: `CREATE TABLE product (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, price REAL NOT NULL);`
+
+## Código de la aplicación
 ```python
 # -*- coding: utf-8 -*-
 
@@ -155,3 +161,12 @@ if __name__ == '__main__':
     application = Product(window)
     window.mainloop()
 ```
+
+## Cómo funciona
+
+- **`__init__`**: construye la ventana con un formulario (nombre y precio), un botón para guardar, una tabla (`Treeview`) con los productos y los botones para eliminar y editar.
+- **`run_query`**: abre la conexión con la base de datos, ejecuta la consulta con sus parámetros y confirma los cambios.
+- **`get_products`**: limpia la tabla y la vuelve a llenar con los productos de la base de datos.
+- **`add_product`**, **`delete_product`** y **`edit_product`**: implementan las operaciones de crear, eliminar y editar. La edición abre una ventana secundaria (`Toplevel`) y llama a `edit_records` para guardar los cambios.
+
+Las consultas usan parámetros con `?` en lugar de concatenar texto, lo que evita problemas de inyección SQL. Para ejecutar la aplicación, guarda el código en un archivo y lánzalo con `python nombre_del_archivo.py`.

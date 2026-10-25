@@ -1,16 +1,18 @@
 ---
 title: ▷ Configuración de los asientos de inventario en Odoo ERP
 date: 2022/12/31
-description: ▷ Configuración de los asientos de inventario en Odoo ERP
+description: ▷ Cómo configurar en la categoría de producto las cuentas que usa Odoo para generar los asientos de inventario y de facturas.
 tag: odoo, asientos, inventario
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
 # ▷ Configuración de los asientos de inventario en Odoo ERP
+Cuando trabajamos con valoración de inventario automatizada (perpetua), Odoo genera asientos contables cada vez que entra o sale mercancía del almacén. Las cuentas que utiliza para esos asientos se definen principalmente en la categoría de producto, por lo que es importante configurarla bien antes de empezar a operar.
+
 Para configurar los asientos de inventario en Odoo ERP debemos seguir los siguientes pasos:
 
-1. Ingresamos a la configuración de la categoría de producto.
+1. Ingresamos en la configuración de la categoría de producto (Inventario → Configuración → Categorías de productos) y revisamos el método de coste, la valoración del inventario y las cuentas de stock.
 
 <Image
   src="/images/posts/categorias.png"
@@ -43,7 +45,7 @@ Para configurar los asientos de inventario en Odoo ERP debemos seguir los siguie
   className="next-image"
 />
 
-4. Tipos de cuentas contables.
+4. Tipos de cuentas contables que intervienen en cada documento.
 ```
 [FACTURA DE VENTA]
 Ventas de Giro = Ingresos
@@ -60,3 +62,4 @@ Deudores por Ventas == A Cobrar
 Por pagar proveedores vario == A Pagar
 ```
 
+Los nombres de las cuentas y los tipos pueden variar según el plan contable del país (la localización instalada), por lo que conviene revisarlos con el contador de la empresa antes de configurarlos.

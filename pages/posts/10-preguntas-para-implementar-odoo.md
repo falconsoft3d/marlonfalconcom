@@ -1,12 +1,14 @@
 ---
 title: 10 preguntas antes de implementar Odoo ERP
 date: 2022/12/27
-description: 10 preguntas antes de implementar Odoo ERP
+description: Las 10 preguntas clave que toda empresa debería responder antes de empezar la implementación de Odoo ERP.
 tag: odoo
 author: Marlon Falcon Hernandez
 ---
 
 # 10 preguntas antes de implementar Odoo ERP
+
+Implementar un ERP como Odoo es un proyecto que afecta a toda la empresa: procesos, datos y personas. Antes de empezar, conviene detenerse a responder algunas preguntas que ayudan a definir el alcance, a evitar sorpresas y a medir después si la implementación ha sido un éxito.
 
 1. ¿Cuál es el objetivo principal de implementar Odoo en mi empresa?
 2. ¿Cuál es el alcance de la implementación de Odoo? ¿Qué módulos se van a utilizar?
@@ -18,3 +20,5 @@ author: Marlon Falcon Hernandez
 8. ¿Cuáles son las expectativas de rendimiento y resultados después de implementar Odoo en mi empresa? ¿Cómo se medirá el éxito de la implementación?
 9. ¿Cuáles son los costos asociados con la implementación de Odoo? ¿Hay algún costo de mantenimiento o actualización posterior?
 10. ¿Qué soporte técnico estará disponible después de la implementación de Odoo? ¿Hay una opción de soporte premium disponible en caso de que sea necesario?
+
+Tener respuestas claras a estas preguntas antes de arrancar facilita la elaboración del plan de proyecto, el presupuesto y la comunicación con el equipo de implementación.

@@ -1,12 +1,20 @@
 ---
-title: Enviar email desde nodejs
+title: Enviar email desde Node.js
 date: 2022/12/21
-description: Enviar email desde nodejs
+description: Cómo enviar correos electrónicos desde Node.js con Nodemailer, usando una cuenta de pruebas de Ethereal.
 tag: nodejs, api
 author: Enviar email desde nodejs
 ---
 
-# Enviar email desde nodejs
+# Enviar email desde Node.js
+
+Nodemailer es la librería más utilizada para enviar correos electrónicos desde Node.js. Funciona con cualquier servidor SMTP y, para hacer pruebas, permite crear al momento una cuenta en Ethereal, un servicio que captura los correos sin entregarlos a nadie.
+
+## Instalación
+
+Instalamos la dependencia con `npm install nodemailer`.
+
+## Código
 
 email.js
 
@@ -50,3 +58,5 @@ async function main() {
 
 main().catch(console.error);
 ```
+
+Al ejecutarlo con `node email.js`, la consola mostrará el ID del mensaje y una URL de vista previa de Ethereal donde podemos ver el correo tal como se enviaría. Para enviarlo de verdad, basta con sustituir los datos del transporte por los de nuestro servidor SMTP (host, puerto, usuario y contraseña).

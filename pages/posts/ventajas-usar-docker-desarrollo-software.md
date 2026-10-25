@@ -1,7 +1,7 @@
 ---
-title: Ventajas de usar Docker en el desarrollo de software
+title: "Ventajas de usar Docker en el desarrollo de software"
 date: 2022/12/22
-description: Ventajas de usar Docker en el desarrollo de software
+description: "Principales ventajas de usar contenedores Docker en el desarrollo de software - reproducibilidad, eficiencia, despliegue y seguridad."
 tag: docker
 author: Marlon Falcon Hernandez
 ---
@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 # Ventajas de usar Docker en el desarrollo de software
 
-Docker es una herramienta de virtualización de contenedores que ha revolucionado la forma en que desarrollamos y desplegamos software. 
+Docker es una herramienta de virtualización basada en contenedores que ha revolucionado la forma en que desarrollamos y desplegamos software. 
 
 <Image
   src="/images/posts/docker-marlon.png"
@@ -30,6 +30,6 @@ A continuación, se presentan algunas de las principales ventajas de utilizar Do
 
 3. Facilita la implementación y el despliegue: una vez que tu aplicación está contenida en un contenedor Docker, es fácil desplegarla en cualquier servidor que tenga Docker instalado. Esto reduce el tiempo de implementación y minimiza los problemas de configuración y compatibilidad.
 
-3. Mejora la seguridad: al aislar las aplicaciones en contenedores, puedes asegurarte de que cada una tenga acceso solo a lo que necesita para funcionar. Esto reduce el riesgo de ataques de seguridad y evita que una aplicación dañe a otra.
+4. Mejora la seguridad: al aislar las aplicaciones en contenedores, puedes asegurarte de que cada una tenga acceso solo a lo que necesita para funcionar. Esto reduce el riesgo de ataques de seguridad y evita que una aplicación dañe a otra.
 
 En resumen, Docker es una herramienta valiosa para el desarrollo de software que ofrece una mayor reproducibilidad, eficiencia y seguridad. Si estás buscando mejorar tu flujo de trabajo de desarrollo, definitivamente debes considerar utilizar Docker.

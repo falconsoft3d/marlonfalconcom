@@ -1,32 +1,32 @@
 ---
-title: ▷ Como instalar Odoo 17 en Linux
+title: ▷ Cómo instalar Odoo 17 en Linux
 date: 2023/10/18
-description: ▷ Como instalar Odoo 17 en Linux
+description: ▷ Guía paso a paso para instalar Odoo 17 Community en Ubuntu 22.04 con PostgreSQL, wkhtmltopdf y Nginx.
 tag: odoo, erp, instalar
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# ▷ Como instalar Odoo 17 en Linux
-Lo primero que necesitas un servidor (VPS) aqui te dejo un enlace para que te crees uno en Digital Ocean. https://m.do.co/c/7f5c3af8d6bb. Necesitas tener python 3.10 , ubuntu 22.04 lo tiene trata de usar esa versión. Seguidamente sigue estos pasos que te dejo a continuación.
+# ▷ Cómo instalar Odoo 17 en Linux
+Lo primero que necesitas es un servidor (VPS); aquí te dejo un enlace para que te crees uno en DigitalOcean: https://m.do.co/c/7f5c3af8d6bb. Necesitas tener Python 3.10: Ubuntu 22.04 lo trae por defecto, así que trata de usar esa versión. A continuación, sigue estos pasos.
 
-## 1- Actualizamos el sistema
+## 1. Actualizamos el sistema
 ```linux
 apt-get update && apt-get upgrade -y
 ```
 
-## 2- Creamos el usuario Odoo
+## 2. Creamos el usuario odoo
 
 ```linux
 adduser --system --home=/opt/odoo --group odoo
 ```
 
-## 3- Instalamos postgresql
+## 3. Instalamos PostgreSQL
 ```linux
 sudo apt install postgresql postgresql-contrib
 ```
 
-## 4- Reiniciamos postgres, iniciamos sesión en postgres y creamos el usuario postgres
+## 4. Reiniciamos PostgreSQL, iniciamos sesión como postgres y creamos el usuario odoo en la base de datos
 ```linux
 service postgresql restart
 su - postgres
@@ -34,30 +34,30 @@ createuser --createdb --username postgres --no-createrole --no-superuser --pwpro
 exit
 ```
 
-## 5- Instalamos unzip
+## 5. Instalamos unzip
 ```linux
 apt-get install unzip
 ```
 
-## 6- Instalación de librerias, actualizamos pip e instalamos dependencias python de Odoo
+## 6. Instalamos pip para las dependencias Python de Odoo
 ```linux
 apt install python3-pip
 ```
 
-## 7- Ingresamos en la carpeta /opt/odoo y descargamos la fuente para la versión comunity
+## 7. Ingresamos en la carpeta /opt/odoo y descargamos el código fuente de la versión Community
 ```linux
 cd /opt/odoo/
 wget https://github.com/odoo/odoo/archive/17.0.zip
 unzip 17.0.zip
 ```
 
-## 8- Ingresamos en la carpeta /opt/odoo y descargamos la fuente para la versión comunity
+## 8. Renombramos la carpeta y asignamos el propietario al usuario odoo
 ```linux
 mv odoo-17.0 server
 chown -R odoo: server
 ```
 
-## 9- Creando un directorio para almacenar el archivo de logs
+## 9. Instalamos las dependencias de Python de Odoo
 ```linux
 sudo apt-get update
 sudo apt-get install libpq-dev python3.10-dev
@@ -65,7 +65,7 @@ pip install -r /opt/odoo/server/requirements.txt
 ```
 
 
-Si al instalar las librerias te da problema copia y pega este código, te instalará las librerias necesarias, o puedes instalarlas una por una.
+Si al instalar las librerías te da problemas, copia y pega este código para instalar las librerías necesarias, o instálalas una por una.
 ```linux
 pip install Babel==2.9.1  # min version = 2.6.0 (Focal with security backports)
 pip install chardet==4.0.0
@@ -122,13 +122,13 @@ pip install xlwt==1.3.*
 pip install zeep==4.1.0
 ```
 
-## 10- Creando un directorio para almacenar el archivo de logs
+## 10. Creamos un directorio para almacenar el archivo de logs
 ```linux
 mkdir /var/log/odoo/
 chown odoo:root /var/log/odoo
 ```
 
-## 11- Configurando Odoo Server
+## 11. Configuramos Odoo Server
 ```linux
 mkdir /etc/odoo
 cp /opt/odoo/server/debian/odoo.conf /etc/odoo/odoo.conf
@@ -136,19 +136,19 @@ chown odoo: /etc/odoo/odoo.conf
 chmod 640 /etc/odoo/odoo.conf
 ```
 
-## 12- Creamos la carpeta de los addons o módulos personalizados.
+## 12. Creamos la carpeta de los addons o módulos personalizados
 ```linux
 mkdir /opt/odoo/server/extra-addons
 chown odoo: /opt/odoo/ -R
 ```
 
-## 13- Editamos el archivo odoo.conf
+## 13. Editamos el archivo odoo.conf
 ```linux
 nano /etc/odoo/odoo.conf
 ```
 
-## 14- Modificamos y/o agregamos lo siguiente y guardamos el archivo.
-si no tienes módulo en estra-addons no coloque la ruta sino te dará problemas.
+## 14. Modificamos o agregamos lo siguiente y guardamos el archivo
+Si no tienes módulos en extra-addons, no añadas esa ruta a `addons_path`; de lo contrario, te dará problemas.
 
 ```linux
 db_user = odoo
@@ -159,7 +159,7 @@ logrotate = True
 log_level = warn
 ```
 
-## 15- Script de inicio automático de Odoo-Server en Ubuntu 16
+## 15. Script de inicio automático de Odoo Server
 
 ```linux
 cp /opt/odoo/server/debian/init /etc/init.d/odoo
@@ -167,39 +167,39 @@ chmod 755 /etc/init.d/odoo
 chown root: /etc/init.d/odoo
 ```
 
-## 16- Editamos el archivo:
+## 16. Editamos el archivo
 
 ```linux
 nano /etc/init.d/odoo
 ```
 
-## 17- Modificamos los siguientes valores, y guardamos el archivo:
+## 17. Modificamos los siguientes valores y guardamos el archivo
 
 ```linux
 DAEMON=/opt/odoo/server/odoo-bin
 ```
 
-## 18- Haciendo que Odoo se inicie automáticamente cuando reiniciemos nuestro servidor:
+## 18. Hacemos que Odoo se inicie automáticamente al reiniciar el servidor
 ```linux
 update-rc.d odoo defaults
 ```
 
-## 19- Haciendo que Postgresql se inicie automáticamente cuando reiniciemos nuestro servidor :
+## 19. Hacemos que PostgreSQL se inicie automáticamente al reiniciar el servidor
 ```linux
 update-rc.d postgresql enable
 ```
 
-## 20- Manipulamos el servicio
+## 20. Gestionamos el servicio
 ```linux
 /etc/init.d/odoo start|stop|restart
 ```
 
-## 21- Editar archivo de configuración de postgres pg_hba.conf
+## 21. Editamos el archivo de configuración de PostgreSQL pg_hba.conf
 
 ```linux
 nano /etc/postgresql/14/main/pg_hba.conf
 ```
-Editamos la siguiente linea
+Editamos la siguiente línea
 
 ```linux
 local   all             all        peer
@@ -209,14 +209,18 @@ local   all             all        peer
 local   all             all       trust
 ```
 
-## 22- Reiniciamos servicio de postgresql y odoo
+**Nota de seguridad:** el método `trust` permite conectarse a PostgreSQL sin contraseña desde el propio servidor. Es cómodo para una instalación de pruebas, pero en producción es preferible mantener `peer` o usar `md5`/`scram-sha-256` con contraseña.
+
+## 22. Reiniciamos los servicios de PostgreSQL y Odoo
 ```linux
 service postgresql restart
 /etc/init.d/odoo restart
 ```
 
 
-## 23- Instalar Libreria wkhtmltopdf
+## 23. Instalamos la librería wkhtmltopdf
+
+Odoo usa wkhtmltopdf para generar los informes en PDF (facturas, pedidos, etc.).
 
 ```linux
 sudo apt-get update -y
@@ -226,19 +230,21 @@ dpkg -i wkhtmltox_0.12.5-1.focal_amd64.deb
 apt install -f
 ```
 
-## 24- Reiniciamos odoo erp
+## 24. Reiniciamos Odoo ERP
 
 ```linux
 /etc/init.d/odoo restart
 ```
 
-## 25- Vemos el Log
+## 25. Revisamos el log
 
 ```linux
 tail -f /var/log/odoo/odoo-server.log
 ```
 
-## 26- Instalamos nginx
+## 26. Instalamos Nginx
+
+Nginx actúa como proxy inverso delante de Odoo, de modo que podemos acceder por el puerto 80/443 con nuestro dominio. En el archivo de configuración hay que indicar el dominio y la IP de tu servidor en `server_name`.
 ```linux
 sudo apt-get install nginx -y
 cd /etc/nginx/sites-available
@@ -255,7 +261,7 @@ server_name j.wemakeyourdayeasy.com 11.64.123.12;
 nginx -s reload
 ```
 
-## 27- Si queremos instalar enterprise, claro tenemos que ser partner...
+## 27. Si queremos instalar Enterprise (para ello tenemos que ser partner de Odoo)
 ```linux
 ssh-keygen
 cat ~/.ssh/id_rsa.pub
@@ -268,8 +274,8 @@ nano /etc/odoo/odoo.conf
 addons_path = /opt/odoo/server/addons,/opt/odoo/server/extra-addons/enterprise
 ```
 
-## 28- test local
-Si odoo no levanta con este codigo puedes revisar la causa. La más probable es que no tengas instalado las librerias de python.
+## 28. Prueba local
+Si Odoo no arranca, con este comando puedes ver la causa en la terminal. La más probable es que no tengas instaladas las librerías de Python.
 ```linux
 su - odoo -s /bin/bash
 cd /opt/odoo/server

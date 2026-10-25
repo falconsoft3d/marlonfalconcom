@@ -1,47 +1,51 @@
 ---
 title: Comandos Docker
 date: 2022/12/18
-description: Comandos Docker
+description: Chuleta con los comandos Docker más usados para instalar, ejecutar, gestionar y publicar contenedores e imágenes.
 tag: docker
 author: Marlon Falcon Hernandez
 ---
 
 # Comandos Docker
 
-Instalar Docker en Ubuntu
+Docker permite empaquetar una aplicación con todas sus dependencias en una imagen y ejecutarla en contenedores aislados, de forma idéntica en cualquier servidor. Esta es mi chuleta con los comandos que más utilizo.
+
+## Instalar Docker en Ubuntu
 
 ```bash
 apt-get update && apt-get upgrade -y
 apt  install docker.io docker-compose -y
 ```
 
-Listar dockers
+## Listar contenedores
 
 ```bash
 docker ps
 ```
 
-Parar un docker
+Para ver también los contenedores detenidos, usa `docker ps -a`.
+
+## Parar un contenedor
 ```bash
 docker stop <id_docker>
 ```
 
-Eliminar un docker
+## Eliminar un contenedor
 ```bash
 docker rm <id_docker>
 ```
 
-Iniciar un docker
+## Iniciar un contenedor
 ```bash
 docker start <id_docker>
 ```
 
-Abrir un docker
+## Abrir una terminal dentro de un contenedor
 ```bash
 docker exec -it <id_docker> bash
 ```
 
-Clonamos un docker y lo ejecutamos
+## Clonar un proyecto con docker-compose y ejecutarlo
 ```bash
 git clone https://github.com/falconsoft3d/jamfnow-api
 cd jamfnow-api
@@ -50,27 +54,27 @@ docker-compose build
 docker-compose up -d
 ```
 
-Ejecutar un docker
+## Ejecutar un contenedor
 ```bash
 docker run -d -p 80:80 --name webserver nginx
 ```
 
-Ejecutar un docker con volumen
+## Ejecutar un contenedor con volumen
 ```bash
 docker run -d -p 80:80 --name webserver -v /var/www/html:/usr/share/nginx/html nginx
 ```
 
-Ejecutar un docker con volumen y puerto
+## Ejecutar un contenedor con volumen y puerto
 ```bash
 docker run -d -p 80:80 --name webserver -v /var/www/html:/usr/share/nginx/html nginx
 ```
 
-Ejecutar un docker desdes una imagen en dockerhub
+## Ejecutar un contenedor desde una imagen de Docker Hub
 ```bash
 docker run -d -p 3014:3014 --restart=always  mfalconsoft/apialticephone
 ```
 
-Otra forma
+## Otro ejemplo con varios volúmenes
 ```bash
 docker run -d --name=netdata \
   -p 19999:19999 \
@@ -84,7 +88,7 @@ docker run -d --name=netdata \
   netdata/netdata
 ```
 
-Subir un docker a dockerhub
+## Subir una imagen a Docker Hub
 ```bash
 docker login
 docker tag mfalconsoft/odoo:10.0 mfalconsoft/odoo:10.0
@@ -92,7 +96,11 @@ docker push mfalconsoft/odoo:10.0
 docker run -d  mfalconsoft/odoo:10.0
 ```
 
-Crear un docker desde un Dockerfile
+## Crear una imagen desde un Dockerfile
 ```bash
 docker build -t mfalconsoft/odoo:10.0 .
 ```
+
+## Nota
+
+En los comandos, `id_docker` se refiere al ID o al nombre del contenedor, que puedes obtener con `docker ps`. La opción `-d` ejecuta el contenedor en segundo plano, `-p` mapea un puerto del host al contenedor y `-v` monta un volumen.

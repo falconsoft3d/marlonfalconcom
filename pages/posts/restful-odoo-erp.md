@@ -1,16 +1,19 @@
 ---
-title: ▷ Restful odoo erp
+title: "▷ RESTful Odoo ERP"
 date: 2023/01/12
-description: ▷ Restful odoo erp
+description: "▷ Cómo consumir Odoo ERP mediante una API REST con el módulo restful_restapi - obtener un token, leer, crear y borrar registros desde Python."
 tag: odoo, desarrolloodoo
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-# ▷ Restful odoo erp
-1. Instalar el modulo restful. github: https://github.com/falconsoft3d/restful_restapi
+# ▷ RESTful Odoo ERP
 
-2. Obtener el token de acceso
+Odoo ofrece de forma nativa APIs XML-RPC y JSON-RPC, pero muchas aplicaciones externas esperan una API REST, con rutas por modelo y métodos HTTP como GET, POST o DELETE. Con un módulo REST instalado en Odoo podemos trabajar así. En este post vemos los pasos básicos con ejemplos en Python usando la librería `requests`.
+
+1. Instalar el módulo restful. GitHub: https://github.com/falconsoft3d/restful_restapi
+
+2. Obtener el token de acceso con el usuario, la contraseña y la base de datos:
 ```py
 # -*- coding: utf-8 -*-
 
@@ -39,7 +42,7 @@ headers['access-token'] = content.get('access_token')
 print(headers)
 ```
 
-3. Obtener las ordedes de venta
+3. Obtener las órdenes de venta. El token se envía en la cabecera `access-token` y, en el cuerpo, se pueden indicar opciones como el límite de registros, los campos, el dominio o el desplazamiento (ver el comentario del ejemplo):
 ```py
 import requests
 
@@ -59,7 +62,7 @@ response = requests.request("GET", url, data=payload, headers=headers)
 print(response.text)
 ```
 
-3. POST product.template
+4. Crear un registro de product.template con POST:
 ```py
 # -*- coding: utf-8 -*-
 
@@ -79,7 +82,7 @@ response = requests.request("POST", url, data=payload, headers=headers)
 print(response.text)
 ```
 
-4. Borrar product.template
+5. Borrar un registro de product.template indicando su id en la URL:
 ```py
 # -*- coding: utf-8 -*-
 
@@ -97,3 +100,4 @@ response = requests.delete(url, headers=headers)
 print(response.text)
 ```
 
+**Nota:** sustituye la URL, las credenciales y el token por los de tu instalación. En producción, usa siempre HTTPS para que el usuario, la contraseña y el token viajen cifrados.

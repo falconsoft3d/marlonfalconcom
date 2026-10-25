@@ -1,20 +1,26 @@
 ---
-title: NodeJs Odoo RPC
+title: Node.js Odoo RPC
 date: 2022/12/18
-description: NodeJs Odoo RPC
+description: Cómo conectarse a Odoo desde Node.js por XML-RPC con la librería odoo-xmlrpc y leer registros de contactos.
 tag: nodejs, odoo, rpc
 author: Marlon Falcon Hernandez
 ---
 
-# NodeJs Odoo RPC
+# Node.js Odoo RPC
 
-Instalamos odoo-xmlrpc
+Odoo expone una API externa por XML-RPC que permite leer, crear, modificar y eliminar registros desde cualquier lenguaje. Desde Node.js podemos usarla fácilmente con la librería `odoo-xmlrpc`. En este ejemplo nos conectamos a una base de datos de Odoo y leemos los contactos activos (`res.partner`).
+
+## Instalación
+
+Instalamos odoo-xmlrpc:
 
 ```
 npm install odoo-xmlrpc
 ```
 
-Ejecutamos el servidor
+## Conexión y lectura de registros
+
+Creamos un archivo con el siguiente código, ajustando la URL, el puerto, la base de datos y las credenciales a nuestro entorno:
 
 ```
 var Odoo = require('odoo-xmlrpc');
@@ -57,3 +63,5 @@ odoo.connect(function (err) {
     });    
 });
 ```
+
+El método `search` devuelve los IDs de los contactos que cumplen el dominio indicado (en este caso, los activos) y, a continuación, `read` obtiene los campos que le pedimos de esos registros. Del mismo modo podemos usar `create`, `write` o `unlink` para crear, modificar o eliminar registros.

@@ -1,15 +1,28 @@
 ---
 title: Django API MySQL
 date: 2022/12/20
-description: Django API MySQL
+description: Cómo crear una API REST sencilla con Django y MySQL usando vistas basadas en clases y JsonResponse, con operaciones CRUD.
 tag: django, api, mysql
 author: Marlon Falcon Hernandez
 ---
 
 # Django API MySQL
-Creando una API con Django y MySQL
+
+En este post vamos a crear una API REST sencilla con Django y MySQL, sin librerías adicionales: solo vistas basadas en clases y `JsonResponse`. La API permitirá listar, consultar, crear, actualizar y eliminar empresas (CRUD).
+
+## Requisitos previos
+
+Necesitas Python, un servidor MySQL en ejecución y una base de datos creada (en el ejemplo, `django_api`). Instalamos Django y el conector de MySQL, y creamos el proyecto y la app `api`:
+
+```bash
+pip install django mysqlclient
+django-admin startproject config .
+python manage.py startapp api
+```
 
 ## Configuramos el archivo settings.py
+
+Añadimos la app `api` a `INSTALLED_APPS` y configuramos la conexión a MySQL en `DATABASES`:
 ```python
 
 INSTALLED_APPS = [
@@ -36,7 +49,11 @@ DATABASES = {
 
 ```
 
-## Configuramos las urls.py
+**Nota:** en el diccionario `DATABASES`, el servidor de la base de datos se indica con la clave `HOST` (por ejemplo, `'HOST': 'localhost'`); la clave `NAME` es el nombre de la base de datos.
+
+## Configuramos el archivo urls.py del proyecto
+
+Incluimos las rutas de la app bajo el prefijo `api/`:
 ```python
 from django.contrib import admin
 from django.urls import path, include
@@ -49,7 +66,9 @@ urlpatterns = [
 ```
 
 
-## Configuramos el archivo archivo url de la app api.
+## Configuramos el archivo urls.py de la app api
+
+Creamos `api/urls.py` con dos rutas: una para el listado y la creación, y otra con el `id` para consultar, actualizar o eliminar una empresa:
 ```python
 from django.urls import path
 from .views import CompanyView
@@ -61,6 +80,8 @@ urlpatterns = [
 ```
 
 ## Modificamos el archivo models.py
+
+Definimos el modelo `Company`:
 ```python
 from django.db import models
 # Create your models here.
@@ -70,8 +91,16 @@ class Company(models.Model):
     fondation = models.PositiveIntegerField()
 ```
 
+Y creamos las tablas en la base de datos con las migraciones:
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
 
 ## Creamos el archivo views.py
+
+La vista `CompanyView` implementa un método por cada verbo HTTP (`get`, `post`, `put` y `delete`). El decorador `csrf_exempt` desactiva la protección CSRF para poder hacer peticiones desde clientes externos como Postman:
 ```python
 from django.http import JsonResponse
 from django.shortcuts import render
@@ -140,3 +169,15 @@ class CompanyView(View):
         return JsonResponse(datos)
 
 ```
+
+## Probar la API
+
+Arrancamos el servidor con `python manage.py runserver` y ya podemos probar los endpoints:
+
+- `GET /api/companies/`: lista todas las empresas.
+- `GET /api/companies/1`: devuelve la empresa con id 1.
+- `POST /api/companies/`: crea una empresa enviando un JSON con `name`, `website` y `fondation`.
+- `PUT /api/companies/1`: actualiza la empresa con id 1.
+- `DELETE /api/companies/1`: elimina la empresa con id 1.
+
+Este enfoque es ideal para entender cómo funciona una API en Django. Para proyectos más grandes conviene usar Django REST Framework, que aporta serializadores, validación, autenticación y paginación, y evitar `csrf_exempt` en producción en favor de un sistema de autenticación adecuado.

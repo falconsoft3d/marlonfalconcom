@@ -1,13 +1,13 @@
 ---
 title: ReactJS en 20 pasos
 date: 2022/12/18
-description: ReactJS en 20 pasos
+description: Guía rápida de React en 20 pasos con ejemplos de hooks, formularios, Axios, styled-components y React Router.
 tag: react, 20pasos, javascript
 author: Marlon Falcon Hernandez
 ---
 
 # ReactJS en 20 pasos
-React es una biblioteca JavaScript de código abierto diseñada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones en una sola página. Me pase de 20 ...
+React es una biblioteca JavaScript de código abierto diseñada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones de una sola página (SPA). En esta guía repasamos en 20 pasos lo esencial: crear un proyecto, los hooks más usados, formularios, peticiones HTTP, estilos y rutas.
 
 ## 1. Instalación
 ```bash
@@ -36,7 +36,7 @@ npm run build
 serve -s build
 ```
 
-## 6. UserState
+## 6. useState
 ```js
 import React, { useState } from 'react';
 
@@ -213,7 +213,7 @@ function App() {
 }
 ```
 
-## 14. Layaout
+## 14. Layout
 ```js
 
 import React from 'react';
@@ -240,7 +240,7 @@ function App() {
 }
 ```
 
-## 16. Styles
+## 15. Estilos
 ```js
 
 import React from 'react';
@@ -268,7 +268,7 @@ function App() {
 }
 ```
 
-## 17. Form
+## 16. Formularios
 ```js
 
 import React, { useState } from 'react';
@@ -298,7 +298,7 @@ function App() {
 ```
 
 
-## 18. Formik + Yup
+## 17. Formik + Yup
 ```js
 
 import React from 'react';
@@ -357,7 +357,7 @@ function App() {
 }
 ```
 
-## 19. Axios
+## 18. Axios
 ```js
 
 import React, { useState, useEffect } from 'react';
@@ -393,7 +393,7 @@ function App() {
 }
 ```
 
-## 20. Styled Components
+## 19. Styled Components
 ```js
 
 import React from 'react';
@@ -421,7 +421,7 @@ function App() {
 }
 ```
 
-## 21. React Router
+## 20. React Router
 ```js
 
 import React from 'react';
@@ -481,3 +481,7 @@ function Users() {
   return <h2>Users</h2>;
 }
 ```
+
+## Nota
+
+Create React App ya no es la opción recomendada para empezar proyectos nuevos; hoy la documentación oficial de React sugiere frameworks como Next.js o herramientas como Vite (`npm create vite@latest`). Además, el ejemplo de React Router usa la sintaxis de la versión 5 (`Switch`); a partir de la versión 6 se usa `Routes` y la propiedad `element`.

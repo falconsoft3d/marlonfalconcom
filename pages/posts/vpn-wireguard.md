@@ -1,23 +1,27 @@
 ---
-title: Instalar un VPN con Wireguard
+title: Instalar una VPN con WireGuard
 date: 2022/12/19
-description: Instalar un VPN con Wireguard
+description: Cómo instalar una VPN con WireGuard y Pi-hole usando Docker Compose en Ubuntu 20.04 y conectar un cliente.
 tag: vpn
 author: Marlon Falcon Hernandez
 ---
 import Image from 'next/image'
 
-## Instalar un VPN con Wireguard
-Wireguard es un VPN que permite crear una red privada virtual. Es un protocolo de código abierto y de alto rendimiento. Es muy fácil de configurar y usar. En este tutorial veremos como instalar un VPN con Wireguard en Ubuntu 20.04.
+# Instalar una VPN con WireGuard
+WireGuard es un protocolo de VPN (red privada virtual) de código abierto y de alto rendimiento. Es muy fácil de configurar y usar. En este tutorial veremos cómo instalar una VPN con WireGuard en Ubuntu 20.04 usando Docker Compose, junto con Pi-hole como servidor DNS para bloquear publicidad y rastreadores.
 
-## Instalar un VPN con Wireguard en el servidor
+## Instalar la VPN con WireGuard en el servidor
+Primero instalamos Docker y Docker Compose:
 ```
 apt install docker.io docker-compose -y
 ```
 
+Creamos el archivo `docker-compose.yml`:
 ```
 nano docker-compose.yml
 ```
+
+Y pegamos la siguiente configuración. El servicio `wireguard` usa la imagen de linuxserver, que genera automáticamente las claves y la configuración de los clientes (`PEERS=2` crea dos), y el servicio `pihole` actúa como DNS de la VPN. Ajusta la zona horaria y cambia la contraseña de la interfaz web de Pi-hole (`WEBPASSWORD`).
 
 ```
 version: '3.7'
@@ -80,7 +84,7 @@ networks:
         - subnet: 172.20.0.0/24
 ```
 
-
+Levantamos los contenedores y revisamos los logs:
 ```
 docker-compose up -d
 docker-compose logs -f
@@ -92,8 +96,10 @@ docker logs -f wireguard
 ```
 
 
-## Instalar un VPN con Wireguard en el cliente
-Esto lo sacamos del servidor usando el log
+Recuerda abrir el puerto 51820/UDP en el firewall del servidor.
+
+## Instalar la VPN con WireGuard en el cliente
+La configuración de cada cliente la sacamos del servidor usando el log (también se guarda en la carpeta `/root/wireguard`, en un subdirectorio por cada peer). Será algo parecido a esto:
 ```
 [Interface]
 PrivateKey = MOvnGsnqfjuKOA3339ccViL5zGd00QwayHIWLlm7ZAU4=
@@ -109,6 +115,8 @@ Endpoint = 81.198.198.51:51820
 ```
 
 ## Configuras el cliente
+Instala la aplicación oficial de WireGuard en tu equipo o móvil e importa esa configuración (en el móvil también puedes escanear el código QR que aparece en el log).
+
 <Image
   src="/images/posts/wireguard.png"
   alt="owl-odoo"
@@ -117,5 +125,7 @@ Endpoint = 81.198.198.51:51820
   priority
   className="next-image"
 />
+
+Al activar el túnel, todo tu tráfico pasará por el servidor (`AllowedIPs = 0.0.0.0/0, ::/0`). Las claves privadas son secretas: no compartas los archivos de configuración de los clientes.
 
 
