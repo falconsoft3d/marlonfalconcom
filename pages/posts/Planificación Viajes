@@ -1,0 +1,100 @@
+Planificación Viajes
+------
+Origen correo electrónico.
+
+Tipos de clientes
+- Clientes flota Fija con planificacion de demanda y me asignan el vehiculo. ( Ipf, Linde ) le asigna el viaje. Hoy todo es mano.
+- Clientes que te mandan la demanda pero sin el recurso.
+- Clientes periodicos carga y descarga.
+- Mejora de importador de demanda.
+
+# Demandas
+- diarias ( hoy te pido para mañana) o los viernes te pasan v,sd
+- semanal lo hace el viernes a viernes.
+- manual
+
+- Solicitud de viaje. Carga de demanda de viajes.
+- un adm no maneja mas de 30 vehiculos.
+
+- hay flotas.
+
+
+# servicios
+ gas licuado de petroleo 75% ( porque se paga ida y vuelta ) carga peligrosa
+ gas aire 20% co2 o2
+ - 5% otros tipos petrole, aceite no peligrosos.
+ - electrónica
+ - aire acondiconado.
+
+ # Armado de la flota con aprobaciones y tiene que el jefe logistico aprobar el supervisor del operador logístico.
+- carga en origen
+- máximo 9 entregas
+- nombre corto sanchezR hablar
+- armado de flota.
+- Conjunto => Flota. ( Tractor, Semi Remolque ( antes tanque) , Chofer, 2do Chofer )
+- cuando modifico la flota pongo un motivo ( codigo, nombre)
+
+
+Control de Flota Jornada. Normativa
+- 12 Trabajo x 12 descanso por cliente.
+- 14 trabajo x 10 descanso
+
+- Tacografo analogico
+- Tacografo electronico.
+
+
+
+
+
+
+Resumen Mantenimiento.
+----------------------
+
+Mantenimeinto Preventivo ( Evitar fallas 
+Mantenimiento Correctivo
+Taller mecanico
+taller tecnico
+1 año o 200k km va a la marca una ves cumplida hacen los mantenimeintos preventivo y correctivo
+Se lleva el historico de manteniento.
+
+Ficha mecanica. FM ( abierta y cerrada)
+Objetivo es registrar la mano de obra y el material.
+Hay reparaciones  T Internas y E. externas.
+Hay varios talleres.
+Antiguedad de la ficha
+Ciere Tecnico, Cierre Administrativo
+Jefe de taller, mecanico, adminstrativa.
+El jede de taller evalua los mecanicos
+
+Llmado - ficha mecanica - 
+La ficha se puede reabrir
+Una ficha tiene varias facturas.
+
+valor del odometro al levantar la FM
+no pueden abrir una ficha con 30 dias atras
+
+SOLFM - problema, vehiculo.
+
+origen ( llamda, email, wasap)
+
+- Novedades de Correctivos.
+tractor y tanque
+
+- ficha mecanida debe decir las otras fichas abiertas.
+- hay una categorizacion principal
+- resumen de trabajo.
+- se peude editar la fecha entrada y salida de la fm 
+
+- evaluacion de mecanica y el macanico del mes
+- el vehiulo esta en reparacion no esta disponible.
+- auditar.
+- fichas pendientes.
+- cierre ficha adminstracion.
+- Estados ??
+- la ficha genera la oc
+
+
+
+Correctivo
+por km o fechas
+- 

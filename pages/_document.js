@@ -21,6 +21,12 @@ export default function Document() {
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
+        {/* El diseño es oscuro: fija el tema de next-themes antes de hidratar */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "try{localStorage.setItem('theme','dark')}catch(e){}document.documentElement.classList.add('dark')"
+          }}
+        />
       </Head>
       <body>
         <Main />
