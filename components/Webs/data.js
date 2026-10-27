@@ -86,6 +86,42 @@ export const webs = [
     destacados: ['Filtros por ERP y versión', 'Nivel de dificultad por truco', 'Hecho con Next.js']
   },
   {
+    slug: 'falcondatabase-com',
+    web: 'falcondatabase.com',
+    nombre: 'falcondatabase',
+    categoria: 'SaaS · Backend',
+    comentario:
+      'Un backend listo para cualquier frontend, hecho con Django y PostgreSQL: creas proyectos aislados, defines tablas reales y añades login a tus apps en un clic. La portada enseña el SDK en JavaScript con un ejemplo de código, así que se entiende enseguida. Incluso se puede gestionar con un asistente de IA como Claude o Cursor.',
+    destacados: ['API REST y SDK en JavaScript', 'Login y reglas de acceso por tabla', 'Gestión con asistentes de IA']
+  },
+  {
+    slug: 'cursosdeguitarras-com',
+    web: 'www.cursosdeguitarras.com',
+    nombre: 'Cursos de Guitarras',
+    categoria: 'Formación · Música',
+    comentario:
+      'Clases de guitarra cortas e interactivas con un enfoque de juego: ganas XP, subes de nivel y desbloqueas insignias. Usa audio real para escuchar cada cuerda y afinar con el micrófono. Tras el curso básico hay 20 talleres de música cubana y latinoamericana (trova, bolero, son…) con canciones de dominio público.',
+    destacados: ['3 clases gratis, 30 € al año', 'Afinador con micrófono', 'Gamificación con XP e insignias']
+  },
+  {
+    slug: 'marlonpartners-com',
+    web: 'www.marlonpartners.com',
+    nombre: 'Marlon Partners',
+    categoria: 'Portal · Partners',
+    comentario:
+      'La red de empresas aliadas con las que trabajo. Combina un directorio público de partners con un portal privado, por invitación, donde cada partner gestiona sus contactos, sus oportunidades en un CRM por etapas y su propia ficha de marca. El diseño es sobrio y tipográfico, en azul marino.',
+    destacados: ['Directorio público de partners', 'CRM de oportunidades por etapa', 'API de partners']
+  },
+  {
+    slug: 'grabadordepantalla-online',
+    web: 'www.grabadordepantalla.online',
+    nombre: 'Grabador de Pantalla',
+    categoria: 'App · Vídeo',
+    comentario:
+      'Graba la pantalla desde el navegador en segundos, sin instalar nada, para tutoriales y presentaciones. La portada, en azul claro, tiene un mensaje muy directo y dos llamadas a la acción: empezar gratis o ver la demo. Los vídeos se guardan en el propio dispositivo, lo que refuerza la privacidad.',
+    destacados: ['Sin instalar software', 'Vídeos guardados en local', 'Empieza gratis']
+  },
+  {
     slug: 'marlonfalcon-com',
     web: 'www.marlonfalcon.com',
     nombre: 'MarlonFalcon.com',
