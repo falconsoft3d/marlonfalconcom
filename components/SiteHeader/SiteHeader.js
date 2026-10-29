@@ -5,12 +5,18 @@ import Icon from '../Icon'
 import useCarrito from '../Tienda/useCarrito'
 import { useIdioma } from '../../lib/idioma'
 
+// Un elemento es [href, etiqueta] o un grupo { etiqueta, hijos } que se muestra como desplegable
 const LINKS = [
   ['/', { es: 'Inicio', en: 'Home' }],
   ['/posts', { es: 'Artículos', en: 'Articles' }],
-  ['/webs', { es: 'Webs', en: 'Websites' }],
-  ['/odoo-espana', 'Odoo'],
-  ['/odoo-programa-gestion-construccion', 'Bim 2.0'],
+  {
+    etiqueta: { es: 'Páginas', en: 'Pages' },
+    hijos: [
+      ['/webs', { es: 'Webs', en: 'Websites' }],
+      ['/odoo-espana', 'Odoo'],
+      ['/odoo-programa-gestion-construccion', 'Bim 2.0']
+    ]
+  },
   ['/tienda', { es: 'Tienda', en: 'Store' }],
   ['/cursos', { es: 'Cursos', en: 'Courses' }],
   ['/libros', { es: 'Libros', en: 'Books' }],
@@ -75,6 +81,7 @@ export default function SiteHeader() {
   const router = useRouter()
   const [tema, alternarTema] = useTema()
   const [abierto, setAbierto] = useState(false)
+  const [grupo, setGrupo] = useState(null)
   const { lineas } = useCarrito()
   const { lang, setLang } = useIdioma()
   const t = TEXTOS[lang]
@@ -87,15 +94,40 @@ export default function SiteHeader() {
   }
 
   useEffect(() => {
-    const cerrar = () => setAbierto(false)
+    const cerrar = () => {
+      setAbierto(false)
+      setGrupo(null)
+    }
     router.events.on('routeChangeStart', cerrar)
     return () => router.events.off('routeChangeStart', cerrar)
   }, [router.events])
+
+  // El desplegable se cierra al pulsar fuera o con Escape
+  useEffect(() => {
+    if (!grupo) return
+    const fuera = (e) => !e.target.closest('.sh-group') && setGrupo(null)
+    const escape = (e) => e.key === 'Escape' && setGrupo(null)
+    document.addEventListener('click', fuera)
+    document.addEventListener('keydown', escape)
+    return () => {
+      document.removeEventListener('click', fuera)
+      document.removeEventListener('keydown', escape)
+    }
+  }, [grupo])
 
   const activo = (href) =>
     href === '/' ? router.pathname === '/' : router.asPath === href || router.asPath.startsWith(href + '/') || router.asPath.startsWith(href + '?')
 
   const etiquetaTema = tema === 'dark' ? t.claro : t.oscuro
+  const texto = (label) => (typeof label === 'string' ? label : label[lang])
+
+  const enlace = ([href, label], clase = 'sh-link') => (
+    <Link key={href} href={href}>
+      <a className={`${clase}${activo(href) ? ' active' : ''}`} aria-current={activo(href) ? 'page' : undefined}>
+        {texto(label)}
+      </a>
+    </Link>
+  )
 
   return (
     <header className={`site-header${abierto ? ' open' : ''}`}>
@@ -111,13 +143,26 @@ export default function SiteHeader() {
         </Link>
 
         <nav className="sh-nav" aria-label={t.principal}>
-          {LINKS.map(([href, label]) => (
-            <Link key={href} href={href}>
-              <a className={`sh-link${activo(href) ? ' active' : ''}`} aria-current={activo(href) ? 'page' : undefined}>
-                {typeof label === 'string' ? label : label[lang]}
-              </a>
-            </Link>
-          ))}
+          {LINKS.map((item) => {
+            if (Array.isArray(item)) return enlace(item)
+            const nombre = texto(item.etiqueta)
+            const desplegado = grupo === nombre
+            const hijoActivo = item.hijos.some(([href]) => activo(href))
+            return (
+              <div key={nombre} className={`sh-group${desplegado ? ' open' : ''}`}>
+                <button
+                  type="button"
+                  className={`sh-link sh-group-btn${hijoActivo ? ' active' : ''}`}
+                  aria-expanded={desplegado}
+                  onClick={() => setGrupo(desplegado ? null : nombre)}
+                >
+                  {nombre}
+                  <Icon name="right" size={14} />
+                </button>
+                <div className="sh-sub">{item.hijos.map((hijo) => enlace(hijo, 'sh-link sh-sublink'))}</div>
+              </div>
+            )
+          })}
         </nav>
 
         <div className="sh-actions">
@@ -248,6 +293,58 @@ export default function SiteHeader() {
           font-variation-settings: 'wght' 600;
         }
 
+        .sh-group {
+          position: relative;
+        }
+        .sh-group-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.25rem;
+          border: 0;
+          background: transparent;
+          font: inherit;
+          font-size: 0.9rem;
+          cursor: pointer;
+        }
+        .sh-group-btn svg {
+          transform: rotate(90deg);
+          transition: transform 0.15s;
+        }
+        .sh-group.open .sh-group-btn svg {
+          transform: rotate(-90deg);
+        }
+        .sh-sub {
+          position: absolute;
+          top: calc(100% + 8px);
+          left: 0;
+          z-index: 60;
+          display: none;
+          flex-direction: column;
+          gap: 0.1rem;
+          min-width: 200px;
+          padding: 0.4rem;
+          border: 1px solid var(--border);
+          border-radius: 0.8rem;
+          background: var(--bg);
+          box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.45);
+        }
+        /* Puente invisible para que el menú no se cierre al bajar el ratón */
+        .sh-sub::before {
+          content: '';
+          position: absolute;
+          top: -10px;
+          left: 0;
+          right: 0;
+          height: 10px;
+        }
+        .sh-group:hover .sh-sub,
+        .sh-group.open .sh-sub {
+          display: flex;
+        }
+        .sh-sublink {
+          border-radius: 0.55rem;
+        }
+
         .sh-actions {
           display: flex;
           align-items: center;
@@ -351,6 +448,26 @@ export default function SiteHeader() {
             padding: 0.75rem 0.9rem;
             border-radius: 0.6rem;
             font-size: 1rem;
+          }
+          /* En el menú del móvil el grupo es un título con sus enlaces siempre visibles */
+          .site-header.open .sh-group-btn {
+            width: 100%;
+            pointer-events: none;
+          }
+          .site-header.open .sh-group-btn svg {
+            display: none;
+          }
+          .site-header.open .sh-sub {
+            position: static;
+            display: flex;
+            min-width: 0;
+            padding: 0 0 0 0.9rem;
+            border: 0;
+            border-left: 2px solid var(--border);
+            margin-left: 0.9rem;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
           }
         }
         @media (max-width: 560px) {

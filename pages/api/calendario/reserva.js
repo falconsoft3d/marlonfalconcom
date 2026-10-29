@@ -1,5 +1,6 @@
 import { buscar, actualizar } from '../../../lib/falcondb'
 import { eventoPublico } from '../../../lib/calendario/publico'
+import { avisarReserva } from '../../../lib/calendario/telegram'
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
 
@@ -26,6 +27,7 @@ export default async function handler(req, res) {
       if (reserva.status === 'confirmed') {
         if (Date.parse(reserva.starts_at) < Date.now()) return res.status(409).json({ error: 'Esta reunión ya ha pasado.' })
         reserva = await actualizar('bookings', reserva.id, { status: 'cancelled', cancelled_at: new Date().toISOString() })
+        await avisarReserva(reserva, 'cancelada')
       }
     } else if (req.method !== 'GET') {
       return res.status(405).json({ error: 'Método no permitido' })

@@ -110,7 +110,7 @@ export default function NinjaReto({ onChange, renovar, t }) {
         </svg>
       </div>
       <div className="nr-fila">
-        <label className="cal-field nr-campo">
+        <label className="nr-campo">
           <span>{t.retoPregunta}</span>
           <input
             required
@@ -123,7 +123,7 @@ export default function NinjaReto({ onChange, renovar, t }) {
             placeholder="?"
           />
         </label>
-        <button type="button" className="cal-btn ghost nr-otra" onClick={pedir} title={t.retoOtra} aria-label={t.retoOtra}>
+        <button type="button" className="nr-otra" onClick={pedir} title={t.retoOtra} aria-label={t.retoOtra}>
           <Icon name="refresh" size={16} />
         </button>
       </div>
@@ -220,16 +220,44 @@ export default function NinjaReto({ onChange, renovar, t }) {
           gap: 0.5rem;
         }
         .nr-campo {
+          display: flex;
           flex: 1;
+          flex-direction: column;
+          gap: 0.35rem;
+          color: var(--text-strong);
+          font-size: 0.85rem;
+          font-variation-settings: 'wght' 600;
         }
         .nr-campo input {
+          padding: 0.7rem 0.85rem;
+          border: 1px solid var(--border);
+          border-radius: 0.6rem;
+          background: var(--surface-2);
+          color: var(--text-strong);
+          font: inherit;
           font-size: 1.1rem;
           letter-spacing: 0.1em;
+          font-variation-settings: 'wght' 500;
+        }
+        .nr-campo input:focus {
+          outline: 2px solid var(--tint-border);
+          border-color: var(--accent-2);
         }
         .nr-otra {
-          width: 46px;
-          min-height: 46px;
-          padding: 0;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          width: 48px;
+          height: 48px;
+          border: 1px solid var(--border);
+          border-radius: 50%;
+          background: transparent;
+          color: var(--text-strong);
+          cursor: pointer;
+        }
+        .nr-otra:hover {
+          border-color: var(--accent-2);
         }
       `}</style>
     </div>

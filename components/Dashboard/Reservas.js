@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import AvisosTelegram from './AvisosTelegram'
 import { api } from './api'
 import { formatoFecha, formatoHora } from '../../lib/calendario/zona'
 
@@ -30,6 +31,7 @@ export default function Reservas({ zona }) {
 
   return (
     <>
+      <AvisosTelegram />
       <div className="db-head">
         <div>
           <h2>{pasadas ? 'Reservas pasadas' : 'Próximas reservas'}</h2>

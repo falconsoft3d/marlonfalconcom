@@ -3,7 +3,7 @@ import { conSesion } from '../../../lib/calendario/sesion'
 import { zonaValida } from '../../../lib/calendario/zona'
 import { normalizarUrl } from '../../../lib/calendario/ics'
 
-// CRUD del dashboard: /api/dashboard/{ajustes|eventos|bloqueos|calendarios|reservas}
+// CRUD del dashboard: /api/dashboard/{ajustes|eventos|bloqueos|calendarios|reservas|mensajes}
 // GET lista · POST crea · PATCH ?id= actualiza · DELETE ?id= borra.
 // Cada campo pasa por su validador: lo que no esté en la lista no se guarda.
 
@@ -118,6 +118,13 @@ const RECURSOS = {
     campos: { status: estado },
     obligatorios: [],
     soloEditar: true
+  },
+  mensajes: {
+    tabla: 'contact_messages',
+    filtros: () => ({ order: 'created_at.desc', limit: '200' }),
+    campos: { read: booleano },
+    obligatorios: [],
+    sinCrear: true
   }
 }
 
@@ -144,7 +151,7 @@ export default conSesion(async function handler(req, res) {
       case 'GET':
         return res.status(200).json({ data: await listar(recurso.tabla, recurso.filtros(req.query)) })
       case 'POST':
-        if (recurso.soloEditar) break
+        if (recurso.soloEditar || recurso.sinCrear) break
         return res.status(200).json({ data: await crear(recurso.tabla, validar(recurso, req.body || {}, true)) })
       case 'PATCH': {
         if (!id) return res.status(400).json({ error: 'Falta el id.' })

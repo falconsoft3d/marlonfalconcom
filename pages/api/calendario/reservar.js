@@ -2,6 +2,7 @@ import { buscar, crear } from '../../../lib/falcondb'
 import { huecosDeEvento } from '../../../lib/calendario/disponibilidad'
 import { zonaValida } from '../../../lib/calendario/zona'
 import { retoValido } from '../../../lib/calendario/reto'
+import { avisarReserva } from '../../../lib/calendario/telegram'
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -48,6 +49,7 @@ export default async function handler(req, res) {
       status: 'confirmed'
     })
 
+    await avisarReserva(reserva, 'nueva')
     res.status(200).json({ token: reserva.token })
   } catch (e) {
     console.error('[calendario/reservar]', e)

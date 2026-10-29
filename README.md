@@ -63,5 +63,11 @@ Calendarios conectados:
 | `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET` | No | Activan el botón «Conectar con Google» |
 | `GOOGLE_REDIRECT_URI` | No | Por defecto `https://<host>/api/dashboard/google/callback` |
 | `CAPTCHA_SECRET` | No | Clave del captcha; por defecto usa `FALCONDB_SERVICE_KEY` |
+| `TELEGRAM_BOT_TOKEN` | No | Token del bot de Telegram (de @BotFather) que envía los avisos |
+| `TELEGRAM_CHAT_ID` | No | Id del grupo de Telegram donde llegan los avisos (el dashboard lo detecta con «Detectar grupo») |
 
-No se envían emails: el invitado puede añadir la reunión a su calendario y avisar por WhatsApp desde la página de confirmación.
+Avisos: con `TELEGRAM_BOT_TOKEN` y `TELEGRAM_CHAT_ID`, cada reserva nueva o cancelada y cada mensaje de `/contacto` llega al grupo de Telegram. No se envían emails: el invitado puede añadir la reunión a su calendario desde la página de confirmación.
+
+## Contacto (`/contacto`)
+
+Formulario con el mismo captcha de los ninjas. Al enviarlo se guarda en la tabla privada `contact_messages` (pestaña «Mensajes» del dashboard), se avisa por Telegram y se abre WhatsApp con el mensaje ya escrito para el +34 662 47 0645.

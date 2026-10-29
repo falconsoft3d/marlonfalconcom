@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Icon from '../Icon'
 import { api } from './api'
 import Reservas from './Reservas'
+import Mensajes from './Mensajes'
 import Ocupado from './Ocupado'
 import Horario from './Horario'
 import Bloqueos from './Bloqueos'
@@ -12,6 +13,7 @@ import Eventos from './Eventos'
 
 const PESTANAS = [
   ['reservas', 'Reservas', 'users'],
+  ['mensajes', 'Mensajes', 'mail'],
   ['ocupado', 'Horas ocupadas', 'calendar'],
   ['horario', 'Horario', 'clock'],
   ['bloqueos', 'No trabajo', 'close'],
@@ -131,6 +133,7 @@ export default function Dashboard() {
 
           <section className="db-panel">
             {pestana === 'reservas' && <Reservas {...props} />}
+            {pestana === 'mensajes' && <Mensajes {...props} />}
             {pestana === 'ocupado' && <Ocupado {...props} />}
             {pestana === 'horario' && <Horario {...props} />}
             {pestana === 'bloqueos' && <Bloqueos {...props} />}
