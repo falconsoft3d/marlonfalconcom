@@ -477,6 +477,14 @@ export default function Home() {
       <section className="band band-alt" id="contacto">
         <div className="inner contact">
           <div className="contact-text">
+            <img
+              src="/images/ninja.jpeg"
+              alt="Ninja de Marlon Falcón"
+              className="contact-ninja"
+              width={600}
+              height={600}
+              loading="lazy"
+            />
             <h2 className="section-title">{t.datos}</h2>
             <p className="section-lede">{t.datosLede}</p>
             <div className="hero-actions">
@@ -1425,6 +1433,15 @@ export default function Home() {
           grid-template-columns: 1fr 1.2fr;
           gap: 3rem;
           align-items: center;
+        }
+        .home .contact-ninja {
+          display: block;
+          width: 180px;
+          height: auto;
+          margin-bottom: 1.5rem;
+          border: 1px solid var(--border);
+          border-radius: 1.2rem;
+          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
         }
         .home .contact-grid {
           display: grid;
