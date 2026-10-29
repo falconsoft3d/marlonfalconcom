@@ -13,3 +13,7 @@ export const formatoPrecio = (precio, moneda = 'EUR') =>
 export const etiquetaVersion = (version) => `Odoo ${version.replace(/\.0$/, '')}`
 
 export const rutaModulo = (m) => `/tienda/${m.version}/${m.tecnico}`
+
+// Las imágenes pasan por /api/tienda/imagen: Odoo Apps cambia su URL cada vez que se actualiza el módulo
+export const imagenModulo = (m, tipo = 'portada') =>
+  `/api/tienda/imagen?version=${m.version}&modulo=${m.tecnico}${tipo === 'icono' ? '&tipo=icono' : ''}`

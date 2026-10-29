@@ -3,18 +3,48 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Icon from '../Icon'
 import useCarrito from '../Tienda/useCarrito'
+import { useIdioma } from '../../lib/idioma'
 
 const LINKS = [
-  ['/', 'Inicio'],
-  ['/posts', 'Artículos'],
-  ['/webs', 'Webs'],
+  ['/', { es: 'Inicio', en: 'Home' }],
+  ['/posts', { es: 'Artículos', en: 'Articles' }],
+  ['/webs', { es: 'Webs', en: 'Websites' }],
   ['/odoo-espana', 'Odoo'],
   ['/odoo-programa-gestion-construccion', 'Bim 2.0'],
-  ['/tienda', 'Tienda'],
-  ['/cursos', 'Cursos'],
-  ['/libros', 'Libros'],
-  ['/contacto', 'Contacto']
+  ['/tienda', { es: 'Tienda', en: 'Store' }],
+  ['/cursos', { es: 'Cursos', en: 'Courses' }],
+  ['/libros', { es: 'Libros', en: 'Books' }],
+  ['/contacto', { es: 'Contacto', en: 'Contact' }]
 ]
+
+const TEXTOS = {
+  es: {
+    inicio: 'Marlon Falcón Hernández, inicio',
+    principal: 'Principal',
+    claro: 'Cambiar a modo claro',
+    oscuro: 'Cambiar a modo oscuro',
+    idioma: 'Switch to English',
+    carrito: 'Carrito',
+    modulos: 'módulos',
+    contacto: 'Contáctame',
+    cerrar: 'Cerrar menú',
+    abrir: 'Abrir menú',
+    cv: '/cv'
+  },
+  en: {
+    inicio: 'Marlon Falcón Hernández, home',
+    principal: 'Main',
+    claro: 'Switch to light mode',
+    oscuro: 'Switch to dark mode',
+    idioma: 'Cambiar a español',
+    carrito: 'Cart',
+    modulos: 'modules',
+    contacto: 'Contact me',
+    cerrar: 'Close menu',
+    abrir: 'Open menu',
+    cv: '/cv/en'
+  }
+}
 
 const WHATSAPP = 'https://wa.me/34662470645'
 
@@ -45,6 +75,15 @@ export default function SiteHeader() {
   const [tema, alternarTema] = useTema()
   const [abierto, setAbierto] = useState(false)
   const { lineas } = useCarrito()
+  const { lang, setLang } = useIdioma()
+  const t = TEXTOS[lang]
+  const otroIdioma = lang === 'en' ? 'es' : 'en'
+
+  // El CV tiene una página por idioma: al cambiar de idioma se pasa a la otra
+  const cambiarIdioma = () => {
+    setLang(otroIdioma)
+    if (router.pathname === '/cv' || router.pathname === '/cv/en') router.push(TEXTOS[otroIdioma].cv)
+  }
 
   useEffect(() => {
     const cerrar = () => setAbierto(false)
@@ -55,13 +94,13 @@ export default function SiteHeader() {
   const activo = (href) =>
     href === '/' ? router.pathname === '/' : router.asPath === href || router.asPath.startsWith(href + '/') || router.asPath.startsWith(href + '?')
 
-  const etiquetaTema = tema === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'
+  const etiquetaTema = tema === 'dark' ? t.claro : t.oscuro
 
   return (
     <header className={`site-header${abierto ? ' open' : ''}`}>
       <div className="sh-inner">
         <Link href="/">
-          <a className="sh-brand" aria-label="Marlon Falcón Hernández, inicio">
+          <a className="sh-brand" aria-label={t.inicio}>
             <img className="sh-logo" src="/images/avatar.png" alt="" width={38} height={38} />
             <span className="sh-name">
               <strong>Marlon Falcón</strong>
@@ -70,17 +109,27 @@ export default function SiteHeader() {
           </a>
         </Link>
 
-        <nav className="sh-nav" aria-label="Principal">
+        <nav className="sh-nav" aria-label={t.principal}>
           {LINKS.map(([href, label]) => (
             <Link key={href} href={href}>
               <a className={`sh-link${activo(href) ? ' active' : ''}`} aria-current={activo(href) ? 'page' : undefined}>
-                {label}
+                {typeof label === 'string' ? label : label[lang]}
               </a>
             </Link>
           ))}
         </nav>
 
         <div className="sh-actions">
+          <button
+            type="button"
+            className="sh-icon sh-lang"
+            onClick={cambiarIdioma}
+            aria-label={t.idioma}
+            title={t.idioma}
+            lang={otroIdioma}
+          >
+            {otroIdioma.toUpperCase()}
+          </button>
           <button type="button" className="sh-icon" onClick={alternarTema} aria-label={etiquetaTema} title={etiquetaTema}>
             {/* Antes de montar no sabemos el tema: el icono se oculta para evitar parpadeos */}
             <span style={{ visibility: tema ? 'visible' : 'hidden', display: 'inline-flex' }}>
@@ -89,23 +138,23 @@ export default function SiteHeader() {
           </button>
           {lineas.length > 0 && (
             <Link href="/tienda/carrito">
-              <a className="sh-icon sh-cart" aria-label={`Carrito: ${lineas.length} módulos`} title="Carrito">
+              <a className="sh-icon sh-cart" aria-label={`${t.carrito}: ${lineas.length} ${t.modulos}`} title={t.carrito}>
                 <Icon name="cart" size={18} />
                 <b>{lineas.length}</b>
               </a>
             </Link>
           )}
-          <Link href="/cv">
+          <Link href={t.cv}>
             <a className="sh-btn sh-ghost">CV</a>
           </Link>
           <a className="sh-btn sh-primary" href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-            Contáctame
+            {t.contacto}
           </a>
           <button
             type="button"
             className="sh-icon sh-burger"
             onClick={() => setAbierto(!abierto)}
-            aria-label={abierto ? 'Cerrar menú' : 'Abrir menú'}
+            aria-label={abierto ? t.cerrar : t.abrir}
             aria-expanded={abierto}
           >
             <Icon name={abierto ? 'close' : 'menu'} size={20} />
@@ -220,6 +269,11 @@ export default function SiteHeader() {
         .sh-icon:hover {
           color: var(--text-strong);
           border-color: var(--accent-2);
+        }
+        .sh-lang {
+          font-size: 0.72rem;
+          letter-spacing: 0.04em;
+          font-variation-settings: 'wght' 700;
         }
         .sh-cart {
           position: relative;

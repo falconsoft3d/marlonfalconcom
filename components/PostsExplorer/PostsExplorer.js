@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Icon from '../Icon'
 import posts from '../../data/posts.json'
+import { tr, useIdioma } from '../../lib/idioma'
 
 const POR_PAGINA = 12
 
@@ -12,28 +13,28 @@ const CATEGORIAS = [
   { id: 'erp', nombre: 'ERP', match: (t) => t === 'erp' },
   {
     id: 'construccion',
-    nombre: 'Construcción y BIM',
+    nombre: { es: 'Construcción y BIM', en: 'Construction and BIM' },
     match: (t) => ['bim', 'bim20', 'construccion', 'revit'].includes(t)
   },
-  { id: 'python', nombre: 'Python y Django', match: (t) => ['python', 'django'].includes(t) },
+  { id: 'python', nombre: { es: 'Python y Django', en: 'Python and Django' }, match: (t) => ['python', 'django'].includes(t) },
   {
     id: 'javascript',
     nombre: 'JavaScript',
     match: (t) => ['javascript', 'react', 'nodejs', 'nextjs', 'bootstrap'].includes(t)
   },
-  { id: 'flutter', nombre: 'Flutter y Dart', match: (t) => ['flutter', 'dart'].includes(t) },
+  { id: 'flutter', nombre: { es: 'Flutter y Dart', en: 'Flutter and Dart' }, match: (t) => ['flutter', 'dart'].includes(t) },
   {
     id: 'devops',
-    nombre: 'DevOps y Linux',
+    nombre: { es: 'DevOps y Linux', en: 'DevOps and Linux' },
     match: (t) => ['docker', 'linux', 'ssh', 'kubernetes', 'postgresql'].includes(t)
   },
-  { id: 'credito', nombre: 'Créditos', match: (t) => t.startsWith('credi') },
+  { id: 'credito', nombre: { es: 'Créditos', en: 'Loans' }, match: (t) => t.startsWith('credi') },
   {
     id: 'programacion',
-    nombre: 'Programación',
+    nombre: { es: 'Programación', en: 'Programming' },
     match: (t) => ['20pasos', 'programacion', 'api', 'tools', 'csharp', 'crud'].includes(t)
   },
-  { id: 'metodologia', nombre: 'Metodología', match: (t) => ['metodologia', 'experto'].includes(t) }
+  { id: 'metodologia', nombre: { es: 'Metodología', en: 'Methodology' }, match: (t) => ['metodologia', 'experto'].includes(t) }
 ]
 
 const normalizar = (s) =>
@@ -59,16 +60,50 @@ const CONTEO = INDEXADOS.reduce((acc, p) => {
 }, {})
 
 const LISTA_CATEGORIAS = [
-  { id: 'todas', nombre: 'Todas', total: INDEXADOS.length },
+  { id: 'todas', nombre: { es: 'Todas', en: 'All' }, total: INDEXADOS.length },
   ...CATEGORIAS.map((c) => ({ id: c.id, nombre: c.nombre, total: CONTEO[c.id] || 0 })).filter((c) => c.total),
-  ...(CONTEO.otros ? [{ id: 'otros', nombre: 'Otros', total: CONTEO.otros }] : [])
+  ...(CONTEO.otros ? [{ id: 'otros', nombre: { es: 'Otros', en: 'Other' }, total: CONTEO.otros }] : [])
 ]
 
-const MESES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic']
-const formatoFecha = (iso) => {
+const TEXTOS = {
+  es: {
+    titulo: 'Artículos',
+    lede: (total) => `${total} artículos sobre Odoo, ERP, construcción, programación y más.`,
+    buscar: 'Buscar artículos…',
+    buscarLabel: 'Buscar artículos',
+    borrar: 'Borrar búsqueda',
+    categorias: 'Categorías',
+    resultados: (n) => `${n} ${n === 1 ? 'resultado' : 'resultados'}`,
+    pagina: (actual, total) => ` · página ${actual} de ${total}`,
+    vacio: 'No hay artículos que coincidan con tu búsqueda.',
+    todos: 'Ver todos los artículos',
+    paginacion: 'Paginación',
+    anterior: '← Anterior',
+    siguiente: 'Siguiente',
+    meses: ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic']
+  },
+  en: {
+    titulo: 'Articles',
+    lede: (total) => `${total} articles about Odoo, ERP, construction, programming and more. All articles are written in Spanish.`,
+    buscar: 'Search articles…',
+    buscarLabel: 'Search articles',
+    borrar: 'Clear search',
+    categorias: 'Categories',
+    resultados: (n) => `${n} ${n === 1 ? 'result' : 'results'}`,
+    pagina: (actual, total) => ` · page ${actual} of ${total}`,
+    vacio: 'No articles match your search.',
+    todos: 'View all articles',
+    paginacion: 'Pagination',
+    anterior: '← Previous',
+    siguiente: 'Next',
+    meses: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
+  }
+}
+
+const formatoFecha = (iso, meses) => {
   if (!iso) return ''
   const [y, m, d] = iso.split('-')
-  return `${Number(d)} ${MESES[Number(m) - 1]} ${y}`
+  return `${Number(d)} ${meses[Number(m) - 1]} ${y}`
 }
 
 // Números de página con "…" cuando hay muchas
@@ -85,6 +120,8 @@ const paginas = (actual, total) => {
 
 export default function PostsExplorer() {
   const router = useRouter()
+  const { lang } = useIdioma()
+  const t = TEXTOS[lang]
   const [q, setQ] = useState('')
   const [cat, setCat] = useState('todas')
   const [tag, setTag] = useState('')
@@ -141,10 +178,8 @@ export default function PostsExplorer() {
   return (
     <div className="px" id="posts-top">
       <header className="px-head">
-        <h2 className="px-title">Artículos</h2>
-        <p className="px-lede">
-          {INDEXADOS.length} artículos sobre Odoo, ERP, construcción, programación y más.
-        </p>
+        <h2 className="px-title">{t.titulo}</h2>
+        <p className="px-lede">{t.lede(INDEXADOS.length)}</p>
         <label className="px-search">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true">
             <circle cx="11" cy="11" r="7" />
@@ -152,13 +187,13 @@ export default function PostsExplorer() {
           </svg>
           <input
             type="search"
-            placeholder="Buscar artículos…"
+            placeholder={t.buscar}
             value={q}
             onChange={(e) => actualizar({ q: e.target.value })}
-            aria-label="Buscar artículos"
+            aria-label={t.buscarLabel}
           />
           {q && (
-            <button type="button" className="px-clear" onClick={() => actualizar({ q: '' })} aria-label="Borrar búsqueda">
+            <button type="button" className="px-clear" onClick={() => actualizar({ q: '' })} aria-label={t.borrar}>
               ×
             </button>
           )}
@@ -166,8 +201,8 @@ export default function PostsExplorer() {
       </header>
 
       <div className="px-layout">
-        <nav className="px-cats" aria-label="Categorías">
-          <span className="px-cats-title">Categorías</span>
+        <nav className="px-cats" aria-label={t.categorias}>
+          <span className="px-cats-title">{t.categorias}</span>
           {LISTA_CATEGORIAS.map((c) => (
             <button
               key={c.id}
@@ -176,7 +211,7 @@ export default function PostsExplorer() {
               onClick={() => actualizar({ cat: c.id, tag: '' })}
               aria-pressed={cat === c.id}
             >
-              <span>{c.nombre}</span>
+              <span>{tr(c.nombre, lang)}</span>
               <span className="px-count">{c.total}</span>
             </button>
           ))}
@@ -185,8 +220,8 @@ export default function PostsExplorer() {
         <div className="px-main">
           <div className="px-status">
             <span>
-              {filtrados.length} {filtrados.length === 1 ? 'resultado' : 'resultados'}
-              {totalPaginas > 1 && ` · página ${actual} de ${totalPaginas}`}
+              {t.resultados(filtrados.length)}
+              {totalPaginas > 1 && t.pagina(actual, totalPaginas)}
             </span>
             {tag && (
               <button type="button" className="px-active-tag" onClick={() => actualizar({ tag: '' })}>
@@ -201,7 +236,7 @@ export default function PostsExplorer() {
                 <li key={p.slug} className="px-item">
                   <Link href={`/posts/${p.slug}`}>
                     <a className="px-link">
-                      <span className="px-date">{formatoFecha(p.date)}</span>
+                      <span className="px-date">{formatoFecha(p.date, t.meses)}</span>
                       <span className="px-item-title">{p.title}</span>
                       {p.description && p.description !== p.title && (
                         <span className="px-desc">{p.description}</span>
@@ -227,17 +262,17 @@ export default function PostsExplorer() {
             </ul>
           ) : (
             <div className="px-empty">
-              <p>No hay artículos que coincidan con tu búsqueda.</p>
+              <p>{t.vacio}</p>
               <button type="button" className="px-btn" onClick={() => actualizar({ q: '', cat: 'todas', tag: '' })}>
-                Ver todos los artículos
+                {t.todos}
               </button>
             </div>
           )}
 
           {totalPaginas > 1 && (
-            <nav className="px-pages" aria-label="Paginación">
+            <nav className="px-pages" aria-label={t.paginacion}>
               <button type="button" className="px-page" disabled={actual === 1} onClick={() => irA(actual - 1)}>
-                ← Anterior
+                {t.anterior}
               </button>
               <div className="px-page-nums">
                 {paginas(actual, totalPaginas).map((n) =>
@@ -264,7 +299,7 @@ export default function PostsExplorer() {
                 disabled={actual === totalPaginas}
                 onClick={() => irA(actual + 1)}
               >
-                Siguiente <Icon name="arrow" size={14} />
+                {t.siguiente} <Icon name="arrow" size={14} />
               </button>
             </nav>
           )}

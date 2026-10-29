@@ -4,39 +4,41 @@ import { useRouter } from 'next/router'
 import Icon from '../Icon'
 import Marco from './Marco'
 import useCarrito from './useCarrito'
-import { EMAIL_COMPROBANTE, formatoPrecio, etiquetaVersion, rutaModulo } from './data'
+import { EMAIL_COMPROBANTE, formatoPrecio, etiquetaVersion, rutaModulo, imagenModulo } from './data'
+import useTextos from './textos'
 
 const PAYPAL_CLIENT_ID = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
+// Las etiquetas de cada campo están en textos.js
 const CAMPOS = [
-  ['nombre', 'Nombre y apellidos *', 'text', 'name'],
-  ['email', 'Email *', 'email', 'email'],
-  ['empresa', 'Empresa', 'text', 'organization'],
-  ['nif', 'NIF / CIF', 'text', 'off'],
-  ['pais', 'País', 'text', 'country-name'],
-  ['telefono', 'Teléfono', 'tel', 'tel']
+  ['nombre', 'text', 'name'],
+  ['email', 'email', 'email'],
+  ['empresa', 'text', 'organization'],
+  ['nif', 'text', 'off'],
+  ['pais', 'text', 'country-name'],
+  ['telefono', 'tel', 'tel']
 ]
 
-async function enviar(url, cuerpo) {
+async function enviar(url, cuerpo, errorGenerico) {
   const res = await fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(cuerpo)
   })
   const json = await res.json().catch(() => ({}))
-  if (!res.ok) throw new Error(json.error || 'Algo ha fallado. Inténtalo de nuevo.')
+  if (!res.ok) throw new Error(json.error || errorGenerico)
   return json
 }
 
 // Carga el SDK de PayPal una sola vez
-function usePaypal(moneda) {
+function usePaypal(moneda, locale) {
   const [listo, setListo] = useState(false)
   useEffect(() => {
     if (!PAYPAL_CLIENT_ID || !moneda) return
     if (window.paypal) return setListo(true)
     const s = document.createElement('script')
-    s.src = `https://www.paypal.com/sdk/js?client-id=${PAYPAL_CLIENT_ID}&currency=${moneda}&intent=capture&locale=es_ES&disable-funding=paylater`
+    s.src = `https://www.paypal.com/sdk/js?client-id=${PAYPAL_CLIENT_ID}&currency=${moneda}&intent=capture&locale=${locale}&disable-funding=paylater`
     s.onload = () => setListo(true)
     document.body.appendChild(s)
   }, [moneda])
@@ -46,23 +48,29 @@ function usePaypal(moneda) {
 export default function Carrito() {
   const router = useRouter()
   const { lineas, total, quitar, vaciar } = useCarrito()
-  const [cliente, setCliente] = useState({ nombre: '', email: '', empresa: '', nif: '', pais: 'España', telefono: '', notas: '' })
+  const t = useTextos()
+  const [cliente, setCliente] = useState({ nombre: '', email: '', empresa: '', nif: '', pais: t.paisInicial, telefono: '', notas: '' })
   const [error, setError] = useState('')
   const [enviando, setEnviando] = useState(false)
   const [acepto, setAcepto] = useState(false)
 
   const moneda = lineas[0]?.moneda || 'EUR'
-  const paypalListo = usePaypal(lineas.length ? moneda : null)
+  const paypalListo = usePaypal(lineas.length ? moneda : null, t.paypalLocale)
   const botones = useRef(null)
 
-  // Los botones de PayPal se crean una vez: leen siempre el formulario más reciente
+  // El país por defecto depende del idioma mientras el usuario no lo haya cambiado
+  useEffect(() => {
+    setCliente((c) => (['España', ''].includes(c.pais) ? { ...c, pais: t.paisInicial } : c))
+  }, [t])
+
+  // Los botones de PayPal se crean una vez: leen siempre el formulario y los textos más recientes
   const estado = useRef({})
-  estado.current = { cliente, lineas, acepto }
+  estado.current = { cliente, lineas, acepto, t }
 
   const validar = () => {
-    const { cliente: c, acepto: a } = estado.current
-    if (!c.nombre.trim() || !EMAIL.test(c.email.trim())) return 'Indica tu nombre y un email válido.'
-    if (!a) return 'Debes aceptar las condiciones de compra.'
+    const { cliente: c, acepto: a, t: textos } = estado.current
+    if (!c.nombre.trim() || !EMAIL.test(c.email.trim())) return textos.errorDatos
+    if (!a) return textos.errorCondiciones
     return ''
   }
 
@@ -72,10 +80,14 @@ export default function Carrito() {
   }
 
   const crearPedido = () =>
-    enviar('/api/tienda/pedido', {
-      cliente: estado.current.cliente,
-      claves: estado.current.lineas.map((l) => l.clave)
-    })
+    enviar(
+      '/api/tienda/pedido',
+      {
+        cliente: estado.current.cliente,
+        claves: estado.current.lineas.map((l) => l.clave)
+      },
+      estado.current.t.errorGenerico
+    )
 
   useEffect(() => {
     if (!paypalListo || !botones.current || !lineas.length) return
@@ -103,13 +115,13 @@ export default function Carrito() {
       onApprove: async (data) => {
         setEnviando(true)
         try {
-          verPedido(await enviar('/api/tienda/capturar', { id: data.orderID }))
+          verPedido(await enviar('/api/tienda/capturar', { id: data.orderID }, estado.current.t.errorGenerico))
         } catch (e) {
           setError(e.message)
           setEnviando(false)
         }
       },
-      onError: () => setError((actual) => actual || 'PayPal no ha podido completar el pago. Inténtalo de nuevo.')
+      onError: () => setError((actual) => actual || estado.current.t.errorPaypal)
     })
     instancia.render(contenedor)
     return () => {
@@ -137,23 +149,23 @@ export default function Carrito() {
   const cambiar = (campo) => (e) => setCliente({ ...cliente, [campo]: e.target.value })
 
   return (
-    <Marco titulo="Carrito · Tienda de módulos Odoo">
-      <h1 className="tn-title">Carrito</h1>
+    <Marco titulo={t.carritoTitulo}>
+      <h1 className="tn-title">{t.carrito}</h1>
 
       {lineas.length === 0 ? (
         <div className="tn-empty">
-          <p>Tu carrito está vacío.</p>
+          <p>{t.vacio}</p>
           <Link href="/tienda">
-            <a className="tn-btn">Ver módulos</a>
+            <a className="tn-btn">{t.verModulos}</a>
           </Link>
         </div>
       ) : (
         <div className="tk">
-          <section className="tk-lines" aria-label="Módulos en el carrito">
+          <section className="tk-lines" aria-label={t.enCarritoLabel}>
             {lineas.map((l) => (
               <div key={l.clave} className="tk-line">
                 <Link href={rutaModulo(l)}>
-                  <a className="tk-thumb">{l.imagen && <img src={l.imagen} alt="" />}</a>
+                  <a className="tk-thumb">{l.imagen && <img src={imagenModulo(l)} alt="" />}</a>
                 </Link>
                 <div className="tk-desc">
                   <Link href={rutaModulo(l)}>
@@ -164,55 +176,55 @@ export default function Carrito() {
                   </span>
                 </div>
                 <b className="tk-price">{formatoPrecio(l.precio, l.moneda)}</b>
-                <button type="button" className="tk-remove" onClick={() => quitar(l.clave)} aria-label={`Quitar ${l.nombre}`}>
+                <button type="button" className="tk-remove" onClick={() => quitar(l.clave)} aria-label={t.quitar(l.nombre)}>
                   <Icon name="trash" size={17} />
                 </button>
               </div>
             ))}
-            <p className="tk-note">
-              Una licencia por módulo y versión. Recibirás el código fuente completo por email. Los precios se
-              confirman con Odoo Apps al pagar.
-            </p>
+            <p className="tk-note">{t.nota}</p>
           </section>
 
           <form className="tk-checkout" onSubmit={pedidoManual} noValidate>
-            <h2>Tus datos</h2>
+            <h2>{t.tusDatos}</h2>
             <div className="tk-fields">
-              {CAMPOS.map(([campo, etiqueta, tipo, auto]) => (
+              {CAMPOS.map(([campo, tipo, auto]) => (
                 <label key={campo}>
-                  <span>{etiqueta}</span>
+                  <span>{t.campos[campo]}</span>
                   <input type={tipo} autoComplete={auto} value={cliente[campo]} onChange={cambiar(campo)} />
                 </label>
               ))}
               <label className="wide">
-                <span>Notas (versión exacta, edición Community / Enterprise…)</span>
+                <span>{t.notas}</span>
                 <textarea rows={3} value={cliente.notas} onChange={cambiar('notas')} />
               </label>
             </div>
 
             <div className="tk-total">
-              <span>Total ({lineas.length} {lineas.length === 1 ? 'módulo' : 'módulos'})</span>
+              <span>
+                {t.total} ({t.modulos(lineas.length)})
+              </span>
               <b>{formatoPrecio(total, moneda)}</b>
             </div>
 
             <label className="tk-accept">
               <input type="checkbox" checked={acepto} onChange={(e) => setAcepto(e.target.checked)} />
-              <span>Acepto que es un producto digital: tras recibir el código fuente no admite devolución.</span>
+              <span>{t.acepto}</span>
             </label>
 
             {PAYPAL_CLIENT_ID ? (
               <div className="tk-pay">
-                {!paypalListo && <p className="tk-loading">Cargando PayPal…</p>}
+                {!paypalListo && <p className="tk-loading">{t.cargandoPaypal}</p>}
                 <div ref={botones} aria-busy={enviando} />
               </div>
             ) : (
               <div className="tk-pay">
                 <button type="submit" className="tn-btn tk-submit" disabled={enviando}>
-                  {enviando ? 'Registrando pedido…' : 'Confirmar pedido'}
+                  {enviando ? t.registrando : t.confirmar}
                 </button>
                 <p className="tk-manual">
-                  Al confirmar verás cómo pagar por PayPal. Envía el comprobante a <b>{EMAIL_COMPROBANTE}</b> con tu
-                  número de pedido y te mandaré los módulos.
+                  {t.manualAntes}
+                  <b>{EMAIL_COMPROBANTE}</b>
+                  {t.manualDespues}
                 </p>
               </div>
             )}

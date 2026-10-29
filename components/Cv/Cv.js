@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import Icon from '../Icon'
 import { cv } from './data'
+import { useIdioma } from '../../lib/idioma'
 
 export default function Cv({ lang = 'es' }) {
   const d = cv[lang]
   const t = d.etiquetas
+  const router = useRouter()
+  const { lang: idiomaSitio, setLang } = useIdioma()
+
+  // Quien navega en inglés y abre el CV en español pasa a la versión en inglés
+  useEffect(() => {
+    if (lang === 'es' && idiomaSitio === 'en') router.replace(cv.en.ruta)
+  }, [lang, idiomaSitio])
 
   return (
     <>
@@ -20,7 +29,12 @@ export default function Cv({ lang = 'es' }) {
           <div className="cv-langs" role="group" aria-label="Idioma / Language">
             {Object.entries(cv).map(([codigo, version]) => (
               <Link key={codigo} href={version.ruta}>
-                <a className={`cv-lang-btn${codigo === lang ? ' active' : ''}`} hrefLang={codigo} aria-current={codigo === lang ? 'page' : undefined}>
+                <a
+                  className={`cv-lang-btn${codigo === lang ? ' active' : ''}`}
+                  hrefLang={codigo}
+                  aria-current={codigo === lang ? 'page' : undefined}
+                  onClick={() => setLang(codigo)}
+                >
                   {codigo.toUpperCase()}
                 </a>
               </Link>

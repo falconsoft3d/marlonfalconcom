@@ -1,9 +1,10 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/router'
 import Icon from '../Icon'
 import Marco from './Marco'
 import Tarjeta from './Tarjeta'
 import { ODOO_AUTOR_URL, etiquetaVersion } from './data'
+import useTextos from './textos'
 
 const ORDENES = {
   relevancia: (a, b) => a.orden - b.orden,
@@ -19,9 +20,142 @@ const normalizar = (s = '') =>
     .normalize('NFD')
     .replace(/[̀-ͯ]/g, '')
 
-// Catálogo leído de apps.odoo.com, agrupado por versión de Odoo como en Odoo Apps
-export default function Tienda({ modulos, actualizado }) {
+// Al entrar se lee el catálogo en vivo de apps.odoo.com y, mientras tanto, se muestra la carga
+export default function Tienda() {
+  const t = useTextos()
+  const [datos, setDatos] = useState(null)
+  const [error, setError] = useState(false)
+
+  const cargar = useCallback(() => {
+    setError(false)
+    fetch('/api/tienda/catalogo')
+      .then((res) => {
+        if (!res.ok) throw new Error()
+        return res.json()
+      })
+      .then(setDatos)
+      .catch(() => setError(true))
+  }, [])
+
+  useEffect(cargar, [cargar])
+
+  if (datos) return <Catalogo {...datos} />
+
+  return (
+    <Marco titulo={t.catalogoTitulo} descripcion={t.catalogoDescripcion}>
+      <h1 className="tn-title">{t.catalogoH1}</h1>
+
+      {error ? (
+        <div className="tn-empty">
+          <p>{t.errorCatalogo}</p>
+          <button type="button" className="tn-btn" onClick={cargar}>
+            {t.reintentar}
+          </button>
+        </div>
+      ) : (
+        <div className="tl" role="status" aria-live="polite">
+          <p className="tl-msg">
+            <span className="tl-spin" aria-hidden="true" />
+            {t.cargandoCatalogo}
+          </p>
+          <div className="tl-grid" aria-hidden="true">
+            {Array.from({ length: 8 }, (_, i) => (
+              <div key={i} className="tl-card">
+                <span className="tl-cover" />
+                <span className="tl-line" />
+                <span className="tl-line short" />
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <style jsx global>{`
+        .tl-msg {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          margin: 0.5rem 0 2rem;
+          color: var(--muted);
+        }
+        .tl-spin {
+          width: 20px;
+          height: 20px;
+          border: 2px solid var(--border);
+          border-top-color: var(--accent-2);
+          border-radius: 50%;
+          animation: tl-giro 0.8s linear infinite;
+        }
+        .tl-grid {
+          display: grid;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: 1.75rem 1.5rem;
+        }
+        .tl-card {
+          display: flex;
+          flex-direction: column;
+          gap: 0.8rem;
+          padding-bottom: 1.25rem;
+          border: 1px solid var(--border);
+          border-radius: 0.9rem;
+          background: var(--surface);
+          overflow: hidden;
+        }
+        .tl-cover,
+        .tl-line {
+          display: block;
+          background: linear-gradient(90deg, var(--surface-2) 25%, var(--border) 50%, var(--surface-2) 75%);
+          background-size: 200% 100%;
+          animation: tl-brillo 1.4s ease-in-out infinite;
+        }
+        .tl-cover {
+          aspect-ratio: 2 / 1;
+        }
+        .tl-line {
+          height: 0.9rem;
+          margin: 0 1.1rem;
+          border-radius: 999px;
+        }
+        .tl-line.short {
+          width: 45%;
+        }
+        @keyframes tl-giro {
+          to {
+            transform: rotate(360deg);
+          }
+        }
+        @keyframes tl-brillo {
+          from {
+            background-position: 200% 0;
+          }
+          to {
+            background-position: -200% 0;
+          }
+        }
+        @media (max-width: 1080px) {
+          .tl-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+          }
+        }
+        @media (max-width: 820px) {
+          .tl-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+        }
+        @media (max-width: 540px) {
+          .tl-grid {
+            grid-template-columns: minmax(0, 1fr);
+          }
+        }
+      `}</style>
+    </Marco>
+  )
+}
+
+// Catálogo agrupado por versión de Odoo como en Odoo Apps
+function Catalogo({ modulos, actualizado }) {
   const router = useRouter()
+  const t = useTextos()
   const [version, setVersion] = useState('todas')
   const [categoria, setCategoria] = useState('')
   const [precio, setPrecio] = useState('')
@@ -72,54 +206,54 @@ export default function Tienda({ modulos, actualizado }) {
 
   return (
     <Marco
-      titulo="Tienda de módulos Odoo · Marlon Falcón Hernández"
-      descripcion="Compra módulos de Odoo de Marlon Falcón Hernández para Odoo 14 a 20: contabilidad, facturación electrónica, ventas, construcción y logística."
+      titulo={t.catalogoTitulo}
+      descripcion={t.catalogoDescripcion}
     >
       <header className="ts-head">
         <div>
-          <h1 className="tn-title">Módulos de Odoo</h1>
+          <h1 className="tn-title">{t.catalogoH1}</h1>
           <p className="tn-lede">
-            {tecnicos} módulos publicados en{' '}
+            {t.publicados(tecnicos)}
             <a href={ODOO_AUTOR_URL} target="_blank" rel="noopener noreferrer">
               Odoo Apps
             </a>
-            , con el código fuente completo. Elige la versión de tu Odoo, añádelos al carrito y paga con PayPal.
+            {t.publicadosFin}
           </p>
         </div>
         <label className="ts-search">
           <Icon name="search" size={17} />
           <input
             type="search"
-            placeholder="Buscar módulo…"
+            placeholder={t.buscar}
             value={busqueda}
             onChange={(e) => setBusqueda(e.target.value)}
-            aria-label="Buscar módulo"
+            aria-label={t.buscarLabel}
           />
         </label>
       </header>
 
       <div className="ts-bar">
         <label>
-          <span>Categoría</span>
+          <span>{t.categoria}</span>
           <select value={categoria} onChange={(e) => setCategoria(e.target.value)}>
-            <option value="">Todas</option>
+            <option value="">{t.todas}</option>
             {categorias.map((c) => (
               <option key={c}>{c}</option>
             ))}
           </select>
         </label>
         <label>
-          <span>Precio</span>
+          <span>{t.precio}</span>
           <select value={precio} onChange={(e) => setPrecio(e.target.value)}>
-            <option value="">Todos</option>
-            <option value="pago">De pago</option>
-            <option value="gratis">Gratis</option>
+            <option value="">{t.todos}</option>
+            <option value="pago">{t.dePago}</option>
+            <option value="gratis">{t.gratis}</option>
           </select>
         </label>
         <label>
-          <span>Versión</span>
+          <span>{t.version}</span>
           <select value={version} onChange={(e) => elegirVersion(e.target.value)}>
-            <option value="todas">Todas</option>
+            <option value="todas">{t.todas}</option>
             {versiones.map(([v]) => (
               <option key={v} value={v}>
                 {v}
@@ -128,20 +262,20 @@ export default function Tienda({ modulos, actualizado }) {
           </select>
         </label>
         <label className="ts-sort">
-          <span>Ordenar por</span>
+          <span>{t.ordenarPor}</span>
           <select value={orden} onChange={(e) => setOrden(e.target.value)}>
-            <option value="relevancia">Relevancia</option>
-            <option value="nombre">Nombre</option>
-            <option value="precio-asc">Precio: menor a mayor</option>
-            <option value="precio-desc">Precio: mayor a menor</option>
-            <option value="descargas">Descargas</option>
+            {Object.keys(ORDENES).map((clave) => (
+              <option key={clave} value={clave}>
+                {t.ordenes[clave]}
+              </option>
+            ))}
           </select>
         </label>
       </div>
 
-      <nav className="ts-versions" aria-label="Versiones de Odoo">
+      <nav className="ts-versions" aria-label={t.versionesLabel}>
         <button type="button" className={version === 'todas' ? 'on' : ''} onClick={() => elegirVersion('todas')}>
-          Todas <small>{modulos.length}</small>
+          {t.todas} <small>{modulos.length}</small>
         </button>
         {versiones.map(([v, n]) => (
           <button key={v} type="button" className={version === v ? 'on' : ''} onClick={() => elegirVersion(v)}>
@@ -150,15 +284,13 @@ export default function Tienda({ modulos, actualizado }) {
         ))}
       </nav>
 
-      {grupos.length === 0 && <p className="tn-empty">No hay módulos con esos filtros.</p>}
+      {grupos.length === 0 && <p className="tn-empty">{t.sinModulos}</p>}
 
       {grupos.map(([v, lista]) => (
         <section key={v} className="ts-group">
           <h2>
             {etiquetaVersion(v)}
-            <span>
-              {lista.length} {lista.length === 1 ? 'módulo' : 'módulos'}
-            </span>
+            <span>{t.modulos(lista.length)}</span>
           </h2>
           <div className="ts-grid">
             {lista.map((m) => (
@@ -169,8 +301,8 @@ export default function Tienda({ modulos, actualizado }) {
       ))}
 
       <p className="ts-sync">
-        Catálogo sincronizado con Odoo Apps · actualizado el{' '}
-        {new Date(actualizado).toLocaleString('es-ES', { dateStyle: 'long', timeStyle: 'short', timeZone: 'Europe/Madrid' })}
+        {t.sincronizado}
+        {new Date(actualizado).toLocaleString(t.locale, { dateStyle: 'long', timeStyle: 'short', timeZone: 'Europe/Madrid' })}
       </p>
 
       <style jsx global>{`

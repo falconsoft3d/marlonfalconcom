@@ -1,8 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useIdioma } from '../../../lib/idioma'
 
 export default function ButtonCall() {
+  const { lang } = useIdioma()
   return (
             <>
             {/* 
@@ -33,7 +35,7 @@ export default function ButtonCall() {
 
                 <div className="container-button">
                     <a href="callto:+34662470645" target="_blank" rel="noopener noreferrer" 
-                        className="button-call">LLAMAR +34 662 47 0645</a>
+                        className="button-call">{lang === 'en' ? 'CALL' : 'LLAMAR'} +34 662 47 0645</a>
                 </div>
 
                 <style jsx>{`

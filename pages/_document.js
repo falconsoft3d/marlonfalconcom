@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document';
+import { SCRIPT_IDIOMA } from '../lib/idioma';
 
 export default function Document() {
   const meta = {
@@ -34,6 +35,8 @@ export default function Document() {
               "(function(){var t='dark';try{var s=localStorage.getItem('theme');if(s==='light'||s==='dark'){t=s}else{localStorage.setItem('theme',t)}}catch(e){}var h=document.documentElement;h.classList.toggle('dark',t==='dark');h.style.colorScheme=t})()"
           }}
         />
+        {/* Elige el idioma (español o inglés) antes de pintar */}
+        <script dangerouslySetInnerHTML={{ __html: SCRIPT_IDIOMA }} />
       </Head>
       <body>
         <Main />

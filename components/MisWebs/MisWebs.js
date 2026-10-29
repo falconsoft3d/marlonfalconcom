@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { useIdioma } from '../../lib/idioma'
 
 const toUrl = (web) => (/^https?:\/\//.test(web) ? web : `https://${web}`)
 
@@ -24,8 +25,15 @@ const Globo = ({ size, className }) => (
   </svg>
 )
 
+const TEXTOS = {
+  es: { titulo: 'Mis webs', todas: 'Ver con capturas →' },
+  en: { titulo: 'My websites', todas: 'View with screenshots →' }
+}
+
 export default function MisWebs() {
   const [webs, setWebs] = useState([])
+  const { lang } = useIdioma()
+  const t = TEXTOS[lang]
 
   useEffect(() => {
     fetch('/api/mis-webs')
@@ -40,10 +48,10 @@ export default function MisWebs() {
     <div className="mis-webs">
       <div className="mis-webs-head">
         <h4>
-          <Globo size={18} className="mw-globe-head" /> Mis webs
+          <Globo size={18} className="mw-globe-head" /> {t.titulo}
         </h4>
         <Link href="/webs">
-          <a className="mis-webs-all">Ver con capturas →</a>
+          <a className="mis-webs-all">{t.todas}</a>
         </Link>
       </div>
       <ul>

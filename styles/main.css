@@ -158,3 +158,21 @@ body {
 .next-image {
   border-radius: 5px;
 }
+
+/* Mientras se aplica el inglés la página se oculta para no ver el español un instante (ver lib/idioma.js) */
+html.lang-pending body {
+  visibility: hidden;
+}
+
+/* Aviso en los artículos: solo están en español */
+.solo-es {
+  width: calc(100% - 2rem);
+  max-width: 41.25rem;
+  margin: 1.25rem auto 0;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--tint-border);
+  border-radius: 0.75rem;
+  background: var(--tint);
+  color: var(--text);
+  font-size: 0.9rem;
+}

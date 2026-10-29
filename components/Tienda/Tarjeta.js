@@ -2,11 +2,13 @@ import React from 'react'
 import Link from 'next/link'
 import Icon from '../Icon'
 import useCarrito from './useCarrito'
-import { formatoPrecio, rutaModulo } from './data'
+import { formatoPrecio, rutaModulo, imagenModulo } from './data'
+import useTextos from './textos'
 
 // Tarjeta de módulo con el formato de apps.odoo.com (la portada ya trae la etiqueta de versión)
 export default function Tarjeta({ modulo: m }) {
   const { anadir, tiene } = useCarrito()
+  const t = useTextos()
   const enCarrito = tiene(m.clave)
   const gratis = !(m.precio > 0)
 
@@ -15,7 +17,7 @@ export default function Tarjeta({ modulo: m }) {
       <Link href={rutaModulo(m)}>
         <a className="tc-link">
           <span className="tc-cover">
-            {m.imagen && <img src={m.imagen} alt="" loading="lazy" />}
+            {m.imagen && <img src={imagenModulo(m)} alt="" loading="lazy" />}
             {m.resumen && <span className="tc-summary">{m.resumen}</span>}
           </span>
           <span className="tc-body">
@@ -24,7 +26,7 @@ export default function Tarjeta({ modulo: m }) {
             </span>
             <span className="tc-row">
               <span className="tc-author">{m.autor}</span>
-              <b className="tc-price">{gratis ? 'GRATIS' : formatoPrecio(m.precio, m.moneda)}</b>
+              <b className="tc-price">{gratis ? t.gratisMayus : formatoPrecio(m.precio, m.moneda)}</b>
             </span>
           </span>
         </a>
@@ -34,13 +36,13 @@ export default function Tarjeta({ modulo: m }) {
         <span className="tc-meta">
           {m.categoria}
           {m.descargas > 0 && (
-            <span title="Descargas totales en Odoo Apps">
+            <span title={t.descargasTotales}>
               <Icon name="download" size={13} /> {m.descargas}
             </span>
           )}
         </span>
         {gratis ? (
-          <a className="tc-cart" href={m.url} target="_blank" rel="noopener noreferrer" title="Descargar gratis en Odoo Apps">
+          <a className="tc-cart" href={m.url} target="_blank" rel="noopener noreferrer" title={t.descargarGratis}>
             <Icon name="external" size={16} />
           </a>
         ) : (
@@ -49,8 +51,8 @@ export default function Tarjeta({ modulo: m }) {
             className={`tc-cart${enCarrito ? ' in' : ''}`}
             onClick={() => anadir(m)}
             disabled={enCarrito}
-            aria-label={enCarrito ? `${m.nombre} ya está en el carrito` : `Añadir ${m.nombre} al carrito`}
-            title={enCarrito ? 'En el carrito' : 'Añadir al carrito'}
+            aria-label={enCarrito ? t.yaEnCarrito(m.nombre) : t.anadirModulo(m.nombre)}
+            title={enCarrito ? t.enCarrito : t.anadir}
           >
             <Icon name={enCarrito ? 'check' : 'cart'} size={16} />
           </button>

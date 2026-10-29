@@ -4,18 +4,19 @@ import { useRouter } from 'next/router'
 import Icon from '../Icon'
 import Marco from './Marco'
 import { EMAIL_COMPROBANTE, PAYPAL_CUENTA, formatoPrecio, etiquetaVersion } from './data'
+import useTextos from './textos'
 
-function enlaceComprobante(p) {
-  const asunto = `Comprobante de pago · pedido ${p.numero}`
+function enlaceComprobante(p, t) {
+  const asunto = t.asunto(p.numero)
   const cuerpo = [
-    `Hola Marlon,`,
+    t.hola,
     ``,
-    `Adjunto el comprobante de PayPal del pedido ${p.numero} (${formatoPrecio(p.total, p.moneda)}):`,
+    t.adjunto(p.numero, formatoPrecio(p.total, p.moneda)),
     ...p.lineas.map((l) => `- ${l.nombre} · ${etiquetaVersion(l.version)} (${l.tecnico})`),
     ``,
-    `Enviad los módulos a: ${p.email}`,
+    t.enviad(p.email),
     ``,
-    `Gracias,`,
+    t.gracias,
     p.nombre
   ].join('\n')
   return `mailto:${EMAIL_COMPROBANTE}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`
@@ -24,6 +25,7 @@ function enlaceComprobante(p) {
 // Estado de un pedido: instrucciones de pago manual o confirmación de PayPal
 export default function Pedido() {
   const router = useRouter()
+  const t = useTextos()
   const [pedido, setPedido] = useState(null)
   const [error, setError] = useState('')
 
@@ -36,65 +38,68 @@ export default function Pedido() {
         if (!res.ok) throw new Error(json.error)
         setPedido(json)
       })
-      .catch((e) => setError(e.message || 'No se pudo cargar el pedido.'))
+      .catch((e) => setError(e.message || t.errorPedido))
   }, [router.isReady, router.query])
 
   const pagado = pedido?.estado === 'paid'
 
   return (
-    <Marco titulo="Tu pedido · Tienda de módulos Odoo">
+    <Marco titulo={t.pedidoTitulo}>
       {error && (
         <div className="tn-empty">
           <p>{error}</p>
           <Link href="/tienda">
-            <a className="tn-btn">Volver a la tienda</a>
+            <a className="tn-btn">{t.volver}</a>
           </Link>
         </div>
       )}
 
-      {!pedido && !error && <p className="tn-lede">Cargando pedido…</p>}
+      {!pedido && !error && <p className="tn-lede">{t.cargandoPedido}</p>}
 
       {pedido && (
         <div className="tp">
           <span className={`tp-status${pagado ? ' ok' : ''}`}>
             <Icon name={pagado ? 'check' : 'mail'} size={16} />
-            {pagado ? 'Pago confirmado' : 'Pendiente de pago'}
+            {pagado ? t.pagoConfirmado : t.pendiente}
           </span>
-          <h1 className="tn-title">Pedido {pedido.numero}</h1>
-          <p className="tn-lede">
-            {pagado
-              ? `Gracias, ${pedido.nombre}. He recibido tu pago por PayPal. Te enviaré el código fuente de los módulos a ${pedido.email}.`
-              : `Gracias, ${pedido.nombre}. Tu pedido está registrado. Sigue estos pasos para recibir los módulos en ${pedido.email}.`}
-          </p>
+          <h1 className="tn-title">
+            {t.pedido} {pedido.numero}
+          </h1>
+          <p className="tn-lede">{pagado ? t.graciasPagado(pedido) : t.graciasPendiente(pedido)}</p>
 
           {!pagado && (
             <ol className="tp-steps">
               <li>
-                <b>Paga {formatoPrecio(pedido.total, pedido.moneda)} por PayPal</b>
+                <b>{t.paga(formatoPrecio(pedido.total, pedido.moneda))}</b>
                 <span>
-                  Envía el pago a la cuenta <code>{PAYPAL_CUENTA}</code> e indica el concepto <code>{pedido.numero}</code>.
+                  {t.pagaAntes}
+                  <code>{PAYPAL_CUENTA}</code>
+                  {t.pagaMedio}
+                  <code>{pedido.numero}</code>.
                 </span>
                 <a className="tn-btn ghost" href="https://www.paypal.com/myaccount/transfer/homepage/pay" target="_blank" rel="noopener noreferrer">
-                  Abrir PayPal <Icon name="external" size={15} />
+                  {t.abrirPaypal} <Icon name="external" size={15} />
                 </a>
               </li>
               <li>
-                <b>Envía el comprobante por email</b>
+                <b>{t.envia}</b>
                 <span>
-                  Manda el comprobante de PayPal a <code>{EMAIL_COMPROBANTE}</code> con el número de pedido.
+                  {t.enviaAntes}
+                  <code>{EMAIL_COMPROBANTE}</code>
+                  {t.enviaDespues}
                 </span>
-                <a className="tn-btn" href={enlaceComprobante(pedido)}>
-                  <Icon name="mail" size={17} /> Enviar comprobante
+                <a className="tn-btn" href={enlaceComprobante(pedido, t.email)}>
+                  <Icon name="mail" size={17} /> {t.enviarComprobante}
                 </a>
               </li>
               <li>
-                <b>Recibe los módulos</b>
-                <span>En cuanto verifique el pago te enviaré el código fuente a {pedido.email}.</span>
+                <b>{t.recibe}</b>
+                <span>{t.recibeTexto(pedido.email)}</span>
               </li>
             </ol>
           )}
 
-          <section className="tp-summary" aria-label="Resumen del pedido">
+          <section className="tp-summary" aria-label={t.resumen}>
             {pedido.lineas.map((l) => (
               <div key={l.clave} className="tp-line">
                 <span>
@@ -104,14 +109,14 @@ export default function Pedido() {
               </div>
             ))}
             <div className="tp-line tp-total">
-              <span>Total</span>
+              <span>{t.total}</span>
               <b>{formatoPrecio(pedido.total, pedido.moneda)}</b>
             </div>
           </section>
 
           <p className="tp-keep">
-            Guarda este enlace para consultar tu pedido. ¿Dudas? Escríbeme a{' '}
-            <a href={`mailto:${EMAIL_COMPROBANTE}?subject=${encodeURIComponent(`Pedido ${pedido.numero}`)}`}>{EMAIL_COMPROBANTE}</a>.
+            {t.guarda}
+            <a href={`mailto:${EMAIL_COMPROBANTE}?subject=${encodeURIComponent(`${t.pedido} ${pedido.numero}`)}`}>{EMAIL_COMPROBANTE}</a>.
           </p>
         </div>
       )}

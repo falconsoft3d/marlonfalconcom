@@ -28,7 +28,7 @@ Si usas otra herramienta (asdf, fnm, etc.), el archivo `.node-version` también 
 
 ## Tienda de módulos Odoo (`/tienda`)
 
-El catálogo se lee en vivo de [apps.odoo.com](https://apps.odoo.com/apps/modules/browse?author=Marlon%20Falc%C3%B3n%20Hern%C3%A1ndez) y se regenera cada hora (ISR). Los pedidos se guardan en la tabla privada `shop_orders` de falcondatabase.
+El catálogo se lee en vivo de [apps.odoo.com](https://apps.odoo.com/apps/modules/browse?author=Marlon%20Falc%C3%B3n%20Hern%C3%A1ndez) al entrar en la tienda (`/api/tienda/catalogo`, con 5 minutos de caché en el CDN). Las imágenes se sirven desde `/api/tienda/imagen`, porque Odoo Apps cambia sus URLs cada vez que se actualiza un módulo. Los pedidos se guardan en la tabla privada `shop_orders` de falcondatabase.
 
 Variables de entorno (`.env.local` y Vercel):
 

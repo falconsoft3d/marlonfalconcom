@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import Link from 'next/link'
 import Icon from '../Icon'
 import MatrixRain from './MatrixRain'
 import CountUp from './CountUp'
 import posts from '../../data/posts.json'
+import { tr, useIdioma } from '../../lib/idioma'
 import {
   recorrido,
   stats,
@@ -17,7 +18,93 @@ import {
 } from './data'
 
 const WHATSAPP = 'https://wa.me/34662470645'
-const titulos = ['Ingeniero Civil', 'Máster en Arquitectura', 'Consultor SAP ERP']
+
+const TEXTOS = {
+  es: {
+    ubicacion: 'Valencia, España',
+    subtitulo: 'Desarrollador y Consultor de Software · Odoo, Flutter, Django',
+    lede:
+      'Desarrollador de Odoo, Flutter y React con más de 3000 módulos y más de 200 proyectos en Chile, Panamá, Argentina, España, Paraguay, México, Puerto Rico, República Dominicana y USA. Dirección de proyectos, desarrollo y gestión funcional.',
+    contacto: 'Contáctame',
+    contratar: 'Cómo contratarme',
+    verCv: 'Ver CV',
+    cv: '/cv',
+    vivo: 'Vivo en Valencia, España',
+    titulaciones: 'Titulaciones',
+    titulos: ['Ingeniero Civil', 'Máster en Arquitectura', 'Consultor SAP ERP'],
+    vivido: 'Dónde he vivido',
+    vividoLede: 'Tres países que han marcado mi forma de trabajar.',
+    hoy: 'Hoy',
+    tecnologias: 'Habilidades y Tecnologías',
+    tecnologiasLede: (
+      <>
+        Referente en la enseñanza de Odoo y SAP R3 con más de 28 mil seguidores en YouTube. Desarrollador principal de{' '}
+        <strong>PyERP</strong>, un ERP libre en Django.
+      </>
+    ),
+    verticales: 'Soluciones Verticales',
+    verticalesLede: 'Productos sobre Odoo ERP para sectores concretos.',
+    servicios: 'Servicios',
+    serviciosLede: 'Todo el ciclo de vida de tu Odoo ERP.',
+    proyectos: 'Proyectos',
+    proyectosLede: 'Productos propios en desarrollo y producción.',
+    certificaciones: 'Certificaciones',
+    destacados: 'Artículos destacados',
+    destacadosLede: 'Guías y lecturas recomendadas para empezar.',
+    todos: 'Ver todos los artículos',
+    serie: 'serie',
+    coleccion: (total) => `Colección de ${total} artículos.`,
+    meses: ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'],
+    api: '# API para generar contraseñas aleatorias',
+    datos: 'Datos de contacto',
+    datosLede:
+      'Msc. Ing. Marlon Falcón Hernández · Valencia, España. ¿Tienes un proyecto en mente? Escríbeme y lo hablamos.',
+    whatsapp: 'Escríbeme por WhatsApp',
+    paginaContacto: 'Página de contacto'
+  },
+  en: {
+    ubicacion: 'Valencia, Spain',
+    subtitulo: 'Software Developer and Consultant · Odoo, Flutter, Django',
+    lede:
+      'Odoo, Flutter and React developer with more than 3,000 modules and over 200 projects in Chile, Panama, Argentina, Spain, Paraguay, Mexico, Puerto Rico, the Dominican Republic and the USA. Project management, development and functional consulting.',
+    contacto: 'Contact me',
+    contratar: 'How to hire me',
+    verCv: 'View résumé',
+    cv: '/cv/en',
+    vivo: 'Living in Valencia, Spain',
+    titulaciones: 'Degrees',
+    titulos: ['Civil Engineer', 'Master’s in Architecture', 'SAP ERP Consultant'],
+    vivido: 'Where I have lived',
+    vividoLede: 'Three countries that shaped the way I work.',
+    hoy: 'Today',
+    tecnologias: 'Skills and Technologies',
+    tecnologiasLede: (
+      <>
+        A reference in Odoo and SAP R3 teaching, with more than 28k YouTube followers. Lead developer of{' '}
+        <strong>PyERP</strong>, a free ERP built with Django.
+      </>
+    ),
+    verticales: 'Vertical Solutions',
+    verticalesLede: 'Products built on Odoo ERP for specific industries.',
+    servicios: 'Services',
+    serviciosLede: 'The whole lifecycle of your Odoo ERP.',
+    proyectos: 'Projects',
+    proyectosLede: 'My own products, in development and in production.',
+    certificaciones: 'Certifications',
+    destacados: 'Featured articles',
+    destacadosLede: 'Guides and recommended reads to get started (in Spanish).',
+    todos: 'View all articles',
+    serie: 'series',
+    coleccion: (total) => `A collection of ${total} articles.`,
+    meses: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
+    api: '# API to generate random passwords',
+    datos: 'Contact details',
+    datosLede:
+      'MSc. Eng. Marlon Falcón Hernández · Valencia, Spain. Have a project in mind? Write to me and let’s talk.',
+    whatsapp: 'Message me on WhatsApp',
+    paginaContacto: 'Contact page'
+  }
+}
 
 function A({ href, className, children, ...rest }) {
   if (href.startsWith('/')) {
@@ -36,18 +123,17 @@ function A({ href, className, children, ...rest }) {
   )
 }
 
-const MESES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic']
 const COLORES = ['var(--p-blue)', 'var(--p-lavender)', 'var(--p-pink)', 'var(--p-green)', 'var(--p-yellow)', 'var(--p-peach)']
 const limpiar = (s = '') => s.replace(/^▷\s*/, '').trim()
 
 // Completa cada artículo destacado con fecha, etiquetas y descripción del índice de posts.
 // Los enlaces a /tags/... son series: muestran cuántos artículos tienen.
-const destacados = articulos.map((a, i) => {
+const destacadosEn = (t) => articulos.map((a, i) => {
   const color = COLORES[i % COLORES.length]
   const tag = a.href.startsWith('/tags/') && a.href.slice(6)
   if (tag) {
     const total = posts.filter((p) => p.tags.includes(tag)).length
-    return { ...a, color, serie: total, etiquetas: ['serie', tag], descripcion: `Colección de ${total} artículos.` }
+    return { ...a, color, serie: total, etiquetas: [t.serie, tag], descripcion: t.coleccion(total) }
   }
   const post = posts.find((p) => `/posts/${p.slug}` === a.href)
   if (!post) return { ...a, color, etiquetas: [] }
@@ -60,7 +146,7 @@ const destacados = articulos.map((a, i) => {
     titulo,
     descripcion: descripcion !== titulo ? descripcion : '',
     etiquetas: post.tags.slice(0, 3),
-    fecha: post.date && { dia: Number(d), mes: MESES[Number(m) - 1], anio: y }
+    fecha: post.date && { dia: Number(d), mes: t.meses[Number(m) - 1], anio: y }
   }
 })
 
@@ -94,6 +180,9 @@ const dominio = (url) => url.replace(/^https?:\/\//, '').replace(/\/$/, '')
 
 export default function Home() {
   const [matrix, setMatrix] = useState(false)
+  const { lang } = useIdioma()
+  const t = TEXTOS[lang]
+  const destacados = useMemo(() => destacadosEn(t), [t])
 
   return (
     <div className="home">
@@ -102,24 +191,20 @@ export default function Home() {
         <div className="inner hero">
           <div className="hero-text">
             <span className="eyebrow">
-              <Icon name="pin" size={14} /> Valencia, España
+              <Icon name="pin" size={14} /> {t.ubicacion}
             </span>
             <h1 className="hero-title">Marlon Falcón Hernández</h1>
-            <p className="hero-subtitle">Desarrollador y Consultor de Software · Odoo, Flutter, Django</p>
-            <p className="hero-lede">
-              Desarrollador de Odoo, Flutter y React con más de 3000 módulos y más de 200 proyectos en Chile, Panamá,
-              Argentina, España, Paraguay, México, Puerto Rico, República Dominicana y USA. Dirección de proyectos,
-              desarrollo y gestión funcional.
-            </p>
+            <p className="hero-subtitle">{t.subtitulo}</p>
+            <p className="hero-lede">{t.lede}</p>
             <div className="hero-actions">
               <A href={WHATSAPP} className="btn btn-primary">
-                Contáctame <Icon name="arrow" size={16} />
+                {t.contacto} <Icon name="arrow" size={16} />
               </A>
               <A href="/posts/como-contratar-servicios-marlon" className="btn btn-ghost">
-                Cómo contratarme
+                {t.contratar}
               </A>
-              <A href="/cv" className="btn btn-ghost">
-                <Icon name="file" size={16} /> Ver CV
+              <A href={t.cv} className="btn btn-ghost">
+                <Icon name="file" size={16} /> {t.verCv}
               </A>
             </div>
           </div>
@@ -143,15 +228,15 @@ export default function Home() {
               <span className="hero-paella-icon" aria-hidden="true">
                 🥘
               </span>
-              Vivo en Valencia, España
+              {t.vivo}
             </div>
-            <ul className="hero-titles" aria-label="Titulaciones">
-              {titulos.map((t, i) => (
-                <li key={t} style={{ '--c': ['var(--p-yellow)', 'var(--p-pink)', 'var(--p-green)'][i % 3] }}>
+            <ul className="hero-titles" aria-label={t.titulaciones}>
+              {t.titulos.map((titulo, i) => (
+                <li key={i} style={{ '--c': ['var(--p-yellow)', 'var(--p-pink)', 'var(--p-green)'][i % 3] }}>
                   <span className="hero-cap" aria-hidden="true">
                     <Icon name="cap" size={16} />
                   </span>
-                  {t}
+                  {titulo}
                 </li>
               ))}
             </ul>
@@ -161,7 +246,7 @@ export default function Home() {
         <div className="inner">
           <div className="stats">
             {stats.map((s) => (
-              <div className="stat" key={s.label}>
+              <div className="stat" key={s.icono}>
                 <span className="stat-icon" style={{ '--c': s.color }}>
                   <Icon name={s.icono} size={22} />
                 </span>
@@ -169,7 +254,7 @@ export default function Home() {
                   <p className="stat-value">
                     <CountUp fin={s.numero} sufijo={s.sufijo} />
                   </p>
-                  <p className="stat-label">{s.label}</p>
+                  <p className="stat-label">{tr(s.label, lang)}</p>
                 </div>
               </div>
             ))}
@@ -180,18 +265,18 @@ export default function Home() {
       {/* Recorrido */}
       <section className="band">
         <div className="inner">
-          <h2 className="section-title center">Dónde he vivido</h2>
-          <p className="section-lede center">Tres países que han marcado mi forma de trabajar.</p>
+          <h2 className="section-title center">{t.vivido}</h2>
+          <p className="section-lede center">{t.vividoLede}</p>
           <ol className="timeline">
             {recorrido.map((r) => (
               <li key={r.anio} className={`tl-item${r.actual ? ' actual' : ''}`}>
                 <span className="tl-flag">{BANDERAS[r.bandera]}</span>
                 <span className="tl-year">
                   {r.anio}
-                  {r.actual && <em>Hoy</em>}
+                  {r.actual && <em>{t.hoy}</em>}
                 </span>
-                <h3 className="tl-title">{r.titulo}</h3>
-                <p className="tl-text">{r.texto}</p>
+                <h3 className="tl-title">{tr(r.titulo, lang)}</h3>
+                <p className="tl-text">{tr(r.texto, lang)}</p>
               </li>
             ))}
           </ol>
@@ -201,23 +286,20 @@ export default function Home() {
       {/* Tecnologías */}
       <section className="band band-alt">
         <div className="inner">
-          <h2 className="section-title center">Habilidades y Tecnologías</h2>
-          <p className="section-lede center">
-            Referente en la enseñanza de Odoo y SAP R3 con más de 28 mil seguidores en YouTube. Desarrollador principal
-            de <strong>PyERP</strong>, un ERP libre en Django.
-          </p>
+          <h2 className="section-title center">{t.tecnologias}</h2>
+          <p className="section-lede center">{t.tecnologiasLede}</p>
           <div className="tech-row">
-            {tecnologias.map((t) => (
-              <A key={t.nombre} href={t.href} className="tech" aria-describedby={`tip-${t.nombre}`}>
-                {t.wordmark ? (
+            {tecnologias.map((tec) => (
+              <A key={tec.nombre} href={tec.href} className="tech" aria-describedby={`tip-${tec.nombre}`}>
+                {tec.wordmark ? (
                   <span className="odoo-wordmark">odoo</span>
                 ) : (
-                  <img src={t.logo} alt="" width={36} height={36} loading="lazy" />
+                  <img src={tec.logo} alt="" width={36} height={36} loading="lazy" />
                 )}
-                <span className="tech-name">{t.nombre}</span>
-                <span className="tech-tip" id={`tip-${t.nombre}`} role="tooltip">
-                  <strong>{t.nombre}</strong>
-                  {t.explicacion}
+                <span className="tech-name">{tec.nombre}</span>
+                <span className="tech-tip" id={`tip-${tec.nombre}`} role="tooltip">
+                  <strong>{tec.nombre}</strong>
+                  {tr(tec.explicacion, lang)}
                 </span>
               </A>
             ))}
@@ -229,8 +311,8 @@ export default function Home() {
       <section className="band">
         <div className="inner">
           <div className="section-head">
-            <h2 className="section-title">Soluciones Verticales</h2>
-            <p className="section-lede">Productos sobre Odoo ERP para sectores concretos.</p>
+            <h2 className="section-title">{t.verticales}</h2>
+            <p className="section-lede">{t.verticalesLede}</p>
           </div>
           <div className="grid grid-3">
             {verticales.map((v) => (
@@ -239,7 +321,7 @@ export default function Home() {
                   <Icon name={v.icono} />
                 </span>
                 <h3 className="card-title">{v.nombre}</h3>
-                <p className="card-text">{v.descripcion}</p>
+                <p className="card-text">{tr(v.descripcion, lang)}</p>
                 <span className="card-meta">
                   {dominio(v.web)} <Icon name="external" size={14} />
                 </span>
@@ -248,17 +330,17 @@ export default function Home() {
           </div>
 
           <div className="section-head spaced">
-            <h2 className="section-title">Servicios</h2>
-            <p className="section-lede">Todo el ciclo de vida de tu Odoo ERP.</p>
+            <h2 className="section-title">{t.servicios}</h2>
+            <p className="section-lede">{t.serviciosLede}</p>
           </div>
           <div className="grid grid-5">
             {servicios.map((s) => (
-              <A key={s.nombre} href={s.href} className="card card-link card-compact">
+              <A key={s.href} href={s.href} className="card card-link card-compact">
                 <span className="card-icon">
                   <Icon name={s.icono} />
                 </span>
-                <h3 className="card-title">{s.nombre}</h3>
-                <p className="card-text">{s.descripcion}</p>
+                <h3 className="card-title">{tr(s.nombre, lang)}</h3>
+                <p className="card-text">{tr(s.descripcion, lang)}</p>
               </A>
             ))}
           </div>
@@ -269,8 +351,8 @@ export default function Home() {
       <section className="band band-alt">
         <div className="inner">
           <div className="section-head">
-            <h2 className="section-title">Proyectos</h2>
-            <p className="section-lede">Productos propios en desarrollo y producción.</p>
+            <h2 className="section-title">{t.proyectos}</h2>
+            <p className="section-lede">{t.proyectosLede}</p>
           </div>
           <div className="grid grid-3">
             {proyectos.map((p, i) => {
@@ -281,7 +363,7 @@ export default function Home() {
                   </div>
                   <div className="project-body">
                     <h3 className="card-title">{p.nombre}</h3>
-                    <p className="card-text">{p.descripcion}</p>
+                    <p className="card-text">{tr(p.descripcion, lang)}</p>
                     {p.web && (
                       <span className="card-meta">
                         {dominio(p.web)} <Icon name="external" size={14} />
@@ -307,7 +389,7 @@ export default function Home() {
       {/* Certificaciones, artículos y API */}
       <section className="band">
         <div className="inner">
-          <h2 className="section-title">Certificaciones</h2>
+          <h2 className="section-title">{t.certificaciones}</h2>
           {certificaciones.map((c) => (
             <A key={c.nombre} href={c.imagen} className="card card-link cert">
               <img src={c.imagen} alt={c.nombre} className="cert-img" loading="lazy" />
@@ -316,7 +398,7 @@ export default function Home() {
                   <Icon name="award" size={18} />
                 </span>
                 <h3 className="card-title">{c.nombre}</h3>
-                <p className="card-text">{c.descripcion}</p>
+                <p className="card-text">{tr(c.descripcion, lang)}</p>
                 <span className="card-meta">{c.anio}</span>
               </div>
             </A>
@@ -327,11 +409,11 @@ export default function Home() {
         <div className="inner">
           <div className="section-head spaced feat-head">
             <div>
-              <h2 className="section-title">Artículos destacados</h2>
-              <p className="section-lede">Guías y lecturas recomendadas para empezar.</p>
+              <h2 className="section-title">{t.destacados}</h2>
+              <p className="section-lede">{t.destacadosLede}</p>
             </div>
             <A href="/posts" className="btn btn-ghost">
-              Ver todos los artículos <Icon name="arrow" size={16} />
+              {t.todos} <Icon name="arrow" size={16} />
             </A>
           </div>
           <div className="feat-grid">
@@ -346,7 +428,7 @@ export default function Home() {
                     </>
                   ) : a.serie ? (
                     <>
-                      <span className="feat-month">serie</span>
+                      <span className="feat-month">{t.serie}</span>
                       <span className="feat-day">{a.serie}</span>
                       <span className="feat-year">posts</span>
                     </>
@@ -382,7 +464,7 @@ export default function Home() {
               <i />
             </div>
             <div className="terminal-body">
-              <span># API para generar contraseñas aleatorias</span>
+              <span>{t.api}</span>
               <A href="/api/password/21" className="terminal-cmd">
                 <span className="prompt">$</span> curl marlonfalcon.com/api/password/21
               </A>
@@ -395,17 +477,14 @@ export default function Home() {
       <section className="band band-alt" id="contacto">
         <div className="inner contact">
           <div className="contact-text">
-            <h2 className="section-title">Datos de contacto</h2>
-            <p className="section-lede">
-              Msc. Ing. Marlon Falcón Hernández · Valencia, España. ¿Tienes un proyecto en mente? Escríbeme y lo
-              hablamos.
-            </p>
+            <h2 className="section-title">{t.datos}</h2>
+            <p className="section-lede">{t.datosLede}</p>
             <div className="hero-actions">
               <A href={WHATSAPP} className="btn btn-primary">
-                Escríbeme por WhatsApp <Icon name="arrow" size={16} />
+                {t.whatsapp} <Icon name="arrow" size={16} />
               </A>
               <A href="/contacto" className="btn btn-ghost">
-                Página de contacto
+                {t.paginaContacto}
               </A>
             </div>
           </div>

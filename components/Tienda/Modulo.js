@@ -3,22 +3,24 @@ import Link from 'next/link'
 import Icon from '../Icon'
 import Marco from './Marco'
 import useCarrito from './useCarrito'
-import { formatoPrecio, etiquetaVersion } from './data'
+import { formatoPrecio, etiquetaVersion, imagenModulo } from './data'
+import useTextos from './textos'
 
 // Ficha de un módulo en una versión, con el resto de versiones publicadas
 export default function Modulo({ modulo: m }) {
   const { anadir, tiene } = useCarrito()
+  const t = useTextos()
   const enCarrito = tiene(m.clave)
   const gratis = !(m.precio > 0)
 
   return (
     <Marco
-      titulo={`${m.nombre} · ${etiquetaVersion(m.version)} · Tienda Odoo`}
-      descripcion={m.resumen || `${m.nombre}, módulo para ${etiquetaVersion(m.version)} de Marlon Falcón Hernández.`}
+      titulo={`${m.nombre} · ${etiquetaVersion(m.version)} · ${t.moduloTitulo}`}
+      descripcion={m.resumen || t.moduloDescripcion(m.nombre, etiquetaVersion(m.version))}
     >
-      <nav className="tm-crumbs" aria-label="Ruta">
+      <nav className="tm-crumbs" aria-label={t.ruta}>
         <Link href="/tienda">
-          <a>Tienda</a>
+          <a>{t.tiendaCorta}</a>
         </Link>
         <span>/</span>
         <Link href={`/tienda?version=${m.version}`}>
@@ -30,17 +32,19 @@ export default function Modulo({ modulo: m }) {
 
       <div className="tm">
         <div className="tm-cover">
-          {m.imagen && <img src={m.imagen} alt={`Portada de ${m.nombre}`} />}
+          {m.imagen && <img src={imagenModulo(m)} alt={t.portada(m.nombre)} />}
         </div>
 
         <div className="tm-info">
           <div className="tm-title">
-            {m.icono && <img className="tm-icon" src={m.icono} alt="" width={64} height={64} />}
+            {m.icono && <img className="tm-icon" src={imagenModulo(m, 'icono')} alt="" width={64} height={64} />}
             <div>
               <h1>{m.nombre}</h1>
-              <p>por {m.autor}</p>
+              <p>
+                {t.por} {m.autor}
+              </p>
             </div>
-            <strong className="tm-price">{gratis ? 'Gratis' : formatoPrecio(m.precio, m.moneda)}</strong>
+            <strong className="tm-price">{gratis ? t.gratis : formatoPrecio(m.precio, m.moneda)}</strong>
           </div>
 
           <div className="tm-tags">
@@ -54,28 +58,28 @@ export default function Modulo({ modulo: m }) {
           <div className="tm-actions">
             {gratis ? (
               <a className="tn-btn" href={m.url} target="_blank" rel="noopener noreferrer">
-                <Icon name="download" size={18} /> Descargar gratis en Odoo Apps
+                <Icon name="download" size={18} /> {t.descargarGratis}
               </a>
             ) : enCarrito ? (
               <Link href="/tienda/carrito">
                 <a className="tn-btn in">
-                  <Icon name="check" size={18} /> En el carrito · Ver carrito
+                  <Icon name="check" size={18} /> {t.verCarrito}
                 </a>
               </Link>
             ) : (
               <button type="button" className="tn-btn" onClick={() => anadir(m)}>
-                <Icon name="cart" size={18} /> Añadir al carrito
+                <Icon name="cart" size={18} /> {t.anadir}
               </button>
             )}
             <a className="tn-btn ghost" href={m.url} target="_blank" rel="noopener noreferrer">
-              Ficha en Odoo Apps <Icon name="external" size={15} />
+              {t.ficha} <Icon name="external" size={15} />
             </a>
           </div>
 
           <table className="tm-table">
             <tbody>
               <tr>
-                <th>Versiones</th>
+                <th>{t.versiones}</th>
                 <td className="tm-versions">
                   {m.versiones.map((v) =>
                     v === m.version ? (
@@ -92,25 +96,25 @@ export default function Modulo({ modulo: m }) {
               </tr>
               {m.dependencias.length > 0 && (
                 <tr>
-                  <th>Dependencias</th>
+                  <th>{t.dependencias}</th>
                   <td>{m.dependencias.join(' · ')}</td>
                 </tr>
               )}
               {m.lineas > 0 && (
                 <tr>
-                  <th>Líneas de código</th>
-                  <td>{m.lineas.toLocaleString('es-ES')}</td>
+                  <th>{t.lineas}</th>
+                  <td>{m.lineas.toLocaleString(t.locale)}</td>
                 </tr>
               )}
               <tr>
-                <th>Nombre técnico</th>
+                <th>{t.tecnico}</th>
                 <td>
                   <code>{m.tecnico}</code>
                 </td>
               </tr>
               <tr>
-                <th>Entrega</th>
-                <td>Código fuente completo, enviado por email tras confirmar el pago.</td>
+                <th>{t.entrega}</th>
+                <td>{t.entregaTexto}</td>
               </tr>
             </tbody>
           </table>

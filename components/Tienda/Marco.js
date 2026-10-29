@@ -4,10 +4,12 @@ import Link from 'next/link'
 import Icon from '../Icon'
 import useCarrito from './useCarrito'
 import { formatoPrecio } from './data'
+import useTextos from './textos'
 
 // Estructura y estilos comunes de todas las páginas de la tienda
 export default function Marco({ titulo, descripcion, children }) {
   const { lineas, total } = useCarrito()
+  const t = useTextos()
 
   return (
     <div className="tn">
@@ -19,13 +21,13 @@ export default function Marco({ titulo, descripcion, children }) {
       <div className="tn-top">
         <Link href="/tienda">
           <a className="tn-home">
-            <Icon name="box" size={16} /> Tienda de módulos Odoo
+            <Icon name="box" size={16} /> {t.tienda}
           </a>
         </Link>
         <Link href="/tienda/carrito">
-          <a className="tn-cartbtn" aria-label={`Carrito: ${lineas.length} módulos`}>
+          <a className="tn-cartbtn" aria-label={t.carritoLabel(lineas.length)}>
             <Icon name="cart" size={18} />
-            <span>{lineas.length ? formatoPrecio(total, lineas[0].moneda) : 'Carrito'}</span>
+            <span>{lineas.length ? formatoPrecio(total, lineas[0].moneda) : t.carrito}</span>
             {lineas.length > 0 && <b className="tn-count">{lineas.length}</b>}
           </a>
         </Link>

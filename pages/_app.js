@@ -5,10 +5,22 @@ import Script from 'next/script';
 import WhatsappLink from '../components/WhatsappLink';
 import SiteHeader from '../components/SiteHeader';
 import { Analytics } from '@vercel/analytics/react';
+import { useRouter } from 'next/router';
+import { IdiomaProvider, useIdioma } from '../lib/idioma';
+
+// Rutas de artículos: solo existen en español
+const ARTICULOS = ['/posts/', '/odoo-espana', '/odoo-programa-gestion-construccion']
+
+function AvisoSoloEspanol() {
+  const { pathname } = useRouter()
+  const { lang } = useIdioma()
+  if (lang !== 'en' || !ARTICULOS.some((ruta) => pathname.startsWith(ruta))) return null
+  return <p className="solo-es">This article is only available in Spanish.</p>
+}
 
 export default function Nextra({ Component, pageProps }) {
   return (
-    <>
+    <IdiomaProvider>
       <Head>
         <link
           rel="alternate"
@@ -57,7 +69,8 @@ export default function Nextra({ Component, pageProps }) {
         `}
         </Script>
       <SiteHeader />
+      <AvisoSoloEspanol />
       <Component {...pageProps} />
-    </>
+    </IdiomaProvider>
   )
 }

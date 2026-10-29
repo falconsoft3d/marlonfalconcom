@@ -3,12 +3,34 @@ import Image from 'next/image'
 import Icon from '../Icon'
 import { webs } from './data'
 import { slugWeb } from './slug'
+import { tr, useIdioma } from '../../lib/idioma'
+
+const TEXTOS = {
+  es: {
+    enProduccion: (n) => `${n} proyectos en producción`,
+    titulo: 'Mis webs',
+    lede: 'Productos y herramientas que he creado: SaaS, ERP, formación y utilidades para construcción. Cada web incluye una captura y un comentario redactado con IA a partir de su contenido.',
+    abrir: (nombre) => `Abrir ${nombre}`,
+    captura: (nombre) => `Captura de ${nombre}`,
+    comentarioIa: '✦ Comentario IA'
+  },
+  en: {
+    enProduccion: (n) => `${n} projects in production`,
+    titulo: 'My websites',
+    lede: 'Products and tools I have built: SaaS, ERP, training and construction utilities. Each website includes a screenshot and an AI-written comment based on its content.',
+    abrir: (nombre) => `Open ${nombre}`,
+    captura: (nombre) => `Screenshot of ${nombre}`,
+    comentarioIa: '✦ AI comment'
+  }
+}
 
 const urlDe = (web) => (/^https?:\/\//.test(web) ? web : `https://${web}`)
 const dominio = (web) => web.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/$/, '')
 
 export default function WebsPage() {
   const [extra, setExtra] = useState([])
+  const { lang } = useIdioma()
+  const t = TEXTOS[lang]
 
   // Las webs nuevas de la tabla mis_webs que aún no tienen comentario se añaden al final
   useEffect(() => {
@@ -29,19 +51,16 @@ export default function WebsPage() {
     <div className="wp">
       <header className="wp-head">
         <span className="wp-eyebrow">
-          <Icon name="external" size={14} /> {webs.length + extra.length} proyectos en producción
+          <Icon name="external" size={14} /> {t.enProduccion(webs.length + extra.length)}
         </span>
-        <h2 className="wp-title">Mis webs</h2>
-        <p className="wp-lede">
-          Productos y herramientas que he creado: SaaS, ERP, formación y utilidades para construcción. Cada web
-          incluye una captura y un comentario redactado con IA a partir de su contenido.
-        </p>
+        <h2 className="wp-title">{t.titulo}</h2>
+        <p className="wp-lede">{t.lede}</p>
       </header>
 
       <div className="wp-grid">
         {[...webs, ...extra].map((w, i) => (
           <article className="wp-card" key={w.slug}>
-            <a className="wp-shot" href={urlDe(w.web)} target="_blank" rel="noopener noreferrer" aria-label={`Abrir ${w.nombre}`}>
+            <a className="wp-shot" href={urlDe(w.web)} target="_blank" rel="noopener noreferrer" aria-label={t.abrir(w.nombre)}>
               <span className="wp-bar" aria-hidden="true">
                 <i />
                 <i />
@@ -52,7 +71,7 @@ export default function WebsPage() {
                 <span className="wp-img">
                   <Image
                     src={`/images/webs/${w.slug}.png`}
-                    alt={`Captura de ${w.nombre}`}
+                    alt={t.captura(w.nombre)}
                     width={1280}
                     height={800}
                     layout="responsive"
@@ -67,20 +86,20 @@ export default function WebsPage() {
             </a>
 
             <div className="wp-body">
-              {w.categoria && <span className="wp-cat">{w.categoria}</span>}
+              {w.categoria && <span className="wp-cat">{tr(w.categoria, lang)}</span>}
               <h3 className="wp-name">{w.nombre}</h3>
               <a className="wp-link" href={urlDe(w.web)} target="_blank" rel="noopener noreferrer">
                 {dominio(w.web)} <Icon name="external" size={13} />
               </a>
               {w.comentario && (
                 <div className="wp-ai">
-                  {w.categoria && <span className="wp-ai-badge">✦ Comentario IA</span>}
-                  <p>{w.comentario}</p>
+                  {w.categoria && <span className="wp-ai-badge">{t.comentarioIa}</span>}
+                  <p>{tr(w.comentario, lang)}</p>
                 </div>
               )}
               {w.destacados && (
                 <ul className="wp-tags">
-                  {w.destacados.map((d) => (
+                  {tr(w.destacados, lang).map((d) => (
                     <li key={d}>{d}</li>
                   ))}
                 </ul>

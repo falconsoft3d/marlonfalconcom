@@ -4,10 +4,11 @@ title: Tagged Posts
 ---
 
 import { useRouter } from 'next/router'
+import { Texto } from '../../lib/idioma'
 
 export const TagName = () => {
   const { tag } = useRouter().query
   return tag || null
 }
 
-# Articulos con la etiqueta “<TagName/>”
+# <Texto es="Articulos con la etiqueta" en="Articles tagged" /> “<TagName/>”
