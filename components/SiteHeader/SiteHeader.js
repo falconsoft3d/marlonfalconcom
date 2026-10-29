@@ -5,7 +5,8 @@ import Icon from '../Icon'
 import useCarrito from '../Tienda/useCarrito'
 import { useIdioma } from '../../lib/idioma'
 
-// Un elemento es [href, etiqueta] o un grupo { etiqueta, hijos } que se muestra como desplegable
+// Un elemento es [href, etiqueta, opciones?] o un grupo { etiqueta, hijos } que se muestra como desplegable.
+// Opciones: contador (número rojo de módulos de Odoo 20) y destacado (sombra azul debajo).
 const LINKS = [
   ['/', { es: 'Inicio', en: 'Home' }],
   ['/posts', { es: 'Artículos', en: 'Articles' }],
@@ -14,15 +15,44 @@ const LINKS = [
     hijos: [
       ['/webs', { es: 'Webs', en: 'Websites' }],
       ['/odoo-espana', 'Odoo'],
-      ['/odoo-programa-gestion-construccion', 'Bim 2.0']
+      ['/odoo-programa-gestion-construccion', 'Bim 2.0'],
+      ['/libros', { es: 'Libros', en: 'Books' }]
     ]
   },
-  ['/tienda', { es: 'Tienda', en: 'Store' }],
+  ['/tienda', { es: 'Tienda', en: 'Store' }, { contador: true }],
   ['/cursos', { es: 'Cursos', en: 'Courses' }],
-  ['/libros', { es: 'Libros', en: 'Books' }],
-  ['/calendario', { es: 'Calendario', en: 'Calendar' }],
+  ['/calendario', { es: 'Calendario', en: 'Calendar' }, { destacado: true }],
   ['/contacto', { es: 'Contacto', en: 'Contact' }]
 ]
+
+// Módulos de Odoo 20 publicados: se pide una vez por visita y se recuerda en la pestaña
+let contadorGuardado = null
+function useModulosOdoo20() {
+  const [total, setTotal] = useState(contadorGuardado)
+
+  useEffect(() => {
+    if (contadorGuardado !== null) return
+    try {
+      const guardado = sessionStorage.getItem('tienda-odoo20')
+      if (guardado) {
+        contadorGuardado = Number(guardado)
+        return setTotal(contadorGuardado)
+      }
+    } catch (e) {}
+    fetch('/api/tienda/contador')
+      .then((res) => (res.ok ? res.json() : Promise.reject()))
+      .then(({ odoo20 }) => {
+        contadorGuardado = odoo20
+        setTotal(odoo20)
+        try {
+          sessionStorage.setItem('tienda-odoo20', String(odoo20))
+        } catch (e) {}
+      })
+      .catch(() => {})
+  }, [])
+
+  return total
+}
 
 const TEXTOS = {
   es: {
@@ -33,6 +63,7 @@ const TEXTOS = {
     idioma: 'Switch to English',
     carrito: 'Carrito',
     modulos: 'módulos',
+    odoo20: (n) => `${n} módulos para Odoo 20`,
     contacto: 'Contáctame',
     cerrar: 'Cerrar menú',
     abrir: 'Abrir menú',
@@ -46,6 +77,7 @@ const TEXTOS = {
     idioma: 'Cambiar a español',
     carrito: 'Cart',
     modulos: 'modules',
+    odoo20: (n) => `${n} modules for Odoo 20`,
     contacto: 'Contact me',
     cerrar: 'Close menu',
     abrir: 'Open menu',
@@ -83,6 +115,7 @@ export default function SiteHeader() {
   const [abierto, setAbierto] = useState(false)
   const [grupo, setGrupo] = useState(null)
   const { lineas } = useCarrito()
+  const modulos20 = useModulosOdoo20()
   const { lang, setLang } = useIdioma()
   const t = TEXTOS[lang]
   const otroIdioma = lang === 'en' ? 'es' : 'en'
@@ -121,10 +154,18 @@ export default function SiteHeader() {
   const etiquetaTema = tema === 'dark' ? t.claro : t.oscuro
   const texto = (label) => (typeof label === 'string' ? label : label[lang])
 
-  const enlace = ([href, label], clase = 'sh-link') => (
+  const enlace = ([href, label, opciones = {}], clase = 'sh-link') => (
     <Link key={href} href={href}>
-      <a className={`${clase}${activo(href) ? ' active' : ''}`} aria-current={activo(href) ? 'page' : undefined}>
+      <a
+        className={`${clase}${activo(href) ? ' active' : ''}${opciones.destacado ? ' sh-destacado' : ''}`}
+        aria-current={activo(href) ? 'page' : undefined}
+      >
         {texto(label)}
+        {opciones.contador && modulos20 > 0 && (
+          <b className="sh-contador" title={t.odoo20(modulos20)}>
+            {modulos20}
+          </b>
+        )}
       </a>
     </Link>
   )
@@ -291,6 +332,29 @@ export default function SiteHeader() {
           color: var(--text-strong);
           background: var(--surface);
           font-variation-settings: 'wght' 600;
+        }
+
+        .sh-contador {
+          display: inline-block;
+          min-width: 20px;
+          height: 18px;
+          margin-left: 0.35rem;
+          padding: 0 5px;
+          border-radius: 999px;
+          background: #e5484d;
+          color: #fff;
+          font-size: 0.68rem;
+          line-height: 18px;
+          text-align: center;
+          vertical-align: 1px;
+          font-variation-settings: 'wght' 700;
+        }
+        .sh-destacado {
+          box-shadow: inset 0 -2px 0 var(--accent-2), 0 8px 14px -8px var(--accent-2);
+        }
+        .sh-destacado:hover,
+        .sh-destacado.active {
+          box-shadow: inset 0 -2px 0 var(--accent-2), 0 10px 18px -8px var(--accent-2);
         }
 
         .sh-group {

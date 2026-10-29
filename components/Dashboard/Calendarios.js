@@ -9,6 +9,7 @@ const VACIO = { name: '', ics_url: '', color: '#b5aecf' }
 const MOTIVOS = {
   'sin-configurar': 'Faltan GOOGLE_CLIENT_ID y GOOGLE_CLIENT_SECRET en las variables de entorno.',
   'enlace-caducado': 'La conexión tardó demasiado o el enlace no es válido. Vuelve a pulsar «Conectar con Google».',
+  redirect_uri_mismatch: 'Google no reconoce el URI de redireccionamiento: añade en tu cliente OAuth el que aparece abajo, tal cual.',
   'sin-refresh-token': 'Google no devolvió permiso permanente. Quita el acceso de la app en myaccount.google.com/permissions y vuelve a conectar.',
   access_denied: 'Cancelaste el permiso en Google.'
 }
@@ -81,7 +82,7 @@ function Google() {
               <path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-2.9-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C.9 16.6 0 20.2 0 24s.9 7.4 2.6 10.7l7.9-6.1z" />
               <path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.3-5.7c-2 1.4-4.7 2.3-8.6 2.3-6.3 0-11.6-4.1-13.5-9.9l-7.9 6.1C6.6 42.6 14.6 48 24 48z" />
             </svg>
-            Conectar con Google
+            {info.cuentas?.length ? 'Conectar otra cuenta de Google' : 'Conectar con Google'}
           </a>
         )}
       </div>
@@ -89,6 +90,19 @@ function Google() {
       {aviso && <p className="db-ok">{aviso}</p>}
       {error && <p className="db-error">{error}</p>}
       {!info && !error && <p className="db-muted">Cargando…</p>}
+
+      {/* Si Google responde redirect_uri_mismatch, este URI no está en el cliente OAuth tal cual */}
+      {info?.configurado && (
+        <div className="ca-uri">
+          <span className="db-muted">URI de redireccionamiento que debe estar autorizado en Google Cloud:</span>
+          <div className="db-row">
+            <code style={{ flex: 1 }}>{info.redirectUri}</code>
+            <button type="button" className="db-btn ghost" onClick={() => navigator.clipboard?.writeText(info.redirectUri).then(() => setAviso('URI copiado.'))}>
+              Copiar
+            </button>
+          </div>
+        </div>
+      )}
 
       {info && !info.configurado && (
         <details className="ca-guia" open>
@@ -107,10 +121,10 @@ function Google() {
             </Paso>
             <Paso n="4">
               En <a href="https://console.cloud.google.com/auth/clients" target="_blank" rel="noopener noreferrer">Clientes</a> crea un <b>ID de cliente OAuth</b> de tipo
-              <b> Aplicación web</b> con estos URI de redireccionamiento autorizados (producción y local):
-              <code>https://marlonfalcon.com/api/dashboard/google/callback</code>
+              <b> Aplicación web</b> con estos URI de redireccionamiento autorizados (producción, con www, y local):
+              <code>https://www.marlonfalcon.com/api/dashboard/google/callback</code>
               <code>http://localhost:3000/api/dashboard/google/callback</code>
-              Ahora mismo estás usando: <code>{info.redirectUri}</code>
+              Tienen que coincidir letra por letra con el que usa esta página: <code>{info.redirectUri}</code>
             </Paso>
             <Paso n="5">
               Copia el ID y el secreto en Vercel (y en <code>.env.local</code>) como <code>GOOGLE_CLIENT_ID</code> y <code>GOOGLE_CLIENT_SECRET</code>, y vuelve a desplegar.
@@ -367,6 +381,11 @@ export default function Calendarios({ ajustes }) {
         .ca-google:hover {
           background: #f8faff;
           border-color: #c6dafc;
+        }
+        .ca-uri {
+          display: grid;
+          gap: 0.35rem;
+          font-size: 0.85rem;
         }
         .ca-cuenta {
           padding: 0.9rem 1rem;
