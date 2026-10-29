@@ -43,6 +43,7 @@ const MENU = [
     links: [
       ['/', 'Inicio'],
       ['/posts', 'Artículos'],
+      ['/tienda', 'Tienda Odoo'],
       ['/categorias', 'Categorías'],
       ['/cursos', 'Cursos'],
       ['/libros', 'Libros'],

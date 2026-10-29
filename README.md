@@ -25,3 +25,18 @@ node -v
 Si usas otra herramienta (asdf, fnm, etc.), el archivo `.node-version` también contiene `22`.
 
 
+
+## Tienda de módulos Odoo (`/tienda`)
+
+El catálogo se lee en vivo de [apps.odoo.com](https://apps.odoo.com/apps/modules/browse?author=Marlon%20Falc%C3%B3n%20Hern%C3%A1ndez) y se regenera cada hora (ISR). Los pedidos se guardan en la tabla privada `shop_orders` de falcondatabase.
+
+Variables de entorno (`.env.local` y Vercel):
+
+| Variable | Obligatoria | Uso |
+| --- | --- | --- |
+| `FALCONDB_SERVICE_KEY` | Sí | Clave *service* del proyecto `dntmjqkfhehnzvutqrrd` para guardar pedidos |
+| `NEXT_PUBLIC_PAYPAL_CLIENT_ID` | No | Client ID de PayPal. Sin él, el cliente paga por PayPal y envía el comprobante por email |
+| `PAYPAL_CLIENT_SECRET` | No | Secret de PayPal (solo servidor) |
+| `PAYPAL_ENV` | No | `live` para cobrar de verdad; por defecto `sandbox` |
+
+Estados de un pedido: `awaiting_payment` (manual, esperando comprobante), `pending` (orden de PayPal creada), `paid`, `payment_error`. El envío de los módulos es manual.

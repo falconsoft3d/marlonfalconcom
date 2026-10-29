@@ -135,6 +135,22 @@ const paths = {
       <path d="M3.27 6.96 12 12.01l8.73-5.05M12 22.08V12" />
     </>
   ),
+  cart: (
+    <>
+      <circle cx="9" cy="20" r="1.4" />
+      <circle cx="18" cy="20" r="1.4" />
+      <path d="M2 3h3l2.7 12.4a1.5 1.5 0 0 0 1.5 1.1h8.9a1.5 1.5 0 0 0 1.4-1.1L22 7H6.2" />
+    </>
+  ),
+  search: (
+    <>
+      <circle cx="11" cy="11" r="7" />
+      <path d="m20 20-3.5-3.5" />
+    </>
+  ),
+  trash: <path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6M10 11v6M14 11v6" />,
+  download: <path d="M12 3v12M7 10l5 5 5-5M5 21h14" />,
+  check: <path d="M20 6 9 17l-5-5" />,
   globe: (
     <>
       <circle cx="12" cy="12" r="10" />

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Icon from '../Icon'
+import useCarrito from '../Tienda/useCarrito'
 
 const LINKS = [
   ['/', 'Inicio'],
@@ -9,6 +10,7 @@ const LINKS = [
   ['/webs', 'Webs'],
   ['/odoo-espana', 'Odoo'],
   ['/odoo-programa-gestion-construccion', 'Bim 2.0'],
+  ['/tienda', 'Tienda'],
   ['/cursos', 'Cursos'],
   ['/libros', 'Libros'],
   ['/contacto', 'Contacto']
@@ -42,6 +44,7 @@ export default function SiteHeader() {
   const router = useRouter()
   const [tema, alternarTema] = useTema()
   const [abierto, setAbierto] = useState(false)
+  const { lineas } = useCarrito()
 
   useEffect(() => {
     const cerrar = () => setAbierto(false)
@@ -84,6 +87,14 @@ export default function SiteHeader() {
               <Icon name={tema === 'dark' ? 'sun' : 'moon'} size={18} />
             </span>
           </button>
+          {lineas.length > 0 && (
+            <Link href="/tienda/carrito">
+              <a className="sh-icon sh-cart" aria-label={`Carrito: ${lineas.length} módulos`} title="Carrito">
+                <Icon name="cart" size={18} />
+                <b>{lineas.length}</b>
+              </a>
+            </Link>
+          )}
           <Link href="/cv">
             <a className="sh-btn sh-ghost">CV</a>
           </Link>
@@ -209,6 +220,23 @@ export default function SiteHeader() {
         .sh-icon:hover {
           color: var(--text-strong);
           border-color: var(--accent-2);
+        }
+        .sh-cart {
+          position: relative;
+        }
+        .sh-cart b {
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          min-width: 18px;
+          height: 18px;
+          padding: 0 4px;
+          border-radius: 999px;
+          background: var(--accent-2);
+          color: #fff;
+          font-size: 0.65rem;
+          line-height: 18px;
+          text-align: center;
         }
         .sh-btn {
           display: inline-flex;
