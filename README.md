@@ -40,3 +40,28 @@ Variables de entorno (`.env.local` y Vercel):
 | `PAYPAL_ENV` | No | `live` para cobrar de verdad; por defecto `sandbox` |
 
 Estados de un pedido: `awaiting_payment` (manual, esperando comprobante), `pending` (orden de PayPal creada), `paid`, `payment_error`. El envío de los módulos es manual.
+
+
+## Calendario de reservas (`/calendario`) y dashboard (`/dashboard`)
+
+Página de reservas estilo Calendly: el visitante elige reunión (30 min, 1 h o 2 h), día y hora, o pulsa «Primera hora libre» / «… de la próxima semana». El calendario está en español, inglés, catalán y ruso (selector propio o `?lang=ca`); el resto de la web sigue en español e inglés. Las horas se ven en su zona horaria (o la que elija) y debajo en hora de Madrid. Para reservar resuelve una suma que aparece entre dos ninjas luchando (captcha local, firmado en el servidor y de un solo uso).
+
+Los huecos salen del horario semanal, menos los bloqueos («No trabajo»), las reservas y las horas ocupadas de los calendarios conectados. Al abrir la página se releen los calendarios (como mucho una vez cada 20 s) y se vuelve a comprobar todo justo antes de guardar una reserva.
+
+Todo se configura en `/dashboard`: reservas, vista semanal de horas ocupadas, horario, bloqueos, calendarios y tipos de reunión. Tablas privadas en falcondatabase: `booking_settings`, `booking_event_types`, `booking_blocks`, `booking_calendars`, `booking_google_accounts` y `bookings`.
+
+Calendarios conectados:
+
+- **Google (botón «Conectar con Google»)**: OAuth de solo lectura con FreeBusy, sin títulos de eventos. Se pueden conectar varias cuentas y elegir qué calendarios de cada una cuentan como ocupados. En el dashboard están los pasos para crear el cliente OAuth. La app de Google Cloud tiene que estar **publicada**: en modo «Prueba» Google corta la conexión a los 7 días.
+- **Dirección iCal**: Outlook, iCloud o la «dirección secreta en formato iCal» de un calendario de Google.
+- **Feed de reservas**: `/api/calendario/feed?token=…` (el enlace está en el dashboard) para ver las reservas en Google Calendar.
+
+| Variable | Obligatoria | Uso |
+| --- | --- | --- |
+| `DASHBOARD_PASSWORD` | Sí | Contraseña de `/dashboard`. Si la cambias, se cierran todas las sesiones |
+| `DASHBOARD_SECRET` | No | Se añade a la firma de la cookie de sesión |
+| `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET` | No | Activan el botón «Conectar con Google» |
+| `GOOGLE_REDIRECT_URI` | No | Por defecto `https://<host>/api/dashboard/google/callback` |
+| `CAPTCHA_SECRET` | No | Clave del captcha; por defecto usa `FALCONDB_SERVICE_KEY` |
+
+No se envían emails: el invitado puede añadir la reunión a su calendario y avisar por WhatsApp desde la página de confirmación.

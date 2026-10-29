@@ -14,6 +14,7 @@ const LINKS = [
   ['/tienda', { es: 'Tienda', en: 'Store' }],
   ['/cursos', { es: 'Cursos', en: 'Courses' }],
   ['/libros', { es: 'Libros', en: 'Books' }],
+  ['/calendario', { es: 'Calendario', en: 'Calendar' }],
   ['/contacto', { es: 'Contacto', en: 'Contact' }]
 ]
 
