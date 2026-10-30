@@ -17,6 +17,8 @@ const TEXTOS = {
     catalogoDescripcion:
       'Compra módulos de Odoo de Marlon Falcón Hernández para Odoo 14 a 20: contabilidad, facturación electrónica, ventas, construcción y logística.',
     catalogoH1: 'Módulos de Odoo',
+    pestanas: { modulo: 'Módulos', tema: 'Webs' },
+    tipoLabel: 'Tipo de producto',
     publicados: (n) => `${n} módulos publicados en `,
     publicadosFin: ', con el código fuente completo. Elige la versión de tu Odoo, añádelos al carrito y paga con PayPal.',
     buscar: 'Buscar módulo…',
@@ -41,6 +43,18 @@ const TEXTOS = {
     cargandoCatalogo: 'Cargando módulos desde Odoo Apps…',
     errorCatalogo: 'No se pudo cargar el catálogo de Odoo Apps.',
     reintentar: 'Reintentar',
+
+    // Pestaña de webs: sustituye a los textos de módulos
+    webs: {
+      catalogoH1: 'Webs para Odoo',
+      publicados: (n) => `${n} webs publicadas en `,
+      publicadosFin: ', con el código fuente completo. Elige la versión de tu Odoo, añádelas al carrito y paga con PayPal.',
+      buscar: 'Buscar web…',
+      buscarLabel: 'Buscar web',
+      sinModulos: 'No hay webs con esos filtros.',
+      modulos: (n) => `${n} ${n === 1 ? 'web' : 'webs'}`,
+      moduloDescripcion: (nombre, version) => `${nombre}, web para ${version} de Marlon Falcón Hernández.`
+    },
 
     // Tarjeta y ficha
     descargasTotales: 'Descargas totales en Odoo Apps',
@@ -140,6 +154,8 @@ const TEXTOS = {
     catalogoDescripcion:
       'Buy Odoo modules by Marlon Falcón Hernández for Odoo 14 to 20: accounting, e-invoicing, sales, construction and logistics.',
     catalogoH1: 'Odoo modules',
+    pestanas: { modulo: 'Modules', tema: 'Websites' },
+    tipoLabel: 'Product type',
     publicados: (n) => `${n} modules published on `,
     publicadosFin: ', with full source code. Choose your Odoo version, add them to the cart and pay with PayPal.',
     buscar: 'Search module…',
@@ -164,6 +180,17 @@ const TEXTOS = {
     cargandoCatalogo: 'Loading modules from Odoo Apps…',
     errorCatalogo: 'The Odoo Apps catalog could not be loaded.',
     reintentar: 'Try again',
+
+    webs: {
+      catalogoH1: 'Odoo websites',
+      publicados: (n) => `${n} websites published on `,
+      publicadosFin: ', with full source code. Choose your Odoo version, add them to the cart and pay with PayPal.',
+      buscar: 'Search website…',
+      buscarLabel: 'Search website',
+      sinModulos: 'No websites match those filters.',
+      modulos: (n) => `${n} ${n === 1 ? 'website' : 'websites'}`,
+      moduloDescripcion: (nombre, version) => `${nombre}, a ${version} website by Marlon Falcón Hernández.`
+    },
 
     descargasTotales: 'Total downloads on Odoo Apps',
     descargarGratis: 'Download for free on Odoo Apps',

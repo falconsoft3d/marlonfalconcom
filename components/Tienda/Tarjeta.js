@@ -13,7 +13,7 @@ export default function Tarjeta({ modulo: m }) {
   const gratis = !(m.precio > 0)
 
   return (
-    <div className="tc">
+    <div className={`tc${m.tipo === 'tema' ? ' tema' : ''}`}>
       <Link href={rutaModulo(m)}>
         <a className="tc-link">
           <span className="tc-cover">
@@ -91,6 +91,13 @@ export default function Tarjeta({ modulo: m }) {
           height: 100%;
           margin: 0;
           object-fit: cover;
+        }
+        /* Las portadas de las webs son capturas verticales: se muestra su parte superior */
+        .tc.tema .tc-cover {
+          aspect-ratio: 4 / 3;
+        }
+        .tc.tema .tc-cover img {
+          object-position: top;
         }
         .tc-summary {
           position: absolute;

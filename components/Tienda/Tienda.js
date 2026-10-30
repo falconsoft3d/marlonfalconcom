@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import Icon from '../Icon'
 import Marco from './Marco'
 import Tarjeta from './Tarjeta'
-import { ODOO_AUTOR_URL, etiquetaVersion } from './data'
+import { ODOO_AUTOR_URL, ODOO_TEMAS_URL, etiquetaVersion } from './data'
 import useTextos from './textos'
 
 const ORDENES = {
@@ -152,7 +152,7 @@ export default function Tienda() {
   )
 }
 
-// Catálogo agrupado por versión de Odoo como en Odoo Apps
+// Catálogo con una pestaña por tipo (módulos y webs), agrupado por versión de Odoo como en Odoo Apps
 function Catalogo({ modulos, actualizado }) {
   const router = useRouter()
   const t = useTextos()
@@ -167,34 +167,54 @@ function Catalogo({ modulos, actualizado }) {
     if (router.isReady && typeof router.query.version === 'string') setVersion(router.query.version)
   }, [router.isReady, router.query.version])
 
-  const elegirVersion = (v) => {
-    setVersion(v)
-    const query = v === 'todas' ? {} : { version: v }
+  // La pestaña también vive en la URL (?tipo=webs)
+  const tipo = router.query.tipo === 'webs' ? 'tema' : 'modulo'
+  const c = tipo === 'tema' ? t.webs : t
+
+  const navegar = (nuevoTipo, v) => {
+    const query = {}
+    if (nuevoTipo === 'tema') query.tipo = 'webs'
+    if (v !== 'todas') query.version = v
     router.replace({ pathname: '/tienda', query }, undefined, { shallow: true, scroll: false })
   }
 
+  const elegirVersion = (v) => {
+    setVersion(v)
+    navegar(tipo, v)
+  }
+
+  // Cada pestaña tiene sus categorías, y puede que no tenga la versión elegida
+  const elegirTipo = (nuevoTipo) => {
+    const v = modulos.some((m) => m.tipo === nuevoTipo && m.version === version) ? version : 'todas'
+    setCategoria('')
+    setVersion(v)
+    navegar(nuevoTipo, v)
+  }
+
+  const delTipo = useMemo(() => modulos.filter((m) => m.tipo === tipo), [modulos, tipo])
+
   const versiones = useMemo(() => {
     const cuenta = {}
-    modulos.forEach((m) => (cuenta[m.version] = (cuenta[m.version] || 0) + 1))
+    delTipo.forEach((m) => (cuenta[m.version] = (cuenta[m.version] || 0) + 1))
     return Object.keys(cuenta)
       .sort((a, b) => parseFloat(b) - parseFloat(a))
       .map((v) => [v, cuenta[v]])
-  }, [modulos])
+  }, [delTipo])
 
   const categorias = useMemo(
-    () => [...new Set(modulos.map((m) => m.categoria).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'es')),
-    [modulos]
+    () => [...new Set(delTipo.map((m) => m.categoria).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'es')),
+    [delTipo]
   )
 
   const filtrados = useMemo(() => {
     const q = normalizar(busqueda.trim())
-    return modulos
+    return delTipo
       .filter((m) => version === 'todas' || m.version === version)
       .filter((m) => !categoria || m.categoria === categoria)
       .filter((m) => !precio || (precio === 'gratis' ? !(m.precio > 0) : m.precio > 0))
       .filter((m) => !q || normalizar(`${m.nombre} ${m.tecnico} ${m.resumen} ${m.categoria}`).includes(q))
       .sort(ORDENES[orden])
-  }, [modulos, version, categoria, precio, orden, busqueda])
+  }, [delTipo, version, categoria, precio, orden, busqueda])
 
   // Con "Todas" se muestra una sección por versión, de la más nueva a la más antigua
   const grupos = useMemo(() => {
@@ -202,7 +222,7 @@ function Catalogo({ modulos, actualizado }) {
     return versiones.map(([v]) => [v, filtrados.filter((m) => m.version === v)]).filter(([, lista]) => lista.length)
   }, [version, versiones, filtrados])
 
-  const tecnicos = new Set(modulos.map((m) => m.tecnico)).size
+  const tecnicos = new Set(delTipo.map((m) => m.tecnico)).size
 
   return (
     <Marco
@@ -211,26 +231,34 @@ function Catalogo({ modulos, actualizado }) {
     >
       <header className="ts-head">
         <div>
-          <h1 className="tn-title">{t.catalogoH1}</h1>
+          <h1 className="tn-title">{c.catalogoH1}</h1>
           <p className="tn-lede">
-            {t.publicados(tecnicos)}
-            <a href={ODOO_AUTOR_URL} target="_blank" rel="noopener noreferrer">
+            {c.publicados(tecnicos)}
+            <a href={tipo === 'tema' ? ODOO_TEMAS_URL : ODOO_AUTOR_URL} target="_blank" rel="noopener noreferrer">
               Odoo Apps
             </a>
-            {t.publicadosFin}
+            {c.publicadosFin}
           </p>
         </div>
         <label className="ts-search">
           <Icon name="search" size={17} />
           <input
             type="search"
-            placeholder={t.buscar}
+            placeholder={c.buscar}
             value={busqueda}
             onChange={(e) => setBusqueda(e.target.value)}
-            aria-label={t.buscarLabel}
+            aria-label={c.buscarLabel}
           />
         </label>
       </header>
+
+      <nav className="ts-tabs" aria-label={t.tipoLabel}>
+        {Object.keys(t.pestanas).map((clave) => (
+          <button key={clave} type="button" className={tipo === clave ? 'on' : ''} onClick={() => elegirTipo(clave)}>
+            {t.pestanas[clave]} <small>{modulos.filter((m) => m.tipo === clave).length}</small>
+          </button>
+        ))}
+      </nav>
 
       <div className="ts-bar">
         <label>
@@ -275,7 +303,7 @@ function Catalogo({ modulos, actualizado }) {
 
       <nav className="ts-versions" aria-label={t.versionesLabel}>
         <button type="button" className={version === 'todas' ? 'on' : ''} onClick={() => elegirVersion('todas')}>
-          {t.todas} <small>{modulos.length}</small>
+          {t.todas} <small>{delTipo.length}</small>
         </button>
         {versiones.map(([v, n]) => (
           <button key={v} type="button" className={version === v ? 'on' : ''} onClick={() => elegirVersion(v)}>
@@ -284,13 +312,13 @@ function Catalogo({ modulos, actualizado }) {
         ))}
       </nav>
 
-      {grupos.length === 0 && <p className="tn-empty">{t.sinModulos}</p>}
+      {grupos.length === 0 && <p className="tn-empty">{c.sinModulos}</p>}
 
       {grupos.map(([v, lista]) => (
         <section key={v} className="ts-group">
           <h2>
             {etiquetaVersion(v)}
-            <span>{t.modulos(lista.length)}</span>
+            <span>{c.modulos(lista.length)}</span>
           </h2>
           <div className="ts-grid">
             {lista.map((m) => (
@@ -339,6 +367,39 @@ function Catalogo({ modulos, actualizado }) {
           background: transparent;
           color: var(--text-strong);
           font: inherit;
+        }
+
+        .ts-tabs {
+          display: flex;
+          gap: 1.5rem;
+          margin-bottom: 1.25rem;
+          border-bottom: 1px solid var(--border);
+        }
+        .ts-tabs button {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          margin-bottom: -1px;
+          padding: 0.6rem 0.1rem;
+          border: 0;
+          border-bottom: 2px solid transparent;
+          background: transparent;
+          color: var(--muted);
+          font: inherit;
+          font-variation-settings: 'wght' 600;
+          cursor: pointer;
+          transition: color 0.15s, border-color 0.15s;
+        }
+        .ts-tabs button:hover {
+          color: var(--text-strong);
+        }
+        .ts-tabs button.on {
+          border-bottom-color: var(--accent-2);
+          color: var(--text-strong);
+        }
+        .ts-tabs small {
+          opacity: 0.65;
+          font-size: 0.75rem;
         }
 
         .ts-bar {

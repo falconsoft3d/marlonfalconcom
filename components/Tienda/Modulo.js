@@ -12,18 +12,19 @@ export default function Modulo({ modulo: m }) {
   const t = useTextos()
   const enCarrito = tiene(m.clave)
   const gratis = !(m.precio > 0)
+  const esWeb = m.tipo === 'tema'
 
   return (
     <Marco
       titulo={`${m.nombre} · ${etiquetaVersion(m.version)} · ${t.moduloTitulo}`}
-      descripcion={m.resumen || t.moduloDescripcion(m.nombre, etiquetaVersion(m.version))}
+      descripcion={m.resumen || (esWeb ? t.webs : t).moduloDescripcion(m.nombre, etiquetaVersion(m.version))}
     >
       <nav className="tm-crumbs" aria-label={t.ruta}>
         <Link href="/tienda">
           <a>{t.tiendaCorta}</a>
         </Link>
         <span>/</span>
-        <Link href={`/tienda?version=${m.version}`}>
+        <Link href={`/tienda?${esWeb ? 'tipo=webs&' : ''}version=${m.version}`}>
           <a>{etiquetaVersion(m.version)}</a>
         </Link>
         <span>/</span>
@@ -31,7 +32,7 @@ export default function Modulo({ modulo: m }) {
       </nav>
 
       <div className="tm">
-        <div className="tm-cover">
+        <div className={`tm-cover${esWeb ? ' tema' : ''}`}>
           {m.imagen && <img src={imagenModulo(m)} alt={t.portada(m.nombre)} />}
         </div>
 
@@ -155,6 +156,12 @@ export default function Modulo({ modulo: m }) {
           height: 100%;
           margin: 0;
           object-fit: cover;
+        }
+        .tm-cover.tema {
+          aspect-ratio: auto;
+        }
+        .tm-cover.tema img {
+          height: auto;
         }
         .tm-title {
           display: flex;

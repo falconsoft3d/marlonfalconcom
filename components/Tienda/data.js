@@ -7,6 +7,9 @@ export const PAYPAL_CUENTA = 'mfalconsoft@gmail.com'
 export const ODOO_AUTOR_URL =
   'https://apps.odoo.com/apps/modules/browse?author=Marlon%20Falc%C3%B3n%20Hern%C3%A1ndez'
 
+export const ODOO_TEMAS_URL =
+  'https://apps.odoo.com/apps/themes/browse?author=Marlon%20Falc%C3%B3n%20Hern%C3%A1ndez'
+
 export const formatoPrecio = (precio, moneda = 'EUR') =>
   new Intl.NumberFormat('es-ES', { style: 'currency', currency: moneda }).format(precio)
 

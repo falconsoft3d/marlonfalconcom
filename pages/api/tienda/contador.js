@@ -5,7 +5,7 @@ import { obtenerCatalogo } from '../../../lib/odoo-apps'
 export default async function handler(req, res) {
   try {
     const modulos = await obtenerCatalogo()
-    const odoo20 = new Set(modulos.filter((m) => m.version === '20.0').map((m) => m.tecnico)).size
+    const odoo20 = new Set(modulos.filter((m) => m.tipo === 'modulo' && m.version === '20.0').map((m) => m.tecnico)).size
     res.setHeader('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400')
     res.json({ odoo20 })
   } catch (e) {

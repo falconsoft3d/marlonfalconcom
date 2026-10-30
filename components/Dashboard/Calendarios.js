@@ -256,7 +256,8 @@ function Ics() {
           </Paso>
           <Paso n="3">
             Baja hasta <b>Integrar el calendario</b> y copia la <b>Dirección secreta en formato iCal</b> (termina en <code>/basic.ics</code>). No uses la «dirección
-            pública»: solo funciona si el calendario es público.
+            pública»: solo funciona si el calendario es público. En cuentas de empresa (Google Workspace) a veces no aparece la secreta: usa «Conectar con
+            Google» o, en <b>Permisos de acceso a eventos</b>, hazlo público con <b>Ver solo libre/ocupado</b> y pega la dirección pública.
           </Paso>
           <Paso n="4">Pégala abajo con un nombre (p. ej. «Gmail personal») y pulsa Añadir. Se comprueba al momento y verás cuántos eventos ocupados tiene.</Paso>
           <Paso n="5">
