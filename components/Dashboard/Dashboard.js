@@ -10,6 +10,7 @@ import Horario from './Horario'
 import Bloqueos from './Bloqueos'
 import Calendarios from './Calendarios'
 import Eventos from './Eventos'
+import Agentes from './Agentes'
 
 const PESTANAS = [
   ['reservas', 'Reservas', 'users'],
@@ -18,7 +19,8 @@ const PESTANAS = [
   ['horario', 'Horario', 'clock'],
   ['bloqueos', 'No trabajo', 'close'],
   ['calendarios', 'Calendarios', 'refresh'],
-  ['eventos', 'Reuniones', 'chat']
+  ['eventos', 'Reuniones', 'chat'],
+  ['agentes', 'Agentes', 'rocket']
 ]
 
 function Login({ alEntrar }) {
@@ -139,6 +141,7 @@ export default function Dashboard() {
             {pestana === 'bloqueos' && <Bloqueos {...props} />}
             {pestana === 'calendarios' && <Calendarios {...props} />}
             {pestana === 'eventos' && <Eventos {...props} />}
+            {pestana === 'agentes' && <Agentes {...props} />}
           </section>
         </>
       )}

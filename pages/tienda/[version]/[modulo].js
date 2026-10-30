@@ -1,17 +1,14 @@
-import { Modulo } from '../../../components/Tienda'
-import { obtenerModulo, REVALIDAR } from '../../../lib/odoo-apps'
+import { fichaEstatica } from '../../../lib/odoo-apps'
 
-// Las fichas se generan al primer acceso y se regeneran cada hora desde apps.odoo.com
+// Ruta antigua de las fichas: redirige de forma permanente a /tienda/odoo-module y /tienda/odoo-template
 export function getStaticPaths() {
   return { paths: [], fallback: 'blocking' }
 }
 
-export async function getStaticProps({ params }) {
-  const modulo = await obtenerModulo(params.version, params.modulo)
-  if (!modulo) return { notFound: true, revalidate: REVALIDAR }
-  return { props: { modulo }, revalidate: REVALIDAR }
+export function getStaticProps({ params }) {
+  return fichaEstatica(params)
 }
 
-export default function ModuloPage({ modulo }) {
-  return <Modulo modulo={modulo} />
+export default function RutaAntigua() {
+  return null
 }

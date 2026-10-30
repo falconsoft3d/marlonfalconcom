@@ -8,5 +8,8 @@ module.exports = withNextra({
       // El enlace antiguo al PDF lleva ahora a la página del CV, que permite descargarlo
       { source: '/resume_marlon_falcon.pdf', destination: '/cv', permanent: false }
     ]
+  },
+  async rewrites() {
+    return [{ source: '/sitemap-tienda.xml', destination: '/api/tienda/sitemap' }]
   }
 })

@@ -8,6 +8,13 @@ import { Analytics } from '@vercel/analytics/react';
 import { useRouter } from 'next/router';
 import { IdiomaProvider, useIdioma } from '../lib/idioma';
 
+// Valores por defecto: cada página los sustituye desde su <Head>, que aquí sí se deduplica (en _document saldrían repetidos)
+const META = {
+  title: 'Marlon Falcón Hernández | Full Stack Developer',
+  description: 'Desarrollador de Odoo y Python, con experiencia en desarrollo web y móvil.',
+  image: 'https://www.marlonfalcon.com/images/marlon_yellow2.png'
+}
+
 // Rutas de artículos: solo existen en español
 const ARTICULOS = ['/posts/', '/odoo-espana', '/odoo-programa-gestion-construccion']
 
@@ -19,9 +26,26 @@ function AvisoSoloEspanol() {
 }
 
 export default function Nextra({ Component, pageProps }) {
+  // La URL de una sala de agentes lleva su token: no pasa por analítica ni chats de terceros
+  const { pathname } = useRouter()
+  if (pathname === '/agentes/[token]') {
+    return (
+      <IdiomaProvider>
+        <Component {...pageProps} />
+      </IdiomaProvider>
+    )
+  }
+
   return (
     <IdiomaProvider>
       <Head>
+        <meta name="description" content={META.description} />
+        <meta key="og:title" property="og:title" content={META.title} />
+        <meta key="og:description" property="og:description" content={META.description} />
+        <meta key="og:image" property="og:image" content={META.image} />
+        <meta key="twitter:title" name="twitter:title" content={META.title} />
+        <meta key="twitter:description" name="twitter:description" content={META.description} />
+        <meta key="twitter:image" name="twitter:image" content={META.image} />
         <link
           rel="alternate"
           type="application/rss+xml"

@@ -38,8 +38,8 @@ export default function useCarrito() {
   const anadir = useCallback((m) => {
     const actuales = leer()
     if (actuales.some((l) => l.clave === m.clave)) return
-    const { clave, tecnico, version, nombre, precio, moneda, imagen } = m
-    guardar([...actuales, { clave, tecnico, version, nombre, precio, moneda, imagen }])
+    const { clave, tipo, tecnico, version, nombre, precio, moneda, imagen } = m
+    guardar([...actuales, { clave, tipo, tecnico, version, nombre, precio, moneda, imagen }])
   }, [])
 
   const quitar = useCallback((clave) => guardar(leer().filter((l) => l.clave !== clave)), [])

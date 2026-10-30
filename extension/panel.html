@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Torre de control</title>
+    <link rel="stylesheet" href="panel.css" />
+  </head>
+  <body>
+    <header>
+      <p class="torre"><span id="luz"></span> Torre de control</p>
+      <div class="sala">
+        <select id="salas" aria-label="Sala"></select>
+        <button id="quitar" type="button" title="Dejar de seguir esta sala" aria-label="Dejar de seguir esta sala">×</button>
+      </div>
+      <div id="total" hidden>
+        <div class="fila-total"><b id="porcentaje"></b><span id="resumen"></span></div>
+        <div class="barra"><div id="barra-total"></div></div>
+      </div>
+    </header>
+    <main id="filas"></main>
+    <p id="aviso" hidden></p>
+    <form id="nueva">
+      <label for="entrada">Sigue una sala nueva</label>
+      <div>
+        <input id="entrada" placeholder="Pega la URL o el token" autocomplete="off" />
+        <button type="submit">Añadir</button>
+      </div>
+    </form>
+    <footer><a id="abrir" target="_blank" rel="noopener noreferrer" hidden>Abrir la sala en una pestaña</a></footer>
+    <script type="module" src="panel.js"></script>
+  </body>
+</html>

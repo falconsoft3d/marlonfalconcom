@@ -2,8 +2,9 @@ import { listar, crear, actualizar, borrar } from '../../../lib/falcondb'
 import { conSesion } from '../../../lib/calendario/sesion'
 import { zonaValida } from '../../../lib/calendario/zona'
 import { normalizarUrl } from '../../../lib/calendario/ics'
+import { crearToken, borrarAgentes } from '../../../lib/agentes'
 
-// CRUD del dashboard: /api/dashboard/{ajustes|eventos|bloqueos|calendarios|reservas|mensajes}
+// CRUD del dashboard: /api/dashboard/{ajustes|eventos|bloqueos|calendarios|reservas|mensajes|salas}
 // GET lista · POST crea · PATCH ?id= actualiza · DELETE ?id= borra.
 // Cada campo pasa por su validador: lo que no esté en la lista no se guarda.
 
@@ -125,6 +126,14 @@ const RECURSOS = {
     campos: { read: booleano },
     obligatorios: [],
     sinCrear: true
+  },
+  salas: {
+    tabla: 'agent_rooms',
+    filtros: () => ({ order: 'created_at.desc' }),
+    campos: { title: texto(120, true), active: booleano },
+    obligatorios: ['title'],
+    alCrear: () => ({ token: crearToken() }),
+    alBorrar: borrarAgentes
   }
 }
 
@@ -152,7 +161,7 @@ export default conSesion(async function handler(req, res) {
         return res.status(200).json({ data: await listar(recurso.tabla, recurso.filtros(req.query)) })
       case 'POST':
         if (recurso.soloEditar || recurso.sinCrear) break
-        return res.status(200).json({ data: await crear(recurso.tabla, validar(recurso, req.body || {}, true)) })
+        return res.status(200).json({ data: await crear(recurso.tabla, { ...validar(recurso, req.body || {}, true), ...recurso.alCrear?.() }) })
       case 'PATCH': {
         if (!id) return res.status(400).json({ error: 'Falta el id.' })
         const cambios = validar(recurso, req.body || {}, false)
@@ -162,6 +171,7 @@ export default conSesion(async function handler(req, res) {
       case 'DELETE':
         if (recurso.soloEditar || recurso.tabla === 'booking_settings') break
         if (!id) return res.status(400).json({ error: 'Falta el id.' })
+        await recurso.alBorrar?.(id)
         await borrar(recurso.tabla, id)
         return res.status(200).json({ ok: true })
     }

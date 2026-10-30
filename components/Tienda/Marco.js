@@ -7,7 +7,7 @@ import { formatoPrecio } from './data'
 import useTextos from './textos'
 
 // Estructura y estilos comunes de todas las páginas de la tienda
-export default function Marco({ titulo, descripcion, children }) {
+export default function Marco({ titulo, descripcion, canonica, imagen, children }) {
   const { lineas, total } = useCarrito()
   const t = useTextos()
 
@@ -16,6 +16,14 @@ export default function Marco({ titulo, descripcion, children }) {
       <Head>
         <title>{titulo}</title>
         {descripcion && <meta name="description" content={descripcion} />}
+        <meta key="og:title" property="og:title" content={titulo} />
+        <meta key="twitter:title" name="twitter:title" content={titulo} />
+        {descripcion && <meta key="og:description" property="og:description" content={descripcion} />}
+        {descripcion && <meta key="twitter:description" name="twitter:description" content={descripcion} />}
+        {canonica && <link rel="canonical" href={canonica} />}
+        {canonica && <meta key="og:url" property="og:url" content={canonica} />}
+        {imagen && <meta key="og:image" property="og:image" content={imagen} />}
+        {imagen && <meta key="twitter:image" name="twitter:image" content={imagen} />}
       </Head>
 
       <div className="tn-top">

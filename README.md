@@ -26,9 +26,13 @@ Si usas otra herramienta (asdf, fnm, etc.), el archivo `.node-version` también 
 
 
 
+## Torre de control de agentes (`/agentes/<token>`)
+
+Desde `/dashboard`, pestaña Agentes, se crea una sala con una URL con token. Claude informa con `POST /api/agentes/<token>` y la página muestra una fila por agente con su barra y sus tareas; las instrucciones y la API están documentadas en esa misma página y en el dashboard. Los datos están en las tablas privadas `agent_rooms` y `agent_states` de falcondatabase. El plugin de Chrome está en `extension/`: `npm run extension:zip` genera la descarga `public/torre-de-control-chrome.zip`.
+
 ## Tienda de módulos Odoo (`/tienda`)
 
-El catálogo se lee en vivo de [apps.odoo.com](https://apps.odoo.com/apps/modules/browse?author=Marlon%20Falc%C3%B3n%20Hern%C3%A1ndez), módulos y [temas web](https://apps.odoo.com/apps/themes/browse?author=Marlon%20Falc%C3%B3n%20Hern%C3%A1ndez) (pestaña «Webs», `/tienda?tipo=webs`), al entrar en la tienda (`/api/tienda/catalogo`, con 5 minutos de caché en el CDN). Las imágenes se sirven desde `/api/tienda/imagen`, porque Odoo Apps cambia sus URLs cada vez que se actualiza un módulo. Los pedidos se guardan en la tabla privada `shop_orders` de falcondatabase.
+El catálogo se lee en vivo de [apps.odoo.com](https://apps.odoo.com/apps/modules/browse?author=Marlon%20Falc%C3%B3n%20Hern%C3%A1ndez), módulos y [temas web](https://apps.odoo.com/apps/themes/browse?author=Marlon%20Falc%C3%B3n%20Hern%C3%A1ndez) (pestaña «Webs», `/tienda?tipo=webs`), al entrar en la tienda (`/api/tienda/catalogo`, con 5 minutos de caché en el CDN). Cada ficha está en `/tienda/odoo-module/<versión>/<módulo>` o `/tienda/odoo-template/<versión>/<web>`; la ruta antigua `/tienda/<versión>/<módulo>` redirige a ellas y `/sitemap-tienda.xml` las lista en vivo. Las imágenes se sirven desde `/api/tienda/imagen`, porque Odoo Apps cambia sus URLs cada vez que se actualiza un módulo. Los pedidos se guardan en la tabla privada `shop_orders` de falcondatabase.
 
 Variables de entorno (`.env.local` y Vercel):
 

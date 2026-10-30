@@ -7,6 +7,7 @@
     "start": "next start",
     "cv:pdf": "node ./scripts/gen-cv-pdf.js",
     "webs:shots": "node ./scripts/gen-webs-shots.js",
+    "extension:zip": "rm -f public/torre-de-control-chrome.zip && cd extension && zip -qr ../public/torre-de-control-chrome.zip . -x '.*'",
     "postbuild": "next-sitemap"
   },
   "dependencies": {

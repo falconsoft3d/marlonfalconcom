@@ -1,9 +1,10 @@
 import React from 'react'
+import Head from 'next/head'
 import Link from 'next/link'
 import Icon from '../Icon'
 import Marco from './Marco'
 import useCarrito from './useCarrito'
-import { formatoPrecio, etiquetaVersion, imagenModulo } from './data'
+import { SITIO, formatoPrecio, etiquetaVersion, imagenModulo, rutaModulo } from './data'
 import useTextos from './textos'
 
 // Ficha de un módulo en una versión, con el resto de versiones publicadas
@@ -13,12 +14,40 @@ export default function Modulo({ modulo: m }) {
   const enCarrito = tiene(m.clave)
   const gratis = !(m.precio > 0)
   const esWeb = m.tipo === 'tema'
+  const url = `${SITIO}${rutaModulo(m)}`
+  const portada = `${SITIO}${imagenModulo(m)}`
+  const descripcion = m.resumen || (esWeb ? t.webs : t).moduloDescripcion(m.nombre, etiquetaVersion(m.version))
+
+  // Datos de producto para los resultados de Google
+  const producto = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: m.nombre,
+    description: descripcion,
+    sku: m.tecnico,
+    category: m.categoria,
+    image: portada,
+    brand: { '@type': 'Brand', name: m.autor },
+    offers: {
+      '@type': 'Offer',
+      url,
+      price: m.precio,
+      priceCurrency: m.moneda,
+      availability: 'https://schema.org/InStock'
+    }
+  }
 
   return (
     <Marco
       titulo={`${m.nombre} · ${etiquetaVersion(m.version)} · ${t.moduloTitulo}`}
-      descripcion={m.resumen || (esWeb ? t.webs : t).moduloDescripcion(m.nombre, etiquetaVersion(m.version))}
+      descripcion={descripcion}
+      canonica={url}
+      imagen={portada}
     >
+      <Head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(producto).replace(/</g, '\\u003c') }} />
+      </Head>
+
       <nav className="tm-crumbs" aria-label={t.ruta}>
         <Link href="/tienda">
           <a>{t.tiendaCorta}</a>
@@ -88,7 +117,7 @@ export default function Modulo({ modulo: m }) {
                         {v}
                       </span>
                     ) : (
-                      <Link key={v} href={`/tienda/${v}/${m.tecnico}`}>
+                      <Link key={v} href={rutaModulo({ ...m, version: v })}>
                         <a>{v}</a>
                       </Link>
                     )
