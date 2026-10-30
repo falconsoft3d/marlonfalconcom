@@ -850,6 +850,97 @@ export const libros = [
     ]
   },
   {
+    slug: 'guitarra-de-trova-cubana',
+    titulo: 'Guitarra de trova cubana',
+    subtitulo: {
+      es: 'Curso completo con cancionero: bolero, criolla, guajira, habanera, son y filin',
+      en: 'A complete course with songbook: bolero, criolla, guajira, habanera, son and filin'
+    },
+    portada: { src: '/images/libros/guitarra-de-trova-cubana.jpg', ancho: 909, alto: 1287 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['14 capítulos', '101 páginas', '28 canciones', 'En español'],
+      en: ['14 chapters', '101 pages', '28 songs', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Para quien ya conoce los acordes básicos y quiere acompañarse con la guitarra al estilo de los trovadores cubanos. Reúne los 20 arpegios esenciales, la clave, el tresillo y el cinquillo, los ritmos de la trova, la armonía del filin y un cancionero de 28 piezas con acordes, entre canciones de dominio público, poemas para musicalizar y temas de estudio. Incluye un plan de 12 semanas y un cuaderno de práctica.',
+      en: 'For anyone who already knows the basic chords and wants to accompany themselves on guitar in the style of Cuban trovadores. It brings together the 20 essential arpeggios, the clave, tresillo and cinquillo, the rhythms of trova, the harmony of filin and a songbook of 28 pieces with chords, including public domain songs, poems to set to music and study pieces. It includes a 12-week plan and a practice notebook.'
+    },
+    temas: {
+      es: ['Guitarra', 'Trova cubana', 'Bolero', 'Son', 'Habanera', 'Filin', 'Arpegios', 'Cancionero'],
+      en: ['Guitar', 'Cuban trova', 'Bolero', 'Son', 'Habanera', 'Filin', 'Arpeggios', 'Songbook']
+    },
+    acciones: [
+      {
+        href: '/libros/guitarra-de-trova-cubana.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Curso_Guitarra_Trova_Cubana.pdf'
+      },
+      {
+        href: '/libros/guitarra-de-trova-cubana.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Presentación',
+      'Cómo leer este libro',
+      'Sobre el repertorio de este libro',
+      'Capítulo 1 · Qué es la trova cubana',
+      'Capítulo 2 · La guitarra del trovador',
+      'Capítulo 3 · La mano derecha',
+      'Capítulo 4 · La mano izquierda',
+      'Capítulo 5 · Los 20 arpegios esenciales',
+      'Capítulo 6 · La clave, el tresillo y el cinquillo',
+      'Capítulo 7 · El bolero trovadoresco',
+      'Capítulo 8 · Criolla, guajira y punto',
+      'Capítulo 9 · La habanera y la contradanza',
+      'Capítulo 10 · El son en la guitarra',
+      'Capítulo 11 · Armonía de la trova y del filin',
+      'Capítulo 12 · Acompañar la voz',
+      'Capítulo 13 · Nueva trova y estilo propio',
+      'Capítulo 14 · Estudios para guitarra sola',
+      'Canción 1 · Arroz con leche',
+      'Canción 2 · Tengo una muñeca',
+      'Canción 3 · Señora Santana',
+      'Canción 4 · Son de la Ma Teodora',
+      'Canción 5 · La Bayamesa (Himno de Bayamo)',
+      'Canción 6 · La paloma',
+      'Canción 7 · La golondrina',
+      'Canción 8 · La bayamesa (1851)',
+      'Canción 9 · Tristezas',
+      'Canción 10 · El manisero',
+      'Canción 11 · Yo soy un hombre sincero',
+      'Canción 12 · Cultivo una rosa blanca',
+      'Canción 13 · La niña de Guatemala',
+      'Canción 14 · Mi caballero',
+      'Canción 15 · Al partir',
+      'Canción 16 · Volverán las oscuras golondrinas',
+      'Canción 17 · Caminante, no hay camino',
+      'Canción 18 · Para Aragón, en España',
+      'Canción 19 · Si ves un monte de espumas',
+      'Canción 20 · Rimas XXI y XXIII',
+      'Canción 21 · Lo fatal',
+      'Canción 22 · Bolero del portal',
+      'Canción 23 · Criolla de la tarde',
+      'Canción 24 · Guajira de las doce semanas',
+      'Canción 25 · Décima del aprendiz',
+      'Canción 26 · Habanera del puerto',
+      'Canción 27 · Son del aprendiz',
+      'Canción 28 · Canción para empezar',
+      'Acordes por tonalidad',
+      'Resumen de ritmos',
+      'Plan de estudio de 12 semanas',
+      'Cuaderno de práctica',
+      'Plantilla de décima',
+      'Repertorio para escuchar y sacar de oído',
+      'Glosario'
+    ]
+  },
+  {
     slug: 'rimas-desde-cero',
     titulo: 'Rimas desde Cero',
     subtitulo: {
@@ -959,7 +1050,7 @@ export const libros = [
 ]
 
 // Novedades de «Cómo contratar» y primeros libros del carrusel del home: el último publicado va primero
-const ULTIMOS = ['rimas-desde-cero', 'curso-basico-de-guitarra', 'manual-bim-2-0']
+const ULTIMOS = ['guitarra-de-trova-cubana', 'rimas-desde-cero', 'curso-basico-de-guitarra']
 
 export const ultimosLibros = ULTIMOS.map((slug) => libros.find((libro) => libro.slug === slug))
 
