@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Icon from '../Icon'
 import MatrixRain from './MatrixRain'
 import CountUp from './CountUp'
+import CarruselLibros from '../Libros/CarruselLibros'
 import posts from '../../data/posts.json'
 import { tr, useIdioma } from '../../lib/idioma'
 import {
@@ -260,6 +261,11 @@ export default function Home() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Libros */}
+      <section className="band band-alt">
+        <CarruselLibros />
       </section>
 
       {/* Recorrido */}

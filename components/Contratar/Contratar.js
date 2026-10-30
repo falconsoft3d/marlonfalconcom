@@ -1,5 +1,6 @@
 import React from 'react'
 import Icon from '../Icon'
+import UltimosLibros from '../Libros/UltimosLibros'
 import { WHATSAPP, EMAIL, PDF_TARIFA, confianza, ayudas, tramos, pasos, razones, preguntas } from './data'
 
 const Ext = ({ href, className, children }) => (
@@ -155,8 +156,15 @@ export default function Contratar() {
         </div>
       </section>
 
-      {/* Preguntas */}
+      {/* Libros */}
       <section className="hb">
+        <div className="hi">
+          <UltimosLibros />
+        </div>
+      </section>
+
+      {/* Preguntas */}
+      <section className="hb hb-alt">
         <div className="hi hi-narrow">
           <h2 className="h-section">Preguntas frecuentes</h2>
           <div className="h-faq">

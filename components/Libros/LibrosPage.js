@@ -11,7 +11,7 @@ import estilos from './estilos'
 import { tr, useIdioma } from '../../lib/idioma'
 
 const TITULO = 'Libros gratis de Odoo 20 y ABAP | Marlon Falcón Hernández'
-const DESCRIPCION = 'Libros gratuitos de programación en Odoo 20, OWL, Claude Code y ABAP para SAP, de Marlon Falcón Hernández, con ejercicios prácticos, PDF para descargar y buscador por tema y capítulo.'
+const DESCRIPCION = 'Libros gratuitos de programación en Odoo 20, OWL, JSON-RPC, SQL, Git, Claude Code y ABAP para SAP, y de Scrum e inteligencia artificial en la empresa, de Marlon Falcón Hernández, con ejercicios prácticos, PDF para descargar y buscador por tema y capítulo.'
 const URL = `${SITIO}/libros`
 
 const TEXTOS = {
@@ -73,19 +73,22 @@ const INDICE = libros.map((libro) => ({
   capitulos: libro.capitulos.map((capitulo) => ({ capitulo, texto: normalizar(capitulo) }))
 }))
 
+// Por inicio de palabra: «api» no debe encontrar «capítulo», ni «ia» cualquier palabra que la contenga
+const crearClave = (palabra) => new RegExp(`(^|[^a-z0-9])${palabra.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`)
+
 function buscar(consulta) {
-  const palabras = normalizar(consulta).split(/\s+/).filter(Boolean)
+  const palabras = normalizar(consulta).split(/\s+/).filter(Boolean).map(crearClave)
   if (!palabras.length) return libros.map((libro) => ({ libro, coinciden: [] }))
 
   return INDICE.flatMap(({ libro, ficha, capitulos }) => {
     const todo = [ficha, ...capitulos.map((c) => c.texto)].join(' ')
-    if (!palabras.every((palabra) => todo.includes(palabra))) return []
+    if (!palabras.every((palabra) => palabra.test(todo))) return []
     // «odoo factura» en un libro de Odoo: «odoo» ya está en el título, el capítulo se busca por «factura»
     const titulo = normalizar(libro.titulo)
-    const resto = palabras.filter((palabra) => !titulo.includes(palabra))
+    const resto = palabras.filter((palabra) => !palabra.test(titulo))
     const claves = resto.length ? resto : palabras
-    const conTodas = capitulos.filter((c) => claves.every((clave) => c.texto.includes(clave)))
-    const coinciden = conTodas.length ? conTodas : capitulos.filter((c) => claves.some((clave) => c.texto.includes(clave)))
+    const conTodas = capitulos.filter((c) => claves.every((clave) => clave.test(c.texto)))
+    const coinciden = conTodas.length ? conTodas : capitulos.filter((c) => claves.some((clave) => clave.test(c.texto)))
     return [{ libro, coinciden: coinciden.map((c) => c.capitulo) }]
   })
 }

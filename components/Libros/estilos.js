@@ -113,4 +113,24 @@ export default css.global`
       border-color: var(--accent-hover);
       background: var(--accent-hover);
     }
+
+    /* Cabecera de las secciones de libros en otras páginas */
+    .lb-u .lb-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .lb-u .lb-head-title {
+      margin: 0 0 0.5rem;
+      font-size: 1.75rem;
+      line-height: 1.2;
+      color: var(--text-strong);
+    }
+    .lb-u .lb-head-lede {
+      margin: 0;
+      color: var(--muted);
+    }
 `
