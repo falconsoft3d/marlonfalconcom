@@ -224,15 +224,14 @@ export default function LibroPage({ libro }) {
           padding: 0.35rem 0;
         }
         .lf .lf-others {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 1.25rem;
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 1.25rem 1.5rem;
         }
         .lf .lf-other {
           display: flex;
           align-items: center;
           gap: 0.9rem;
-          max-width: 320px;
           color: var(--text-strong);
           font-size: 0.95rem;
           text-decoration: none;
@@ -253,9 +252,18 @@ export default function LibroPage({ libro }) {
           .lf .lf-toc {
             columns: 1;
           }
+          .lf .lf-others {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
           .lf .lf-cover {
             width: min(240px, 70%);
             margin: 0 auto;
+          }
+        }
+
+        @media (max-width: 560px) {
+          .lf .lf-others {
+            grid-template-columns: minmax(0, 1fr);
           }
         }
       `}</style>

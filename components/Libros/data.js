@@ -490,6 +490,63 @@ export const libros = [
     ]
   },
   {
+    slug: 'vender-erp-con-el-metodo-spin',
+    titulo: 'Vender ERP con el método SPIN',
+    subtitulo: {
+      es: 'Cómo convertir una conversación de descubrimiento en un proyecto de implantación que el cliente quiere comprar',
+      en: 'How to turn a discovery conversation into an implementation project the client wants to buy'
+    },
+    portada: { src: '/images/libros/vender-erp-con-el-metodo-spin.jpg', ancho: 914, alto: 1357 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['15 capítulos', '64 páginas', '120 preguntas', 'En español'],
+      en: ['15 chapters', '64 pages', '120 questions', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Adapta el método SPIN a la venta consultiva de proyectos ERP: menos demos y más preguntas, para que sea el cliente quien descubra, cuantifique y defienda el valor del cambio. Incluye un mapa de dolores por área, un caso completo en una constructora, cómo convertir la conversación en propuesta, un plan de entrenamiento de 30 días y 120 preguntas listas para usar.',
+      en: 'It adapts the SPIN method to consultative selling of ERP projects: fewer demos and more questions, so that the client discovers, quantifies and defends the value of change. It includes a pain map by area, a complete case in a construction company, how to turn the conversation into a proposal, a 30-day training plan and 120 ready-to-use questions.'
+    },
+    temas: {
+      es: ['Ventas', 'SPIN', 'ERP', 'Odoo', 'Consultoría', 'Preventa', 'Objeciones', 'Propuestas'],
+      en: ['Sales', 'SPIN', 'ERP', 'Odoo', 'Consulting', 'Pre-sales', 'Objections', 'Proposals']
+    },
+    acciones: [
+      {
+        href: '/libros/vender-erp-con-el-metodo-spin.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Vender_ERP_con_SPIN.pdf'
+      },
+      {
+        href: '/libros/vender-erp-con-el-metodo-spin.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Prólogo',
+      'Capítulo 1 · Por qué vender un ERP no se parece a vender software',
+      'Capítulo 2 · El origen del método SPIN',
+      'Capítulo 3 · Necesidades implícitas y explícitas',
+      'Capítulo 4 · Las cuatro fases de una reunión de venta',
+      'Capítulo 5 · Preguntas de Situación',
+      'Capítulo 6 · Preguntas de Problema',
+      'Capítulo 7 · Preguntas de Implicación',
+      'Capítulo 8 · Preguntas de Necesidad-Beneficio',
+      'Capítulo 9 · Mapa de dolores por área funcional',
+      'Capítulo 10 · Caso práctico: una constructora de tamaño medio',
+      'Capítulo 11 · Varios interlocutores, una sola venta',
+      'Capítulo 12 · Prevenir objeciones en vez de rebatirlas',
+      'Capítulo 13 · De la conversación a la propuesta',
+      'Capítulo 14 · Errores frecuentes del consultor ERP',
+      'Capítulo 15 · Plan de entrenamiento de 30 días',
+      'Anexo · Banco de 120 preguntas SPIN para ERP',
+      'Epílogo'
+    ]
+  },
+  {
     slug: 'desde-lo-alto-de-la-montana',
     titulo: 'Desde lo alto de la montaña',
     subtitulo: {
@@ -594,6 +651,58 @@ export const libros = [
     ]
   },
   {
+    slug: 'bajando-un-escalon',
+    titulo: 'Bajando un escalón',
+    subtitulo: {
+      es: 'Guía práctica para perder peso si pesas entre 100 y 150 kg',
+      en: 'A practical guide to losing weight if you weigh between 100 and 150 kg'
+    },
+    portada: { src: '/images/libros/bajando-un-escalon.jpg', ancho: 909, alto: 1290 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['11 escalones', '26 páginas', 'Plan de 12 semanas', 'En español'],
+      en: ['11 steps', '26 pages', '12-week plan', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Para quien pesa entre 100 y 150 kilos, quiere adelgazar y ya ha probado dietas que duraban poco. Propone cambios pequeños y sostenidos, un hábito cada vez: un plato que sacia, ejercicio que cuida las articulaciones, mejor sueño, hambre emocional y mesetas, con un plan de 12 semanas y registros listos para usar. Es divulgativo: no sustituye la consulta con un profesional sanitario.',
+      en: 'For anyone who weighs between 100 and 150 kilos and has already tried diets that did not last. It proposes small, sustained changes, one habit at a time: a filling plate, exercise that protects your joints, better sleep, emotional hunger and plateaus, with a 12-week plan and ready-to-use logs. It is an informative guide: it does not replace seeing a healthcare professional.'
+    },
+    temas: {
+      es: ['Salud', 'Perder peso', 'Obesidad', 'Alimentación', 'Ejercicio', 'Sueño', 'Hábitos', 'Hambre emocional'],
+      en: ['Health', 'Weight loss', 'Obesity', 'Nutrition', 'Exercise', 'Sleep', 'Habits', 'Emotional hunger']
+    },
+    acciones: [
+      {
+        href: '/libros/bajando-un-escalon.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Bajando_un_escalon.pdf'
+      },
+      {
+        href: '/libros/bajando-un-escalon.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Cómo usar este libro',
+      'Escalón 1 · Empezar donde estás',
+      'Escalón 2 · Antes de subir: la revisión médica',
+      'Escalón 3 · La energía, sin obsesionarse',
+      'Escalón 4 · El plato escalón',
+      'Escalón 5 · Hambre, antojos y emociones',
+      'Escalón 6 · Moverse con un cuerpo grande',
+      'Escalón 7 · Sueño, estrés y entorno',
+      'Escalón 8 · Mesetas, tropiezos y recaídas',
+      'Escalón 9 · Cuando hace falta más ayuda',
+      'Escalón 10 · El plan de 12 semanas',
+      'Escalón 11 · Herramientas y registros',
+      'Epílogo: mirar hacia abajo'
+    ]
+  },
+  {
     slug: 'aprende-abap-4',
     titulo: 'Aprende ABAP/4 con ejercicios prácticos',
     subtitulo: {
@@ -643,7 +752,7 @@ export const libros = [
 ]
 
 // Novedades de «Cómo contratar» y primeros libros del carrusel del home: el último publicado va primero
-const ULTIMOS = ['cuidar-mayores-trastorno-bipolar', 'desde-lo-alto-de-la-montana', 'odoo-en-la-nube']
+const ULTIMOS = ['bajando-un-escalon', 'vender-erp-con-el-metodo-spin', 'cuidar-mayores-trastorno-bipolar']
 
 export const ultimosLibros = ULTIMOS.map((slug) => libros.find((libro) => libro.slug === slug))
 
