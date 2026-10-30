@@ -707,6 +707,209 @@ export const libros = [
     ]
   },
   {
+    slug: 'curso-basico-de-guitarra',
+    titulo: 'Curso Básico de Guitarra',
+    subtitulo: {
+      es: '100 lecciones con pentagrama, tablatura y ejercicios',
+      en: '100 lessons with staff notation, tablature and exercises'
+    },
+    portada: { src: '/images/libros/curso-basico-de-guitarra.jpg', ancho: 909, alto: 1290 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['100 lecciones', '125 páginas', 'En español'],
+      en: ['100 lessons', '125 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Para quien nunca ha tocado una guitarra y quiere llegar a un nivel intermedio. En 100 lecciones con pentagrama, tablatura y ejercicios con una meta concreta, enseña acordes abiertos y con cejilla, rasgueos, escalas, arpegios, fingerstyle y armonía práctica, y termina con los ritmos cubanos y latinos: bolero, guajira, son, cha-cha-chá, habanera y bossa nova. Incluye plan de estudio y hoja de autoevaluación.',
+      en: 'For anyone who has never played a guitar and wants to reach an intermediate level. In 100 lessons with staff notation, tablature and exercises with a specific goal, it teaches open and barre chords, strumming, scales, arpeggios, fingerstyle and practical harmony, and ends with Cuban and Latin rhythms: bolero, guajira, son, cha-cha-chá, habanera and bossa nova. It includes a study plan and a self-assessment sheet.'
+    },
+    temas: {
+      es: ['Guitarra', 'Música', 'Acordes', 'Tablatura', 'Pentagrama', 'Fingerstyle', 'Ritmos cubanos', 'Armonía'],
+      en: ['Guitar', 'Music', 'Chords', 'Tablature', 'Staff notation', 'Fingerstyle', 'Cuban rhythms', 'Harmony']
+    },
+    acciones: [
+      {
+        href: '/libros/curso-basico-de-guitarra.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Curso_Basico_de_Guitarra.pdf'
+      },
+      {
+        href: '/libros/curso-basico-de-guitarra.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Cómo usar este libro',
+      'Lección 1 · Las partes de la guitarra',
+      'Lección 2 · Las cuerdas y sus nombres',
+      'Lección 3 · Afinar con afinador',
+      'Lección 4 · Afinar de oído: el quinto traste',
+      'Lección 5 · La postura',
+      'Lección 6 · Las manos y su numeración',
+      'Lección 7 · Pulsar con la mano izquierda',
+      'Lección 8 · Cuerdas al aire con el pulgar',
+      'Lección 9 · La araña cromática',
+      'Lección 10 · Leer tablatura',
+      'Lección 11 · El pulso y el metrónomo',
+      'Lección 12 · Redondas, blancas y negras',
+      'Lección 13 · Corcheas: el «y»',
+      'Lección 14 · Los silencios',
+      'Lección 15 · Compases de 4/4 y 3/4',
+      'Lección 16 · Las notas en el pentagrama',
+      'Lección 17 · Notas en la 1ª cuerda',
+      'Lección 18 · Notas en la 2ª cuerda',
+      'Lección 19 · Notas en la 3ª cuerda',
+      'Lección 20 · Notas graves: 4ª, 5ª y 6ª cuerdas',
+      'Lección 21 · Leer un diagrama de acorde',
+      'Lección 22 · Mi menor y La menor',
+      'Lección 23 · Mi mayor y La mayor',
+      'Lección 24 · Re mayor y Re menor',
+      'Lección 25 · Do mayor y Sol mayor',
+      'Lección 26 · Cambiar sin parar: el dedo pivote',
+      'Lección 27 · Acordes de séptima: E7, A7, D7 y G7',
+      'Lección 28 · Si séptima y Do séptima',
+      'Lección 29 · Menores con séptima: Am7, Em7 y Dm7',
+      'Lección 30 · Acordes maj7: color y dulzura',
+      'Lección 31 · Acordes suspendidos: sus2 y sus4',
+      'Lección 32 · Cadd9 y las voces abiertas',
+      'Lección 33 · Rasgueo en negras',
+      'Lección 34 · Corcheas: abajo y arriba',
+      'Lección 35 · El patrón de balada',
+      'Lección 36 · El patrón folk',
+      'Lección 37 · Acentos',
+      'Lección 38 · El golpe apagado',
+      'Lección 39 · Semicorcheas',
+      'Lección 40 · Ritmo de vals (3/4)',
+      'Lección 41 · Bajo alterno',
+      'Lección 42 · Rasgueo en 6/8',
+      'Lección 43 · Escala de Do mayor',
+      'Lección 44 · Do mayor en toda la primera posición',
+      'Lección 45 · Melodía en Do: «Brisa de Viñales»',
+      'Lección 46 · Escala de Sol mayor',
+      'Lección 47 · Escala de La menor natural',
+      'Lección 48 · Pentatónica menor: primera caja',
+      'Lección 49 · Secuencias en la pentatónica',
+      'Lección 50 · Pentatónica mayor',
+      'Lección 51 · La escala de blues',
+      'Lección 52 · Melodía en Sol: «Guajirita»',
+      'Lección 53 · Lectura a primera vista',
+      'Lección 54 · Ligados ascendentes (hammer-on)',
+      'Lección 55 · Arpegio p-i-m-a',
+      'Lección 56 · Arpegio p-i-m-a-m-i',
+      'Lección 57 · Arpegio con bajo alterno',
+      'Lección 58 · Travis picking (I)',
+      'Lección 59 · Travis picking (II)',
+      'Lección 60 · Arpegio en 3/4: el sonido de la serenata',
+      'Lección 61 · El pellizco',
+      'Lección 62 · Melodía con bajo',
+      'Lección 63 · Arpegio y rasgueo combinados',
+      'Lección 64 · Estudio en La menor: «Atardecer»',
+      'Lección 65 · Power chords',
+      'Lección 66 · Power chords móviles',
+      'Lección 67 · Media cejilla',
+      'Lección 68 · Fa mayor con cejilla completa',
+      'Lección 69 · Forma de Mi: mayores y menores móviles',
+      'Lección 70 · Forma de La: Si♭, Si menor, Do menor',
+      'Lección 71 · Encontrar cualquier acorde',
+      'Lección 72 · Séptimas con cejilla',
+      'Lección 73 · Progresión con cejillas',
+      'Lección 74 · Cejilla rítmica: cortes',
+      'Lección 75 · Intervalos',
+      'Lección 76 · Cómo se construye un acorde',
+      'Lección 77 · Los acordes de una tonalidad',
+      'Lección 78 · I – IV – V: los tres pilares',
+      'Lección 79 · La progresión I – V – vi – IV',
+      'Lección 80 · Tonalidad menor y su dominante',
+      'Lección 81 · Dominantes secundarias',
+      'Lección 82 · Disminuidos y sextas',
+      'Lección 83 · Transportar y el capotraste',
+      'Lección 84 · Sacar canciones de oído',
+      'Lección 85 · La clave cubana',
+      'Lección 86 · El bolero',
+      'Lección 87 · La guajira',
+      'Lección 88 · El son: el bajo anticipado',
+      'Lección 89 · Guaracha y rasgueo rápido',
+      'Lección 90 · Cha-cha-chá',
+      'Lección 91 · La habanera',
+      'Lección 92 · Bossa nova',
+      'Lección 93 · Rumba',
+      'Lección 94 · La trova: acompañar la voz',
+      'Lección 95 · Ligados descendentes (pull-off)',
+      'Lección 96 · Deslizamientos (slides)',
+      'Lección 97 · Bending y vibrato',
+      'Lección 98 · Armónicos naturales',
+      'Lección 99 · Dinámica y expresión',
+      'Lección 100 · Pieza final: «El trovador del valle»',
+      'Plan de estudio',
+      'Hoja de autoevaluación',
+      'Glosario'
+    ]
+  },
+  {
+    slug: 'rimas-desde-cero',
+    titulo: 'Rimas desde Cero',
+    subtitulo: {
+      es: 'Aprende a rapear en 30 días: ritmo, rima, flow, voz y freestyle',
+      en: 'Learn to rap in 30 days: rhythm, rhyme, flow, voice and freestyle'
+    },
+    portada: { src: '/images/libros/rimas-desde-cero.jpg', ancho: 909, alto: 1286 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['20 capítulos', '26 páginas', 'Plan de 30 días', 'En español'],
+      en: ['20 chapters', '26 pages', '30-day plan', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Para quien siempre ha querido rapear y parte de cero, sin saber música. Enseña a contar el compás, encontrar rimas, crear tu flow, escribir letras con estructura y punchlines, cuidar la voz e improvisar en freestyle, y llega hasta grabar en casa, hacer beats y publicar. Termina con un plan de 30 días para tener tu primer tema grabado y un glosario.',
+      en: 'For anyone who has always wanted to rap and is starting from zero, with no musical knowledge. It teaches you to count the bar, find rhymes, build your flow, write structured lyrics and punchlines, look after your voice and freestyle, and goes on to recording at home, making beats and releasing your music. It ends with a 30-day plan to get your first track recorded and a glossary.'
+    },
+    temas: {
+      es: ['Rap', 'Música', 'Rimas', 'Flow', 'Freestyle', 'Letras', 'Voz', 'Beats'],
+      en: ['Rap', 'Music', 'Rhymes', 'Flow', 'Freestyle', 'Lyrics', 'Voice', 'Beats']
+    },
+    acciones: [
+      {
+        href: '/libros/rimas-desde-cero.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Rimas-desde-Cero-Aprende-a-Rapear.pdf'
+      },
+      {
+        href: '/libros/rimas-desde-cero.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Capítulo 1 · Qué es el rap',
+      'Capítulo 2 · El ritmo: aprender a contar',
+      'Capítulo 3 · La rima: el corazón de la letra',
+      'Capítulo 4 · El flow: cómo suenan tus palabras',
+      'Capítulo 5 · Escribir tu primera letra',
+      'Capítulo 6 · Recursos literarios y punchlines',
+      'Capítulo 7 · La voz: respiración y dicción',
+      'Capítulo 8 · Freestyle: rapear sin papel',
+      'Capítulo 9 · Grabar en casa',
+      'Capítulo 10 · Escuchar como un rapero',
+      'Capítulo 11 · Métrica: contar sílabas',
+      'Capítulo 12 · Rima avanzada y banco de rimas',
+      'Capítulo 13 · Storytelling: contar historias',
+      'Capítulo 14 · Estilos y subgéneros',
+      'Capítulo 15 · Estribillos, ganchos y melodía',
+      'Capítulo 16 · El directo: escenario y micrófono',
+      'Capítulo 17 · Haz tus propios beats',
+      'Capítulo 18 · Bloqueo creativo, disciplina y mentalidad',
+      'Capítulo 19 · Identidad artística, difusión y derechos',
+      'Capítulo 20 · Plan de práctica de 30 días',
+      'Glosario del rapero'
+    ]
+  },
+  {
     slug: 'aprende-abap-4',
     titulo: 'Aprende ABAP/4 con ejercicios prácticos',
     subtitulo: {
@@ -756,7 +959,7 @@ export const libros = [
 ]
 
 // Novedades de «Cómo contratar» y primeros libros del carrusel del home: el último publicado va primero
-const ULTIMOS = ['manual-bim-2-0', 'vender-erp-con-el-metodo-spin', 'cuidar-mayores-trastorno-bipolar']
+const ULTIMOS = ['rimas-desde-cero', 'curso-basico-de-guitarra', 'manual-bim-2-0']
 
 export const ultimosLibros = ULTIMOS.map((slug) => libros.find((libro) => libro.slug === slug))
 
