@@ -43,6 +43,8 @@ const TEXTOS = {
     cargandoCatalogo: 'Cargando módulos desde Odoo Apps…',
     errorCatalogo: 'No se pudo cargar el catálogo de Odoo Apps.',
     reintentar: 'Reintentar',
+    refrescar: 'Refrescar',
+    refrescarTitulo: 'Buscar de nuevo en Odoo Apps',
 
     // Pestaña de webs: sustituye a los textos de módulos
     webs: {
@@ -180,6 +182,8 @@ const TEXTOS = {
     cargandoCatalogo: 'Loading modules from Odoo Apps…',
     errorCatalogo: 'The Odoo Apps catalog could not be loaded.',
     reintentar: 'Try again',
+    refrescar: 'Refresh',
+    refrescarTitulo: 'Check Odoo Apps again',
 
     webs: {
       catalogoH1: 'Odoo websites',

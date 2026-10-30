@@ -20,6 +20,12 @@ const normalizar = (s = '') =>
     .normalize('NFD')
     .replace(/[̀-ͯ]/g, '')
 
+const pedirCatalogo = (url) =>
+  fetch(url).then((res) => {
+    if (!res.ok) throw new Error()
+    return res.json()
+  })
+
 // Al entrar se lee el catálogo en vivo de apps.odoo.com y, mientras tanto, se muestra la carga
 export default function Tienda() {
   const t = useTextos()
@@ -28,18 +34,16 @@ export default function Tienda() {
 
   const cargar = useCallback(() => {
     setError(false)
-    fetch('/api/tienda/catalogo')
-      .then((res) => {
-        if (!res.ok) throw new Error()
-        return res.json()
-      })
+    pedirCatalogo('/api/tienda/catalogo')
       .then(setDatos)
       .catch(() => setError(true))
   }, [])
 
   useEffect(cargar, [cargar])
 
-  if (datos) return <Catalogo {...datos} />
+  const refrescar = useCallback(() => pedirCatalogo(`/api/tienda/catalogo?refrescar=${Date.now()}`).then(setDatos), [])
+
+  if (datos) return <Catalogo {...datos} alRefrescar={refrescar} />
 
   return (
     <Marco titulo={t.catalogoTitulo} descripcion={t.catalogoDescripcion}>
@@ -153,7 +157,7 @@ export default function Tienda() {
 }
 
 // Catálogo con una pestaña por tipo (módulos y webs), agrupado por versión de Odoo como en Odoo Apps
-function Catalogo({ modulos, actualizado }) {
+function Catalogo({ modulos, actualizado, alRefrescar }) {
   const router = useRouter()
   const t = useTextos()
   const [version, setVersion] = useState('todas')
@@ -161,6 +165,8 @@ function Catalogo({ modulos, actualizado }) {
   const [precio, setPrecio] = useState('')
   const [orden, setOrden] = useState('relevancia')
   const [busqueda, setBusqueda] = useState('')
+  const [refrescando, setRefrescando] = useState(false)
+  const [errorRefresco, setErrorRefresco] = useState(false)
 
   // La versión elegida vive en la URL (?version=16.0) para poder enlazarla
   useEffect(() => {
@@ -189,6 +195,15 @@ function Catalogo({ modulos, actualizado }) {
     setCategoria('')
     setVersion(v)
     navegar(nuevoTipo, v)
+  }
+
+  // El catálogo actual sigue a la vista mientras se vuelve a leer de Odoo
+  const refrescar = () => {
+    setRefrescando(true)
+    setErrorRefresco(false)
+    alRefrescar()
+      .catch(() => setErrorRefresco(true))
+      .finally(() => setRefrescando(false))
   }
 
   const delTipo = useMemo(() => modulos.filter((m) => m.tipo === tipo), [modulos, tipo])
@@ -252,13 +267,30 @@ function Catalogo({ modulos, actualizado }) {
         </label>
       </header>
 
-      <nav className="ts-tabs" aria-label={t.tipoLabel}>
-        {Object.keys(t.pestanas).map((clave) => (
-          <button key={clave} type="button" className={tipo === clave ? 'on' : ''} onClick={() => elegirTipo(clave)}>
-            {t.pestanas[clave]} <small>{modulos.filter((m) => m.tipo === clave).length}</small>
-          </button>
-        ))}
-      </nav>
+      <div className="ts-tabbar">
+        <nav className="ts-tabs" aria-label={t.tipoLabel}>
+          {Object.keys(t.pestanas).map((clave) => (
+            <button key={clave} type="button" className={tipo === clave ? 'on' : ''} onClick={() => elegirTipo(clave)}>
+              {t.pestanas[clave]} <small>{modulos.filter((m) => m.tipo === clave).length}</small>
+            </button>
+          ))}
+        </nav>
+        <button
+          type="button"
+          className={`ts-refresh${refrescando ? ' girando' : ''}`}
+          onClick={refrescar}
+          disabled={refrescando}
+          title={t.refrescarTitulo}
+        >
+          <Icon name="refresh" size={15} /> {t.refrescar}
+        </button>
+      </div>
+
+      {errorRefresco && (
+        <p className="ts-aviso" role="alert">
+          {t.errorCatalogo}
+        </p>
+      )}
 
       <div className="ts-bar">
         <label>
@@ -369,11 +401,17 @@ function Catalogo({ modulos, actualizado }) {
           font: inherit;
         }
 
+        .ts-tabbar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1rem;
+          margin-bottom: 1.25rem;
+          border-bottom: 1px solid var(--border);
+        }
         .ts-tabs {
           display: flex;
           gap: 1.5rem;
-          margin-bottom: 1.25rem;
-          border-bottom: 1px solid var(--border);
         }
         .ts-tabs button {
           display: inline-flex;
@@ -400,6 +438,42 @@ function Catalogo({ modulos, actualizado }) {
         .ts-tabs small {
           opacity: 0.65;
           font-size: 0.75rem;
+        }
+        .ts-refresh {
+          flex-shrink: 0;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          height: 34px;
+          padding: 0 0.8rem;
+          border: 1px solid var(--border);
+          border-radius: 999px;
+          background: transparent;
+          color: var(--text);
+          font: inherit;
+          font-size: 0.85rem;
+          cursor: pointer;
+          transition: border-color 0.15s;
+        }
+        .ts-refresh:hover {
+          border-color: var(--accent-2);
+        }
+        .ts-refresh:disabled {
+          opacity: 0.6;
+          cursor: default;
+        }
+        .ts-refresh.girando svg {
+          animation: ts-giro 0.8s linear infinite;
+        }
+        @keyframes ts-giro {
+          to {
+            transform: rotate(360deg);
+          }
+        }
+        .ts-aviso {
+          margin: 0 0 1rem;
+          color: var(--muted);
+          font-size: 0.85rem;
         }
 
         .ts-bar {
