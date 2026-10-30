@@ -1,5 +1,10 @@
 // Catálogo de /libros. Para añadir un libro: portada en public/images/libros y una entrada aquí.
 // Los libros están en español: el índice no se traduce, solo los textos de la ficha.
+// Cada libro tiene su página en /libros/<slug>. La imagen para redes (public/images/libros/og) sale de `npm run libros:og`.
+import { SITIO } from '../Tienda/data'
+
+export const urlLibro = (libro) => `${SITIO}/libros/${libro.slug}`
+
 export const libros = [
   {
     slug: 'odoo-20-para-nuevos-programadores',
@@ -69,6 +74,114 @@ export const libros = [
       'Capítulo 25 · Odoo shell: Python directo contra tu base de datos',
       'Capítulo 26 · Programar Odoo con Claude',
       'Anexo · Chuleta de migración de Odoo 16 a Odoo 20'
+    ]
+  },
+  {
+    slug: 'owl-para-odoo-20',
+    titulo: 'OWL para Odoo 20',
+    subtitulo: {
+      es: 'Curso paso a paso del framework web de Odoo, de tu primer componente a un proyecto completo',
+      en: 'A step-by-step course on the Odoo web framework, from your first component to a complete project'
+    },
+    portada: { src: '/images/libros/owl-para-odoo-20.jpg', ancho: 909, alto: 1287 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['17 capítulos', '86 páginas', 'En español'],
+      en: ['17 chapters', '86 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Continúa Odoo 20 para Nuevos Programadores y lleva tus módulos al navegador: componentes, estado, servicios, widgets de campo, vistas propias, Punto de Venta y sitio web. Cada capítulo es un módulo real que se construye por pasos y termina con una prueba y un reto, hasta un tablero de tareas con arrastrar y soltar.',
+      en: 'It continues Odoo 20 para Nuevos Programadores and takes your modules to the browser: components, state, services, field widgets, custom views, Point of Sale and website. Each chapter is a real module built step by step that ends with a test and a challenge, up to a drag-and-drop task board.'
+    },
+    temas: {
+      es: ['OWL', 'JavaScript', 'Componentes', 'Servicios', 'Widgets', 'Punto de Venta', 'Sitio web', 'Hoot'],
+      en: ['OWL', 'JavaScript', 'Components', 'Services', 'Widgets', 'Point of Sale', 'Website', 'Hoot']
+    },
+    acciones: [
+      {
+        href: '/libros/owl-para-odoo-20.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'OWL-para-Odoo-20.pdf'
+      },
+      {
+        href: '/libros/owl-para-odoo-20.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Introducción',
+      'Qué es OWL y cómo encaja en Odoo 20',
+      'Capítulo 0 · JavaScript moderno para OWL',
+      'Capítulo 1 · Hola mundo: tu primer componente',
+      'Capítulo 2 · Plantillas QWeb en OWL',
+      'Capítulo 3 · Estado y reactividad con useState',
+      'Capítulo 4 · Componentes hijos, props y slots',
+      'Capítulo 5 · Eventos y comunicación entre componentes',
+      'Capítulo 6 · Ciclo de vida y hooks',
+      'Capítulo 7 · Servicios: hablar con el servidor',
+      'Capítulo 8 · Registros: dónde Odoo busca tus piezas',
+      'Capítulo 9 · Un widget de campo propio',
+      'Capítulo 10 · Modificar componentes de Odoo con patch y t-inherit',
+      'Capítulo 11 · Personalizar vistas: controlador de lista y kanban',
+      'Capítulo 12 · Un icono en la barra superior (systray)',
+      'Capítulo 13 · Un servicio propio',
+      'Capítulo 14 · Pruebas con Hoot y depuración',
+      'Capítulo 15 · OWL en el Punto de Venta',
+      'Capítulo 16 · Sitio web y portal: Interactions',
+      'Capítulo 17 · Proyecto final: tablero de tareas del equipo',
+      'Apéndice A · Chuleta de OWL',
+      'Apéndice B · Errores frecuentes',
+      'Apéndice C · Migración desde versiones anteriores'
+    ]
+  },
+  {
+    slug: 'odoo-20-con-claude-code',
+    titulo: 'Odoo 20 con Claude Code',
+    subtitulo: {
+      es: 'Buenas prácticas para programar módulos de Odoo con un agente de IA',
+      en: 'Best practices for building Odoo modules with an AI agent'
+    },
+    portada: { src: '/images/libros/odoo-20-con-claude-code.jpg', ancho: 900, alto: 1275 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['5 capítulos', '31 páginas', 'En español'],
+      en: ['5 chapters', '31 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Claude Code escribe código muy deprisa, pero solo escribe buen código Odoo si le das contexto, límites y una forma de comprobar su trabajo. Este libro enseña a construir esas tres cosas con ejercicios sobre Odoo 20: del primer CLAUDE.md al ciclo explorar, planificar, codificar y verificar.',
+      en: 'Claude Code writes code very fast, but it only writes good Odoo code if you give it context, limits and a way to check its work. This book teaches you to build those three things with Odoo 20 exercises: from the first CLAUDE.md to the explore, plan, code and verify cycle.'
+    },
+    temas: {
+      es: ['Claude Code', 'CLAUDE.md', 'Inteligencia artificial', 'Modo plan', 'Permisos', 'Seguridad'],
+      en: ['Claude Code', 'CLAUDE.md', 'Artificial intelligence', 'Plan mode', 'Permissions', 'Security']
+    },
+    acciones: [
+      {
+        href: '/libros/odoo-20-con-claude-code.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Odoo-20-con-Claude-Code.pdf'
+      },
+      {
+        href: '/libros/odoo-20-con-claude-code.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Introducción',
+      'Qué es Claude Code y cómo encaja en el desarrollo con Odoo 20',
+      'Capítulo 0 · Instalar Claude Code y preparar un repositorio Odoo 20',
+      'Capítulo 1 · CLAUDE.md: enseñar Odoo 20 al agente',
+      'Capítulo 2 · Tu primer módulo con Claude Code',
+      'Capítulo 3 · Modo plan, prompts y contexto',
+      'Capítulo 4 · Permisos y seguridad'
     ]
   },
   {

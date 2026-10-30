@@ -15,12 +15,12 @@ const LINKS = [
     hijos: [
       ['/webs', { es: 'Webs', en: 'Websites' }],
       ['/odoo-espana', 'Odoo'],
-      ['/odoo-programa-gestion-construccion', 'Bim 2.0'],
-      ['/libros', { es: 'Libros', en: 'Books' }]
+      ['/odoo-programa-gestion-construccion', 'Bim 2.0']
     ]
   },
   ['/tienda', { es: 'Tienda', en: 'Store' }, { contador: true }],
   ['/cursos', { es: 'Cursos', en: 'Courses' }],
+  ['/libros', { es: 'Libros', en: 'Books' }],
   ['/calendario', { es: 'Calendario', en: 'Calendar' }, { destacado: true }],
   ['/contacto', { es: 'Contacto', en: 'Contact' }]
 ]
@@ -484,7 +484,7 @@ export default function SiteHeader() {
           display: none;
         }
 
-        @media (max-width: 1020px) {
+        @media (max-width: 1210px) {
           .sh-nav {
             display: none;
           }

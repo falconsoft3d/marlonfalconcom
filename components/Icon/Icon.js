@@ -3,6 +3,20 @@ import React from 'react'
 const paths = {
   arrow: <path d="M5 12h14M12 5l7 7-7 7" />,
   external: <path d="M7 17 17 7M7 7h10v10" />,
+  share: (
+    <>
+      <circle cx="18" cy="5" r="3" />
+      <circle cx="6" cy="12" r="3" />
+      <circle cx="18" cy="19" r="3" />
+      <path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4" />
+    </>
+  ),
+  link: (
+    <>
+      <path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7L11.7 5.2" />
+      <path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7" />
+    </>
+  ),
   code: (
     <>
       <polyline points="16 18 22 12 16 6" />

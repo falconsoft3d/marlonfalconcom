@@ -1,13 +1,17 @@
 import React, { useMemo, useState } from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 import Image from 'next/image'
 import Icon from '../Icon'
 import { SITIO } from '../Tienda/data'
-import { libros } from './data'
+import { libros, urlLibro } from './data'
+import Accion from './Accion'
+import { BotonCompartir } from './Compartir'
+import estilos from './estilos'
 import { tr, useIdioma } from '../../lib/idioma'
 
 const TITULO = 'Libros gratis de Odoo 20 y ABAP | Marlon Falcón Hernández'
-const DESCRIPCION = 'Libros gratuitos de programación en Odoo 20 y ABAP para SAP, de Marlon Falcón Hernández, con ejercicios prácticos, PDF para descargar y buscador por tema y capítulo.'
+const DESCRIPCION = 'Libros gratuitos de programación en Odoo 20, OWL, Claude Code y ABAP para SAP, de Marlon Falcón Hernández, con ejercicios prácticos, PDF para descargar y buscador por tema y capítulo.'
 const URL = `${SITIO}/libros`
 
 const TEXTOS = {
@@ -89,41 +93,30 @@ function buscar(consulta) {
 const datosEstructurados = (libro) => ({
   '@type': 'Book',
   name: libro.titulo,
+  url: urlLibro(libro),
   image: `${SITIO}${libro.portada.src}`,
   inLanguage: 'es',
   isAccessibleForFree: true,
   author: { '@type': 'Person', name: 'Marlon Falcón Hernández', url: SITIO }
 })
 
-function Accion({ accion, lang }) {
-  return (
-    <a
-      className={`lb-btn ${accion.principal ? 'lb-btn-main' : ''}`}
-      href={accion.href}
-      download={accion.descarga}
-      target={accion.descarga ? undefined : '_blank'}
-      rel={accion.descarga ? undefined : 'noopener noreferrer'}
-    >
-      <Icon name={accion.icono} size={16} /> {tr(accion.texto, lang)}
-    </a>
-  )
-}
-
 function Ficha({ libro, coinciden, buscando, prioridad, lang, t }) {
-  const principal = libro.acciones[0]
+  const ficha = `/libros/${libro.slug}`
   return (
     <article className="lb-card">
-      <a className="lb-cover" href={principal.href} target="_blank" rel="noopener noreferrer" aria-label={tr(principal.texto, lang)}>
-        <Image
-          src={libro.portada.src}
-          alt={t.portada(libro.titulo)}
-          width={libro.portada.ancho}
-          height={libro.portada.alto}
-          layout="responsive"
-          sizes="(max-width: 700px) 220px, 250px"
-          priority={prioridad}
-        />
-      </a>
+      <Link href={ficha}>
+        <a className="lb-cover">
+          <Image
+            src={libro.portada.src}
+            alt={t.portada(libro.titulo)}
+            width={libro.portada.ancho}
+            height={libro.portada.alto}
+            layout="responsive"
+            sizes="(max-width: 700px) 220px, 250px"
+            priority={prioridad}
+          />
+        </a>
+      </Link>
 
       <div className="lb-body">
         {(libro.nuevo || libro.fecha) && (
@@ -132,7 +125,11 @@ function Ficha({ libro, coinciden, buscando, prioridad, lang, t }) {
             {libro.fecha && <span>{tr(libro.fecha, lang)}</span>}
           </p>
         )}
-        <h3 className="lb-name">{libro.titulo}</h3>
+        <h3 className="lb-name">
+          <Link href={ficha}>
+            <a>{libro.titulo}</a>
+          </Link>
+        </h3>
         <p className="lb-sub">{tr(libro.subtitulo, lang)}</p>
         <ul className="lb-data">
           {tr(libro.datos, lang).map((dato) => (
@@ -149,6 +146,7 @@ function Ficha({ libro, coinciden, buscando, prioridad, lang, t }) {
           {libro.acciones.map((accion) => (
             <Accion key={accion.icono} accion={accion} lang={lang} />
           ))}
+          <BotonCompartir libro={libro} />
         </div>
 
         {buscando && coinciden.length > 0 ? (
@@ -184,14 +182,14 @@ export default function LibrosPage() {
   const buscando = consulta.trim() !== ''
   const capitulos = resultados.reduce((total, r) => total + r.coinciden.length, 0)
 
-  const portadaSocial = `${SITIO}${libros[0].portada.src}`
+  const portadaSocial = `${SITIO}/images/libros/og/${libros[0].slug}.jpg`
   const datos = {
     '@context': 'https://schema.org',
     '@graph': libros.map(datosEstructurados)
   }
 
   return (
-    <div className="lb">
+    <div className="lb lb-u">
       <Head>
         <title>{TITULO}</title>
         <meta name="description" content={DESCRIPCION} />
@@ -258,6 +256,7 @@ export default function LibrosPage() {
         </div>
       )}
 
+      <style jsx global>{estilos}</style>
       <style jsx global>{`
         /* Sustituye el título por defecto del tema */
         article > h1:first-child {
@@ -370,54 +369,8 @@ export default function LibrosPage() {
           box-shadow: 0 24px 50px -28px var(--glow);
         }
 
-        /* La portada se presenta como un libro: lomo con luz y sombra al apoyarlo */
-        .lb .lb-cover {
-          position: relative;
-          display: block;
-          overflow: hidden;
-          border-radius: 3px 8px 8px 3px;
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 18px 32px -14px rgba(0, 0, 0, 0.6);
-          transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .lb .lb-cover::after {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.32) 0,
-            rgba(255, 255, 255, 0.14) 1.6%,
-            rgba(0, 0, 0, 0.1) 3.5%,
-            transparent 7%
-          );
-          pointer-events: none;
-        }
-        .lb .lb-cover:hover {
-          transform: translateY(-4px) rotate(-0.8deg);
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 28px 40px -14px rgba(0, 0, 0, 0.65);
-        }
-        .lb .lb-cover img {
-          margin: 0 !important;
-        }
-
         .lb .lb-body {
           min-width: 0;
-        }
-        .lb .lb-flags {
-          display: flex;
-          align-items: center;
-          gap: 0.6rem;
-          margin: 0 0 0.6rem;
-          color: var(--muted);
-          font-size: 0.8rem;
-        }
-        .lb .lb-new {
-          padding: 0.15rem 0.6rem;
-          border-radius: 999px;
-          background: var(--p-yellow);
-          color: #3a2f15;
-          font-size: 0.72rem;
-          font-variation-settings: 'wght' 600;
         }
         .lb .lb-name {
           margin: 0;
@@ -426,86 +379,27 @@ export default function LibrosPage() {
           letter-spacing: -0.02em;
           color: var(--text-strong);
         }
+        .lb .lb-name a {
+          color: inherit;
+          text-decoration: none;
+        }
+        .lb .lb-name a:hover {
+          text-decoration: underline;
+        }
         .lb .lb-sub {
           margin: 0.35rem 0 0;
           color: var(--muted);
-        }
-        .lb .lb-data {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 0.3rem 1rem;
-          margin: 0.9rem 0 0;
-          padding: 0;
-          list-style: none;
-          color: var(--text-strong);
-          font-size: 0.85rem;
-          font-variation-settings: 'wght' 600;
-        }
-        .lb .lb-data > li {
-          margin: 0;
-          padding: 0;
         }
         .lb .lb-desc {
           margin: 0.9rem 0 0;
           line-height: 1.6;
         }
-        .lb .lb-tags {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 0.4rem;
-          margin: 1rem 0 0;
-          padding: 0;
-          list-style: none;
-        }
-        .lb .lb-tags > li {
-          margin: 0;
-          padding: 0.2rem 0.65rem;
-          border: 1px solid var(--border);
-          border-radius: 999px;
-          font-size: 0.75rem;
-          color: var(--muted);
-        }
-        .lb .lb-data > li::before,
-        .lb .lb-tags > li::before {
-          content: none;
-        }
-
         .lb .lb-actions {
           display: flex;
           flex-wrap: wrap;
           gap: 0.6rem;
           margin-top: 1.25rem;
         }
-        .lb .lb-btn,
-        .lb a.lb-btn {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.45rem;
-          padding: 0.55rem 1.1rem;
-          border: 1px solid var(--border);
-          border-radius: 999px;
-          background: var(--surface-2);
-          color: var(--text-strong);
-          font: inherit;
-          font-size: 0.9rem;
-          font-variation-settings: 'wght' 600;
-          text-decoration: none;
-          cursor: pointer;
-          transition: border-color 0.2s, background 0.2s;
-        }
-        .lb .lb-btn:hover {
-          border-color: var(--tint-border);
-        }
-        .lb a.lb-btn-main {
-          border-color: var(--accent);
-          background: var(--accent);
-          color: var(--on-accent);
-        }
-        .lb a.lb-btn-main:hover {
-          border-color: var(--accent-hover);
-          background: var(--accent-hover);
-        }
-
         .lb .lb-toc,
         .lb .lb-found {
           margin-top: 1.25rem;
