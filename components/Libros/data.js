@@ -444,6 +444,62 @@ export const libros = [
     ]
   },
   {
+    slug: 'manual-bim-2-0',
+    titulo: 'BIM 2.0 · Manual de uso para arquitectos',
+    subtitulo: {
+      es: 'Gestión de obra sobre Odoo 19, del primer presupuesto a la última certificación',
+      en: 'Construction management on Odoo 19, from the first budget to the final certification'
+    },
+    portada: { src: '/images/libros/manual-bim-2-0.jpg', ancho: 1287, alto: 909 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['16 capítulos', '97 páginas', 'En español'],
+      en: ['16 chapters', '97 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Para arquitectos, aparejadores y jefes de obra que usan BIM 2.0 sobre Odoo 19, sin necesidad de saber informática ni contabilidad. Sigue la vida de una obra de ejemplo de 24 viviendas: presupuesto, planificación, certificación, control en obra, compras, valor ganado, flujo de caja, integración con Revit e inteligencia artificial, con capturas del programa en cada paso.',
+      en: 'For architects, quantity surveyors and site managers who use BIM 2.0 on Odoo 19, with no need for IT or accounting knowledge. It follows the life of a sample 24-home project: budget, planning, certification, site control, purchasing, earned value, cash flow, Revit integration and artificial intelligence, with screenshots of the program at every step.'
+    },
+    temas: {
+      es: ['BIM 2.0', 'Odoo 19', 'Construcción', 'Presupuestos', 'Certificaciones', 'Valor ganado', 'Flujo de caja', 'Revit'],
+      en: ['BIM 2.0', 'Odoo 19', 'Construction', 'Budgets', 'Certifications', 'Earned value', 'Cash flow', 'Revit']
+    },
+    acciones: [
+      {
+        href: '/libros/manual-bim-2-0.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Manual_BIM20_Odoo19.pdf'
+      },
+      {
+        href: '/libros/manual-bim-2-0.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Cómo leer este manual',
+      'Capítulo 1 · Teoría del presupuesto',
+      'Capítulo 2 · Primeros pasos',
+      'Capítulo 3 · La obra',
+      'Capítulo 4 · El presupuesto',
+      'Capítulo 5 · Precios e importación',
+      'Capítulo 6 · Planificación',
+      'Capítulo 7 · Certificación y cobro',
+      'Capítulo 8 · Control en obra',
+      'Capítulo 9 · Compras y gastos',
+      'Capítulo 10 · Valor ganado',
+      'Capítulo 11 · Flujo de caja',
+      'Capítulo 12 · Dashboards',
+      'Capítulo 13 · Integración BIM',
+      'Capítulo 14 · Inteligencia artificial',
+      'Capítulo 15 · Promoción, mantenimiento y portal',
+      'Capítulo 16 · Configuración y roles'
+    ]
+  },
+  {
     slug: 'pedir-un-prompt-al-consultor',
     titulo: 'Pedir un prompt al consultor',
     subtitulo: {
@@ -752,7 +808,7 @@ export const libros = [
 ]
 
 // Novedades de «Cómo contratar» y primeros libros del carrusel del home: el último publicado va primero
-const ULTIMOS = ['bajando-un-escalon', 'vender-erp-con-el-metodo-spin', 'cuidar-mayores-trastorno-bipolar']
+const ULTIMOS = ['manual-bim-2-0', 'bajando-un-escalon', 'vender-erp-con-el-metodo-spin']
 
 export const ultimosLibros = ULTIMOS.map((slug) => libros.find((libro) => libro.slug === slug))
 

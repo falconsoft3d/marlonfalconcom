@@ -11,7 +11,7 @@ import estilos from './estilos'
 import { tr, useIdioma } from '../../lib/idioma'
 
 const TITULO = 'Libros gratis de Odoo 20 y ABAP | Marlon Falcón Hernández'
-const DESCRIPCION = 'Libros gratuitos de programación en Odoo 20, OWL, JSON-RPC, SQL, Git, Claude Code y ABAP para SAP, y de Scrum, servidores, venta de ERP, inteligencia artificial en la empresa, psicología y cuidado de personas mayores y pérdida de peso, de Marlon Falcón Hernández, con ejercicios prácticos, PDF para descargar y buscador por tema y capítulo.'
+const DESCRIPCION = 'Libros gratuitos de programación en Odoo 20, OWL, JSON-RPC, SQL, Git, Claude Code y ABAP para SAP, y de Scrum, servidores, gestión de obra con BIM 2.0, venta de ERP, inteligencia artificial en la empresa, psicología y cuidado de personas mayores y pérdida de peso, de Marlon Falcón Hernández, con ejercicios prácticos, PDF para descargar y buscador por tema y capítulo.'
 const URL = `${SITIO}/libros`
 
 const TEXTOS = {
