@@ -69,9 +69,11 @@ function Fila({ agente: a, ahora }) {
         <div className="ag-barra">
           <div className="ag-relleno" style={{ width: `${a.progreso}%` }} />
         </div>
-        <span className="ag-meta" aria-hidden="true">
-          🏁
-        </span>
+        {a.progreso < 100 && (
+          <span className="ag-meta" aria-hidden="true">
+            🏁
+          </span>
+        )}
         <div className="ag-corredor" style={{ left: `calc(${a.progreso}% - ${a.progreso * 0.3}px)` }}>
           <Robot nombre={a.nombre} estado={estado} size={30} />
         </div>
@@ -90,10 +92,12 @@ function Fila({ agente: a, ahora }) {
 
       {a.url && <Prueba url={a.url} />}
 
-      <div className="ag-tareas">
-        <Lista titulo="Hechas" tareas={a.hechas} marca="✓" clase="hechas" abierta={abierta} ultimas />
-        <Lista titulo="Por realizar" tareas={a.pendientes} marca="○" clase="pendientes" abierta={abierta} />
-      </div>
+      {a.hechas.length + a.pendientes.length > 0 && (
+        <div className="ag-tareas">
+          <Lista titulo="Hechas" tareas={a.hechas} marca="✓" clase="hechas" abierta={abierta} ultimas />
+          <Lista titulo="Por realizar" tareas={a.pendientes} marca="○" clase="pendientes" abierta={abierta} />
+        </div>
+      )}
       {ocultas && (
         <button type="button" className="ag-mas" onClick={() => setAbierta(!abierta)}>
           {abierta ? 'Ver menos' : 'Ver todas las tareas'}
@@ -351,6 +355,10 @@ export default function Sala({ token, inicial, origen }) {
           grid-template-columns: 170px minmax(0, 1fr) 96px;
           gap: 0.6rem 1.25rem;
           align-items: center;
+          /* El tema del blog centra y limita los article */
+          width: 100%;
+          max-width: none;
+          margin: 0;
           padding: 1rem 1.25rem;
           border: 1px solid var(--border);
           border-left: 3px solid var(--c);

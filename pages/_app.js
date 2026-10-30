@@ -65,6 +65,8 @@ export default function Nextra({ Component, pageProps }) {
 
       <Analytics />
 
+      <Script data-project="dntmjqkfhehnzvutqrrd" src="https://falcondatabase.com/a.js" strategy="afterInteractive" />
+
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=UA-232389777-1"
         strategy="afterInteractive"

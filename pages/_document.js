@@ -1,7 +1,7 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 import { SCRIPT_IDIOMA } from '../lib/idioma';
 
-export default function Document({ __NEXT_DATA__ }) {
+export default function Document() {
   const meta = {
     title: 'Marlon Falcón Hernández | Full Stack Developer'
   }
@@ -18,7 +18,6 @@ export default function Document({ __NEXT_DATA__ }) {
         <meta property="og:site_name" content={meta.title} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@MarlonFalcon4" />
-        {__NEXT_DATA__.page !== '/agentes/[token]' && <script defer data-project="dntmjqkfhehnzvutqrrd" src="https://falcondatabase.com/a.js"></script>}
         {/* Aplica el tema guardado antes de pintar (oscuro por defecto); misma clave que next-themes */}
         <script
           dangerouslySetInnerHTML={{
