@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="curso_owl_todo.StatCard">
+        <div class="card p-2 text-center">
+            <small class="text-muted" t-out="this.props.title"/>
+            <strong class="fs-3"><t t-call-slot="default"/></strong>
+        </div>
+    </t>
+
+</templates>

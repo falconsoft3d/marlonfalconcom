@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="curso_owl_ejemplos.Eventos">
+        <div class="p-3">
+            <button class="btn btn-primary" t-on-click="this.alPulsar">Método</button>
+            <button class="btn btn-secondary" t-on-click="() => this.saludar('Ana')">Con argumento</button>
+            <a href="#" t-on-click.prevent.stop="() => this.saludar('enlace')">Con modificadores</a>
+            <p t-out="this.mensaje()"/>
+            <p>Última tecla: <t t-out="this.tecla()"/></p>
+        </div>
+    </t>
+
+</templates>

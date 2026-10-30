@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="curso_owl_ejemplos.Contador">
+        <div class="p-3">
+            <button class="btn btn-primary" t-on-click="this.incrementar">
+                Cuenta: <t t-out="this.cuenta()"/>
+            </button>
+            <p>Doble: <t t-out="this.doble()"/></p>
+            <p>Historial: <t t-out="this.estado.historial.join(', ')"/></p>
+        </div>
+    </t>
+
+</templates>

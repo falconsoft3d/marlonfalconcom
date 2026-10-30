@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="curso_owl_todo.TodoItem">
+        <li class="o_curso_todo_item list-group-item d-flex align-items-center gap-2"
+            t-att-class="{ 'text-muted': this.props.todo.done }">
+            <input type="checkbox"
+                class="o_curso_todo_toggle form-check-input mt-0"
+                t-att-checked="this.props.todo.done"
+                t-on-change="() => this.props.onToggle(this.props.todo)"/>
+            <span class="flex-grow-1" t-out="this.props.todo.name"/>
+            <span t-if="this.props.todo.priority"
+                class="badge text-bg-warning"
+                t-out="this.props.todo.priority"/>
+            <button class="btn btn-link p-0" t-on-click="() => this.props.onOpen(this.props.todo)">
+                Abrir
+            </button>
+            <button class="o_curso_todo_delete btn btn-link text-danger p-0"
+                t-on-click="() => this.props.onDelete(this.props.todo)">
+                Eliminar
+            </button>
+        </li>
+    </t>
+
+</templates>

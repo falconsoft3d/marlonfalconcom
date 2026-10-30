@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="curso_owl_ejemplos.Hijo">
+        <div>
+            <p>Valor recibido: <t t-out="this.props.valor"/></p>
+            <p>Total (signal): <t t-out="this.props.total()"/></p>
+            <button class="btn btn-primary" t-on-click="() => this.props.onSumar(1)">Sumar 1</button>
+        </div>
+    </t>
+
+    <t t-name="curso_owl_ejemplos.Comunicacion">
+        <div class="p-3">
+            <Hijo valor="this.a()" total="this.total" onSumar.bind="this.sumar"/>
+        </div>
+    </t>
+
+</templates>

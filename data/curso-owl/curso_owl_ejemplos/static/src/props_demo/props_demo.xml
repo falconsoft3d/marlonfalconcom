@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="curso_owl_ejemplos.Saludo">
+        <p>
+            <t t-out="this.props.nombre"/> (x<t t-out="this.props.veces"/>)
+            <span t-if="this.props.etiquetas.length" t-out="this.props.etiquetas.join(', ')"/>
+        </p>
+    </t>
+
+    <t t-name="curso_owl_ejemplos.PropsDemo">
+        <div class="p-3">
+            <Saludo nombre="'Ana'"/>
+            <Saludo nombre="'Luis'" veces="3" etiquetas="['nuevo']"/>
+            <Saludo nombre.translate="Equipo"/>
+        </div>
+    </t>
+
+</templates>

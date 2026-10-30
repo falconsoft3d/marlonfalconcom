@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="curso_owl_todo.TodoStarsField">
+        <div class="o_curso_stars d-flex gap-1">
+            <t t-foreach="this.stars" t-as="star" t-key="star">
+                <span t-if="this.props.readonly"
+                    class="oi"
+                    data-icon="star"
+                    t-att-class="{ 'oi-filled': star lte this.value }"/>
+                <button t-else=""
+                    type="button"
+                    class="o_curso_star btn btn-link btn-link-inline p-0 oi"
+                    data-icon="star"
+                    t-att-class="{ 'oi-filled': star lte this.value }"
+                    t-att-aria-label="star"
+                    t-on-click.stop="() => this.onStarClick(star)"/>
+            </t>
+        </div>
+    </t>
+
+</templates>

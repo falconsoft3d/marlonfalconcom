@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="curso_owl_todo.TodoAction">
+        <div class="o_curso_todo h-100 overflow-auto p-3" t-att-class="this.props.className">
+            <h1>Mis tareas</h1>
+
+            <div class="d-flex gap-2 mb-3">
+                <StatCard title.translate="Pendientes">
+                    <t t-out="this.todoStore.pendingCount()"/>
+                </StatCard>
+                <StatCard title.translate="Hechas">
+                    <t t-out="this.todoStore.doneCount()"/>
+                </StatCard>
+            </div>
+
+            <div class="d-flex gap-2 mb-3">
+                <input class="o_curso_todo_input o_input"
+                    placeholder="Nueva tarea"
+                    t-ref="this.inputRef"
+                    t-model="this.newTodoName"
+                    t-on-keydown="this.onInputKeydown"/>
+                <button class="o_curso_todo_add btn btn-primary" t-on-click="this.addTodo">
+                    Añadir
+                </button>
+                <select class="o_curso_todo_filter o_input w-auto" t-model="this.filter">
+                    <option value="all">Todas</option>
+                    <option value="pending">Pendientes</option>
+                    <option value="done">Hechas</option>
+                </select>
+            </div>
+
+            <p t-if="!this.visibleTodos().length" class="o_curso_todo_empty text-muted">
+                No hay tareas.
+            </p>
+            <ul t-else="" class="list-group">
+                <t t-foreach="this.visibleTodos()" t-as="todo" t-key="todo.id">
+                    <TodoItem
+                        todo="todo"
+                        onToggle.bind="this.toggleTodo"
+                        onOpen.bind="this.openTodo"
+                        onDelete.bind="this.deleteTodo"/>
+                </t>
+            </ul>
+        </div>
+    </t>
+
+</templates>

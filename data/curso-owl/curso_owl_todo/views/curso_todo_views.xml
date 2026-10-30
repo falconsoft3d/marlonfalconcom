@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="curso_todo_view_list" model="ir.ui.view">
+        <field name="name">curso.todo.list</field>
+        <field name="model">curso.todo</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="priority" widget="curso_stars"/>
+                <field name="done"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="curso_todo_view_form" model="ir.ui.view">
+        <field name="name">curso.todo.form</field>
+        <field name="model">curso.todo</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="priority" widget="curso_stars" options="{'max_stars': 5}"/>
+                        <field name="done"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="curso_todo_action_list" model="ir.actions.act_window">
+        <field name="name">Todas las tareas</field>
+        <field name="res_model">curso.todo</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="curso_todo_action_client" model="ir.actions.client">
+        <field name="name">Mis tareas</field>
+        <field name="tag">curso_owl_todo.todo_action</field>
+    </record>
+
+    <menuitem
+        id="curso_todo_menu_root"
+        name="Tareas OWL"
+        action="curso_todo_action_client"
+        sequence="200"/>
+
+    <menuitem
+        id="curso_todo_menu_board"
+        name="Mis tareas"
+        action="curso_todo_action_client"
+        parent="curso_todo_menu_root"
+        sequence="1"/>
+
+    <menuitem
+        id="curso_todo_menu_list"
+        name="Todas las tareas"
+        action="curso_todo_action_list"
+        parent="curso_todo_menu_root"
+        sequence="2"/>
+</odoo>

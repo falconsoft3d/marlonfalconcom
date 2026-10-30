@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="curso_owl_todo.TodoSystray">
+        <button class="o_curso_todo_systray o_nav_entry border-0"
+            title="Tareas pendientes"
+            aria-label="Tareas pendientes"
+            t-on-click="this.openTodos">
+            <i class="oi" data-icon="check" aria-hidden="true"/>
+            <span t-if="this.todoStore.pendingCount()"
+                class="badge rounded-pill ms-1"
+                t-out="this.todoStore.pendingCount()"/>
+        </button>
+    </t>
+
+</templates>

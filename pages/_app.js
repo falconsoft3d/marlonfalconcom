@@ -26,9 +26,10 @@ function AvisoSoloEspanol() {
 }
 
 export default function Nextra({ Component, pageProps }) {
-  // Las URLs de la Torre de control llevan su token: no pasan por analítica ni chats de terceros
+  // Las URLs de la Torre de control llevan su token: no pasan por analítica ni chats de terceros.
+  // El manual tampoco lleva nada del sitio: se imprime a PDF.
   const { pathname } = useRouter()
-  if (pathname.startsWith('/agentes/')) {
+  if (pathname.startsWith('/agentes/') || pathname === '/cursos/owl-odoo-20/manual') {
     return (
       <IdiomaProvider>
         <Component {...pageProps} />

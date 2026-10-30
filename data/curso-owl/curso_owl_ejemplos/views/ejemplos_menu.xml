@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_ejemplos_root" name="Ejemplos OWL" sequence="201"/>
+
+    <record id="action_hola" model="ir.actions.client">
+        <field name="name">Hola</field>
+        <field name="tag">curso_owl_ejemplos.hola</field>
+    </record>
+    <menuitem id="menu_hola" name="Hola" action="action_hola" parent="menu_ejemplos_root" sequence="1"/>
+
+    <record id="action_contador" model="ir.actions.client">
+        <field name="name">Contador</field>
+        <field name="tag">curso_owl_ejemplos.contador</field>
+    </record>
+    <menuitem id="menu_contador" name="Contador" action="action_contador" parent="menu_ejemplos_root" sequence="2"/>
+
+    <record id="action_props" model="ir.actions.client">
+        <field name="name">Props</field>
+        <field name="tag">curso_owl_ejemplos.props</field>
+    </record>
+    <menuitem id="menu_props" name="Props" action="action_props" parent="menu_ejemplos_root" sequence="3"/>
+
+    <record id="action_eventos" model="ir.actions.client">
+        <field name="name">Eventos</field>
+        <field name="tag">curso_owl_ejemplos.eventos</field>
+    </record>
+    <menuitem id="menu_eventos" name="Eventos" action="action_eventos" parent="menu_ejemplos_root" sequence="4"/>
+
+    <record id="action_ciclo_vida" model="ir.actions.client">
+        <field name="name">Ciclo de vida</field>
+        <field name="tag">curso_owl_ejemplos.ciclo_vida</field>
+    </record>
+    <menuitem id="menu_ciclo_vida" name="Ciclo de vida" action="action_ciclo_vida" parent="menu_ejemplos_root" sequence="5"/>
+
+    <record id="action_directivas" model="ir.actions.client">
+        <field name="name">Directivas</field>
+        <field name="tag">curso_owl_ejemplos.directivas</field>
+    </record>
+    <menuitem id="menu_directivas" name="Directivas" action="action_directivas" parent="menu_ejemplos_root" sequence="6"/>
+
+    <record id="action_comunicacion" model="ir.actions.client">
+        <field name="name">Comunicación</field>
+        <field name="tag">curso_owl_ejemplos.comunicacion</field>
+    </record>
+    <menuitem id="menu_comunicacion" name="Comunicación" action="action_comunicacion" parent="menu_ejemplos_root" sequence="7"/>
+
+    <record id="action_servicios" model="ir.actions.client">
+        <field name="name">Servicios</field>
+        <field name="tag">curso_owl_ejemplos.servicios</field>
+    </record>
+    <menuitem id="menu_servicios" name="Servicios" action="action_servicios" parent="menu_ejemplos_root" sequence="8"/>
+
+</odoo>

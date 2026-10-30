@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="curso_owl_ejemplos.Servicios">
+        <div class="p-3 d-flex flex-column gap-2 align-items-start">
+            <p>Usuario: <t t-out="this.nombreUsuario"/></p>
+            <button class="btn btn-primary" t-on-click="this.contarUsuarios">orm + notification</button>
+            <button class="btn btn-primary" t-on-click="this.cargarVersion">rpc</button>
+            <button class="btn btn-primary" t-on-click="this.abrirUsuarios">action</button>
+            <button class="btn btn-primary" t-on-click="this.confirmar">dialog</button>
+            <p t-if="this.version()">Versión: <t t-out="this.version()"/></p>
+        </div>
+    </t>
+
+</templates>

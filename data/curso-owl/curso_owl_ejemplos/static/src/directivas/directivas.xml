@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="curso_owl_ejemplos.Caja">
+        <section class="card p-2 mb-2">
+            <h3 t-out="this.props.titulo"/>
+            <t t-call-slot="default">Sin contenido</t>
+            <footer class="text-muted"><t t-call-slot="pie"/></footer>
+        </section>
+    </t>
+
+    <t t-name="curso_owl_ejemplos.Directivas">
+        <div class="p-3">
+            <!-- t-foreach: t-key es obligatorio; item_index e item_first los crea OWL -->
+            <ul>
+                <t t-foreach="this.colores()" t-as="item" t-key="item.id">
+                    <li t-att-class="{ 'fw-bold': item_first }">
+                        <t t-out="item_index + 1"/>. <t t-out="item.nombre"/>
+                    </li>
+                </t>
+            </ul>
+
+            <!-- t-if, t-elif, t-else -->
+            <p t-if="this.texto().length gt 10">Texto largo</p>
+            <p t-elif="this.texto()">Texto corto</p>
+            <p t-else="">Sin texto</p>
+
+            <!-- t-att, t-att-*, t-attf-* -->
+            <button class="btn" t-attf-class="btn-{{ this.activo() ? 'success' : 'secondary' }}"
+                t-att-disabled="!this.activo()" t-att="{ 'data-demo': 'si' }">
+                Botón
+            </button>
+
+            <!-- t-model con signal, t-ref con signal.ref() -->
+            <input class="o_input" t-model="this.texto" t-ref="this.entrada"/>
+            <label><input type="checkbox" t-model="this.activo"/> Activo</label>
+            <select class="o_input" t-model="this.color">
+                <t t-foreach="this.colores()" t-as="item" t-key="item.id">
+                    <option t-att-value="item.nombre" t-out="item.nombre"/>
+                </t>
+            </select>
+
+            <!-- t-on -->
+            <button class="btn btn-link" t-on-click="this.enfocar">Enfocar</button>
+
+            <!-- t-call-slot en Caja, t-set-slot aquí -->
+            <Caja titulo="'Con slots'">
+                Contenido por defecto
+                <t t-set-slot="pie">Color elegido: <t t-out="this.color()"/></t>
+            </Caja>
+        </div>
+    </t>
+
+</templates>
