@@ -298,6 +298,53 @@ export const libros = [
     ]
   },
   {
+    slug: 'odoo-en-la-nube',
+    titulo: 'Odoo en la nube',
+    subtitulo: {
+      es: 'Los 10 mejores proveedores de servidores: ventajas, precios y comparativas',
+      en: 'The 10 best server providers: advantages, prices and comparisons'
+    },
+    portada: { src: '/images/libros/odoo-en-la-nube.jpg', ancho: 911, alto: 1288 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['6 capítulos', '14 páginas', 'En español'],
+      en: ['6 chapters', '14 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Compara diez proveedores para alojar Odoo, de Odoo.sh a AWS, Azure, Google Cloud, DigitalOcean, Hetzner, OVHcloud, IONOS, Vultr y Akamai, con precios consultados en octubre de 2026. Explica cómo dimensionar el servidor, recomienda una opción por tipo de cliente y cierra con una arquitectura de referencia y una lista de comprobación.',
+      en: 'It compares ten providers for hosting Odoo, from Odoo.sh to AWS, Azure, Google Cloud, DigitalOcean, Hetzner, OVHcloud, IONOS, Vultr and Akamai, with prices checked in October 2026. It explains how to size the server, recommends an option for each type of client and closes with a reference architecture and a checklist.'
+    },
+    temas: {
+      es: ['Odoo', 'Servidores', 'Cloud', 'VPS', 'PostgreSQL', 'Nginx', 'Copias de seguridad', 'Precios'],
+      en: ['Odoo', 'Servers', 'Cloud', 'VPS', 'PostgreSQL', 'Nginx', 'Backups', 'Pricing']
+    },
+    acciones: [
+      {
+        href: '/libros/odoo-en-la-nube.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Odoo-en-la-nube.pdf'
+      },
+      {
+        href: '/libros/odoo-en-la-nube.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Introducción',
+      'Capítulo 1 · Qué necesita Odoo para ir rápido',
+      'Capítulo 2 · Cómo se han evaluado',
+      'Capítulo 3 · Los 10 proveedores, uno a uno',
+      'Capítulo 4 · Comparativa global',
+      'Capítulo 5 · Qué proveedor elegir según el cliente',
+      'Capítulo 6 · Arquitectura de referencia y buenas prácticas',
+      'Conclusiones'
+    ]
+  },
+  {
     slug: 'odoo-20-con-claude-code',
     titulo: 'Odoo 20 con Claude Code',
     subtitulo: {
@@ -443,6 +490,110 @@ export const libros = [
     ]
   },
   {
+    slug: 'desde-lo-alto-de-la-montana',
+    titulo: 'Desde lo alto de la montaña',
+    subtitulo: {
+      es: 'Psicología cognitivo-conductual para vivir la tercera edad con calma, sentido y esperanza',
+      en: 'Cognitive behavioural psychology for living later life with calm, meaning and hope'
+    },
+    portada: { src: '/images/libros/desde-lo-alto-de-la-montana.jpg', ancho: 935, alto: 1210 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['11 capítulos', '20 páginas', 'En español'],
+      en: ['11 chapters', '20 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Un manual para personas mayores, familiares, cuidadores y profesionales. Con casos cotidianos, técnicas sencillas y ejercicios semanales, acompaña en la jubilación, la soledad, el duelo, la salud, la preocupación, la tristeza y la memoria, e incluye 9 hojas de trabajo. Es una guía de autoayuda: no sustituye la atención de un profesional.',
+      en: 'A manual for older people, relatives, carers and professionals. With everyday cases, simple techniques and weekly exercises, it offers support through retirement, loneliness, grief, health, worry, sadness and memory, and includes 9 worksheets. It is a self-help guide: it does not replace professional care.'
+    },
+    temas: {
+      es: ['Psicología', 'Terapia cognitivo-conductual', 'Tercera edad', 'Jubilación', 'Soledad', 'Duelo', 'Ansiedad', 'Memoria'],
+      en: ['Psychology', 'Cognitive behavioural therapy', 'Later life', 'Retirement', 'Loneliness', 'Grief', 'Anxiety', 'Memory']
+    },
+    acciones: [
+      {
+        href: '/libros/desde-lo-alto-de-la-montana.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Desde-lo-alto-de-la-montana.pdf'
+      },
+      {
+        href: '/libros/desde-lo-alto-de-la-montana.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Introducción',
+      'Capítulo 1 · Lo que pensamos cambia lo que sentimos',
+      'Capítulo 2 · Los mitos de la vejez y las trampas del pensamiento',
+      'Capítulo 3 · La jubilación: cuando el trabajo ya no dice quién soy',
+      'Capítulo 4 · Soledad: del aislamiento al encuentro',
+      'Capítulo 5 · El duelo: aprender a vivir con la ausencia',
+      'Capítulo 6 · Salud, dolor y limitaciones: hacer lo posible con lo que hay',
+      'Capítulo 7 · Preocupación y ansiedad: domar el «¿y si…?»',
+      'Capítulo 8 · Tristeza: la acción va antes que las ganas',
+      'Capítulo 9 · Memoria: olvidos normales y miedo a la demencia',
+      'Capítulo 10 · Desde lo alto de la montaña: sentido, legado y finitud',
+      'Capítulo 11 · Tu plan personal y cuándo pedir ayuda',
+      'Anexo · Hojas de trabajo'
+    ]
+  },
+  {
+    slug: 'cuidar-mayores-trastorno-bipolar',
+    titulo: 'Cuidar a nuestros mayores con trastorno bipolar',
+    subtitulo: {
+      es: 'Guía práctica para familiares: entender, acompañar, prevenir crisis y cuidarse a uno mismo',
+      en: 'A practical guide for relatives: understand, support, prevent crises and look after yourself'
+    },
+    portada: { src: '/images/libros/cuidar-mayores-trastorno-bipolar.jpg', ancho: 911, alto: 1288 },
+    fecha: { es: '2026', en: '2026' },
+    nuevo: true,
+    datos: {
+      es: ['10 capítulos', '20 páginas', 'En español'],
+      en: ['10 chapters', '20 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Una guía para hijos, nietos y parejas que acompañan a una persona mayor con trastorno bipolar. Enseña a reconocer las señales de manía y depresión, ayudar con la medicación y el litio, comunicarse en cada fase y actuar en una crisis, con el marco legal en España, seis fichas prácticas y teléfonos de ayuda. No sustituye la atención médica.',
+      en: 'A guide for children, grandchildren and partners supporting an older person with bipolar disorder. It shows how to recognise the signs of mania and depression, help with medication and lithium, communicate in each phase and act in a crisis, with the legal framework in Spain, six practical worksheets and helplines. It does not replace medical care.'
+    },
+    temas: {
+      es: ['Salud mental', 'Trastorno bipolar', 'Tercera edad', 'Cuidadores', 'Familia', 'Medicación', 'Crisis', 'Ley 8/2021'],
+      en: ['Mental health', 'Bipolar disorder', 'Later life', 'Carers', 'Family', 'Medication', 'Crisis', 'Spanish Law 8/2021']
+    },
+    acciones: [
+      {
+        href: '/libros/cuidar-mayores-trastorno-bipolar.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Cuidar_mayores_trastorno_bipolar.pdf'
+      },
+      {
+        href: '/libros/cuidar-mayores-trastorno-bipolar.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Prólogo: para quienes cuidan',
+      'Capítulo 1 · Entender el trastorno bipolar en la vejez',
+      'Capítulo 2 · Reconocer los episodios y las señales de alerta',
+      'Capítulo 3 · Diagnóstico, equipo de salud y enfermedades asociadas',
+      'Capítulo 4 · La medicación en personas mayores',
+      'Capítulo 5 · Comunicarse y convivir',
+      'Capítulo 6 · Rutinas que protegen: sueño, alimentación y actividad',
+      'Capítulo 7 · Seguridad y manejo de crisis',
+      'Capítulo 8 · Aspectos legales, sociales y económicos en España',
+      'Capítulo 9 · Cuidar al cuidador',
+      'Capítulo 10 · Plan de acción familiar y fichas prácticas',
+      'Recursos útiles',
+      'Epílogo: lo que queda'
+    ]
+  },
+  {
     slug: 'aprende-abap-4',
     titulo: 'Aprende ABAP/4 con ejercicios prácticos',
     subtitulo: {
@@ -492,7 +643,7 @@ export const libros = [
 ]
 
 // Novedades de «Cómo contratar» y primeros libros del carrusel del home: el último publicado va primero
-const ULTIMOS = ['git-y-github-desde-la-terminal', 'scrum-en-odoo-20', 'sql-para-odoo']
+const ULTIMOS = ['cuidar-mayores-trastorno-bipolar', 'desde-lo-alto-de-la-montana', 'odoo-en-la-nube']
 
 export const ultimosLibros = ULTIMOS.map((slug) => libros.find((libro) => libro.slug === slug))
 
