@@ -92,12 +92,9 @@ export default function Tarjeta({ modulo: m }) {
           margin: 0;
           object-fit: cover;
         }
-        /* Las portadas de las webs son capturas verticales: se muestra su parte superior */
+        /* Las portadas de las webs son GIF verticales de 600×726: se muestran enteras */
         .tc.tema .tc-cover {
-          aspect-ratio: 4 / 3;
-        }
-        .tc.tema .tc-cover img {
-          object-position: top;
+          aspect-ratio: 600 / 726;
         }
         .tc-summary {
           position: absolute;
