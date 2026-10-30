@@ -6,10 +6,10 @@ import useCarrito from '../Tienda/useCarrito'
 import { useIdioma } from '../../lib/idioma'
 
 // Un elemento es [href, etiqueta, opciones?] o un grupo { etiqueta, hijos } que se muestra como desplegable.
-// Opciones: contador (número rojo de módulos de Odoo 20) y destacado (sombra azul debajo).
+// Opciones: destacado (sombra azul debajo).
 const LINKS = [
   ['/', { es: 'Inicio', en: 'Home' }],
-  ['/posts', { es: 'Artículos', en: 'Articles' }],
+  ['/posts', 'Blog'],
   {
     etiqueta: { es: 'Páginas', en: 'Pages' },
     hijos: [
@@ -18,41 +18,12 @@ const LINKS = [
       ['/odoo-programa-gestion-construccion', 'Bim 2.0']
     ]
   },
-  ['/tienda', { es: 'Tienda', en: 'Store' }, { contador: true }],
+  ['/tienda', { es: 'Tienda', en: 'Store' }],
   ['/cursos', { es: 'Cursos', en: 'Courses' }],
   ['/libros', { es: 'Libros', en: 'Books' }],
   ['/calendario', { es: 'Calendario', en: 'Calendar' }, { destacado: true }],
   ['/contacto', { es: 'Contacto', en: 'Contact' }]
 ]
-
-// Módulos de Odoo 20 publicados: se pide una vez por visita y se recuerda en la pestaña
-let contadorGuardado = null
-function useModulosOdoo20() {
-  const [total, setTotal] = useState(contadorGuardado)
-
-  useEffect(() => {
-    if (contadorGuardado !== null) return
-    try {
-      const guardado = sessionStorage.getItem('tienda-odoo20')
-      if (guardado) {
-        contadorGuardado = Number(guardado)
-        return setTotal(contadorGuardado)
-      }
-    } catch (e) {}
-    fetch('/api/tienda/contador')
-      .then((res) => (res.ok ? res.json() : Promise.reject()))
-      .then(({ odoo20 }) => {
-        contadorGuardado = odoo20
-        setTotal(odoo20)
-        try {
-          sessionStorage.setItem('tienda-odoo20', String(odoo20))
-        } catch (e) {}
-      })
-      .catch(() => {})
-  }, [])
-
-  return total
-}
 
 const TEXTOS = {
   es: {
@@ -63,8 +34,6 @@ const TEXTOS = {
     idioma: 'Switch to English',
     carrito: 'Carrito',
     modulos: 'módulos',
-    odoo20: (n) => `${n} módulos para Odoo 20`,
-    contacto: 'Contáctame',
     cerrar: 'Cerrar menú',
     abrir: 'Abrir menú',
     cv: '/cv'
@@ -77,15 +46,11 @@ const TEXTOS = {
     idioma: 'Cambiar a español',
     carrito: 'Cart',
     modulos: 'modules',
-    odoo20: (n) => `${n} modules for Odoo 20`,
-    contacto: 'Contact me',
     cerrar: 'Close menu',
     abrir: 'Open menu',
     cv: '/cv/en'
   }
 }
-
-const WHATSAPP = 'https://wa.me/34662470645'
 
 // Guarda el tema en la misma clave que usa next-themes (tema de Nextra)
 function useTema() {
@@ -115,7 +80,6 @@ export default function SiteHeader() {
   const [abierto, setAbierto] = useState(false)
   const [grupo, setGrupo] = useState(null)
   const { lineas } = useCarrito()
-  const modulos20 = useModulosOdoo20()
   const { lang, setLang } = useIdioma()
   const t = TEXTOS[lang]
   const otroIdioma = lang === 'en' ? 'es' : 'en'
@@ -161,11 +125,6 @@ export default function SiteHeader() {
         aria-current={activo(href) ? 'page' : undefined}
       >
         {texto(label)}
-        {opciones.contador && modulos20 > 0 && (
-          <b className="sh-contador" title={t.odoo20(modulos20)}>
-            {modulos20}
-          </b>
-        )}
       </a>
     </Link>
   )
@@ -234,9 +193,6 @@ export default function SiteHeader() {
           <Link href={t.cv}>
             <a className="sh-btn sh-ghost">CV</a>
           </Link>
-          <a className="sh-btn sh-primary" href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-            {t.contacto}
-          </a>
           <button
             type="button"
             className="sh-icon sh-burger"
@@ -313,11 +269,10 @@ export default function SiteHeader() {
         .sh-nav {
           display: flex;
           align-items: center;
-          gap: 0.15rem;
           margin: 0 auto;
         }
         .sh-link {
-          padding: 0.45rem 0.75rem;
+          padding: 0.45rem 0.55rem;
           border-radius: 999px;
           font-size: 0.9rem;
           color: var(--muted);
@@ -334,21 +289,6 @@ export default function SiteHeader() {
           font-variation-settings: 'wght' 600;
         }
 
-        .sh-contador {
-          display: inline-block;
-          min-width: 20px;
-          height: 18px;
-          margin-left: 0.35rem;
-          padding: 0 5px;
-          border-radius: 999px;
-          background: #e5484d;
-          color: #fff;
-          font-size: 0.68rem;
-          line-height: 18px;
-          text-align: center;
-          vertical-align: 1px;
-          font-variation-settings: 'wght' 700;
-        }
         .sh-destacado {
           box-shadow: inset 0 -2px 0 var(--accent-2), 0 8px 14px -8px var(--accent-2);
         }
@@ -473,18 +413,11 @@ export default function SiteHeader() {
           border-color: var(--accent-2);
           color: var(--text-strong);
         }
-        .sh-primary {
-          background: var(--accent);
-          color: var(--on-accent);
-        }
-        .sh-primary:hover {
-          background: var(--accent-hover);
-        }
         .sh-burger {
           display: none;
         }
 
-        @media (max-width: 1210px) {
+        @media (max-width: 1000px) {
           .sh-nav {
             display: none;
           }
@@ -541,9 +474,6 @@ export default function SiteHeader() {
           }
           .sh-inner {
             gap: 0.75rem;
-          }
-          .sh-primary {
-            padding: 0 0.85rem;
           }
         }
         @media (max-width: 400px) {

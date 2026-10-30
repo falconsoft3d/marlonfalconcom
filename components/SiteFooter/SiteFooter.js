@@ -43,7 +43,7 @@ const MENU = [
     titulo: { es: 'Sitio', en: 'Site' },
     links: [
       ['/', { es: 'Inicio', en: 'Home' }],
-      ['/posts', { es: 'Artículos', en: 'Articles' }],
+      ['/posts', 'Blog'],
       ['/tienda', { es: 'Tienda Odoo', en: 'Odoo store' }],
       ['/categorias', { es: 'Categorías', en: 'Categories' }],
       ['/cursos', { es: 'Cursos', en: 'Courses' }],
