@@ -3,11 +3,10 @@ import Head from 'next/head'
 import Copiar from './Copiar'
 import Guia from './Guia'
 import Robot, { colorAgente } from './Robot'
-import { ESTADOS, instrucciones } from './instrucciones'
+import { ESTADOS, SIN_SENAL_MS, instrucciones, resumirAgentes } from './instrucciones'
 
 const SONDEO_MS = 3000
 const SONDEO_OCULTA_MS = 15000
-const SIN_SENAL_MS = 3 * 60 * 1000
 const TAREAS_VISIBLES = 4
 const MENSAJES_RADIO = 30
 
@@ -158,17 +157,7 @@ export default function Sala({ token, inicial, origen }) {
 
   const { sala, agentes } = datos
 
-  const total = useMemo(() => {
-    const suma = (lista) => agentes.reduce((n, a) => n + lista(a), 0)
-    return {
-      progreso: agentes.length ? Math.round(suma((a) => a.progreso) / agentes.length) : 0,
-      hechas: suma((a) => a.hechas.length),
-      pendientes: suma((a) => a.pendientes.length),
-      trabajando: agentes.filter((a) => a.estado === 'trabajando').length,
-      problemas: agentes.filter((a) => a.estado === 'bloqueado' || a.estado === 'error').length,
-      terminada: agentes.length > 0 && agentes.every((a) => a.estado === 'terminado')
-    }
-  }, [agentes])
+  const total = useMemo(() => resumirAgentes(agentes), [agentes])
 
   // El confeti solo sale si la sala termina con la página abierta
   useEffect(() => {

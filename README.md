@@ -28,7 +28,7 @@ Si usas otra herramienta (asdf, fnm, etc.), el archivo `.node-version` también 
 
 ## Torre de control de agentes (`/agentes/<token>`)
 
-Desde `/dashboard`, pestaña Agentes, se crea una sala con una URL con token. Claude informa con `POST /api/agentes/<token>` y la página muestra una fila por agente con su barra y sus tareas; las instrucciones y la API están documentadas en esa misma página y en el dashboard. Los datos están en las tablas privadas `agent_rooms` y `agent_states` de falcondatabase. El plugin de Chrome está en `extension/`: `npm run extension:zip` genera la descarga `public/torre-de-control-chrome.zip`.
+Desde `/dashboard`, pestaña Agentes, se crea una sala con una URL con token. Claude informa con `POST /api/agentes/<token>` y la página muestra una fila por agente con su barra y sus tareas; las instrucciones y la API están documentadas en esa misma página y en el dashboard. `/agentes/resumen/<token>` muestra todas las salas abiertas en el móvil; su token es `agents_token` en `booking_settings`. Los datos están en las tablas privadas `agent_rooms` y `agent_states` de falcondatabase. El plugin de Chrome está en `extension/`: `npm run extension:zip` genera la descarga `public/torre-de-control-chrome.zip`.
 
 ## Tienda de módulos Odoo (`/tienda`)
 

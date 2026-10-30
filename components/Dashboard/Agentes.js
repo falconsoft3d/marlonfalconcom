@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import Icon from '../Icon'
 import { api } from './api'
 import { Copiar, Guia } from '../Agentes'
-import { instrucciones, urlSala } from '../Agentes/instrucciones'
+import { instrucciones, urlResumen, urlSala } from '../Agentes/instrucciones'
 import { formatoFecha, formatoHora } from '../../lib/calendario/zona'
 
 const LOCALE = 'es-ES'
 
 // Salas de la Torre de control: cada una genera la URL con token que se le pasa a Claude
-export default function Agentes({ zona }) {
+export default function Agentes({ zona, ajustes, cargarAjustes }) {
   const [salas, setSalas] = useState(null)
   const [titulo, setTitulo] = useState('')
   const [origen, setOrigen] = useState('')
@@ -42,6 +42,14 @@ export default function Agentes({ zona }) {
     })
   }
 
+  const renovarResumen = () => {
+    if (!window.confirm('¿Cambiar la URL del resumen? La actual dejará de funcionar, también en tu móvil.')) return
+    ejecutar(async () => {
+      await api('ajustes', { method: 'PATCH', id: ajustes.id, body: { agents_token: true } })
+      await cargarAjustes()
+    })
+  }
+
   const borrar = (s) => {
     if (!window.confirm(`¿Borrar «${s.title}» y todos sus agentes? La URL dejará de funcionar.`)) return
     ejecutar(() => api('salas', { method: 'DELETE', id: s.id }))
@@ -55,6 +63,29 @@ export default function Agentes({ zona }) {
           <p className="db-muted">Crea una sala, pásale su URL a Claude y sigue aquí o en Chrome qué hace cada agente.</p>
         </div>
       </div>
+
+      {ajustes?.agents_token && origen && (
+        <article className="db-card ag-resumen">
+          <div className="ag-sala">
+            <div>
+              <b>Resumen de todas las torres</b>
+              <div className="db-muted">Ábrela en el móvil y añádela a la pantalla de inicio. Lo que necesita atención sale primero.</div>
+              <code>{urlResumen(origen, ajustes.agents_token)}</code>
+            </div>
+            <div className="db-row">
+              <a className="db-btn ghost" href={urlResumen(origen, ajustes.agents_token)} target="_blank" rel="noopener noreferrer">
+                <Icon name="external" size={15} /> Abrir
+              </a>
+              <Copiar className="db-btn" texto={urlResumen(origen, ajustes.agents_token)}>
+                Copiar URL
+              </Copiar>
+              <button type="button" className="db-btn ghost" onClick={renovarResumen}>
+                Cambiar URL
+              </button>
+            </div>
+          </div>
+        </article>
+      )}
 
       <form className="db-row ag-nueva" onSubmit={crearSala}>
         <label className="db-field">
@@ -117,6 +148,9 @@ export default function Agentes({ zona }) {
       )}
 
       <style jsx global>{`
+        .ag-resumen {
+          margin-bottom: 1.25rem;
+        }
         .ag-nueva {
           margin-bottom: 1.25rem;
         }

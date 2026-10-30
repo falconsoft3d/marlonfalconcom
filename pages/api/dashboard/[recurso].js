@@ -1,3 +1,4 @@
+import crypto from 'crypto'
 import { listar, crear, actualizar, borrar } from '../../../lib/falcondb'
 import { conSesion } from '../../../lib/calendario/sesion'
 import { zonaValida } from '../../../lib/calendario/zona'
@@ -61,6 +62,9 @@ const horario = (v) => {
   return limpio
 }
 
+// Cualquier valor pide un token nuevo: el navegador nunca lo elige
+const tokenNuevo = () => crypto.randomUUID()
+
 const ahora = () => new Date().toISOString()
 
 const RECURSOS = {
@@ -73,7 +77,8 @@ const RECURSOS = {
       min_notice_hours: entero(0, 720),
       max_days_ahead: entero(1, 365),
       buffer_minutes: entero(0, 240),
-      slot_step_minutes: entero(5, 240)
+      slot_step_minutes: entero(5, 240),
+      agents_token: tokenNuevo
     },
     obligatorios: []
   },

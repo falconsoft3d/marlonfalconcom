@@ -26,9 +26,9 @@ function AvisoSoloEspanol() {
 }
 
 export default function Nextra({ Component, pageProps }) {
-  // La URL de una sala de agentes lleva su token: no pasa por analítica ni chats de terceros
+  // Las URLs de la Torre de control llevan su token: no pasan por analítica ni chats de terceros
   const { pathname } = useRouter()
-  if (pathname === '/agentes/[token]') {
+  if (pathname.startsWith('/agentes/')) {
     return (
       <IdiomaProvider>
         <Component {...pageProps} />

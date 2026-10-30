@@ -7,7 +7,23 @@ export const ESTADOS = {
   error: 'Error'
 }
 
+// Un agente que sigue trabajando pero lleva este tiempo sin informar se muestra como «Sin señal»
+export const SIN_SENAL_MS = 3 * 60 * 1000
+
+export function resumirAgentes(agentes) {
+  const suma = (valor) => agentes.reduce((n, a) => n + valor(a), 0)
+  return {
+    progreso: agentes.length ? Math.round(suma((a) => a.progreso) / agentes.length) : 0,
+    hechas: suma((a) => a.hechas.length),
+    pendientes: suma((a) => a.pendientes.length),
+    trabajando: agentes.filter((a) => a.estado === 'trabajando').length,
+    problemas: agentes.filter((a) => a.estado === 'bloqueado' || a.estado === 'error').length,
+    terminada: agentes.length > 0 && agentes.every((a) => a.estado === 'terminado')
+  }
+}
+
 export const urlSala = (origen, token) => `${origen}/agentes/${token}`
+export const urlResumen = (origen, token) => `${origen}/agentes/resumen/${token}`
 export const urlApi = (origen, token) => `${origen}/api/agentes/${token}`
 
 export const instrucciones = (origen, token) => `Mientras trabajas, informa de tu progreso en mi Torre de control:

@@ -76,11 +76,19 @@ export default function Guia({ origen, token }) {
       </section>
 
       <section>
+        <h3>4. Resumen en el móvil</h3>
+        <p>
+          La pestaña Agentes del dashboard tiene una URL con todas las salas abiertas, ordenadas por urgencia. Se actualiza sola, y al tocar una torre entras en su sala. En el móvil, ábrela y elige <b>Añadir a pantalla de inicio</b>.
+        </p>
+      </section>
+
+      <section>
         <h3>Seguridad</h3>
         <ul>
           <li>La URL es la contraseña: quien la tenga puede ver la sala y escribir en ella.</li>
           <li>Pide a tus agentes que no envíen claves ni datos de clientes.</li>
           <li>Al cerrar una sala desde el dashboard, la URL deja de funcionar al momento, también para Claude y el plugin.</li>
+          <li>La URL del resumen abre todas las salas: guárdala solo en tu móvil. Si se filtra, usa <b>Cambiar URL</b> en el dashboard.</li>
           <li>Si un agente lleva 3 minutos sin informar y sigue trabajando, su fila muestra «Sin señal».</li>
         </ul>
       </section>
