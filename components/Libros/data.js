@@ -559,6 +559,63 @@ export const libros = [
     ]
   },
   {
+    slug: 'ia-gestion-proyectos-bim-erpsqlite',
+    titulo: 'Inteligencia Artificial aplicada a la Gestión de Proyectos BIM',
+    subtitulo: {
+      es: 'Del modelo IFC a la decisión económica: flujos de trabajo con ERPSqlite, el ERP de escritorio sin servidor',
+      en: 'From the IFC model to the economic decision: workflows with ERPSqlite, the serverless desktop ERP'
+    },
+    portada: { src: '/images/libros/ia-gestion-proyectos-bim-erpsqlite.jpg', ancho: 911, alto: 1287 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['12 capítulos', '38 páginas', 'En español'],
+      en: ['12 chapters', '38 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Para jefes de proyecto, BIM managers, técnicos de presupuestos y jefes de obra que quieren pasar de la curiosidad por la IA a un flujo de trabajo real, sin necesidad de programar. Muestra dónde aporta valor en el coste, el plazo, las compras y la certificación, con ERPSqlite como base de datos única, e incluye una hoja de ruta de 90 días, un caso de 24 viviendas y una biblioteca de prompts.',
+      en: 'For project managers, BIM managers, cost estimators and site managers who want to move from curiosity about AI to a real workflow, with no programming needed. It shows where AI adds value in cost, schedule, purchasing and certification, with ERPSqlite as the single database, and includes a 90-day roadmap, a 24-home case study and a prompt library.'
+    },
+    temas: {
+      es: ['Inteligencia artificial', 'BIM', 'ERPSqlite', 'IFC', 'BC3', 'Valor ganado', 'MCP', 'Prompts'],
+      en: ['Artificial intelligence', 'BIM', 'ERPSqlite', 'IFC', 'BC3', 'Earned value', 'MCP', 'Prompts']
+    },
+    acciones: [
+      {
+        href: '/libros/ia-gestion-proyectos-bim-erpsqlite.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'IA_Gestion_Proyectos_BIM_ERPSqlite.pdf'
+      },
+      {
+        href: '/libros/ia-gestion-proyectos-bim-erpsqlite.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Prólogo',
+      'Capítulo 1 · El nuevo escenario: BIM, datos e inteligencia artificial',
+      'Capítulo 2 · Conceptos de IA que todo gestor BIM debe dominar',
+      'Capítulo 3 · ERPSqlite: la columna vertebral de datos del proyecto',
+      'Capítulo 4 · Del modelo al presupuesto (5D): IFC, BC3 y mediciones',
+      'Capítulo 5 · Planificación y control del plazo (4D)',
+      'Capítulo 6 · Compras, inventario y cadena de suministro',
+      'Capítulo 7 · Control económico: certificaciones, costes y valor ganado',
+      'Capítulo 8 · Asistentes y agentes de IA conectados al ERP',
+      'Capítulo 9 · Analítica, BI e IA predictiva sobre SQLite',
+      'Capítulo 10 · Gobernanza, seguridad y ética de los datos',
+      'Capítulo 11 · Hoja de ruta de implantación en 90 días',
+      'Capítulo 12 · Caso práctico: edificio residencial de 24 viviendas',
+      'Conclusiones',
+      'Anexo A · Glosario',
+      'Anexo B · Biblioteca de prompts para gestión BIM',
+      'Anexo C · Consultas y scripts de referencia',
+      'Anexo D · Lista de verificación de madurez IA-BIM'
+    ]
+  },
+  {
     slug: 'manual-crm-odoo-19',
     titulo: 'CRM en Odoo 19 · Manual de usuario',
     subtitulo: {
@@ -1635,7 +1692,7 @@ export const libros = [
 ]
 
 // Novedades de «Cómo contratar» y primeros libros del carrusel del home: el último publicado va primero
-const ULTIMOS = ['bim-paso-a-paso-con-erpsqlite', 'manual-crm-odoo-19', 'manual-ventas-odoo-19']
+const ULTIMOS = ['ia-gestion-proyectos-bim-erpsqlite', 'bim-paso-a-paso-con-erpsqlite', 'manual-crm-odoo-19']
 
 export const ultimosLibros = ULTIMOS.map((slug) => libros.find((libro) => libro.slug === slug))
 

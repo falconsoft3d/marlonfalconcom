@@ -30,6 +30,13 @@ const COMPUESTAS = {
       'ABAP es el lenguaje de programación del sistema de gestión empresarial SAP R/3. Este libro enseña a programar en ABAP/4 con un lenguaje claro y sencillo: cada capítulo corresponde a un módulo de un curso de formación e incluye ejercicios prácticos para comprobar lo aprendido.',
     temas: ['ABAP/4', 'SAP', 'Tablas internas', 'Open SQL', 'Dynpro', 'IDocs']
   },
+  'ia-gestion-proyectos-bim-erpsqlite': {
+    acento: '#f4a460',
+    titulo: 'Inteligencia Artificial aplicada a la Gestión de Proyectos BIM',
+    texto:
+      'Del modelo IFC a la decisión económica. Esta guía práctica para jefes de proyecto, BIM managers y técnicos de presupuestos muestra dónde aporta valor la IA en el coste, el plazo, las compras y la certificación de una obra, con ERPSqlite como base de datos única, una hoja de ruta de 90 días y un caso completo de 24 viviendas.',
+    temas: ['IA', 'BIM', 'ERPSqlite', 'IFC y BC3', 'Valor ganado', 'MCP', 'Agentes', 'Prompts']
+  },
   'json-rpc-en-odoo-20': {
     acento: '#c79ad6',
     titulo: 'JSON-RPC en Odoo 20',
