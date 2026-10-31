@@ -502,6 +502,274 @@ export const libros = [
     ]
   },
   {
+    slug: 'manual-crm-odoo-19',
+    titulo: 'CRM en Odoo 19 · Manual de usuario',
+    subtitulo: {
+      es: 'Del primer contacto a la oportunidad ganada: leads, flujo de ventas, actividades, equipos y previsión',
+      en: 'From first contact to the won opportunity: leads, sales pipeline, activities, teams and forecasting'
+    },
+    portada: { src: '/images/libros/manual-crm-odoo-19.jpg', ancho: 1287, alto: 910 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['11 capítulos', '137 páginas', 'En español'],
+      en: ['11 chapters', '137 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Tomo 1 de la colección de manuales de Odoo 19. Para quien trabaja a diario con Odoo y para quien lo configura en su empresa, sin necesidad de saber informática. Recorre CRM pantalla a pantalla con capturas reales de Odoo 19 Enterprise: calificar leads, gestionar oportunidades, programar actividades, crear presupuestos, organizar equipos y leer el pronóstico.',
+      en: 'Volume 1 of the Odoo 19 manuals collection. For people who work with Odoo every day and those who set it up in their company, with no IT knowledge needed. It walks through CRM screen by screen with real Odoo 19 Enterprise screenshots: qualifying leads, managing opportunities, scheduling activities, creating quotations, organising teams and reading the forecast.'
+    },
+    temas: {
+      es: ['Odoo 19', 'CRM', 'Leads', 'Oportunidades', 'Actividades', 'Equipos de ventas', 'Pronóstico', 'Manual de usuario'],
+      en: ['Odoo 19', 'CRM', 'Leads', 'Opportunities', 'Activities', 'Sales teams', 'Forecast', 'User manual']
+    },
+    acciones: [
+      {
+        href: '/libros/manual-crm-odoo-19.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Manual_CRM_Odoo19.pdf'
+      },
+      {
+        href: '/libros/manual-crm-odoo-19.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Sobre este manual',
+      'Capítulo 1 · Primeros pasos en Odoo',
+      'Capítulo 2 · Cómo funciona CRM',
+      'Capítulo 3 · Calificar leads',
+      'Capítulo 4 · Gestionar oportunidades',
+      'Capítulo 5 · Actividades y reuniones',
+      'Capítulo 6 · Presupuestos y clientes',
+      'Capítulo 7 · Equipos de ventas',
+      'Capítulo 8 · Conseguir nuevos contactos',
+      'Capítulo 9 · Informes',
+      'Capítulo 10 · Configurar CRM',
+      'Capítulo 11 · Permisos, problemas y glosario',
+      'Mapa de menús'
+    ]
+  },
+  {
+    slug: 'manual-ventas-odoo-19',
+    titulo: 'Ventas en Odoo 19 · Manual de usuario',
+    subtitulo: {
+      es: 'Del presupuesto al pedido facturado: productos, precios, plantillas, firma, pago e informes',
+      en: 'From quotation to invoiced order: products, prices, templates, signature, payment and reports'
+    },
+    portada: { src: '/images/libros/manual-ventas-odoo-19.jpg', ancho: 1287, alto: 910 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['14 capítulos', '140 páginas', 'En español'],
+      en: ['14 chapters', '140 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Tomo 2 de la colección de manuales de Odoo 19. Para quien vende con Odoo y para quien configura la aplicación, sin necesidad de saber informática. Recorre Ventas con capturas reales de Odoo 19 Enterprise: crear presupuestos y plantillas, enviarlos para firmar y cobrar en línea, confirmar pedidos, facturar por partes o con anticipos, fijar precios y analizar lo vendido.',
+      en: 'Volume 2 of the Odoo 19 manuals collection. For people who sell with Odoo and those who configure the app, with no IT knowledge needed. It walks through Sales with real Odoo 19 Enterprise screenshots: creating quotations and templates, sending them for signature and online payment, confirming orders, invoicing in parts or with down payments, setting prices and analysing what was sold.'
+    },
+    temas: {
+      es: ['Odoo 19', 'Ventas', 'Presupuestos', 'Pedidos', 'Facturación', 'Precios', 'Pagos en línea', 'Manual de usuario'],
+      en: ['Odoo 19', 'Sales', 'Quotations', 'Orders', 'Invoicing', 'Prices', 'Online payments', 'User manual']
+    },
+    acciones: [
+      {
+        href: '/libros/manual-ventas-odoo-19.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Manual_Ventas_Odoo19.pdf'
+      },
+      {
+        href: '/libros/manual-ventas-odoo-19.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Sobre este manual',
+      'Capítulo 1 · Primeros pasos en Odoo',
+      'Capítulo 2 · Cómo funciona la venta',
+      'Capítulo 3 · Crear un presupuesto',
+      'Capítulo 4 · Plantillas de presupuesto',
+      'Capítulo 5 · Enviar, firmar y cobrar',
+      'Capítulo 6 · Confirmar y gestionar el pedido',
+      'Capítulo 7 · Facturar los pedidos',
+      'Capítulo 8 · Clientes',
+      'Capítulo 9 · Productos y precios',
+      'Capítulo 10 · Equipos de ventas',
+      'Capítulo 11 · Pagos en línea',
+      'Capítulo 12 · Informes de ventas',
+      'Capítulo 13 · Configurar la aplicación',
+      'Capítulo 14 · Permisos, problemas y glosario',
+      'Mapa de menús'
+    ]
+  },
+  {
+    slug: 'manual-inventario-odoo-19',
+    titulo: 'Inventario en Odoo 19 · Manual de usuario',
+    subtitulo: {
+      es: 'La mercancía bajo control: almacenes, ubicaciones, movimientos, lotes, reposición y valoración',
+      en: 'Goods under control: warehouses, locations, moves, lots, replenishment and valuation'
+    },
+    portada: { src: '/images/libros/manual-inventario-odoo-19.jpg', ancho: 1287, alto: 910 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['12 capítulos', '138 páginas', 'En español'],
+      en: ['12 chapters', '138 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Tomo 3 de la colección de manuales de Odoo 19. Para quien trabaja en el almacén y para quien lo configura, sin necesidad de saber informática. Recorre Inventario con capturas reales de Odoo 19 Enterprise: recibir y entregar mercancía, contar existencias, reponer con reglas de mínimo y máximo, seguir lotes y números de serie, valorar el stock y definir almacenes y rutas.',
+      en: 'Volume 3 of the Odoo 19 manuals collection. For people who work in the warehouse and those who set it up, with no IT knowledge needed. It walks through Inventory with real Odoo 19 Enterprise screenshots: receiving and delivering goods, counting stock, replenishing with minimum and maximum rules, tracking lots and serial numbers, valuing stock and defining warehouses and routes.'
+    },
+    temas: {
+      es: ['Odoo 19', 'Inventario', 'Almacenes', 'Lotes', 'Reposición', 'Valoración', 'Código de barras', 'Manual de usuario'],
+      en: ['Odoo 19', 'Inventory', 'Warehouses', 'Lots', 'Replenishment', 'Valuation', 'Barcode', 'User manual']
+    },
+    acciones: [
+      {
+        href: '/libros/manual-inventario-odoo-19.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Manual_Inventario_Odoo19.pdf'
+      },
+      {
+        href: '/libros/manual-inventario-odoo-19.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Sobre este manual',
+      'Capítulo 1 · Primeros pasos en Odoo',
+      'Capítulo 2 · Cómo funciona Inventario',
+      'Capítulo 3 · Recibir y entregar mercancía',
+      'Capítulo 4 · El traslado a fondo',
+      'Capítulo 5 · Contar y ajustar existencias',
+      'Capítulo 6 · Reponer existencias',
+      'Capítulo 7 · Productos, lotes y paquetes',
+      'Capítulo 8 · Informes',
+      'Capítulo 9 · Valoración y código de barras',
+      'Capítulo 10 · Los ajustes de Inventario',
+      'Capítulo 11 · Almacenes, rutas y catálogos',
+      'Capítulo 12 · Permisos, errores y glosario',
+      'Mapa de menús'
+    ]
+  },
+  {
+    slug: 'manual-compras-odoo-19',
+    titulo: 'Compras en Odoo 19 · Manual de usuario',
+    subtitulo: {
+      es: 'De la solicitud de presupuesto a la factura del proveedor: pedidos, recepciones, proveedores y control',
+      en: 'From request for quotation to vendor bill: orders, receipts, vendors and control'
+    },
+    portada: { src: '/images/libros/manual-compras-odoo-19.jpg', ancho: 1287, alto: 910 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['12 capítulos', '135 páginas', 'En español'],
+      en: ['12 chapters', '135 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Tomo 4 de la colección de manuales de Odoo 19. Para quien compra con Odoo y para quien configura la aplicación, sin necesidad de saber informática. Recorre Compras con capturas reales de Odoo 19 Enterprise: preparar solicitudes de presupuesto, confirmar pedidos, recibir la mercancía, cuadrar las facturas de proveedor, gestionar precios y plazos, y automatizar la reposición.',
+      en: 'Volume 4 of the Odoo 19 manuals collection. For people who buy with Odoo and those who configure the app, with no IT knowledge needed. It walks through Purchase with real Odoo 19 Enterprise screenshots: preparing requests for quotation, confirming orders, receiving goods, matching vendor bills, managing prices and lead times, and automating replenishment.'
+    },
+    temas: {
+      es: ['Odoo 19', 'Compras', 'Pedidos', 'Proveedores', 'Recepciones', 'Facturas', 'Reposición', 'Manual de usuario'],
+      en: ['Odoo 19', 'Purchase', 'Orders', 'Vendors', 'Receipts', 'Bills', 'Replenishment', 'User manual']
+    },
+    acciones: [
+      {
+        href: '/libros/manual-compras-odoo-19.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Manual_Compras_Odoo19.pdf'
+      },
+      {
+        href: '/libros/manual-compras-odoo-19.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Sobre este manual',
+      'Capítulo 1 · Primeros pasos en Odoo',
+      'Capítulo 2 · Cómo funciona Compra',
+      'Capítulo 3 · Crear una solicitud de presupuesto',
+      'Capítulo 4 · Enviar y confirmar el pedido',
+      'Capítulo 5 · Recibir la mercancía',
+      'Capítulo 6 · Facturas de proveedor',
+      'Capítulo 7 · Proveedores',
+      'Capítulo 8 · Productos y precios de proveedor',
+      'Capítulo 9 · Reposición y compras automáticas',
+      'Capítulo 10 · Informes y análisis',
+      'Capítulo 11 · Configuración',
+      'Capítulo 12 · Permisos, errores y glosario',
+      'Mapa de menús'
+    ]
+  },
+  {
+    slug: 'manual-contabilidad-facturacion-odoo-19',
+    titulo: 'Contabilidad y Facturación en Odoo 19 · Manual de usuario',
+    subtitulo: {
+      es: 'Facturas, cobros, bancos, impuestos, activos, cierres e informes, con el plan contable español',
+      en: 'Invoices, payments, banks, taxes, assets, closings and reports, with the Spanish chart of accounts'
+    },
+    portada: { src: '/images/libros/manual-contabilidad-facturacion-odoo-19.jpg', ancho: 1287, alto: 910 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['14 capítulos', '180 páginas', 'En español'],
+      en: ['14 chapters', '180 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Tomo 5 de la colección de manuales de Odoo 19. Para quien lleva la contabilidad con Odoo y para quien la configura, con la localización española. Recorre la aplicación con capturas reales de Odoo 19 Enterprise: facturas de cliente y de proveedor, cobros y remesas SEPA, conciliación bancaria, analítica, activos e impuestos, cierres, informes y cada ajuste.',
+      en: 'Volume 5 of the Odoo 19 manuals collection. For people who keep the books with Odoo and those who set it up, with the Spanish localisation. It walks through the app with real Odoo 19 Enterprise screenshots: customer invoices and vendor bills, payments and SEPA batches, bank reconciliation, analytics, assets and taxes, closings, reports and every setting.'
+    },
+    temas: {
+      es: ['Odoo 19', 'Contabilidad', 'Facturación', 'Bancos', 'Impuestos', 'España', 'Cierres', 'Manual de usuario'],
+      en: ['Odoo 19', 'Accounting', 'Invoicing', 'Banks', 'Taxes', 'Spain', 'Closings', 'User manual']
+    },
+    acciones: [
+      {
+        href: '/libros/manual-contabilidad-facturacion-odoo-19.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Manual_Contabilidad_Facturacion_Odoo19.pdf'
+      },
+      {
+        href: '/libros/manual-contabilidad-facturacion-odoo-19.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Sobre este manual',
+      'Capítulo 1 · Primeros pasos en Odoo',
+      'Capítulo 2 · Conceptos',
+      'Capítulo 3 · Tablero y menús',
+      'Capítulo 4 · Facturas de cliente',
+      'Capítulo 5 · Cobros y clientes',
+      'Capítulo 6 · Proveedores',
+      'Capítulo 7 · Bancos y conciliación',
+      'Capítulo 8 · Asientos y analítica',
+      'Capítulo 9 · Activos, préstamos y diferidos',
+      'Capítulo 10 · Impuestos y España',
+      'Capítulo 11 · Cierre y revisión',
+      'Capítulo 12 · Informes',
+      'Capítulo 13 · Configuración',
+      'Capítulo 14 · Roles, errores y glosario',
+      'Mapa de menús'
+    ]
+  },
+  {
     slug: 'pedir-un-prompt-al-consultor',
     titulo: 'Pedir un prompt al consultor',
     subtitulo: {
@@ -1310,7 +1578,7 @@ export const libros = [
 ]
 
 // Novedades de «Cómo contratar» y primeros libros del carrusel del home: el último publicado va primero
-const ULTIMOS = ['50-canciones-de-rap', 'tus-poemas', 'el-zorro-y-la-tigre']
+const ULTIMOS = ['manual-crm-odoo-19', 'manual-ventas-odoo-19', 'manual-inventario-odoo-19']
 
 export const ultimosLibros = ULTIMOS.map((slug) => libros.find((libro) => libro.slug === slug))
 
