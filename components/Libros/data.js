@@ -884,6 +884,62 @@ export const libros = [
     ]
   },
   {
+    slug: 'iteia-transformacion-empresarial-ia',
+    titulo: 'ITEIA · Transformación empresarial con IA',
+    subtitulo: {
+      es: 'Metodología de implementación en cinco fases: investigar, trazar, experimentar, integrar y adoptar',
+      en: 'A five-phase implementation methodology: investigate, plan, experiment, integrate and adopt'
+    },
+    portada: { src: '/images/libros/iteia-transformacion-empresarial-ia.jpg', ancho: 912, alto: 1287 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['12 capítulos', '37 páginas', 'En español'],
+      en: ['12 chapters', '37 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Para directivos, responsables de operaciones y consultores que quieren llevar la IA del entusiasmo a la producción. Presenta un método propio de cinco fases y cuatro pilares (personas, datos, tecnología y gobernanza) para diagnosticar la empresa, priorizar casos de uso, validar pilotos con métricas e integrarlos en el ERP, con modelo de madurez, plantillas, un caso de una constructora y un plan de 90 días.',
+      en: 'For executives, operations managers and consultants who want to take AI from enthusiasm to production. It presents an original method of five phases and four pillars (people, data, technology and governance) to assess the company, prioritise use cases, validate pilots with metrics and integrate them into the ERP, with a maturity model, templates, a construction company case and a 90-day plan.'
+    },
+    temas: {
+      es: ['Inteligencia artificial', 'Transformación digital', 'Metodología', 'ERP', 'Odoo', 'Gobernanza', 'Gestión del cambio', 'Plantillas'],
+      en: ['Artificial intelligence', 'Digital transformation', 'Methodology', 'ERP', 'Odoo', 'Governance', 'Change management', 'Templates']
+    },
+    acciones: [
+      {
+        href: '/libros/iteia-transformacion-empresarial-ia.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'ITEIA_Metodologia_Transformacion_Empresarial_IA.pdf'
+      },
+      {
+        href: '/libros/iteia-transformacion-empresarial-ia.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Prólogo',
+      'Capítulo 1 · Por qué fracasan las transformaciones con IA',
+      'Capítulo 2 · Visión general de la metodología ITEIA',
+      'Capítulo 3 · Fase I: Investigar',
+      'Capítulo 4 · Fase T: Trazar',
+      'Capítulo 5 · Fase E: Experimentar',
+      'Capítulo 6 · Fase I: Integrar',
+      'Capítulo 7 · Fase A: Adoptar y Afinar',
+      'Capítulo 8 · Gobernanza, ética y cumplimiento',
+      'Capítulo 9 · El ERP como columna vertebral',
+      'Capítulo 10 · Modelo de madurez ITEIA',
+      'Capítulo 11 · Caso práctico: una constructora mediana',
+      'Capítulo 12 · Plan de 90 días para empezar',
+      'Anexo A · Cuestionario de madurez (extracto)',
+      'Anexo B · Ficha de caso de uso',
+      'Anexo C · Lista de verificación de puertas de decisión',
+      'Anexo D · Glosario'
+    ]
+  },
+  {
     slug: 'pedir-un-prompt-al-consultor',
     titulo: 'Pedir un prompt al consultor',
     subtitulo: {
@@ -1692,7 +1748,7 @@ export const libros = [
 ]
 
 // Novedades de «Cómo contratar» y primeros libros del carrusel del home: el último publicado va primero
-const ULTIMOS = ['ia-gestion-proyectos-bim-erpsqlite', 'bim-paso-a-paso-con-erpsqlite', 'manual-crm-odoo-19']
+const ULTIMOS = ['iteia-transformacion-empresarial-ia', 'ia-gestion-proyectos-bim-erpsqlite', 'bim-paso-a-paso-con-erpsqlite']
 
 export const ultimosLibros = ULTIMOS.map((slug) => libros.find((libro) => libro.slug === slug))
 
