@@ -8,6 +8,7 @@
     "cv:pdf": "node ./scripts/gen-cv-pdf.js",
     "webs:shots": "node ./scripts/gen-webs-shots.js",
     "libros:og": "node ./scripts/gen-libros-og.js",
+    "libros:contraportadas": "node ./scripts/gen-libros-contraportadas.js",
     "owl:manual": "node ./scripts/gen-owl-manual.js",
     "owl:zip": "rm -f public/cursos/curso-owl-odoo-20-modulos.zip && cd data/curso-owl && zip -qr ../../public/cursos/curso-owl-odoo-20-modulos.zip curso_owl_ejemplos curso_owl_todo -x '*/.*'",
     "extension:zip": "rm -f public/torre-de-control-chrome.zip && cd extension && zip -qr ../public/torre-de-control-chrome.zip . -x '.*'",

@@ -1,9 +1,11 @@
 // Catálogo de /libros. Para añadir un libro: portada en public/images/libros, una entrada aquí y su slug al principio de ULTIMOS.
 // Los libros están en español: el índice no se traduce, solo los textos de la ficha.
-// Cada libro tiene su página en /libros/<slug>. La imagen para redes (public/images/libros/og) sale de `npm run libros:og`.
+// Cada libro tiene su página en /libros/<slug>. La imagen para redes (public/images/libros/og) sale de `npm run libros:og`
+// y la contraportada del carrusel del home (public/images/libros/contraportadas), de `npm run libros:contraportadas`.
 import { SITIO } from '../Tienda/data'
 
 export const urlLibro = (libro) => `${SITIO}/libros/${libro.slug}`
+export const contraportada = (libro) => `/images/libros/contraportadas/${libro.slug}.jpg`
 
 export const libros = [
   {
@@ -1001,6 +1003,264 @@ export const libros = [
     ]
   },
   {
+    slug: 'robotica-e-impresion-3d',
+    titulo: 'Robótica e Impresión 3D',
+    subtitulo: {
+      es: 'Construye tu primer robot con piezas de Amazon y un chasis diseñado e impreso por ti',
+      en: 'Build your first robot with parts from Amazon and a chassis you design and print yourself'
+    },
+    portada: { src: '/images/libros/robotica-e-impresion-3d.jpg', ancho: 912, alto: 1287 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['9 capítulos', '36 páginas', '5 programas para Arduino', 'En español'],
+      en: ['9 chapters', '36 pages', '5 Arduino programs', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Para quien nunca ha soldado un cable ni ha encendido una impresora 3D. Con componentes fáciles de conseguir en Amazon, enseña lo básico de la electrónica, a programar Arduino con LEDs, botones, servos y sensores, a elegir y calibrar una impresora y a diseñar piezas en Tinkercad. Termina con un robot móvil que esquiva obstáculos, con un chasis hecho por ti, una guía de solución de problemas y un glosario.',
+      en: 'For anyone who has never soldered a wire or switched on a 3D printer. Using parts that are easy to find on Amazon, it teaches the basics of electronics, how to program Arduino with LEDs, buttons, servos and sensors, how to choose and calibrate a printer and how to design parts in Tinkercad. It ends with a mobile robot that avoids obstacles, on a chassis you made yourself, plus a troubleshooting guide and a glossary.'
+    },
+    temas: {
+      es: ['Robótica', 'Arduino', 'Impresión 3D', 'Electrónica', 'Sensores', 'Motores', 'Tinkercad', 'PLA'],
+      en: ['Robotics', 'Arduino', '3D printing', 'Electronics', 'Sensors', 'Motors', 'Tinkercad', 'PLA']
+    },
+    acciones: [
+      {
+        href: '/libros/robotica-e-impresion-3d.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Robotica_e_Impresion_3D.pdf'
+      },
+      {
+        href: '/libros/robotica-e-impresion-3d.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Antes de empezar',
+      'Capítulo 1 · La lista de la compra',
+      'Capítulo 2 · Herramientas y puesto de trabajo',
+      'Capítulo 3 · Electricidad sin miedo',
+      'Capítulo 4 · Primeros pasos con Arduino',
+      'Capítulo 5 · Tu primera impresora 3D',
+      'Capítulo 6 · Diseña tus propias piezas',
+      'Capítulo 7 · Proyectos de entrenamiento',
+      'Capítulo 8 · Proyecto final: robot evita-obstáculos',
+      'Capítulo 9 · Solución de problemas',
+      'Glosario',
+      'Lista de comprobación final'
+    ]
+  },
+  {
+    slug: 'el-zorro-y-la-tigre',
+    titulo: 'El Zorro y la Tigre',
+    subtitulo: {
+      es: 'Lo que pesa el oro. Una fábula sobre la avaricia y la humildad',
+      en: 'What gold weighs. A fable about greed and humility'
+    },
+    portada: { src: '/images/libros/el-zorro-y-la-tigre.jpg', ancho: 908, alto: 1287 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['12 capítulos', '50 páginas', 'Ilustrada en estilo manga', 'En español'],
+      en: ['12 chapters', '50 pages', 'Manga-style illustrations', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Una novela ilustrada en estilo manga. En el Bosque de los Helechos viven Tilo, un zorro curioso, y Ámbar, una tigre que solo toma lo que necesita. Un verano de sequía, Tilo cruza la Colina del Humo, descubre el pueblo de Valdeoro y acepta el trato de Don Ceferino Garra, un hombre que nunca tiene bastante. Una historia sobre lo que pesa el oro, lo poco que hace falta para ser feliz y el valor de volver a casa.',
+      en: 'A novel with manga-style illustrations. In the Fern Forest live Tilo, a curious fox, and Ámbar, a tigress who only takes what she needs. One summer of drought, Tilo crosses Smoke Hill, discovers the town of Valdeoro and accepts a deal from Don Ceferino Garra, a man who never has enough. A story about what gold weighs, how little it takes to be happy and the courage to come home.'
+    },
+    temas: {
+      es: ['Novela ilustrada', 'Manga', 'Fábula', 'Avaricia', 'Humildad', 'Amistad', 'Naturaleza'],
+      en: ['Illustrated novel', 'Manga', 'Fable', 'Greed', 'Humility', 'Friendship', 'Nature']
+    },
+    acciones: [
+      {
+        href: '/libros/el-zorro-y-la-tigre.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'El_Zorro_y_la_Tigre.pdf'
+      },
+      {
+        href: '/libros/el-zorro-y-la-tigre.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Capítulo I · El Bosque de los Helechos',
+      'Capítulo II · El humo al otro lado de la colina',
+      'Capítulo III · Valdeoro',
+      'Capítulo IV · La primera moneda',
+      'Capítulo V · La despensa secreta',
+      'Capítulo VI · El trato del collar',
+      'Capítulo VII · El invierno largo',
+      'Capítulo VIII · La piel de rayas',
+      'Capítulo IX · La noche de la trampa',
+      'Capítulo X · Lo que pesa el oro',
+      'Capítulo XI · El granero vacío',
+      'Capítulo XII · Lo que cabe en una cueva',
+      'Moraleja'
+    ]
+  },
+  {
+    slug: 'tus-poemas',
+    titulo: 'Tus Poemas',
+    subtitulo: {
+      es: 'Poemas de amor a la manera de José María Vargas Vila',
+      en: 'Love poems in the manner of José María Vargas Vila'
+    },
+    portada: { src: '/images/libros/tus-poemas.jpg', ancho: 861, alto: 1223 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['24 poemas', '34 páginas', 'Primera edición', 'En español'],
+      en: ['24 poems', '34 pages', 'First edition', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Veinticuatro poemas en prosa lírica, escritos a la manera de José María Vargas Vila, que siguen el arco de una pasión en cuatro partes: el deslumbramiento, la posesión, la ausencia y las cenizas. Cada poema lleva su propio tatuaje, una marca de tinta dibujada sobre la piel, y el libro se abre con un pórtico y se cierra con un epílogo.',
+      en: 'Twenty-four poems in lyrical prose, written in the manner of José María Vargas Vila, that follow the arc of a passion in four parts: dazzlement, possession, absence and ashes. Each poem carries its own tattoo, an ink mark drawn on the skin, and the book opens with a portico and closes with an epilogue.'
+    },
+    temas: {
+      es: ['Poesía', 'Poemas de amor', 'Prosa lírica', 'Vargas Vila', 'Tatuajes'],
+      en: ['Poetry', 'Love poems', 'Lyrical prose', 'Vargas Vila', 'Tattoos']
+    },
+    acciones: [
+      {
+        href: '/libros/tus-poemas.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Tus_Poemas.pdf'
+      },
+      {
+        href: '/libros/tus-poemas.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Pórtico',
+      'El Deslumbramiento · Apareciste',
+      'El Deslumbramiento · Tus ojos',
+      'El Deslumbramiento · Elogio de tu voz',
+      'El Deslumbramiento · El lirio y la llama',
+      'El Deslumbramiento · Plegaria pagana',
+      'El Deslumbramiento · Tu nombre',
+      'La Posesión · Nupcias de las almas',
+      'La Posesión · Tus manos',
+      'La Posesión · El jardín cerrado',
+      'La Posesión · Canto a tu boca',
+      'La Posesión · Mar de medianoche',
+      'La Posesión · Soberbia del amor',
+      'La Ausencia · Te fuiste en otoño',
+      'La Ausencia · La lámpara apagada',
+      'La Ausencia · Carta que no enviaré',
+      'La Ausencia · Los días sin ti',
+      'La Ausencia · Celos',
+      'La Ausencia · Interrogación a la noche',
+      'Las Cenizas · Lo que queda',
+      'Las Cenizas · Rosas muertas',
+      'Las Cenizas · El retrato',
+      'Las Cenizas · Perdón',
+      'Las Cenizas · Inmortalidad',
+      'Las Cenizas · Tus poemas',
+      'Epílogo · Última palabra'
+    ]
+  },
+  {
+    slug: '50-canciones-de-rap',
+    titulo: '50 Canciones de Rap',
+    subtitulo: {
+      es: 'Versos, coros e historias',
+      en: 'Verses, choruses and stories'
+    },
+    portada: { src: '/images/libros/50-canciones-de-rap.jpg', ancho: 906, alto: 1287 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['50 canciones', '109 páginas', 'Para beats de 80 a 92 BPM', 'En español'],
+      en: ['50 songs', '109 pages', 'For 80 to 92 BPM beats', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Cincuenta letras originales de rap de barrio, de espejo y de conciencia, cada una con cinco estrofas y un coro para rapearla sobre un beat lento. Se dividen en cuatro partes: la calle donde uno nace, el espejo donde uno se busca, veinte historias de gente que podría ser tu vecino y la conciencia que, al final, nos levanta. Cada canción lleva su propio tatuaje.',
+      en: 'Fifty original rap lyrics about the neighbourhood, the mirror and conscience, each with five verses and a chorus to rap over a slow beat. They are divided into four parts: the street where you are born, the mirror where you look for yourself, twenty stories of people who could be your neighbours and the conscience that lifts us up in the end. Each song carries its own tattoo.'
+    },
+    temas: {
+      es: ['Rap', 'Letras', 'Música', 'Barrio', 'Historias', 'Conciencia social', 'Tatuajes'],
+      en: ['Rap', 'Lyrics', 'Music', 'Neighbourhood', 'Stories', 'Social conscience', 'Tattoos']
+    },
+    acciones: [
+      {
+        href: '/libros/50-canciones-de-rap.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: '50_Canciones_de_Rap.pdf'
+      },
+      {
+        href: '/libros/50-canciones-de-rap.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Intro',
+      'Calle · 1. Barrio de cartón',
+      'Calle · 2. La bala perdida',
+      'Calle · 3. Autobús de las seis',
+      'Calle · 4. El niño de los caramelos',
+      'Calle · 5. Escalera sin baranda',
+      'Calle · 6. Pan y plomo',
+      'Calle · 7. Madre de esquina',
+      'Calle · 8. El que no salió',
+      'Calle · 9. Noches de apagón',
+      'Calle · 10. Ley del silencio',
+      'Espejo · 11. Conversación con mi sombra',
+      'Espejo · 12. Lo que no dije',
+      'Espejo · 13. Cuaderno de tachones',
+      'Espejo · 14. Ego',
+      'Espejo · 15. Insomnio',
+      'Espejo · 16. Mi peor enemigo',
+      'Espejo · 17. Cicatrices',
+      'Espejo · 18. Carta a mi yo de niño',
+      'Espejo · 19. Máscaras',
+      'Espejo · 20. Volver a empezar',
+      'Historias · 21. Los zapatos de Andrés',
+      'Historias · 22. La visita',
+      'Historias · 23. Velorio en el cuarto piso',
+      'Historias · 24. Rosa y Manuel',
+      'Historias · 25. El último tren',
+      'Historias · 26. Herencia',
+      'Historias · 27. La carta de Yaneth',
+      'Historias · 28. El boxeador',
+      'Historias · 29. El taxista de la noche',
+      'Historias · 30. Cien años',
+      'Historias · 31. Café frío',
+      'Historias · 32. El hijo del policía',
+      'Historias · 33. La niña del violín',
+      'Historias · 34. Mensaje no enviado',
+      'Historias · 35. Dos extraños',
+      'Historias · 36. Pabellón seis',
+      'Historias · 37. La maestra del páramo',
+      'Historias · 38. Domingo en el hospital',
+      'Historias · 39. El pescador',
+      'Historias · 40. Después de mí',
+      'Conciencia · 41. Pantallas',
+      'Conciencia · 42. Mercado de almas',
+      'Conciencia · 43. Pueblo dormido',
+      'Conciencia · 44. Los de arriba',
+      'Conciencia · 45. Libros contra balas',
+      'Conciencia · 46. Migrante',
+      'Conciencia · 47. Tierra prestada',
+      'Conciencia · 48. Despierta',
+      'Conciencia · 49. Semilla',
+      'Conciencia · 50. Mañana es nuestro'
+    ]
+  },
+  {
     slug: 'aprende-abap-4',
     titulo: 'Aprende ABAP/4 con ejercicios prácticos',
     subtitulo: {
@@ -1050,7 +1310,7 @@ export const libros = [
 ]
 
 // Novedades de «Cómo contratar» y primeros libros del carrusel del home: el último publicado va primero
-const ULTIMOS = ['guitarra-de-trova-cubana', 'rimas-desde-cero', 'curso-basico-de-guitarra']
+const ULTIMOS = ['50-canciones-de-rap', 'tus-poemas', 'el-zorro-y-la-tigre']
 
 export const ultimosLibros = ULTIMOS.map((slug) => libros.find((libro) => libro.slug === slug))
 
