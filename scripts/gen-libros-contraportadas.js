@@ -19,7 +19,8 @@ const ANCHO = 910
 // Páginas más grandes que su cubierta: se recorta el margen blanco, en píxeles a tamaño LADO
 const RECORTES = {
   'tus-poemas': ['-x', 0, '-y', 0, '-W', 861, '-H', 1223],
-  '50-canciones-de-rap': ['-x', 0, '-y', 0, '-W', 906, '-H', 1287]
+  '50-canciones-de-rap': ['-x', 0, '-y', 0, '-W', 906, '-H', 1287],
+  'invertir-en-bolsa-con-cabeza': ['-x', 12, '-y', 12, '-W', 900, '-H', 1275]
 }
 
 const COMPUESTAS = {

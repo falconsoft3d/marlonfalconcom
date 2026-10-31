@@ -1208,6 +1208,64 @@ export const libros = [
     ]
   },
   {
+    slug: 'invertir-en-bolsa-con-cabeza',
+    titulo: 'Invertir en bolsa con cabeza',
+    subtitulo: {
+      es: 'Guía práctica para construir patrimonio a largo plazo',
+      en: 'A practical guide to building long-term wealth'
+    },
+    portada: { src: '/images/libros/invertir-en-bolsa-con-cabeza.jpg', ancho: 900, alto: 1275 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['16 capítulos', '110 páginas', 'En español'],
+      en: ['16 chapters', '110 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Para quien ahorra cada mes y no sabe por dónde empezar a invertir. No hace falta formación financiera: parte de la inflación y el interés compuesto y llega a una cartera propia, con acciones, bonos, fondos y ETF, lectura de estados financieros, valoración con ratios y DCF, diversificación, sesgos psicológicos y fiscalidad en España con notas para Latinoamérica. Trae ejemplos numéricos, ejercicios y un plan de diez pasos. Es un libro educativo: no constituye asesoramiento financiero ni recomienda ningún valor.',
+      en: 'For anyone who saves every month and does not know where to start investing. No financial background is needed: it starts with inflation and compound interest and leads to your own portfolio, covering stocks, bonds, funds and ETFs, reading financial statements, valuation with ratios and DCF, diversification, psychological biases and taxation in Spain with notes for Latin America. It includes numerical examples, exercises and a ten-step plan. It is an educational book: it is not financial advice and does not recommend any security.'
+    },
+    temas: {
+      es: ['Bolsa', 'Inversión', 'Finanzas personales', 'ETF', 'Fondos indexados', 'Análisis fundamental', 'Psicología del inversor', 'Fiscalidad'],
+      en: ['Stock market', 'Investing', 'Personal finance', 'ETFs', 'Index funds', 'Fundamental analysis', 'Investor psychology', 'Taxation']
+    },
+    acciones: [
+      {
+        href: '/libros/invertir-en-bolsa-con-cabeza.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Invertir_en_bolsa_con_cabeza.pdf'
+      },
+      {
+        href: '/libros/invertir-en-bolsa-con-cabeza.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Introducción',
+      'Capítulo 1 · El dinero que duerme: inflación, ahorro e interés compuesto',
+      'Capítulo 2 · Qué es la bolsa y cómo funciona',
+      'Capítulo 3 · Acciones, bonos, fondos y ETF: los instrumentos',
+      'Capítulo 4 · Rentabilidad y riesgo: las dos caras de la moneda',
+      'Capítulo 5 · Conócete como inversor: objetivos, horizonte y perfil de riesgo',
+      'Capítulo 6 · Antes de invertir: fondo de emergencia, deudas y plan financiero',
+      'Capítulo 7 · Cómo elegir bróker y abrir tu cuenta',
+      'Capítulo 8 · Tipos de órdenes y la mecánica de comprar y vender',
+      'Capítulo 9 · Análisis fundamental I: leer los estados financieros',
+      'Capítulo 10 · Análisis fundamental II: ratios y valoración (PER, EV/EBITDA, DCF)',
+      'Capítulo 11 · Análisis técnico: qué es, qué no es y cómo usarlo con prudencia',
+      'Capítulo 12 · Estilos de inversión: valor, crecimiento, dividendos e indexación',
+      'Capítulo 13 · Construir una cartera: diversificación y asignación de activos',
+      'Capítulo 14 · Estrategias en el tiempo: aportaciones periódicas, rebalanceo y DCA',
+      'Capítulo 15 · Psicología del inversor: sesgos y errores comunes',
+      'Capítulo 16 · Fiscalidad, costes y aspectos legales',
+      'Epílogo · Tu plan de inversión en 10 pasos',
+      'Glosario'
+    ]
+  },
+  {
     slug: 'desde-lo-alto-de-la-montana',
     titulo: 'Desde lo alto de la montaña',
     subtitulo: {
@@ -2279,7 +2337,7 @@ export const libros = [
 ]
 
 // Novedades de «Cómo contratar» y primeros libros del carrusel del home: el último publicado va primero
-const ULTIMOS = ['curso-presupuestos-reformistas', 'ubuntu-blindado', 'la-consola-del-mac']
+const ULTIMOS = ['invertir-en-bolsa-con-cabeza', 'curso-presupuestos-reformistas', 'ubuntu-blindado']
 
 export const ultimosLibros = ULTIMOS.map((slug) => libros.find((libro) => libro.slug === slug))
 
