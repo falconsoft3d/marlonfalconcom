@@ -446,6 +446,171 @@ export const libros = [
     ]
   },
   {
+    slug: 'la-consola-del-mac',
+    titulo: 'La Consola del Mac',
+    subtitulo: {
+      es: 'Comandos avanzados de la Terminal de macOS: zsh, automatización, sistema, redes y seguridad',
+      en: 'Advanced macOS Terminal commands: zsh, automation, system, networking and security'
+    },
+    portada: { src: '/images/libros/la-consola-del-mac.jpg', ancho: 913, alto: 1287 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['13 capítulos', '49 páginas', 'En español'],
+      en: ['13 chapters', '49 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Para profesionales que ya conocen lo básico y quieren dominar la Terminal de macOS. Recorre zsh avanzado, los comandos exclusivos de Apple como mdfind, defaults, sips o pbcopy, el diagnóstico de procesos y memoria, los discos y las copias, las redes, el llavero y la automatización con scripts, AppleScript, Atajos y launchd, con ejemplos listos para copiar y una chuleta final.',
+      en: 'For professionals who know the basics and want to master the macOS Terminal. It covers advanced zsh, Apple-only commands such as mdfind, defaults, sips and pbcopy, process and memory diagnostics, disks and backups, networking, the keychain and automation with scripts, AppleScript, Shortcuts and launchd, with ready-to-copy examples and a final cheat sheet.'
+    },
+    temas: {
+      es: ['macOS', 'Terminal', 'zsh', 'Automatización', 'launchd', 'Homebrew', 'Redes', 'Seguridad'],
+      en: ['macOS', 'Terminal', 'zsh', 'Automation', 'launchd', 'Homebrew', 'Networking', 'Security']
+    },
+    acciones: [
+      {
+        href: '/libros/la-consola-del-mac.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'La_Consola_del_Mac.pdf'
+      },
+      {
+        href: '/libros/la-consola-del-mac.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Capítulo 0 · Antes de empezar',
+      'Capítulo 1 · zsh a fondo',
+      'Capítulo 2 · Redirecciones y tuberías',
+      'Capítulo 3 · Buscar archivos y contenido',
+      'Capítulo 4 · Procesar texto como un profesional',
+      'Capítulo 5 · Los comandos exclusivos de macOS',
+      'Capítulo 6 · defaults: los ajustes ocultos',
+      'Capítulo 7 · Procesos, memoria y rendimiento',
+      'Capítulo 8 · Discos, archivos y copias',
+      'Capítulo 9 · Redes desde la consola',
+      'Capítulo 10 · Seguridad y llavero',
+      'Capítulo 11 · Automatización',
+      'Capítulo 12 · Tu entorno ideal',
+      'Apéndice A · Chuleta final'
+    ]
+  },
+  {
+    slug: 'ubuntu-blindado',
+    titulo: 'Ubuntu Blindado',
+    subtitulo: {
+      es: 'Aprende Linux desde cero y protege tu sistema',
+      en: 'Learn Linux from scratch and protect your system'
+    },
+    portada: { src: '/images/libros/ubuntu-blindado.jpg', ancho: 910, alto: 1287 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['15 capítulos', '38 páginas', 'En español'],
+      en: ['15 chapters', '38 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Para técnicos, desarrolladores y consultores que despliegan aplicaciones en Linux. La primera parte enseña la terminal, los permisos, los usuarios, los paquetes, los servicios y las redes. La segunda protege el sistema con cortafuegos UFW, SSH solo con claves, Fail2ban, AppArmor, auditoría, copias cifradas y respuesta a incidentes, y termina con un proyecto final y una checklist para producción.',
+      en: 'For technicians, developers and consultants who deploy applications on Linux. The first part teaches the terminal, permissions, users, packages, services and networking. The second protects the system with the UFW firewall, key-only SSH, Fail2ban, AppArmor, auditing, encrypted backups and incident response, and closes with a final project and a production checklist.'
+    },
+    temas: {
+      es: ['Ubuntu', 'Linux', 'Terminal', 'Cortafuegos', 'SSH', 'Fail2ban', 'Copias de seguridad', 'Bastionado'],
+      en: ['Ubuntu', 'Linux', 'Terminal', 'Firewall', 'SSH', 'Fail2ban', 'Backups', 'Hardening']
+    },
+    acciones: [
+      {
+        href: '/libros/ubuntu-blindado.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Ubuntu_Blindado.pdf'
+      },
+      {
+        href: '/libros/ubuntu-blindado.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Prólogo: cómo usar este libro',
+      'Capítulo 1 · Qué es Linux y qué es Ubuntu',
+      'Capítulo 2 · Instalar Ubuntu de forma segura',
+      'Capítulo 3 · La terminal y los comandos esenciales',
+      'Capítulo 4 · Sistema de archivos y permisos',
+      'Capítulo 5 · Usuarios, grupos y sudo',
+      'Capítulo 6 · Paquetes y actualizaciones',
+      'Capítulo 7 · Procesos, servicios y systemd',
+      'Capítulo 8 · Redes en Ubuntu',
+      'Capítulo 9 · Fundamentos de seguridad y bastionado',
+      'Capítulo 10 · Cortafuegos con UFW',
+      'Capítulo 11 · SSH seguro',
+      'Capítulo 12 · Fail2ban, AppArmor y auditoría',
+      'Capítulo 13 · Copias de seguridad y cifrado',
+      'Capítulo 14 · Monitorización, logs y respuesta a incidentes',
+      'Capítulo 15 · Proyecto final: un servidor de producción blindado',
+      'Apéndice · Chuleta de comandos'
+    ]
+  },
+  {
+    slug: 'proteccion-avanzada-erp-linux',
+    titulo: 'Protección avanzada de sistemas ERP sobre Linux',
+    subtitulo: {
+      es: 'Bastionado, aislamiento, detección y recuperación para plataformas empresariales críticas',
+      en: 'Hardening, isolation, detection and recovery for critical business platforms'
+    },
+    portada: { src: '/images/libros/proteccion-avanzada-erp-linux.jpg', ancho: 910, alto: 1287 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['15 capítulos', '36 páginas', 'En español'],
+      en: ['15 chapters', '36 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Para administradores de sistemas, consultores ERP y responsables de TI que quieren llevar un ERP de una instalación que funciona a una plataforma capaz de resistir intrusiones, ransomware, fraude interno y errores humanos. Válido para Odoo, ERPNext, Dolibarr, Tryton o SAP, recorre cada capa del sistema, las copias inmutables, la detección, la respuesta a incidentes y el cumplimiento de RGPD, ENS, NIS2 e ISO 27001.',
+      en: 'For system administrators, ERP consultants and IT managers who want to take an ERP from an installation that works to a platform able to withstand intrusions, ransomware, internal fraud and human error. Valid for Odoo, ERPNext, Dolibarr, Tryton or SAP, it covers every layer of the system, immutable backups, detection, incident response and compliance with GDPR, ENS, NIS2 and ISO 27001.'
+    },
+    temas: {
+      es: ['ERP', 'Linux', 'Odoo', 'PostgreSQL', 'Nginx', 'Ransomware', 'Bastionado', 'RGPD'],
+      en: ['ERP', 'Linux', 'Odoo', 'PostgreSQL', 'Nginx', 'Ransomware', 'Hardening', 'GDPR']
+    },
+    acciones: [
+      {
+        href: '/libros/proteccion-avanzada-erp-linux.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Proteccion_avanzada_de_sistemas_ERP_sobre_Linux.pdf'
+      },
+      {
+        href: '/libros/proteccion-avanzada-erp-linux.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Prólogo: el ERP es la empresa',
+      'Capítulo 1 · El ERP como activo crítico y su modelo de amenazas',
+      'Capítulo 2 · Arquitectura de referencia segura',
+      'Capítulo 3 · Bastionado del sistema operativo base',
+      'Capítulo 4 · Red, segmentación y cortafuegos con nftables',
+      'Capítulo 5 · Proxy inverso, TLS y protección web',
+      'Capítulo 6 · Endurecer el servidor de aplicación ERP',
+      'Capítulo 7 · PostgreSQL blindado',
+      'Capítulo 8 · Aislamiento con systemd, AppArmor/SELinux y contenedores',
+      'Capítulo 9 · Identidad, accesos y MFA',
+      'Capítulo 10 · Secretos y cifrado',
+      'Capítulo 11 · Copias inmutables y recuperación ante ransomware',
+      'Capítulo 12 · Detección, auditoría y monitorización',
+      'Capítulo 13 · Respuesta a incidentes',
+      'Capítulo 14 · Cumplimiento normativo (RGPD, ENS, NIS2, ISO 27001)',
+      'Capítulo 15 · Proyecto final y checklist de bastionado ERP',
+      'Apéndice · Chuleta de comandos'
+    ]
+  },
+  {
     slug: 'manual-bim-2-0',
     titulo: 'BIM 2.0 · Manual de uso para arquitectos',
     subtitulo: {
@@ -1441,6 +1606,372 @@ export const libros = [
     ]
   },
   {
+    slug: 'curso-basico-de-electricidad',
+    titulo: 'Curso básico de electricidad',
+    subtitulo: {
+      es: 'Para viviendas en España: cuadros, conmutadas, cables, datos y climatización',
+      en: 'For homes in Spain: panels, two-way switching, cables, data and air conditioning'
+    },
+    portada: { src: '/images/libros/curso-basico-de-electricidad.jpg', ancho: 910, alto: 1287 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['7 módulos', '22 páginas', 'En español'],
+      en: ['7 modules', '22 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Para estudiantes, técnicos de obra, promotores y propietarios que quieren entender su instalación antes de encargarla. Enseña a leer, diseñar y razonar la instalación eléctrica de una vivienda española con el REBT vigente y las normas europeas, del contador al último enchufe, incluidas las redes de datos y el aire acondicionado. Es un curso formativo: no habilita para ejecutar instalaciones.',
+      en: 'For students, site technicians, developers and homeowners who want to understand their installation before commissioning it. It teaches how to read, design and reason about the electrical installation of a Spanish home under the current REBT and European standards, from the meter to the last socket, including data networks and air conditioning. It is a training course and does not qualify anyone to carry out installations.'
+    },
+    temas: {
+      es: ['Electricidad', 'REBT', 'Cuadro eléctrico', 'Conmutadas', 'Cables', 'Redes de datos', 'Climatización', 'Vivienda'],
+      en: ['Electricity', 'REBT', 'Electrical panel', 'Two-way switching', 'Cables', 'Data networks', 'Air conditioning', 'Housing']
+    },
+    acciones: [
+      {
+        href: '/libros/curso-basico-de-electricidad.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Curso_basico_electricidad_Espana.pdf'
+      },
+      {
+        href: '/libros/curso-basico-de-electricidad.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Módulo 1 · Fundamentos, teoría y normativa española y europea',
+      'Módulo 2 · El circuito básico de una casa y su cuadro eléctrico',
+      'Módulo 3 · Doble encendido: conmutada y cruzamiento',
+      'Módulo 4 · Cables, secciones, colores y tubos',
+      'Módulo 5 · Redes de datos en vivienda',
+      'Módulo 6 · Aire acondicionado: instalación eléctrica y diseño',
+      'Módulo 7 · Seguridad, ejercicios y fuentes'
+    ]
+  },
+  {
+    slug: 'curso-instalador-paneles-solares',
+    titulo: 'Curso de Instalador de Paneles Solares',
+    subtitulo: {
+      es: 'Del primer módulo en el tejado a la legalización de la instalación',
+      en: 'From the first module on the roof to the legal registration of the installation'
+    },
+    portada: { src: '/images/libros/curso-instalador-paneles-solares.jpg', ancho: 910, alto: 1287 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['12 capítulos', '35 páginas', 'En español'],
+      en: ['12 chapters', '35 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Para electricistas, estudiantes de FP, técnicos de mantenimiento y propietarios que quieren entender el autoconsumo solar. Va de la física de la célula hasta un caso real de vivienda: seguridad en cubierta y en corriente continua, dimensionado de strings, montaje, puesta en marcha, legalización en España y diagnóstico de averías, con ejercicios resueltos. No sustituye la formación oficial ni la habilitación profesional.',
+      en: 'For electricians, vocational students, maintenance technicians and homeowners who want to understand solar self-consumption. It goes from the physics of the cell to a real home case: safety on roofs and with direct current, string sizing, installation, commissioning, legal registration in Spain and fault diagnosis, with solved exercises. It does not replace official training or professional certification.'
+    },
+    temas: {
+      es: ['Energía solar', 'Fotovoltaica', 'Autoconsumo', 'Inversores', 'Baterías', 'Dimensionado', 'Legalización', 'Mantenimiento'],
+      en: ['Solar energy', 'Photovoltaics', 'Self-consumption', 'Inverters', 'Batteries', 'Sizing', 'Legal registration', 'Maintenance']
+    },
+    acciones: [
+      {
+        href: '/libros/curso-instalador-paneles-solares.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Curso_de_Instalador_de_Paneles_Solares.pdf'
+      },
+      {
+        href: '/libros/curso-instalador-paneles-solares.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Prólogo',
+      'Capítulo 1 · Fundamentos de la energía solar fotovoltaica',
+      'Capítulo 2 · Componentes de una instalación fotovoltaica',
+      'Capítulo 3 · Seguridad y prevención de riesgos',
+      'Capítulo 4 · Estudio previo y dimensionado',
+      'Capítulo 5 · Estructuras y montaje mecánico',
+      'Capítulo 6 · Cableado, protecciones y conexión eléctrica',
+      'Capítulo 7 · Inversores, baterías y monitorización',
+      'Capítulo 8 · Puesta en marcha, pruebas y documentación',
+      'Capítulo 9 · Normativa y legalización en España',
+      'Capítulo 10 · Mantenimiento y diagnóstico de averías',
+      'Capítulo 11 · Caso práctico completo de vivienda',
+      'Capítulo 12 · Evaluación final, soluciones y glosario'
+    ]
+  },
+  {
+    slug: 'curso-presupuestos-reformistas',
+    titulo: 'Curso de Presupuestos para Reformistas y Autónomos en España',
+    subtitulo: {
+      es: 'Cómo medir, calcular, cobrar y ganar dinero con cada obra de reforma',
+      en: 'How to measure, price, get paid and make money on every renovation job'
+    },
+    portada: { src: '/images/libros/curso-presupuestos-reformistas.jpg', ancho: 911, alto: 1287 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['9 módulos', '22 páginas', 'En español'],
+      en: ['9 modules', '22 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Para reformistas autónomos, pequeñas empresas de reformas y oficios que presupuestan solos. Enseña a calcular el coste hora real, medir y descomponer cada partida, pasar de coste a precio de venta sin perder margen, aplicar bien el IVA del 10 % y del 21 % con la fiscalidad española de 2026 y redactar condiciones que protegen, con un caso completo de reforma de baño, plantilla de presupuesto y checklist de visita.',
+      en: 'For self-employed renovators, small renovation firms and trades who price their own work. It teaches how to calculate the real hourly cost, measure and break down every item, go from cost to selling price without losing margin, apply 10 % and 21 % VAT correctly under Spanish 2026 tax rules and write protective conditions, with a complete bathroom renovation case, a budget template and a site visit checklist.'
+    },
+    temas: {
+      es: ['Presupuestos', 'Reformas', 'Autónomos', 'Coste hora', 'Precios descompuestos', 'BC3', 'IVA', 'Plantillas'],
+      en: ['Budgets', 'Renovations', 'Self-employed', 'Hourly cost', 'Unit price breakdown', 'BC3', 'VAT', 'Templates']
+    },
+    acciones: [
+      {
+        href: '/libros/curso-presupuestos-reformistas.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Curso_Presupuestos_Reformistas_2026.pdf'
+      },
+      {
+        href: '/libros/curso-presupuestos-reformistas.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Presentación del curso',
+      'Módulo 1 · Qué es un presupuesto de reforma',
+      'Módulo 2 · Visita técnica y toma de datos',
+      'Módulo 3 · Estructura: capítulos, partidas y precios descompuestos',
+      'Módulo 4 · Cálculo de costes directos',
+      'Módulo 5 · Del coste directo al precio de venta',
+      'Módulo 6 · Fiscalidad del presupuesto en 2026',
+      'Módulo 7 · Condiciones que te protegen',
+      'Módulo 8 · Caso práctico: reforma completa de un baño',
+      'Módulo 9 · Presentar, negociar y cerrar',
+      'Anexo A · Plantilla de presupuesto',
+      'Anexo B · Checklist de visita',
+      'Anexo C · Glosario',
+      'Anexo D · Ejercicios'
+    ]
+  },
+  {
+    slug: 'curso-de-manitas',
+    titulo: 'Curso de Manitas',
+    subtitulo: {
+      es: '50 cosas que puedes hacer mejor en casa',
+      en: '50 things you can do better at home'
+    },
+    portada: { src: '/images/libros/curso-de-manitas.jpg', ancho: 910, alto: 1287 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['11 capítulos', '30 páginas', 'En español'],
+      en: ['11 chapters', '30 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Para quien empieza con su primera caja de herramientas y para quien quiere hacerlo mejor, más rápido y más seguro. Reúne 50 arreglos de casa, del taco que no sujeta al grifo que gotea, cada uno con lo que necesitas, los pasos, un truco de oficio y el error que conviene evitar. Incluye diez diagramas y una tabla con el material y el coste por hora de 40 tareas en España, para decidir qué hacer y qué encargar.',
+      en: 'For people starting with their first toolbox and for those who want to do it better, faster and more safely. It gathers 50 home repairs, from the wall plug that will not hold to the dripping tap, each with what you need, the steps, a trade tip and the mistake to avoid. It includes ten diagrams and a table with the materials and hourly cost of 40 jobs in Spain, to help you decide what to do yourself and what to hire out.'
+    },
+    temas: {
+      es: ['Bricolaje', 'Hogar', 'Fontanería', 'Electricidad', 'Pintura', 'Muebles', 'Mantenimiento', 'Herramientas'],
+      en: ['DIY', 'Home', 'Plumbing', 'Electricity', 'Painting', 'Furniture', 'Maintenance', 'Tools']
+    },
+    acciones: [
+      {
+        href: '/libros/curso-de-manitas.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Curso_de_Manitas_50_cosas.pdf'
+      },
+      {
+        href: '/libros/curso-de-manitas.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Capítulo 1 · Herramientas y seguridad',
+      'Capítulo 2 · Paredes y colgar cosas',
+      'Capítulo 3 · Pintura',
+      'Capítulo 4 · Fontanería',
+      'Capítulo 5 · Electricidad doméstica',
+      'Capítulo 6 · Puertas y ventanas',
+      'Capítulo 7 · Suelos y azulejos',
+      'Capítulo 8 · Muebles',
+      'Capítulo 9 · Calefacción, aire y agua',
+      'Capítulo 10 · Exterior y mantenimiento',
+      'Capítulo 11 · Tabla de materiales y coste por hora'
+    ]
+  },
+  {
+    slug: 'algebra-de-0-a-100',
+    titulo: 'Álgebra de 0 a 100',
+    subtitulo: {
+      es: 'Del primer número a las estructuras abstractas: un recorrido completo, paso a paso',
+      en: 'From the first number to abstract structures: a complete journey, step by step'
+    },
+    portada: { src: '/images/libros/algebra-de-0-a-100.jpg', ancho: 910, alto: 1287 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['16 capítulos', '36 páginas', 'En español'],
+      en: ['16 chapters', '36 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Para estudiantes de ESO, Bachillerato y primeros cursos universitarios, para quien prepara una oposición y para cualquier adulto que quiera reconciliarse con las matemáticas. Empieza sumando números negativos y termina en grupos, anillos y cuerpos, sin saltos y sin conocimientos previos, con ejemplos resueltos, los errores más comunes y 85 ejercicios con todas sus soluciones.',
+      en: 'For secondary school and first-year university students, for people preparing public exams and for any adult who wants to make peace with mathematics. It starts with adding negative numbers and ends with groups, rings and fields, with no gaps and no prior knowledge needed, with solved examples, the most common mistakes and 85 exercises with all their solutions.'
+    },
+    temas: {
+      es: ['Álgebra', 'Matemáticas', 'Ecuaciones', 'Polinomios', 'Funciones', 'Matrices', 'Números complejos', 'Ejercicios resueltos'],
+      en: ['Algebra', 'Mathematics', 'Equations', 'Polynomials', 'Functions', 'Matrices', 'Complex numbers', 'Solved exercises']
+    },
+    acciones: [
+      {
+        href: '/libros/algebra-de-0-a-100.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Algebra_de_0_a_100_libro.pdf'
+      },
+      {
+        href: '/libros/algebra-de-0-a-100.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Prólogo',
+      'Capítulo 1 · Números y operaciones',
+      'Capítulo 2 · Fracciones, potencias y raíces',
+      'Capítulo 3 · Lenguaje algebraico y expresiones',
+      'Capítulo 4 · Ecuaciones lineales',
+      'Capítulo 5 · Inecuaciones y valor absoluto',
+      'Capítulo 6 · Sistemas de ecuaciones',
+      'Capítulo 7 · Polinomios y productos notables',
+      'Capítulo 8 · Factorización y fracciones algebraicas',
+      'Capítulo 9 · Ecuaciones cuadráticas',
+      'Capítulo 10 · Funciones',
+      'Capítulo 11 · Exponenciales y logaritmos',
+      'Capítulo 12 · Sucesiones, series e inducción',
+      'Capítulo 13 · Números complejos',
+      'Capítulo 14 · Matrices y determinantes',
+      'Capítulo 15 · Espacios vectoriales y transformaciones lineales',
+      'Capítulo 16 · Estructuras algebraicas: grupos, anillos y cuerpos',
+      'Soluciones a los ejercicios'
+    ]
+  },
+  {
+    slug: 'estadistica-matematica-de-0-a-100',
+    titulo: 'Estadística Matemática de 0 a 100',
+    subtitulo: {
+      es: 'Del primer dato al razonamiento bayesiano: teoría, ejemplos resueltos y ejercicios',
+      en: 'From the first data point to Bayesian reasoning: theory, solved examples and exercises'
+    },
+    portada: { src: '/images/libros/estadistica-matematica-de-0-a-100.jpg', ancho: 910, alto: 1287 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['11 capítulos', '29 páginas', 'En español'],
+      en: ['11 chapters', '29 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Para estudiantes, profesionales de datos, ingenieros y cualquier persona que quiera decidir mejor con números. Sube como una escalera desde contar datos y calcular medias hasta la máxima verosimilitud, el contraste de hipótesis, la regresión y el teorema de Bayes. Cada capítulo combina teoría, ejemplos resueltos, ejercicios con soluciones y una sección en Python con código listo para ejecutar.',
+      en: 'For students, data professionals, engineers and anyone who wants to make better decisions with numbers. It climbs like a ladder from counting data and calculating averages to maximum likelihood, hypothesis testing, regression and Bayes\' theorem. Each chapter combines theory, solved examples, exercises with solutions and a Python section with ready-to-run code.'
+    },
+    temas: {
+      es: ['Estadística', 'Probabilidad', 'Inferencia', 'Regresión', 'Bayes', 'Python', 'Contraste de hipótesis', 'Ejercicios resueltos'],
+      en: ['Statistics', 'Probability', 'Inference', 'Regression', 'Bayes', 'Python', 'Hypothesis testing', 'Solved exercises']
+    },
+    acciones: [
+      {
+        href: '/libros/estadistica-matematica-de-0-a-100.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Estadistica_Matematica_de_0_a_100.pdf'
+      },
+      {
+        href: '/libros/estadistica-matematica-de-0-a-100.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Prólogo',
+      'Capítulo 1 · Qué es la estadística: datos y variables',
+      'Capítulo 2 · Estadística descriptiva: frecuencias y tendencia central',
+      'Capítulo 3 · Dispersión, posición y forma',
+      'Capítulo 4 · Probabilidad',
+      'Capítulo 5 · Variables aleatorias discretas',
+      'Capítulo 6 · Distribuciones continuas',
+      'Capítulo 7 · Muestreo y teorema central del límite',
+      'Capítulo 8 · Estimación',
+      'Capítulo 9 · Contraste de hipótesis',
+      'Capítulo 10 · Correlación y regresión',
+      'Capítulo 11 · Temas avanzados: Bayes, no paramétrica, remuestreo y multivariante',
+      'Apéndice A · Formulario esencial',
+      'Apéndice B · Soluciones de los ejercicios',
+      'Apéndice C · Glosario'
+    ]
+  },
+  {
+    slug: 'derivadas-e-integrales-de-0-a-100',
+    titulo: 'Derivadas e Integrales de 0 a 100',
+    subtitulo: {
+      es: 'Del primer límite a las ecuaciones diferenciales, paso a paso y con ejercicios resueltos',
+      en: 'From the first limit to differential equations, step by step and with solved exercises'
+    },
+    portada: { src: '/images/libros/derivadas-e-integrales-de-0-a-100.jpg', ancho: 912, alto: 1287 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['11 capítulos', '51 páginas', 'En español'],
+      en: ['11 chapters', '51 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Un curso completo de cálculo diferencial e integral en once escalones. Parte de la idea de límite, construye la derivada desde su definición y la usa para optimizar y aproximar. Después llegan la integral, sus técnicas y el Teorema Fundamental, y el último tramo abre las series de Taylor, las derivadas parciales, las integrales dobles y las ecuaciones diferenciales, con más de 80 ejercicios resueltos y formularios.',
+      en: 'A complete course in differential and integral calculus in eleven steps. It starts from the idea of a limit, builds the derivative from its definition and uses it to optimise and approximate. Then come the integral, its techniques and the Fundamental Theorem, and the last stretch opens up Taylor series, partial derivatives, double integrals and differential equations, with more than 80 solved exercises and formula sheets.'
+    },
+    temas: {
+      es: ['Cálculo', 'Derivadas', 'Integrales', 'Límites', 'Series de Taylor', 'Ecuaciones diferenciales', 'Matemáticas', 'Ejercicios resueltos'],
+      en: ['Calculus', 'Derivatives', 'Integrals', 'Limits', 'Taylor series', 'Differential equations', 'Mathematics', 'Solved exercises']
+    },
+    acciones: [
+      {
+        href: '/libros/derivadas-e-integrales-de-0-a-100.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'derivadas_e_integrales_0_100.pdf'
+      },
+      {
+        href: '/libros/derivadas-e-integrales-de-0-a-100.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Cómo usar este libro',
+      'Capítulo 1 · Funciones y límites',
+      'Capítulo 2 · La derivada: el concepto',
+      'Capítulo 3 · Reglas de derivación',
+      'Capítulo 4 · Regla de la cadena y derivación implícita',
+      'Capítulo 5 · Aplicaciones de la derivada',
+      'Capítulo 6 · La integral indefinida',
+      'Capítulo 7 · Técnicas de integración',
+      'Capítulo 8 · La integral definida',
+      'Capítulo 9 · Aplicaciones de la integral',
+      'Capítulo 10 · Integrales impropias y series de Taylor',
+      'Capítulo 11 · Más allá: varias variables y ecuaciones diferenciales',
+      'Apéndice A · Formulario de derivadas',
+      'Apéndice B · Formulario de integrales',
+      'Apéndice C · Soluciones de los ejercicios'
+    ]
+  },
+  {
     slug: 'robotica-e-impresion-3d',
     titulo: 'Robótica e Impresión 3D',
     subtitulo: {
@@ -1748,7 +2279,7 @@ export const libros = [
 ]
 
 // Novedades de «Cómo contratar» y primeros libros del carrusel del home: el último publicado va primero
-const ULTIMOS = ['iteia-transformacion-empresarial-ia', 'ia-gestion-proyectos-bim-erpsqlite', 'bim-paso-a-paso-con-erpsqlite']
+const ULTIMOS = ['curso-presupuestos-reformistas', 'ubuntu-blindado', 'la-consola-del-mac']
 
 export const ultimosLibros = ULTIMOS.map((slug) => libros.find((libro) => libro.slug === slug))
 
