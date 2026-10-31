@@ -1266,6 +1266,64 @@ export const libros = [
     ]
   },
   {
+    slug: 'gestion-de-flotas-de-camiones-2026',
+    titulo: 'Gestión de Flotas de Camiones 2026',
+    subtitulo: {
+      es: 'Mantenimiento, combustible, neumáticos y agendas de vencimientos',
+      en: 'Maintenance, fuel, tyres and compliance deadline calendars'
+    },
+    portada: { src: '/images/libros/gestion-de-flotas-de-camiones-2026.jpg', ancho: 916, alto: 1287 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['18 capítulos', '216 páginas', 'En español'],
+      en: ['18 chapters', '216 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Para jefes de tráfico, responsables de taller, gerentes y consultores que toman decisiones cada día sobre una flota. Reúne las cuatro áreas que más pesan en el coste y el riesgo: mantenimiento preventivo y predictivo, control de combustible y transición energética, neumáticos y agenda de vencimientos, con el marco normativo de España y la UE y notas para Latinoamérica. Trae fórmulas, casos numéricos, listas de comprobación y plantillas, y termina integrándolo todo en un ERP como Odoo. Las periodicidades e importes son orientativos: hay que confirmarlos con la normativa vigente.',
+      en: 'For traffic managers, workshop supervisors, general managers and consultants who make daily decisions about a fleet. It brings together the four areas that weigh most on cost and risk: preventive and predictive maintenance, fuel control and the energy transition, tyres and the compliance deadline calendar, under the Spanish and EU regulatory framework with notes for Latin America. It includes formulas, numerical cases, checklists and templates, and ends by integrating everything in an ERP such as Odoo. Intervals and amounts are indicative and must be confirmed against current regulations.'
+    },
+    temas: {
+      es: ['Flotas', 'Transporte por carretera', 'Mantenimiento', 'Combustible', 'Neumáticos', 'Tacógrafo', 'Vencimientos', 'Odoo'],
+      en: ['Fleets', 'Road transport', 'Maintenance', 'Fuel', 'Tyres', 'Tachograph', 'Compliance deadlines', 'Odoo']
+    },
+    acciones: [
+      {
+        href: '/libros/gestion-de-flotas-de-camiones-2026.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Gestion_de_Flotas_de_Camiones_2026.pdf'
+      },
+      {
+        href: '/libros/gestion-de-flotas-de-camiones-2026.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Capítulo 1 · La gestión de flotas de camiones en 2026',
+      'Capítulo 2 · Fundamentos y estrategia del mantenimiento de flotas',
+      'Capítulo 3 · Plan de mantenimiento preventivo del camión y el semirremolque',
+      'Capítulo 4 · Mantenimiento predictivo, telemática e inteligencia artificial',
+      'Capítulo 5 · Gestión operativa del taller: órdenes de trabajo, recambios y proveedores',
+      'Capítulo 6 · El combustible en la cuenta de resultados',
+      'Capítulo 7 · Sistemas de control: tarjetas, surtidores propios y telemática',
+      'Capítulo 8 · Eficiencia: conducción, rutas y tecnología',
+      'Capítulo 9 · Transición energética de la flota',
+      'Capítulo 10 · El neumático de camión: tecnología y selección',
+      'Capítulo 11 · Presión, inspección y mantenimiento',
+      'Capítulo 12 · Ciclo de vida: recauchutado, reesculturado y fin de vida',
+      'Capítulo 13 · Control de costes y sistemas de gestión de neumáticos',
+      'Capítulo 14 · El mapa de vencimientos de una empresa de transporte',
+      'Capítulo 15 · Vencimientos del vehículo',
+      'Capítulo 16 · Vencimientos del conductor y de la empresa',
+      'Capítulo 17 · Diseñar y automatizar la agenda de vencimientos',
+      'Capítulo 18 · Integración: el sistema de gestión de flota conectado',
+      'Anexos · Glosario y plantillas'
+    ]
+  },
+  {
     slug: 'desde-lo-alto-de-la-montana',
     titulo: 'Desde lo alto de la montaña',
     subtitulo: {
@@ -2337,7 +2395,7 @@ export const libros = [
 ]
 
 // Novedades de «Cómo contratar» y primeros libros del carrusel del home: el último publicado va primero
-const ULTIMOS = ['invertir-en-bolsa-con-cabeza', 'curso-presupuestos-reformistas', 'ubuntu-blindado']
+const ULTIMOS = ['gestion-de-flotas-de-camiones-2026', 'invertir-en-bolsa-con-cabeza', 'curso-presupuestos-reformistas']
 
 export const ultimosLibros = ULTIMOS.map((slug) => libros.find((libro) => libro.slug === slug))
 
