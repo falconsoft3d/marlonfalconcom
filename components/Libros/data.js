@@ -502,6 +502,63 @@ export const libros = [
     ]
   },
   {
+    slug: 'bim-paso-a-paso-con-erpsqlite',
+    titulo: 'BIM paso a paso con ERPSqlite',
+    subtitulo: {
+      es: 'La metodología BIM explicada y aplicada, del primer plano a la última certificación',
+      en: 'The BIM methodology explained and applied, from the first drawing to the final certification'
+    },
+    portada: { src: '/images/libros/bim-paso-a-paso-con-erpsqlite.jpg', ancho: 911, alto: 1287 },
+    fecha: { es: 'Octubre de 2026', en: 'October 2026' },
+    nuevo: true,
+    datos: {
+      es: ['15 capítulos', '113 páginas', 'En español'],
+      en: ['15 chapters', '113 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Para constructoras, estudios y pymes que quieren trabajar con BIM sin grandes inversiones. Explica la metodología en un lenguaje claro (ISO 19650, IFC, LOD, entorno común de datos, 4D y 5D) y la aplica en nueve pasos a una vivienda modular de ejemplo con ERPSqlite: del plano y las mediciones al presupuesto, la planificación, la certificación y la entrega, con plantillas y listas de comprobación.',
+      en: 'For construction companies, studios and small businesses that want to work with BIM without large investments. It explains the methodology in clear language (ISO 19650, IFC, LOD, common data environment, 4D and 5D) and applies it in nine steps to a sample modular home with ERPSqlite: from the drawing and quantities to the budget, planning, certification and handover, with templates and checklists.'
+    },
+    temas: {
+      es: ['BIM', 'ERPSqlite', 'ISO 19650', 'IFC', 'Mediciones', 'Presupuestos', 'Planificación 4D', 'Certificaciones'],
+      en: ['BIM', 'ERPSqlite', 'ISO 19650', 'IFC', 'Quantities', 'Budgets', '4D planning', 'Certifications']
+    },
+    acciones: [
+      {
+        href: '/libros/bim-paso-a-paso-con-erpsqlite.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'BIM_paso_a_paso_con_ERPSqlite.pdf'
+      },
+      {
+        href: '/libros/bim-paso-a-paso-con-erpsqlite.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Prólogo',
+      'Capítulo 1 · Qué es BIM y por qué cambia la forma de construir',
+      'Capítulo 2 · Dimensiones, niveles de información y openBIM',
+      'Capítulo 3 · La gestión de la información: ISO 19650 sin complicaciones',
+      'Capítulo 4 · ERPSqlite: una plataforma BIM ligera para la pyme',
+      'Capítulo 5 · Paso 1: arrancar el proyecto',
+      'Capítulo 6 · Paso 2: el plan de ejecución BIM y el entorno común de datos',
+      'Capítulo 7 · Paso 3: modelar el edificio en el CAD',
+      'Capítulo 8 · Paso 4: disciplinas, coordinación y exportación IFC',
+      'Capítulo 9 · Paso 5: 5D, del modelo a las mediciones y el presupuesto',
+      'Capítulo 10 · Paso 6: 4D, planificar la obra con el modelo',
+      'Capítulo 11 · Paso 7: ejecutar y controlar la obra',
+      'Capítulo 12 · Paso 8: certificar, facturar y medir la rentabilidad',
+      'Capítulo 13 · Paso 9: entregar el modelo, as-built, 6D y 7D',
+      'Capítulo 14 · IA, API y automatización al servicio del BIM',
+      'Capítulo 15 · Caso completo: la Vivienda modular Albufera de principio a fin',
+      'Anexos · Herramientas de consulta',
+      'Epílogo'
+    ]
+  },
+  {
     slug: 'manual-crm-odoo-19',
     titulo: 'CRM en Odoo 19 · Manual de usuario',
     subtitulo: {
@@ -1578,7 +1635,7 @@ export const libros = [
 ]
 
 // Novedades de «Cómo contratar» y primeros libros del carrusel del home: el último publicado va primero
-const ULTIMOS = ['manual-crm-odoo-19', 'manual-ventas-odoo-19', 'manual-inventario-odoo-19']
+const ULTIMOS = ['bim-paso-a-paso-con-erpsqlite', 'manual-crm-odoo-19', 'manual-ventas-odoo-19']
 
 export const ultimosLibros = ULTIMOS.map((slug) => libros.find((libro) => libro.slug === slug))
 
