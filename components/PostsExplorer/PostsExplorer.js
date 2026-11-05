@@ -144,7 +144,12 @@ export default function PostsExplorer() {
     if (estado.cat !== 'todas') query.cat = estado.cat
     if (estado.tag) query.tag = estado.tag
     if (estado.page > 1) query.page = estado.page
-    router.replace({ pathname: router.pathname, query }, undefined, { shallow: true, scroll: false })
+    // Sin router.replace: Nextra recrea el layout en cada render del router y el
+    // componente se volvería a montar, perdiendo el foco del buscador en cada tecla.
+    const qs = new URLSearchParams(query).toString()
+    const url = router.pathname + (qs ? `?${qs}` : '')
+    const st = window.history.state
+    window.history.replaceState(st && st.__N ? { ...st, url, as: url } : st, '', url)
   }
 
   const actualizar = (next) => {
