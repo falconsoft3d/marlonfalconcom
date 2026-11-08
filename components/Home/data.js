@@ -198,6 +198,15 @@ export const proyectos = [
 
 export const certificaciones = [
   {
+    nombre: 'Certificación funcional de Odoo 19',
+    descripcion: {
+      es: 'Certificación oficial de Odoo S.A. en el uso funcional de Odoo 19 (n.º 0001256724).',
+      en: 'Official Odoo S.A. certification in the functional use of Odoo 19 (no. 0001256724).'
+    },
+    anio: '2026',
+    imagen: '/images/certificaciones/odoo_19_funcional_2026.jpg'
+  },
+  {
     nombre: 'SAP ERP 6.0 EHP6 MM',
     descripcion: {
       es: 'Certificación oficial de SAP en Gestión de Materiales.',

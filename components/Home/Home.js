@@ -1253,6 +1253,9 @@ export default function Home() {
           align-items: center;
           gap: 1.5rem;
         }
+        .home .cert + .cert {
+          margin-top: 1rem;
+        }
         .home .cert-img {
           width: 180px;
           height: auto;
