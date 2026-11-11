@@ -4,6 +4,7 @@ date: 2026/11/11
 description: ▷ Busca productos en Odoo 18, 19 y 20 por palabras en cualquier orden, sin acentos - nombre, referencia, código de barras y de proveedor en facturas y pedidos.
 tag: odoo, odoo-19, modulos-odoo, productos, busqueda, ventas
 author: Marlon Falcon Hernandez
+image: /images/posts/modulos-odoo/product_unordered_search/invoice.png
 ---
 import Image from 'next/image'
 
