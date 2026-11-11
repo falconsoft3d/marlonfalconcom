@@ -50,6 +50,8 @@ const TEXTOS = {
     proyectos: 'Proyectos',
     proyectosLede: 'Productos propios en desarrollo y producción.',
     certificaciones: 'Certificaciones',
+    ultimos: 'Últimos artículos',
+    ultimosLede: 'Lo más reciente publicado en el blog.',
     destacados: 'Artículos destacados',
     destacadosLede: 'Guías y lecturas recomendadas para empezar.',
     todos: 'Ver todos los artículos',
@@ -92,6 +94,8 @@ const TEXTOS = {
     proyectos: 'Projects',
     proyectosLede: 'My own products, in development and in production.',
     certificaciones: 'Certifications',
+    ultimos: 'Latest articles',
+    ultimosLede: 'The most recent posts on the blog (in Spanish).',
     destacados: 'Featured articles',
     destacadosLede: 'Guides and recommended reads to get started (in Spanish).',
     todos: 'View all articles',
@@ -138,18 +142,63 @@ const destacadosEn = (t) => articulos.map((a, i) => {
   }
   const post = posts.find((p) => `/posts/${p.slug}` === a.href)
   if (!post) return { ...a, color, etiquetas: [] }
+  return { ...a, ...tarjetaDePost(post, t, color) }
+})
+
+function tarjetaDePost(post, t, color) {
   const titulo = limpiar(post.title)
   const descripcion = limpiar(post.description)
   const [y, m, d] = (post.date || '').split('-')
   return {
-    ...a,
+    href: `/posts/${post.slug}`,
     color,
     titulo,
     descripcion: descripcion !== titulo ? descripcion : '',
     etiquetas: post.tags.slice(0, 3),
     fecha: post.date && { dia: Number(d), mes: t.meses[Number(m) - 1], anio: y }
   }
-})
+}
+
+// posts.json ya viene ordenado del más reciente al más antiguo
+const ultimosEn = (t) => posts.slice(0, 3).map((p, i) => tarjetaDePost(p, t, COLORES[i % COLORES.length]))
+
+function TarjetaArticulo({ a, t }) {
+  return (
+    <A href={a.href} className="feat">
+      <span className="feat-date" style={{ '--c': a.color }} aria-hidden={!a.fecha && !a.serie}>
+        {a.fecha ? (
+          <>
+            <span className="feat-month">{a.fecha.mes}</span>
+            <span className="feat-day">{a.fecha.dia}</span>
+            <span className="feat-year">{a.fecha.anio}</span>
+          </>
+        ) : a.serie ? (
+          <>
+            <span className="feat-month">{t.serie}</span>
+            <span className="feat-day">{a.serie}</span>
+            <span className="feat-year">posts</span>
+          </>
+        ) : (
+          <Icon name="book" size={22} />
+        )}
+      </span>
+      <span className="feat-body">
+        {a.etiquetas.length > 0 && (
+          <span className="feat-tags">
+            {a.etiquetas.map((e) => (
+              <span key={e}>#{e}</span>
+            ))}
+          </span>
+        )}
+        <span className="feat-title">{a.titulo}</span>
+        {a.descripcion && <span className="feat-desc">{a.descripcion}</span>}
+      </span>
+      <span className="feat-arrow" aria-hidden="true">
+        <Icon name="arrow" size={16} />
+      </span>
+    </A>
+  )
+}
 
 // Banderas en SVG: los emojis de bandera no se ven en Windows
 const BANDERAS = {
@@ -184,6 +233,7 @@ export default function Home() {
   const { lang } = useIdioma()
   const t = TEXTOS[lang]
   const destacados = useMemo(() => destacadosEn(t), [t])
+  const ultimos = useMemo(() => ultimosEn(t), [t])
 
   return (
     <div className="home">
@@ -415,48 +465,30 @@ export default function Home() {
         <div className="inner">
           <div className="section-head spaced feat-head">
             <div>
-              <h2 className="section-title">{t.destacados}</h2>
-              <p className="section-lede">{t.destacadosLede}</p>
+              <h2 className="section-title">{t.ultimos}</h2>
+              <p className="section-lede">{t.ultimosLede}</p>
             </div>
             <A href="/posts" className="btn btn-ghost">
               {t.todos} <Icon name="arrow" size={16} />
             </A>
           </div>
           <div className="feat-grid">
+            {ultimos.map((a) => (
+              <TarjetaArticulo key={a.href} a={a} t={t} />
+            ))}
+          </div>
+        </div>
+
+        <div className="inner">
+          <div className="section-head spaced feat-head">
+            <div>
+              <h2 className="section-title">{t.destacados}</h2>
+              <p className="section-lede">{t.destacadosLede}</p>
+            </div>
+          </div>
+          <div className="feat-grid">
             {destacados.map((a) => (
-              <A key={a.href} href={a.href} className="feat">
-                <span className="feat-date" style={{ '--c': a.color }} aria-hidden={!a.fecha && !a.serie}>
-                  {a.fecha ? (
-                    <>
-                      <span className="feat-month">{a.fecha.mes}</span>
-                      <span className="feat-day">{a.fecha.dia}</span>
-                      <span className="feat-year">{a.fecha.anio}</span>
-                    </>
-                  ) : a.serie ? (
-                    <>
-                      <span className="feat-month">{t.serie}</span>
-                      <span className="feat-day">{a.serie}</span>
-                      <span className="feat-year">posts</span>
-                    </>
-                  ) : (
-                    <Icon name="book" size={22} />
-                  )}
-                </span>
-                <span className="feat-body">
-                  {a.etiquetas.length > 0 && (
-                    <span className="feat-tags">
-                      {a.etiquetas.map((t) => (
-                        <span key={t}>#{t}</span>
-                      ))}
-                    </span>
-                  )}
-                  <span className="feat-title">{a.titulo}</span>
-                  {a.descripcion && <span className="feat-desc">{a.descripcion}</span>}
-                </span>
-                <span className="feat-arrow" aria-hidden="true">
-                  <Icon name="arrow" size={16} />
-                </span>
-              </A>
+              <TarjetaArticulo key={a.href} a={a} t={t} />
             ))}
           </div>
         </div>
