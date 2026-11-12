@@ -2,11 +2,11 @@ import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Cabecera from './Cabecera'
-import { contraportada, librosPorNovedad } from './data'
+import { contraportada, libros } from './data'
 import estilos from './estilos'
 
 // La pista lleva los libros dos veces: al pasar de media pista se salta atrás y la copia ocupa el sitio del original
-const pista = [...librosPorNovedad, ...librosPorNovedad]
+const pista = [...libros, ...libros]
 
 // Ciclo de cada libro en ms: llega al centro, crece y se gira, enseña la contraportada y vuelve antes de seguir.
 // VUELTA y el principio de VISTA cubren las transiciones de .lc-libro y .lc-tapas
@@ -27,11 +27,11 @@ export default function CarruselLibros() {
 
     const el = pistaRef.current
     const marco = el.parentElement
-    const libros = el.children
-    const total = librosPorNovedad.length
+    const nodos = el.children
+    const total = libros.length
 
     // Desplazamiento de la pista que deja el libro i en el centro del marco
-    const destino = (i) => libros[i].offsetLeft + libros[i].offsetWidth / 2 - marco.clientWidth / 2
+    const destino = (i) => nodos[i].offsetLeft + nodos[i].offsetWidth / 2 - marco.clientWidth / 2
 
     let i = 0
     while (destino(i) < 0) i++
@@ -45,7 +45,7 @@ export default function CarruselLibros() {
       previo = ahora
 
       if (t >= CICLO) {
-        const mediaPista = libros[total].offsetLeft - libros[0].offsetLeft
+        const mediaPista = nodos[total].offsetLeft - nodos[0].offsetLeft
         t = 0
         origen = destino(i)
         i++
@@ -74,7 +74,7 @@ export default function CarruselLibros() {
       <div className="lc-marco">
         <div className="lc-pista" ref={pistaRef}>
           {pista.map((libro, i) => {
-            const copia = i >= librosPorNovedad.length
+            const copia = i >= libros.length
             return (
               <Link key={i} href={`/libros/${libro.slug}`}>
                 <a
