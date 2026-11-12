@@ -667,6 +667,62 @@ export const libros = [
     ]
   },
   {
+    slug: 'proceso-de-obra-hitos-facturacion-bim-2-0',
+    titulo: 'Proceso de Obra con Hitos de Facturación',
+    subtitulo: {
+      es: 'BIM 2.0 sobre Odoo 19 Community: de la oportunidad al cierre de obra, paso a paso',
+      en: 'BIM 2.0 on Odoo 19 Community: from the sales opportunity to project close-out, step by step'
+    },
+    portada: { src: '/images/libros/proceso-de-obra-hitos-facturacion-bim-2-0.jpg', ancho: 910, alto: 1287 },
+    fecha: { es: 'Noviembre de 2026', en: 'November 2026' },
+    nuevo: true,
+    datos: {
+      es: ['16 capítulos y un anexo', '54 páginas', 'En español'],
+      en: ['16 chapters and an appendix', '54 pages', 'In Spanish']
+    },
+    descripcion: {
+      es: 'Una obra real de principio a fin en BIM 2.0: de la oportunidad comercial al cierre, en los 14 pasos del procedimiento de la empresa y con quién hace cada uno. La venta se factura por hitos de pago definidos en el proyecto, el avance físico se mide con las mediciones de obra y las compras salen siempre del presupuesto. Todas las pantallas son reales, con los números de una nave logística de 260.982 €, y termina explicando uno a uno los KPI de la pestaña BI.',
+      en: 'A real construction project from start to finish in BIM 2.0: from the sales opportunity to close-out, following the 14 steps of the company procedure and who does each one. Sales are invoiced through payment milestones defined in the project, physical progress is measured with site measurements and purchases always come from the budget. Every screenshot is real, with the figures of a €260,982 logistics warehouse, and it ends by explaining each KPI in the BI tab.'
+    },
+    temas: {
+      es: ['BIM 2.0', 'Odoo 19', 'Construcción', 'Hitos de facturación', 'Modo 2000', 'Compras', 'Subcontratas', 'KPI'],
+      en: ['BIM 2.0', 'Odoo 19', 'Construction', 'Billing milestones', 'Modo 2000', 'Purchasing', 'Subcontractors', 'KPI']
+    },
+    acciones: [
+      {
+        href: '/doc/Manual_Proceso_Obra_Hitos_BIM20_Odoo19.pdf',
+        texto: { es: 'Descargar PDF', en: 'Download PDF' },
+        icono: 'download',
+        principal: true,
+        descarga: 'Manual_Proceso_Obra_Hitos_BIM20_Odoo19.pdf'
+      },
+      {
+        href: '/doc/Manual_Proceso_Obra_Hitos_BIM20_Odoo19.pdf',
+        texto: { es: 'Leer online', en: 'Read online' },
+        icono: 'external'
+      }
+    ],
+    capitulos: [
+      'Capítulo 0 · Antes de empezar',
+      'Capítulo 1 · Cliente, oportunidad y obra',
+      'Capítulo 2 · Aprobación, hitos de pago y contrato',
+      'Capítulo 3 · Partidas, cronograma y línea base',
+      'Capítulo 4 · Compras del presupuesto',
+      'Capítulo 5 · Recepción y consumo por partidas',
+      'Capítulo 6 · Subcontratas',
+      'Capítulo 7 · Partes diarios',
+      'Capítulo 8 · Avance físico: mediciones de obra',
+      'Capítulo 9 · Órdenes de cambio',
+      'Capítulo 10 · Costes de mano de obra',
+      'Capítulo 11 · Facturar hitos y conciliar el banco',
+      'Capítulo 12 · Gestión de pagos y cobros',
+      'Capítulo 13 · Control presupuesto frente a real',
+      'Capítulo 14 · Cierre de obra',
+      'Capítulo 15 · La pestaña BI: todos los KPI',
+      'Anexo A · Formato del fichero Modo 2000'
+    ]
+  },
+  {
     slug: 'bim-paso-a-paso-con-erpsqlite',
     titulo: 'BIM paso a paso con ERPSqlite',
     subtitulo: {
@@ -2395,7 +2451,7 @@ export const libros = [
 ]
 
 // Novedades de «Cómo contratar» y primeros libros del carrusel del home: el último publicado va primero
-const ULTIMOS = ['gestion-de-flotas-de-camiones-2026', 'invertir-en-bolsa-con-cabeza', 'curso-presupuestos-reformistas']
+const ULTIMOS = ['proceso-de-obra-hitos-facturacion-bim-2-0', 'gestion-de-flotas-de-camiones-2026', 'invertir-en-bolsa-con-cabeza']
 
 export const ultimosLibros = ULTIMOS.map((slug) => libros.find((libro) => libro.slug === slug))
 
